@@ -52,7 +52,6 @@ class MonitorWindow(Adw.ApplicationWindow):
         headerbar = Adw.HeaderBar()
         headerbar.set_title_widget(label)
         headerbar.add_css_class("flat")
-        headerbar.set_valign(Gtk.Align.START)
 
         self._overlay.add_overlay(headerbar)
 

@@ -10,7 +10,7 @@
 	(2,7,"GtkOverlay","_overlay",3,None,None,None,None)
   </object>
   <object_property>
-	(2,1,"GtkWindow","default-height","150",None,None,None,None,None),
+	(2,1,"GtkWindow","default-height","100",None,None,None,None,None),
 	(2,1,"GtkWindow","default-width","200",None,None,None,None,None),
 	(2,3,"GtkOrientable","orientation","vertical",None,None,None,None,None)
   </object_property>
