@@ -7,18 +7,11 @@
   <object>
 	(2,1,"AdwApplicationWindow","MainWindow",None,None,None,None,None),
 	(2,3,"GtkBox",None,1,None,None,None,1),
-	(2,4,"AdwHeaderBar","_headerbar",3,None,None,None,None),
-	(2,5,"GtkCenterBox","_center_box",3,None,None,None,1),
-	(2,6,"GtkDrawingArea","_drawing_area",5,None,"center",None,-1)
+	(2,7,"GtkOverlay","_overlay",3,None,None,None,None)
   </object>
   <object_property>
 	(2,1,"GtkWindow","default-height","150",None,None,None,None,None),
 	(2,1,"GtkWindow","default-width","200",None,None,None,None,None),
-	(2,3,"GtkOrientable","orientation","vertical",None,None,None,None,None),
-	(2,4,"GtkWidget","css-classes","flat\n",None,None,None,None,None),
-	(2,5,"GtkWidget","hexpand","True",None,None,None,None,None),
-	(2,5,"GtkWidget","vexpand","True",None,None,None,None,None),
-	(2,6,"GtkWidget","hexpand","True",None,None,None,None,None),
-	(2,6,"GtkWidget","vexpand","True",None,None,None,None,None)
+	(2,3,"GtkOrientable","orientation","vertical",None,None,None,None,None)
   </object_property>
 </cambalache-project>

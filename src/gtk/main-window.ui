@@ -10,22 +10,7 @@
       <object class="GtkBox">
         <property name="orientation">vertical</property>
         <child>
-          <object class="AdwHeaderBar" id="_headerbar">
-            <property name="css-classes">flat
-</property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkCenterBox" id="_center_box">
-            <property name="hexpand">True</property>
-            <property name="vexpand">True</property>
-            <child type="center">
-              <object class="GtkDrawingArea" id="_drawing_area">
-                <property name="hexpand">True</property>
-                <property name="vexpand">True</property>
-              </object>
-            </child>
-          </object>
+          <object class="GtkOverlay" id="_overlay"/>
         </child>
       </object>
     </child>
