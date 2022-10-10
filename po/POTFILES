@@ -1,0 +1,6 @@
+data/org.github.jorchube.gpumonitor.desktop.in
+data/org.github.jorchube.gpumonitor.appdata.xml.in
+data/org.github.jorchube.gpumonitor.gschema.xml
+src/main.py
+src/window.py
+src/window.ui
