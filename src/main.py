@@ -25,6 +25,9 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw
 from .window import MonitorWindow
+from .samplers.gpu_sampler import GpuSampler
+from .samplers.cpu_sampler import CpuSampler
+from .samplers.memory_sampler import MemorySampler
 
 
 class MonitorApplication(Adw.Application):
@@ -43,10 +46,19 @@ class MonitorApplication(Adw.Application):
         We raise the application's main window, creating it if
         necessary.
         """
-        win = self.props.active_window
-        if not win:
-            win = MonitorWindow("GPU", "/sys/class/drm/card0/device/gpu_busy_percent", application=self)
-        win.present()
+
+        self._cpu_sampler = CpuSampler()
+        cpu_window = MonitorWindow("CPU", self._cpu_sampler, application=self)
+
+        self._gpu_sampler = GpuSampler("/sys/class/drm/card0/device/gpu_busy_percent")
+        gpu_window = MonitorWindow("GPU", self._gpu_sampler, application=self)
+
+        self._memory_sampler = MemorySampler()
+        memory_window = MonitorWindow("Memory", self._memory_sampler, application=self)
+
+        cpu_window.present()
+        gpu_window.present()
+        memory_window.present()
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
