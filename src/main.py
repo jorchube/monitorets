@@ -36,7 +36,7 @@ class MonitorApplication(Adw.Application):
     def __init__(self):
         super().__init__(application_id='org.github.jorchube.gpumonitor',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
-        self.create_action('quit', self.quit, ['<primary>q'])
+        self.create_action('quit', self.on_quit, ['<primary>q'])
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
 
@@ -60,6 +60,8 @@ class MonitorApplication(Adw.Application):
         gpu_window.present()
         memory_window.present()
 
+        self._windows = [cpu_window, gpu_window, memory_window]
+
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
@@ -70,6 +72,12 @@ class MonitorApplication(Adw.Application):
                                 developers=['Jordi Chulia'],
                                 copyright='© 2022 Jordi Chulia')
         about.present()
+
+    def on_quit(self, *args, **kwargs):
+        for window in self._windows:
+            window.close()
+
+        self.quit()
 
     def on_preferences_action(self, widget, _):
         """Callback for the app.preferences action."""
