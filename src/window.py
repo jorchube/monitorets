@@ -23,12 +23,12 @@ from gi.repository import Gtk
 from .graph_area import GraphArea
 
 @Gtk.Template(resource_path='/org/github/jorchube/gpumonitor/gtk/main-window.ui')
-class MonitorWindow(Adw.ApplicationWindow):
+class UIMonitorWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'MainWindow'
 
     _overlay = Gtk.Template.Child()
 
-    def __init__(self, title, sampler, **kwargs):
+    def __init__(self, title, sampler, color=None, **kwargs):
         super().__init__(**kwargs)
 
         self._drawing_area = Gtk.DrawingArea()
@@ -41,7 +41,7 @@ class MonitorWindow(Adw.ApplicationWindow):
 
         self.connect("close-request", self._close_request)
 
-        self._graph_area = GraphArea(self._drawing_area)
+        self._graph_area = GraphArea(self._drawing_area, color)
 
         self._sampler = sampler
         self._sampler.install_new_sample_callback(self._graph_area.add_value)

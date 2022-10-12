@@ -24,10 +24,9 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw
-from .window import MonitorWindow
-from .samplers.gpu_sampler import GpuSampler
-from .samplers.cpu_sampler import CpuSampler
-from .samplers.memory_sampler import MemorySampler
+from .monitor_windows.cpu_monitor_window import CPUMonitorWindow
+from .monitor_windows.gpu_monitor_window import GPUMonitorWindow
+from .monitor_windows.memory_monitor_window import MemoryMonitorWindow
 
 
 class MonitorApplication(Adw.Application):
@@ -47,14 +46,9 @@ class MonitorApplication(Adw.Application):
         necessary.
         """
 
-        self._cpu_sampler = CpuSampler()
-        cpu_window = MonitorWindow("CPU", self._cpu_sampler, application=self)
-
-        self._gpu_sampler = GpuSampler("/sys/class/drm/card0/device/gpu_busy_percent")
-        gpu_window = MonitorWindow("GPU", self._gpu_sampler, application=self)
-
-        self._memory_sampler = MemorySampler()
-        memory_window = MonitorWindow("Memory", self._memory_sampler, application=self)
+        cpu_window = CPUMonitorWindow(application=self)
+        gpu_window = GPUMonitorWindow(application=self)
+        memory_window = MemoryMonitorWindow(application=self)
 
         cpu_window.present()
         gpu_window.present()

@@ -30,8 +30,10 @@ gpumonitor_sources = [
   'main.py',
   'window.py',
   'graph_area.py',
+  'colors.py',
 ]
 
 install_data(gpumonitor_sources, install_dir: moduledir)
 
 install_subdir('samplers', install_dir: moduledir)
+install_subdir('monitor_windows', install_dir: moduledir)

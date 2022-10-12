@@ -1,11 +1,26 @@
 import cairo
 
+from . import colors
+
+
+graph_color = {
+    colors.RED: (1, 0, 0),
+    colors.GREEN: (0, 0.8, 0),
+    colors.BLUE: (0, 0.5, 1),
+    colors.ORANGE: (1, 0.5, 0)
+}
+
+line_width = 1
+alpha_fill = 0.2
+
 
 class GraphArea:
     _BUFFER_BEFORE_RELEASE_SAMPLE = 50
     _SPACING = 10
 
-    def __init__(self, gtk_drawing_area):
+    def __init__(self, gtk_drawing_area, color=None):
+        self._color = graph_color[color] if color else graph_color[colors.RED]
+
         self._gtk_drawing_area = gtk_drawing_area
         self._gtk_drawing_area.set_draw_func(self._draw_func, None)
 
@@ -43,8 +58,8 @@ class GraphArea:
 
         self._plot_data_points(context, width, height)
 
-        context.set_line_width(1)
-        context.set_source_rgba(1, 0, 0, 1)
+        context.set_line_width(line_width)
+        context.set_source_rgba(*self._color, 1)
         context.stroke()
 
     def _plot_y_fill(self, context, width, height):
@@ -54,7 +69,7 @@ class GraphArea:
 
         self._plot_data_points(context, width, height, close=True)
 
-        context.set_source_rgba(1, 0, 0, 0.2)
+        context.set_source_rgba(*self._color, alpha_fill)
         context.fill()
 
     def _plot_data_points(self, context, width, height, close=False):
