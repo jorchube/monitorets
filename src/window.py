@@ -21,6 +21,7 @@ from gi.repository import Adw
 from gi.repository import Gtk
 
 from .graph_area import GraphArea
+from .headerbar_wrapper import HeaderBarWrapper
 
 @Gtk.Template(resource_path='/org/github/jorchube/gpumonitor/gtk/main-window.ui')
 class UIMonitorWindow(Adw.ApplicationWindow):
@@ -31,22 +32,24 @@ class UIMonitorWindow(Adw.ApplicationWindow):
     def __init__(self, title, sampler, color=None, **kwargs):
         super().__init__(**kwargs)
         self._sampler = sampler
-
-        self.connect("close-request", self._close_request)
+        self._color = color
 
         self._drawing_area = self._build_drawing_area()
         self._overlay.set_child(self._drawing_area)
 
-        self._headerbar = self._build_headerbar(title)
-        self._overlay.add_overlay(self._headerbar)
+        self._headerbar_wrapper = HeaderBarWrapper(title)
+        self._overlay.add_overlay(self._headerbar_wrapper.headerbar)
 
-
-        self._graph_area = self._build_graph_area(color)
+        self._graph_area = self._build_graph_area()
         self._sampler.install_new_sample_callback(self._graph_area.add_value)
+
+        self.connect("close-request", self._close_request)
+        self._install_motion_event_controller()
+
         self._sampler.start()
 
-    def _build_graph_area(self, color):
-        return GraphArea(self._drawing_area, color)
+    def _build_graph_area(self):
+        return GraphArea(self._drawing_area, self._color)
 
     def _build_drawing_area(self):
         drawing_area = Gtk.DrawingArea()
@@ -55,15 +58,17 @@ class UIMonitorWindow(Adw.ApplicationWindow):
 
         return drawing_area
 
-    def _build_headerbar(self, title):
-        label = Gtk.Label()
-        label.set_markup(f"<span weight='bold'>{title}</span>")
+    def _install_motion_event_controller(self):
+        controller = Gtk.EventControllerMotion()
+        controller.connect("enter", self._on_mouse_enter)
+        controller.connect("leave", self._on_mouse_leave)
+        self._headerbar_wrapper.headerbar.add_controller(controller)
 
-        headerbar = Adw.HeaderBar()
-        headerbar.add_css_class("flat")
-        headerbar.set_title_widget(label)
+    def _on_mouse_enter(self, user_data, x, y):
+        self._headerbar_wrapper.set_visible()
 
-        return headerbar
+    def _on_mouse_leave(self, user_data):
+        self._headerbar_wrapper.set_invisible()
 
     def _close_request(self, user_data):
         self._sampler.stop()
