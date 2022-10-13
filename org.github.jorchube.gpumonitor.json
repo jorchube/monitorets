@@ -23,6 +23,7 @@
         "*.a"
     ],
     "modules" : [
+        "pypi-dependencies.json",
         {
             "name" : "gpumonitor",
             "builddir" : true,
@@ -30,7 +31,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///var/home/jorchube/Code"
+                    "url" : "file:///var/home/jorchube/Code/GPUMonitor"
                 }
             ]
         }

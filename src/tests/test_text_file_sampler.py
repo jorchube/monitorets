@@ -1,13 +1,13 @@
 from unittest import mock
 import pytest
 
-from ..sampler import Sampler
+from ..samplers.sampler import Sampler
 
 
 class TestSampler:
     @pytest.fixture
     def mock_read(self):
-        with mock.patch("src.sampler.Sampler._read") as mock_read:
+        with mock.patch("src.samplers.sampler.Sampler._get_sample") as mock_read:
             mock_read.return_value = 33
             yield mock_read
 
@@ -17,7 +17,9 @@ class TestSampler:
             global sample
             sample = value
 
-        sampler = Sampler("/some/file", new_sample_callback)
+        sampler = Sampler()
+        sampler.install_new_sample_callback(new_sample_callback)
+
         sampler._sample()
 
         assert sample == 33

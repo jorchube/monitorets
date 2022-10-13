@@ -4,28 +4,13 @@
   <requires lib="gtk" version="4.6"/>
   <requires lib="libadwaita" version="1.1"/>
   <template class="MainWindow" parent="AdwApplicationWindow">
-    <property name="default-height">150</property>
+    <property name="default-height">100</property>
     <property name="default-width">200</property>
     <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>
         <child>
-          <object class="AdwHeaderBar" id="_headerbar">
-            <property name="css-classes">flat
-</property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkCenterBox" id="_center_box">
-            <property name="hexpand">True</property>
-            <property name="vexpand">True</property>
-            <child type="center">
-              <object class="GtkDrawingArea" id="_drawing_area">
-                <property name="hexpand">True</property>
-                <property name="vexpand">True</property>
-              </object>
-            </child>
-          </object>
+          <object class="GtkOverlay" id="_overlay"/>
         </child>
       </object>
     </child>
