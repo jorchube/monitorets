@@ -30,33 +30,40 @@ class UIMonitorWindow(Adw.ApplicationWindow):
 
     def __init__(self, title, sampler, color=None, **kwargs):
         super().__init__(**kwargs)
-
-        self._drawing_area = Gtk.DrawingArea()
-        self._drawing_area.set_hexpand(True)
-        self._drawing_area.set_vexpand(True)
-
-        self._overlay.set_child(self._drawing_area)
-
-        self._set_title(title)
+        self._sampler = sampler
 
         self.connect("close-request", self._close_request)
 
-        self._graph_area = GraphArea(self._drawing_area, color)
+        self._drawing_area = self._build_drawing_area()
+        self._overlay.set_child(self._drawing_area)
 
-        self._sampler = sampler
+        self._headerbar = self._build_headerbar(title)
+        self._overlay.add_overlay(self._headerbar)
+
+
+        self._graph_area = self._build_graph_area(color)
         self._sampler.install_new_sample_callback(self._graph_area.add_value)
         self._sampler.start()
 
-    def _set_title(self, title):
+    def _build_graph_area(self, color):
+        return GraphArea(self._drawing_area, color)
+
+    def _build_drawing_area(self):
+        drawing_area = Gtk.DrawingArea()
+        drawing_area.set_hexpand(True)
+        drawing_area.set_vexpand(True)
+
+        return drawing_area
+
+    def _build_headerbar(self, title):
         label = Gtk.Label()
         label.set_markup(f"<span weight='bold'>{title}</span>")
 
         headerbar = Adw.HeaderBar()
-        headerbar.set_title_widget(label)
         headerbar.add_css_class("flat")
+        headerbar.set_title_widget(label)
 
-        self._overlay.add_overlay(headerbar)
-
+        return headerbar
 
     def _close_request(self, user_data):
         self._sampler.stop()
