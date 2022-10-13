@@ -62,13 +62,13 @@ class UIMonitorWindow(Adw.ApplicationWindow):
         controller = Gtk.EventControllerMotion()
         controller.connect("enter", self._on_mouse_enter)
         controller.connect("leave", self._on_mouse_leave)
-        self._headerbar_wrapper.headerbar.add_controller(controller)
+        self._overlay.add_controller(controller)
 
-    def _on_mouse_enter(self, user_data, x, y):
-        self._headerbar_wrapper.set_visible()
+    def _on_mouse_enter(self, motion_controller, x, y):
+        self._headerbar_wrapper.on_mouse_enter()
 
-    def _on_mouse_leave(self, user_data):
-        self._headerbar_wrapper.set_invisible()
+    def _on_mouse_leave(self, motion_controller):
+        self._headerbar_wrapper.on_mouse_exit()
 
     def _close_request(self, user_data):
         self._sampler.stop()

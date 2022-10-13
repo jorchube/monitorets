@@ -1,22 +1,22 @@
 from gi.repository import Adw, Gtk
 
 
-class HeaderBarWrapper():
+class HeaderBarWrapper:
     def __init__(self, title):
         self._label = self._build_title_label(title)
         self._settings_button = self._build_settings_button()
         self._headerbar = self._build_headerbar()
 
-        self.set_invisible()
+        self.on_mouse_exit()
 
     @property
     def headerbar(self):
         return self._headerbar
 
-    def set_visible(self):
+    def on_mouse_enter(self):
         self._settings_button.set_visible(True)
 
-    def set_invisible(self):
+    def on_mouse_exit(self):
         self._settings_button.set_visible(False)
 
     def _build_headerbar(self):
