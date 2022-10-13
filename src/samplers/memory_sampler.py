@@ -12,7 +12,8 @@ class MemorySampler(Sampler):
 
         available = vmem.available
         total = vmem.total
+        used = total - available
 
-        value = int((available/total) * 100)
+        value = int((used/total) * 100)
 
         return value
