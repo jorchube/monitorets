@@ -23,7 +23,7 @@ import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Adw
+from gi.repository import Gtk, Gio, Adw, GLib
 from .monitor_windows.cpu_monitor_window import CPUMonitorWindow
 from .monitor_windows.gpu_monitor_window import GPUMonitorWindow
 from .monitor_windows.memory_monitor_window import MemoryMonitorWindow
@@ -39,6 +39,8 @@ class MonitorApplication(Adw.Application):
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
 
+        self.create_cpu_monitor_action('cpu-monitor-enabled-change', self.on_cpu_monitor_enabled_change)
+
     def do_activate(self):
         """Called when the application is activated.
 
@@ -46,15 +48,19 @@ class MonitorApplication(Adw.Application):
         necessary.
         """
 
-        cpu_window = CPUMonitorWindow(application=self)
-        gpu_window = GPUMonitorWindow(application=self)
-        memory_window = MemoryMonitorWindow(application=self)
+        CPUMonitorWindow(application=self).present()
+        GPUMonitorWindow(application=self).present()
+        MemoryMonitorWindow(application=self).present()
 
-        cpu_window.present()
-        gpu_window.present()
-        memory_window.present()
+    def on_cpu_monitor_enabled_change(self, *args, **kwargs):
+        print("action")
+        print(f"{args}")
+        print(f"{kwargs}")
 
-        self._windows = [cpu_window, gpu_window, memory_window]
+    def _on_state_set_change(self, *args, **kwargs):
+        print("signal")
+        print(f"{args}")
+        print(f"{kwargs}")
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
@@ -68,7 +74,7 @@ class MonitorApplication(Adw.Application):
         about.present()
 
     def on_quit(self, *args, **kwargs):
-        for window in self._windows:
+        for window in self.get_windows():
             window.close()
 
         self.quit()
@@ -91,7 +97,6 @@ class MonitorApplication(Adw.Application):
         self.add_action(action)
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
-
 
 def main(version):
     """The application's entry point."""

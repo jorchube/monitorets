@@ -2,16 +2,29 @@
 <!DOCTYPE cambalache-project SYSTEM "cambalache-project.dtd">
 <cambalache-project version="0.10.3" target_tk="gtk-4.0">
   <ui>
-	(2,1,None,"main-window.ui",None,None,None,None,None,None)
+	(2,1,None,"main-window.ui",None,None,None,None,None,None),
+	(5,1,None,"preferences-box.ui",None,None,None,None,None,None)
   </ui>
   <object>
 	(2,1,"AdwApplicationWindow","MainWindow",None,None,None,None,None),
 	(2,3,"GtkBox",None,1,None,None,None,1),
-	(2,7,"GtkOverlay","_overlay",3,None,None,None,None)
+	(2,7,"GtkOverlay","_overlay",3,None,None,None,None),
+	(5,1,"GtkBox","PreferencesBox",None,None,None,None,None),
+	(5,2,"AdwPreferencesGroup","_monitor_enable_preferences_group",1,None,None,None,None),
+	(5,3,"AdwActionRow","_cpu_monitor_enable_action_row",2,None,None,None,None)
   </object>
   <object_property>
 	(2,1,"GtkWindow","default-height","100",None,None,None,None,None),
 	(2,1,"GtkWindow","default-width","200",None,None,None,None,None),
-	(2,3,"GtkOrientable","orientation","vertical",None,None,None,None,None)
+	(2,3,"GtkOrientable","orientation","vertical",None,None,None,None,None),
+	(5,1,"GtkBox","spacing","5",None,None,None,None,None),
+	(5,1,"GtkOrientable","orientation","vertical",None,None,None,None,None),
+	(5,1,"GtkWidget","margin-bottom","10",None,None,None,None,None),
+	(5,1,"GtkWidget","margin-end","10",None,None,None,None,None),
+	(5,1,"GtkWidget","margin-start","10",None,None,None,None,None),
+	(5,1,"GtkWidget","margin-top","10",None,None,None,None,None),
+	(5,1,"GtkWidget","width-request","200",None,None,None,None,None),
+	(5,2,"AdwPreferencesGroup","title","Monitors",None,None,None,None,None),
+	(5,3,"AdwPreferencesRow","title","CPU monitor",None,None,None,None,None)
   </object_property>
 </cambalache-project>

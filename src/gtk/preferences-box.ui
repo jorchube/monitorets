@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+  <requires lib="gtk" version="4.6"/>
+  <requires lib="libadwaita" version="1.1"/>
+  <template class="PreferencesBox" parent="GtkBox">
+    <property name="margin-bottom">10</property>
+    <property name="margin-end">10</property>
+    <property name="margin-start">10</property>
+    <property name="margin-top">10</property>
+    <property name="orientation">vertical</property>
+    <property name="spacing">5</property>
+    <property name="width-request">200</property>
+    <child>
+      <object class="AdwPreferencesGroup" id="_monitor_enable_preferences_group">
+        <property name="title">Monitors</property>
+        <child>
+          <object class="AdwActionRow" id="_cpu_monitor_enable_action_row">
+            <property name="title">CPU monitor</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

@@ -32,6 +32,7 @@ gpumonitor_sources = [
   'graph_area.py',
   'colors.py',
   'headerbar_wrapper.py',
+  'preferences.py',
 ]
 
 install_data(gpumonitor_sources, install_dir: moduledir)

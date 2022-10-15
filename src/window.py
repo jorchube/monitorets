@@ -34,11 +34,11 @@ class UIMonitorWindow(Adw.ApplicationWindow):
         self._sampler = sampler
         self._color = color
 
-        self._drawing_area = self._build_drawing_area()
-        self._overlay.set_child(self._drawing_area)
-
         self._headerbar_wrapper = HeaderBarWrapper(title)
-        self._overlay.add_overlay(self._headerbar_wrapper.headerbar)
+        self._drawing_area = self._build_drawing_area()
+
+        self._overlay.set_child(self._drawing_area)
+        self._overlay.add_overlay(self._headerbar_wrapper.root_widget)
 
         self._graph_area = self._build_graph_area()
         self._sampler.install_new_sample_callback(self._graph_area.add_value)
