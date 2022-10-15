@@ -30,7 +30,6 @@ from .monitor_windows.cpu_monitor_window import CPUMonitorWindow
 from .monitor_windows.gpu_monitor_window import GPUMonitorWindow
 from .monitor_windows.memory_monitor_window import MemoryMonitorWindow
 from .monitor_type import MonitorType
-from .ui.preferences import MonitorEnableSwitch
 
 
 class MonitorApplication(Adw.Application):

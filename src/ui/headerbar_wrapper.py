@@ -1,6 +1,6 @@
 from gi.repository import Adw, Gtk
 
-from .preferences import PreferencesBox
+from .preferences_box import PreferencesBox
 
 class HeaderBarWrapper:
     def __init__(self, title):
