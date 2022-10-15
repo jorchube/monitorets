@@ -1,6 +1,6 @@
 from ..monitor_windows.monitor_window import MonitorWindow
 from ..samplers.cpu_sampler import CpuSampler
-from .. import colors
+from ..ui import colors
 
 
 class CPUMonitorWindow(MonitorWindow):

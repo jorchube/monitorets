@@ -1,6 +1,6 @@
 from ..monitor_windows.monitor_window import MonitorWindow
 from ..samplers.memory_sampler import MemorySampler
-from .. import colors
+from ..ui import colors
 
 
 class MemoryMonitorWindow(MonitorWindow):

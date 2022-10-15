@@ -1,6 +1,6 @@
 from ..monitor_windows.monitor_window import MonitorWindow
 from ..samplers.gpu_sampler import GpuSampler
-from .. import colors
+from ..ui import colors
 
 
 class GPUMonitorWindow(MonitorWindow):

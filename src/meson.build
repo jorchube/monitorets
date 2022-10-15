@@ -28,14 +28,10 @@ configure_file(
 gpumonitor_sources = [
   '__init__.py',
   'main.py',
-  'window.py',
-  'graph_area.py',
-  'colors.py',
-  'headerbar_wrapper.py',
-  'preferences.py',
 ]
 
 install_data(gpumonitor_sources, install_dir: moduledir)
 
+install_subdir('ui', install_dir: moduledir)
 install_subdir('samplers', install_dir: moduledir)
 install_subdir('monitor_windows', install_dir: moduledir)
