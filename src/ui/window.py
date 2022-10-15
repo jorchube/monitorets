@@ -29,9 +29,10 @@ class UIMonitorWindow(Adw.ApplicationWindow):
 
     _overlay = Gtk.Template.Child()
 
-    def __init__(self, title, sampler, color=None, **kwargs):
+    def __init__(self, title, sampler, type, color=None, **kwargs):
         super().__init__(**kwargs)
         self._sampler = sampler
+        self._type = type
         self._color = color
 
         self._headerbar_wrapper = HeaderBarWrapper(title)
@@ -47,6 +48,10 @@ class UIMonitorWindow(Adw.ApplicationWindow):
         self._install_motion_event_controller()
 
         self._sampler.start()
+
+    @property
+    def monitor_type(self):
+        return self._type
 
     def _build_graph_area(self):
         return GraphArea(self._drawing_area, self._color)

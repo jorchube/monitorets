@@ -23,21 +23,27 @@ import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Adw, GLib
+from gi.repository import Gtk, Gio, Adw, GLib, GObject
+from . import events
+from .event_broker import EventBroker
 from .monitor_windows.cpu_monitor_window import CPUMonitorWindow
 from .monitor_windows.gpu_monitor_window import GPUMonitorWindow
 from .monitor_windows.memory_monitor_window import MemoryMonitorWindow
+from .monitor_type import MonitorType
+from .ui.preferences import MonitorEnableSwitch
 
 
 class MonitorApplication(Adw.Application):
     """The main application singleton class."""
 
     def __init__(self):
-        super().__init__(application_id='org.github.jorchube.gpumonitor',
-                         flags=Gio.ApplicationFlags.FLAGS_NONE)
+        super().__init__(application_id='org.github.jorchube.gpumonitor',flags=Gio.ApplicationFlags.FLAGS_NONE)
+
         self.create_action('quit', self.on_quit, ['<primary>q'])
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
+
+        EventBroker.subscribe(events.MONITOR_ENABLED_CHANGED, self._on_monitor_enabled_changed)
 
     def do_activate(self):
         """Called when the application is activated.
@@ -45,20 +51,29 @@ class MonitorApplication(Adw.Application):
         We raise the application's main window, creating it if
         necessary.
         """
+        self._present_monitor_windows(MonitorType.CPU)
+        self._present_monitor_windows(MonitorType.GPU)
+        self._present_monitor_windows(MonitorType.Memory)
 
-        CPUMonitorWindow(application=self).present()
-        GPUMonitorWindow(application=self).present()
-        MemoryMonitorWindow(application=self).present()
+    def _on_monitor_enabled_changed(self, monitor_type, enabled):
+        if enabled:
+            GObject.idle_add(self._present_monitor_windows, monitor_type)
 
-    def on_cpu_monitor_enabled_change(self, *args, **kwargs):
-        print("action")
-        print(f"{args}")
-        print(f"{kwargs}")
+        if not enabled:
+            GObject.idle_add(self._close_monitor_windows, monitor_type)
 
-    def _on_state_set_change(self, *args, **kwargs):
-        print("signal")
-        print(f"{args}")
-        print(f"{kwargs}")
+    def _present_monitor_windows(self, monitor_type):
+        if monitor_type == MonitorType.CPU:
+            CPUMonitorWindow(application=self).present()
+        if monitor_type == MonitorType.GPU:
+            GPUMonitorWindow(application=self).present()
+        if monitor_type == MonitorType.Memory:
+            MemoryMonitorWindow(application=self).present()
+
+    def _close_monitor_windows(self, type):
+        for monitor_window in self.get_windows():
+            if monitor_window.monitor_type == type:
+                monitor_window.close()
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
@@ -98,5 +113,10 @@ class MonitorApplication(Adw.Application):
 
 def main(version):
     """The application's entry point."""
+
+    # GObject.type_register(MonitorEnableSwitch)
+    # GObject.signal_new('mierdas', MonitorEnableSwitch, GObject.SIGNAL_RUN_FIRST, GObject.TYPE_NONE, ())
+
+    EventBroker.initialize()
     app = MonitorApplication()
     return app.run(sys.argv)

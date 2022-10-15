@@ -28,6 +28,9 @@ configure_file(
 gpumonitor_sources = [
   '__init__.py',
   'main.py',
+  'event_broker.py',
+  'events.py',
+  'monitor_type.py',
 ]
 
 install_data(gpumonitor_sources, install_dir: moduledir)

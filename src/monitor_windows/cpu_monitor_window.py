@@ -1,6 +1,7 @@
-from ..monitor_windows.monitor_window import MonitorWindow
+from .monitor_window import MonitorWindow
 from ..samplers.cpu_sampler import CpuSampler
 from ..ui import colors
+from ..monitor_type import MonitorType
 
 
 class CPUMonitorWindow(MonitorWindow):
@@ -8,4 +9,4 @@ class CPUMonitorWindow(MonitorWindow):
         title = "CPU"
         sampler = CpuSampler()
 
-        super().__init__(title, sampler, color=colors.BLUE, *args, **kwargs)
+        super().__init__(title, sampler, type=MonitorType.CPU, color=colors.BLUE, *args, **kwargs)

@@ -19,6 +19,16 @@
             <property name="title">CPU monitor</property>
           </object>
         </child>
+        <child>
+          <object class="AdwActionRow" id="_gpu_monitor_enable_action_row">
+            <property name="title">GPU monitor</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow" id="_memory_monitor_enable_action_row">
+            <property name="title">Memory monitor</property>
+          </object>
+        </child>
       </object>
     </child>
   </template>
