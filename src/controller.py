@@ -1,3 +1,4 @@
+from multiprocessing.dummy import active_children
 from gi.repository import GObject
 
 from . import events
@@ -9,6 +10,13 @@ from .monitor_windows.memory_monitor_window import MemoryMonitorWindow
 from .monitor_type import MonitorType
 
 
+_monitor_type_to_window_map = {
+    MonitorType.CPU: CPUMonitorWindow,
+    MonitorType.GPU: GPUMonitorWindow,
+    MonitorType.Memory: MemoryMonitorWindow,
+}
+
+
 class Controller:
     @classmethod
     def initialize(self, application):
@@ -18,12 +26,22 @@ class Controller:
         Preferences.load()
 
         EventBroker.subscribe(events.MONITOR_ENABLED_CHANGED, self._on_monitor_enabled_changed)
+        EventBroker.subscribe(events.PREFERENCES_CHANGE_REQUESTED, self._on_preferences_change_requested)
 
     @classmethod
     def show_monitors(self):
-        self._create_monitor_window(MonitorType.CPU)
-        self._create_monitor_window(MonitorType.GPU)
-        self._create_monitor_window(MonitorType.Memory)
+        if Preferences.get("cpu_monitor.enabled"):
+            CPUMonitorWindow(application=self._application).present()
+
+        if Preferences.get("gpu_monitor.enabled"):
+            GPUMonitorWindow(application=self._application).present()
+
+        if Preferences.get("memory_monitor.enabled"):
+            MemoryMonitorWindow(application=self._application).present()
+
+    @classmethod
+    def _on_preferences_change_requested(self, preference_key, value):
+        Preferences.set(preference_key, value)
 
     @classmethod
     def _on_monitor_enabled_changed(self, monitor_type, enabled):
@@ -35,12 +53,14 @@ class Controller:
 
     @classmethod
     def _create_monitor_window(self, monitor_type):
-        if monitor_type == MonitorType.CPU:
-            CPUMonitorWindow(application=self._application).present()
-        if monitor_type == MonitorType.GPU:
-            GPUMonitorWindow(application=self._application).present()
-        if monitor_type == MonitorType.Memory:
-            MemoryMonitorWindow(application=self._application).present()
+        if monitor_type in self._get_active_monitor_types():
+            return
+        _monitor_type_to_window_map[monitor_type](application=self._application).present()
+
+    @classmethod
+    def _get_active_monitor_types(self):
+        windows = self._application.get_windows()
+        return [window.monitor_type for window in windows]
 
     @classmethod
     def _close_monitor_windows(self, type):

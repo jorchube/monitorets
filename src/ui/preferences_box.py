@@ -48,5 +48,13 @@ class _MonitorEnableSwitch(Gtk.Switch):
 
         self.connect("state-set", self._on_state_changed)
 
+        EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preferences_changed)
+
     def _on_state_changed(self, emitting_widget, enabled):
-        EventBroker.notify(events.MONITOR_ENABLED_CHANGED, self._monitor_type, self.get_active())
+        is_active = self.get_active()
+        EventBroker.notify(events.PREFERENCES_CHANGE_REQUESTED, self._preference_key, is_active)
+        EventBroker.notify(events.MONITOR_ENABLED_CHANGED, self._monitor_type, is_active)
+
+    def _on_preferences_changed(self, preference_key, value):
+        if preference_key == self._preference_key:
+            self.set_active(value)

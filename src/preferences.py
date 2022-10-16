@@ -30,13 +30,13 @@ class Preferences:
     @classmethod
     def set(self, preference_path, value):
         self._preferences[preference_path] = value
-        self._preferences_updated()
+        self._persist_preferences()
+        EventBroker.notify(events.PREFERENCES_CHANGED, preference_path, value)
 
     @classmethod
-    def _preferences_updated(self):
+    def _persist_preferences(self):
         file_path = self._build_file_path()
         self._write_preferences(self._preferences, file_path)
-        EventBroker.notify(events.PREFERENCES_CHANGED)
 
     @classmethod
     def load(self):
