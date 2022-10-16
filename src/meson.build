@@ -31,6 +31,8 @@ gpumonitor_sources = [
   'event_broker.py',
   'events.py',
   'monitor_type.py',
+  'preferences.py',
+  'controller.py',
 ]
 
 install_data(gpumonitor_sources, install_dir: moduledir)

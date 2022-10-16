@@ -4,6 +4,7 @@ from gi.repository import Adw, GLib, Gtk, GObject
 from ..event_broker import EventBroker
 from .. import events
 from ..monitor_type import MonitorType
+from ..preferences import Preferences
 
 
 @Gtk.Template(resource_path='/org/github/jorchube/gpumonitor/gtk/preferences-box.ui')
@@ -18,25 +19,33 @@ class PreferencesBox(Gtk.Box):
         super().__init__(*args, **kwargs)
         self._type = type
 
-        self._initialize_monitor_enable_action_row(MonitorType.CPU, self._cpu_monitor_enable_action_row)
-        self._initialize_monitor_enable_action_row(MonitorType.GPU, self._gpu_monitor_enable_action_row)
-        self._initialize_monitor_enable_action_row(MonitorType.Memory, self._memory_monitor_enable_action_row)
+        self._setup_monitor_enable_action_row(MonitorType.CPU, "cpu_monitor.enabled", self._cpu_monitor_enable_action_row)
+        self._setup_monitor_enable_action_row(MonitorType.GPU, "gpu_monitor.enabled", self._gpu_monitor_enable_action_row)
+        self._setup_monitor_enable_action_row(MonitorType.Memory, "memory_monitor.enabled", self._memory_monitor_enable_action_row)
 
-    def _initialize_monitor_enable_action_row(self, monitor_type, action_row):
-        monitor_enable_switch = MonitorEnableSwitch(monitor_type=monitor_type)
-        action_row.add_suffix(monitor_enable_switch)
-        action_row.set_activatable_widget(monitor_enable_switch)
+    def _setup_monitor_enable_action_row(self, monitor_type, enabled_preference_key, action_row):
+        switch = _MonitorEnableSwitch(monitor_type, enabled_preference_key)
+        is_sensitive = monitor_type != self._type
+        self._setup_action_row(monitor_type, switch, is_sensitive, action_row)
 
-        if self._type == monitor_type:
-            action_row.set_sensitive(False)
+    def _setup_action_row(self, type, switch, is_sensitive, action_row):
+        self._add_switch_to_action_row(switch, action_row)
+        action_row.set_sensitive(is_sensitive)
 
+    def _add_switch_to_action_row(self, switch, action_row):
+        action_row.add_suffix(switch)
+        action_row.set_activatable_widget(switch)
 
-class MonitorEnableSwitch(Gtk.Switch):
-
-    def __init__(self, monitor_type,*args, **kwargs):
+class _MonitorEnableSwitch(Gtk.Switch):
+    def __init__(self, monitor_type, preference_key, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.set_valign(Gtk.Align.CENTER)
         self._monitor_type = monitor_type
+        self._preference_key = preference_key
+
+        is_active = Preferences.get(self._preference_key)
+        self.set_active(is_active)
+
         self.connect("state-set", self._on_state_changed)
 
     def _on_state_changed(self, emitting_widget, enabled):

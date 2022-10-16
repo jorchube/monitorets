@@ -24,12 +24,7 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw, GLib, GObject
-from . import events
-from .event_broker import EventBroker
-from .monitor_windows.cpu_monitor_window import CPUMonitorWindow
-from .monitor_windows.gpu_monitor_window import GPUMonitorWindow
-from .monitor_windows.memory_monitor_window import MemoryMonitorWindow
-from .monitor_type import MonitorType
+from .controller import Controller
 
 
 class MonitorApplication(Adw.Application):
@@ -42,7 +37,7 @@ class MonitorApplication(Adw.Application):
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
 
-        EventBroker.subscribe(events.MONITOR_ENABLED_CHANGED, self._on_monitor_enabled_changed)
+        Controller.initialize(application=self)
 
     def do_activate(self):
         """Called when the application is activated.
@@ -50,29 +45,7 @@ class MonitorApplication(Adw.Application):
         We raise the application's main window, creating it if
         necessary.
         """
-        self._create_monitor_window(MonitorType.CPU)
-        self._create_monitor_window(MonitorType.GPU)
-        self._create_monitor_window(MonitorType.Memory)
-
-    def _on_monitor_enabled_changed(self, monitor_type, enabled):
-        if enabled:
-            GObject.idle_add(self._create_monitor_window, monitor_type)
-
-        if not enabled:
-            GObject.idle_add(self._close_monitor_windows, monitor_type)
-
-    def _create_monitor_window(self, monitor_type):
-        if monitor_type == MonitorType.CPU:
-            CPUMonitorWindow(application=self).present()
-        if monitor_type == MonitorType.GPU:
-            GPUMonitorWindow(application=self).present()
-        if monitor_type == MonitorType.Memory:
-            MemoryMonitorWindow(application=self).present()
-
-    def _close_monitor_windows(self, type):
-        for monitor_window in self.get_windows():
-            if monitor_window.monitor_type == type:
-                monitor_window.close()
+        Controller.show_monitors()
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
@@ -112,10 +85,5 @@ class MonitorApplication(Adw.Application):
 
 def main(version):
     """The application's entry point."""
-
-    # GObject.type_register(MonitorEnableSwitch)
-    # GObject.signal_new('mierdas', MonitorEnableSwitch, GObject.SIGNAL_RUN_FIRST, GObject.TYPE_NONE, ())
-
-    EventBroker.initialize()
     app = MonitorApplication()
     return app.run(sys.argv)
