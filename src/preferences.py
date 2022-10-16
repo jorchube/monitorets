@@ -12,11 +12,11 @@ class Preferences:
 
     _default_preferences = {
         "cpu_monitor.enabled": True,
-        "cpu_monitor.sampling_frequency_seconds": 0.2,
+        "cpu_monitor.sampling_frequency_seconds": 0.1,
         "gpu_monitor.enabled": True,
-        "gpu_monitor.sampling_frequency_seconds": 0.2,
+        "gpu_monitor.sampling_frequency_seconds": 0.1,
         "memory_monitor.enabled": True,
-        "memory_monitor.sampling_frequency_seconds": 0.5,
+        "memory_monitor.sampling_frequency_seconds": 0.1,
     }
 
     _preferences = {}
