@@ -50,18 +50,18 @@ class MonitorApplication(Adw.Application):
         We raise the application's main window, creating it if
         necessary.
         """
-        self._present_monitor_windows(MonitorType.CPU)
-        self._present_monitor_windows(MonitorType.GPU)
-        self._present_monitor_windows(MonitorType.Memory)
+        self._create_monitor_window(MonitorType.CPU)
+        self._create_monitor_window(MonitorType.GPU)
+        self._create_monitor_window(MonitorType.Memory)
 
     def _on_monitor_enabled_changed(self, monitor_type, enabled):
         if enabled:
-            GObject.idle_add(self._present_monitor_windows, monitor_type)
+            GObject.idle_add(self._create_monitor_window, monitor_type)
 
         if not enabled:
             GObject.idle_add(self._close_monitor_windows, monitor_type)
 
-    def _present_monitor_windows(self, monitor_type):
+    def _create_monitor_window(self, monitor_type):
         if monitor_type == MonitorType.CPU:
             CPUMonitorWindow(application=self).present()
         if monitor_type == MonitorType.GPU:

@@ -1,9 +1,9 @@
 from gi.repository import Adw, Gtk
 
-from .preferences_box import PreferencesBox
 
 class HeaderBarWrapper:
-    def __init__(self, title):
+    def __init__(self, title, preferences_box):
+        self._preferences_box = preferences_box
         self._title_label = self._build_title_label(title)
         self._settings_button = self._build_settings_button()
         self._headerbar = self._build_headerbar()
@@ -48,7 +48,7 @@ class HeaderBarWrapper:
         button.set_valign(Gtk.Align.CENTER)
 
         popover = Gtk.Popover()
-        popover.set_child(PreferencesBox())
+        popover.set_child(self._preferences_box)
         button.set_popover(popover)
         return button
 

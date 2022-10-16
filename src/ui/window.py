@@ -22,6 +22,7 @@ from gi.repository import Gtk
 
 from .graph_area import GraphArea
 from .headerbar_wrapper import HeaderBarWrapper
+from .preferences_box import PreferencesBox
 
 @Gtk.Template(resource_path='/org/github/jorchube/gpumonitor/gtk/main-window.ui')
 class UIMonitorWindow(Adw.ApplicationWindow):
@@ -34,8 +35,8 @@ class UIMonitorWindow(Adw.ApplicationWindow):
         self._sampler = sampler
         self._type = type
         self._color = color
-
-        self._headerbar_wrapper = HeaderBarWrapper(title)
+        self._preferences_box = PreferencesBox(type)
+        self._headerbar_wrapper = HeaderBarWrapper(title, self._preferences_box)
         self._drawing_area = self._build_drawing_area()
 
         self._overlay.set_child(self._drawing_area)

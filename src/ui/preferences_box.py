@@ -14,8 +14,9 @@ class PreferencesBox(Gtk.Box):
     _gpu_monitor_enable_action_row = Gtk.Template.Child()
     _memory_monitor_enable_action_row = Gtk.Template.Child()
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, type, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self._type = type
 
         self._initialize_monitor_enable_action_row(MonitorType.CPU, self._cpu_monitor_enable_action_row)
         self._initialize_monitor_enable_action_row(MonitorType.GPU, self._gpu_monitor_enable_action_row)
@@ -25,6 +26,9 @@ class PreferencesBox(Gtk.Box):
         monitor_enable_switch = MonitorEnableSwitch(monitor_type=monitor_type)
         action_row.add_suffix(monitor_enable_switch)
         action_row.set_activatable_widget(monitor_enable_switch)
+
+        if self._type == monitor_type:
+            action_row.set_sensitive(False)
 
 
 class MonitorEnableSwitch(Gtk.Switch):
