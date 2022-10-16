@@ -13,6 +13,7 @@
     <property name="width-request">200</property>
     <child>
       <object class="AdwPreferencesGroup" id="_monitor_enable_preferences_group">
+        <property name="description">Select which monitor(s) to enable </property>
         <property name="title">Monitors</property>
         <child>
           <object class="AdwActionRow" id="_cpu_monitor_enable_action_row">

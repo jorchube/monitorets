@@ -4,8 +4,8 @@ from .sampler import Sampler
 
 
 class GpuSampler(Sampler):
-    def __init__(self, file):
-        super().__init__()
+    def __init__(self, file, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self._path = file
 
     def _get_sample(self):

@@ -17,6 +17,14 @@ class TestPreferences:
         }
         '''
 
+    @pytest.fixture(autouse=True)
+    def default_preferences(self):
+        Preferences._default_preferences = {
+            "cpu_monitor.enabled": True,
+            "gpu_monitor.enabled": True,
+            "memory_monitor.enabled": True,
+        }
+
     @pytest.fixture
     def mock_file_exists(self):
         with mock.patch('src.preferences.Preferences._file_exists') as mock_exists:
@@ -85,3 +93,14 @@ class TestPreferences:
             retries = retries - 1
 
         mock_subscription.assert_called_once()
+
+    @pytest.mark.usefixtures("mock_file_exists", "mock_read_file", "mock_write_file")
+    def test_it_adds_new_fields_when_default_preferences_has_more_fields_than_persisted_preferences(self):
+        Preferences._default_preferences["new.key"] = "new value"
+
+        Preferences.load()
+
+        assert Preferences.get("new.key") == "new value"
+        assert Preferences.get("cpu_monitor.enabled") is True
+        assert Preferences.get("gpu_monitor.enabled") is False
+        assert Preferences.get("memory_monitor.enabled") is True

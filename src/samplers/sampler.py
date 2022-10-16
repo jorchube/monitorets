@@ -10,6 +10,10 @@ class Sampler:
         self._task = None
         self._is_running = False
 
+    @property
+    def sampling_frequency_seconds(self):
+        return self._sampling_frequency_seconds
+
     def install_new_sample_callback(self, callback):
         self._sample_callback = callback
 

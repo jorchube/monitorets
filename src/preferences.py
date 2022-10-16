@@ -12,8 +12,11 @@ class Preferences:
 
     _default_preferences = {
         "cpu_monitor.enabled": True,
+        "cpu_monitor.sampling_frequency_seconds": 0.1,
         "gpu_monitor.enabled": True,
+        "gpu_monitor.sampling_frequency_seconds": 0.5,
         "memory_monitor.enabled": True,
+        "memory_monitor.sampling_frequency_seconds": 0.5,
     }
 
     _preferences = {}
@@ -44,7 +47,7 @@ class Preferences:
         if not self._file_exists(file_path):
             self._write_preferences(self._default_preferences, file_path)
 
-        self._preferences = self._read_preferences(file_path)
+        self._preferences = self._default_preferences | self._read_preferences(file_path)
 
     @classmethod
     def _read_preferences(self, file_path):

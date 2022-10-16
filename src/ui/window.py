@@ -55,7 +55,7 @@ class UIMonitorWindow(Adw.ApplicationWindow):
         return self._type
 
     def _build_graph_area(self):
-        return GraphArea(self._drawing_area, self._color)
+        return GraphArea(self._drawing_area, self._color, self._sampler.sampling_frequency_seconds)
 
     def _build_drawing_area(self):
         drawing_area = Gtk.DrawingArea()

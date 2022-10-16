@@ -4,8 +4,8 @@ from .sampler import Sampler
 
 
 class MemorySampler(Sampler):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
     def _get_sample(self):
         vmem = psutil.virtual_memory()
