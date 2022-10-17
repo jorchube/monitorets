@@ -11,6 +11,7 @@ class Preferences:
     _file_name = "preferences.json"
 
     _default_preferences = {
+        "general.theme": "system",
         "cpu_monitor.enabled": True,
         "cpu_monitor.sampling_frequency_seconds": 0.1,
         "gpu_monitor.enabled": True,

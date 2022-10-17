@@ -16,9 +16,9 @@
 	(5,5,"AdwActionRow","_memory_monitor_enable_action_row",2,None,None,None,2),
 	(5,6,"AdwPreferencesGroup",None,1,None,None,None,None),
 	(5,7,"GtkBox",None,6,None,None,None,None),
-	(5,8,"GtkToggleButton","_toggle_button_1",7,None,None,None,None),
-	(5,9,"GtkToggleButton",None,7,None,None,None,1),
-	(5,10,"GtkToggleButton",None,7,None,None,None,2),
+	(5,8,"GtkToggleButton","_system_theme_toggle_button",7,None,None,None,None),
+	(5,9,"GtkToggleButton","_light_theme_toggle_button",7,None,None,None,1),
+	(5,10,"GtkToggleButton","_dark_theme_toggle_button",7,None,None,None,2),
 	(5,11,"GtkToggleButton",None,1,None,None,None,2)
   </object>
   <object_property>

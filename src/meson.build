@@ -33,6 +33,7 @@ gpumonitor_sources = [
   'monitor_type.py',
   'preferences.py',
   'controller.py',
+  'theming.py',
 ]
 
 install_data(gpumonitor_sources, install_dir: moduledir)

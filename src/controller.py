@@ -1,4 +1,3 @@
-from multiprocessing.dummy import active_children
 from gi.repository import GObject
 
 from . import events
@@ -8,6 +7,7 @@ from .monitor_windows.cpu_monitor_window import CPUMonitorWindow
 from .monitor_windows.gpu_monitor_window import GPUMonitorWindow
 from .monitor_windows.memory_monitor_window import MemoryMonitorWindow
 from .monitor_type import MonitorType
+from .theming import Theming
 
 
 _monitor_type_to_window_map = {
@@ -24,6 +24,7 @@ class Controller:
 
         EventBroker.initialize()
         Preferences.load()
+        Theming.initialize()
 
         EventBroker.subscribe(events.MONITOR_ENABLED_CHANGED, self._on_monitor_enabled_changed)
         EventBroker.subscribe(events.PREFERENCES_CHANGE_REQUESTED, self._on_preferences_change_requested)
