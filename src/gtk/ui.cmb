@@ -10,16 +10,22 @@
 	(2,3,"GtkBox",None,1,None,None,None,1),
 	(2,7,"GtkOverlay","_overlay",3,None,None,None,None),
 	(5,1,"GtkBox","PreferencesBox",None,None,None,None,None),
-	(5,2,"AdwPreferencesGroup","_monitor_enable_preferences_group",1,None,None,None,None),
+	(5,2,"AdwPreferencesGroup","_monitor_enable_preferences_group",1,None,None,None,1),
 	(5,3,"AdwActionRow","_cpu_monitor_enable_action_row",2,None,None,None,None),
 	(5,4,"AdwActionRow","_gpu_monitor_enable_action_row",2,None,None,None,1),
-	(5,5,"AdwActionRow","_memory_monitor_enable_action_row",2,None,None,None,2)
+	(5,5,"AdwActionRow","_memory_monitor_enable_action_row",2,None,None,None,2),
+	(5,6,"AdwPreferencesGroup",None,1,None,None,None,None),
+	(5,7,"GtkBox",None,6,None,None,None,None),
+	(5,8,"GtkToggleButton","_toggle_button_1",7,None,None,None,None),
+	(5,9,"GtkToggleButton",None,7,None,None,None,1),
+	(5,10,"GtkToggleButton",None,7,None,None,None,2),
+	(5,11,"GtkToggleButton",None,1,None,None,None,2)
   </object>
   <object_property>
 	(2,1,"GtkWindow","default-height","45",None,None,None,None,None),
 	(2,1,"GtkWindow","default-width","150",None,None,None,None,None),
 	(2,3,"GtkOrientable","orientation","vertical",None,None,None,None,None),
-	(5,1,"GtkBox","spacing","5",None,None,None,None,None),
+	(5,1,"GtkBox","spacing","10",None,None,None,None,None),
 	(5,1,"GtkOrientable","orientation","vertical",None,None,None,None,None),
 	(5,1,"GtkWidget","margin-bottom","10",None,None,None,None,None),
 	(5,1,"GtkWidget","margin-end","10",None,None,None,None,None),
@@ -30,6 +36,23 @@
 	(5,2,"AdwPreferencesGroup","title","Monitors",None,None,None,None,None),
 	(5,3,"AdwPreferencesRow","title","CPU monitor",None,None,None,None,None),
 	(5,4,"AdwPreferencesRow","title","GPU monitor",None,None,None,None,None),
-	(5,5,"AdwPreferencesRow","title","Memory monitor",None,None,None,None,None)
+	(5,5,"AdwPreferencesRow","title","Memory monitor",None,None,None,None,None),
+	(5,7,"GtkBox","spacing","20",None,None,None,None,None),
+	(5,7,"GtkWidget","halign","center",None,None,None,None,None),
+	(5,8,"GtkWidget","css-classes","circular",None,None,None,None,None),
+	(5,8,"GtkWidget","height-request","50",None,None,None,None,None),
+	(5,8,"GtkWidget","width-request","50",None,None,None,None,None),
+	(5,9,"GtkToggleButton","group","8",None,None,None,None,None),
+	(5,9,"GtkWidget","css-classes","circular",None,None,None,None,None),
+	(5,9,"GtkWidget","height-request","50",None,None,None,None,None),
+	(5,9,"GtkWidget","width-request","50",None,None,None,None,None),
+	(5,10,"GtkToggleButton","group","8",None,None,None,None,None),
+	(5,10,"GtkWidget","css-classes","circular",None,None,None,None,None),
+	(5,10,"GtkWidget","height-request","50",None,None,None,None,None),
+	(5,10,"GtkWidget","width-request","50",None,None,None,None,None),
+	(5,11,"GtkActionable","action-name","app.about",None,None,None,None,None),
+	(5,11,"GtkButton","has-frame","False",None,None,None,None,None),
+	(5,11,"GtkButton","icon-name","help-about-symbolic",None,None,None,None,None),
+	(5,11,"GtkWidget","halign","end",None,None,None,None,None)
   </object_property>
 </cambalache-project>
