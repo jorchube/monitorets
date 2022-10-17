@@ -35,8 +35,9 @@ class UIMonitorWindow(Adw.ApplicationWindow):
         self._sampler = sampler
         self._type = type
         self._color = color
+        self._title_label = self._build_title_label(title)
         self._preferences_box = PreferencesBox(type)
-        self._headerbar_wrapper = HeaderBarWrapper(title, self._preferences_box)
+        self._headerbar_wrapper = HeaderBarWrapper(self._title_label, self._preferences_box)
         self._drawing_area = self._build_drawing_area()
 
         self._overlay.set_child(self._drawing_area)
@@ -53,6 +54,11 @@ class UIMonitorWindow(Adw.ApplicationWindow):
     @property
     def monitor_type(self):
         return self._type
+
+    def _build_title_label(self, title):
+        label = Gtk.Label(label="")
+        label.set_markup(f"<span weight='bold' color='#{self._color.HTML}'>{title}</span>")
+        return label
 
     def _build_graph_area(self):
         return GraphArea(self._drawing_area, self._color, self._sampler.sampling_frequency_seconds)

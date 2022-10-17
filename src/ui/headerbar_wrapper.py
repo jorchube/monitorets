@@ -2,9 +2,9 @@ from gi.repository import Adw, Gtk
 
 
 class HeaderBarWrapper:
-    def __init__(self, title, preferences_box):
+    def __init__(self, title_label, preferences_box):
         self._preferences_box = preferences_box
-        self._title_label = self._build_title_label(title)
+        self._title_label = title_label
         self._settings_button = self._build_settings_button()
         self._headerbar = self._build_headerbar()
 
@@ -12,7 +12,7 @@ class HeaderBarWrapper:
         self.title_overlay.set_child(self._title_label)
         self.title_overlay.add_overlay(self._headerbar)
 
-        self._title_label.set_opacity(0.5)
+        self._title_label.set_opacity(0.75)
 
         self.on_mouse_exit()
 
