@@ -4,7 +4,6 @@
   <requires lib="gtk" version="4.6"/>
   <requires lib="libadwaita" version="1.1"/>
   <template class="PreferencesBox" parent="GtkBox">
-    <property name="margin-bottom">10</property>
     <property name="margin-end">10</property>
     <property name="margin-start">10</property>
     <property name="margin-top">10</property>
@@ -13,31 +12,27 @@
     <property name="width-request">200</property>
     <child>
       <object class="AdwPreferencesGroup">
+        <property name="title">Theme</property>
         <child>
           <object class="GtkBox">
-            <property name="halign">center</property>
-            <property name="spacing">20</property>
+            <property name="css-classes">linked
+</property>
+            <property name="homogeneous">True</property>
             <child>
               <object class="GtkToggleButton" id="_toggle_button_1">
-                <property name="css-classes">circular</property>
-                <property name="height-request">50</property>
-                <property name="width-request">50</property>
+                <property name="label">System</property>
               </object>
             </child>
             <child>
               <object class="GtkToggleButton">
-                <property name="css-classes">circular</property>
                 <property name="group">_toggle_button_1</property>
-                <property name="height-request">50</property>
-                <property name="width-request">50</property>
+                <property name="label">Light</property>
               </object>
             </child>
             <child>
               <object class="GtkToggleButton">
-                <property name="css-classes">circular</property>
                 <property name="group">_toggle_button_1</property>
-                <property name="height-request">50</property>
-                <property name="width-request">50</property>
+                <property name="label">Dark</property>
               </object>
             </child>
           </object>
