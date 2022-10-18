@@ -18,6 +18,10 @@ _monitor_type_to_window_map = {
 
 
 class Controller:
+    _CPU_MONITOR_ENABLED_KEY = "cpu_monitor.enabled"
+    _GPU_MONITOR_ENABLED_KEY = "gpu_monitor.enabled"
+    _MEMORY_MONITOR_ENABLED_KEY = "memory_monitor.enabled"
+
     @classmethod
     def initialize(self, application):
         self._application = application
@@ -26,8 +30,7 @@ class Controller:
         Preferences.load()
         Theming.initialize()
 
-        EventBroker.subscribe(events.MONITOR_ENABLED_CHANGED, self._on_monitor_enabled_changed)
-        EventBroker.subscribe(events.PREFERENCES_CHANGE_REQUESTED, self._on_preferences_change_requested)
+        EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preference_changed)
 
     @classmethod
     def show_monitors(self):
@@ -41,8 +44,15 @@ class Controller:
             MemoryMonitorWindow(application=self._application).present()
 
     @classmethod
-    def _on_preferences_change_requested(self, preference_key, value):
-        Preferences.set(preference_key, value)
+    def _on_preference_changed(self, preference_key, value):
+        if preference_key == self._CPU_MONITOR_ENABLED_KEY:
+            self._on_monitor_enabled_changed(MonitorType.CPU, value)
+
+        if preference_key == self._GPU_MONITOR_ENABLED_KEY:
+            self._on_monitor_enabled_changed(MonitorType.GPU, value)
+
+        if preference_key == self._MEMORY_MONITOR_ENABLED_KEY:
+            self._on_monitor_enabled_changed(MonitorType.Memory, value)
 
     @classmethod
     def _on_monitor_enabled_changed(self, monitor_type, enabled):

@@ -22,8 +22,8 @@
 	(5,11,"GtkToggleButton",None,1,None,None,None,2)
   </object>
   <object_property>
-	(2,1,"GtkWindow","default-height","45",None,None,None,None,None),
-	(2,1,"GtkWindow","default-width","150",None,None,None,None,None),
+	(2,1,"GtkWindow","default-height","90",None,None,None,None,None),
+	(2,1,"GtkWindow","default-width","160",None,None,None,None,None),
 	(2,3,"GtkOrientable","orientation","vertical",None,None,None,None,None),
 	(5,1,"GtkBox","spacing","10",None,None,None,None,None),
 	(5,1,"GtkOrientable","orientation","vertical",None,None,None,None,None),

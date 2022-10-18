@@ -59,8 +59,7 @@ class _MonitorEnableSwitch(Gtk.Switch):
 
     def _on_state_changed(self, emitting_widget, enabled):
         is_active = self.get_active()
-        EventBroker.notify(events.PREFERENCES_CHANGE_REQUESTED, self._preference_key, is_active)
-        EventBroker.notify(events.MONITOR_ENABLED_CHANGED, self._monitor_type, is_active)
+        Preferences.set(self._preference_key, is_active)
 
     def _on_preferences_changed(self, preference_key, value):
         if preference_key == self._preference_key:
@@ -69,6 +68,7 @@ class _MonitorEnableSwitch(Gtk.Switch):
 
 class _ThemeToggleWrapper:
     def __init__(self, preferences_box):
+        self._preference_key = "general.theme"
         self._theme_to_toggle_button_map = {
             Theme.SYSTEM: None,
             Theme.LIGHT: None,
@@ -85,22 +85,23 @@ class _ThemeToggleWrapper:
         self._preferences_box._light_theme_toggle_button.connect("clicked", self._on_light_theme_button_clicked)
         self._preferences_box._dark_theme_toggle_button.connect("clicked", self._on_dark_theme_button_clicked)
 
-        theme = Preferences.get("general.theme")
+        theme = Preferences.get(self._preference_key)
         self._set_active_toggle_for_theme(theme)
 
-        EventBroker.subscribe(events.THEME_CHANGED, self._on_theme_changed)
+        EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preference_changed)
 
     def _on_system_theme_button_clicked(self, user_data):
-        EventBroker.notify(events.THEME_CHANGE_REQUESTED, Theme.SYSTEM)
+        Preferences.set(self._preference_key, Theme.SYSTEM)
 
     def _on_light_theme_button_clicked(self, user_data):
-        EventBroker.notify(events.THEME_CHANGE_REQUESTED, Theme.LIGHT)
+        Preferences.set(self._preference_key, Theme.LIGHT)
 
     def _on_dark_theme_button_clicked(self, user_data):
-        EventBroker.notify(events.THEME_CHANGE_REQUESTED, Theme.DARK)
+        Preferences.set(self._preference_key, Theme.DARK)
 
     def _set_active_toggle_for_theme(self, theme):
         self._theme_to_toggle_button_map[theme].set_active(True)
 
-    def _on_theme_changed(self, value):
-        self._set_active_toggle_for_theme(value)
+    def _on_preference_changed(self, preference_key, value):
+        if preference_key == self._preference_key:
+            self._set_active_toggle_for_theme(value)
