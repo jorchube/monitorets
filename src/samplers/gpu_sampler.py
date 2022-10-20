@@ -10,8 +10,8 @@ class GpuSampler(Sampler):
         self._file_handle = open(self._path, "r")
 
     def _get_sample(self):
-        value_read = self._read_file(self._file_handle)
-        return int(value_read)
+        value = self._read_file(self._file_handle)
+        return int(value)
 
     def _read_file(self, file_handle):
         file_handle.seek(0, SEEK_SET)

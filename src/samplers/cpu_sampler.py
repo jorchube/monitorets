@@ -9,4 +9,5 @@ class CpuSampler(Sampler):
 
     def _get_sample(self):
         value = psutil.cpu_percent()
+
         return int(value)

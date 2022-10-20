@@ -1,6 +1,5 @@
+import math
 import cairo
-
-
 
 
 class GraphArea:
@@ -28,12 +27,12 @@ class GraphArea:
 
         self._plot_y_fill(context, width, height)
         self._plot_y_values(context, width, height)
+        self._apply_mask(context, width, height)
 
     def _release_samples_if_needed(self, width):
         max_values = self._get_number_of_visible_values(width)
         if len(self._values) > max_values:
             self._values = self._values[:max_values]
-
 
     def add_value(self, value):
         self._values.insert(0, value)
@@ -60,7 +59,13 @@ class GraphArea:
 
         self._plot_data_points(context, width, height, close=True)
 
+        # pattern = cairo.LinearGradient(0, 0, 0, height)
+        # pattern.add_color_stop_rgba(0, *self._color, 0.7)
+        # pattern.add_color_stop_rgba(1, 0, 0, 0, 0)
+        # context.set_source(pattern)
+
         context.set_source_rgba(*self._color, self._ALPHA_FILL)
+
         context.fill()
 
     def _plot_data_points(self, context, width, height, close=False):
@@ -77,3 +82,21 @@ class GraphArea:
             context.line_to(x, height)
             context.line_to(width, height)
             context.close_path()
+
+    def _apply_mask(self, context, width, height):
+        RADIUS = 12
+
+        context.set_operator(cairo.OPERATOR_DEST_IN)
+        context.new_path()
+
+        context.line_to(width, height-RADIUS)
+        context.arc(width-RADIUS, height-RADIUS, RADIUS, 0, math.pi/2)
+        context.line_to(RADIUS, height)
+        context.arc(RADIUS, height-RADIUS, RADIUS, math.pi/2, math.pi)
+        context.line_to(0, RADIUS)
+        context.arc(RADIUS, RADIUS, RADIUS, math.pi, (3/2)*math.pi)
+        context.line_to(width-RADIUS, 0)
+        context.arc(width-RADIUS, RADIUS, RADIUS, (3/2)*math.pi, 0)
+
+        context.close_path()
+        context.fill()

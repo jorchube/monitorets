@@ -25,6 +25,7 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw, GLib, GObject
 from .controller import Controller
+from .ui.single_window import SingleWindow
 
 
 class MonitorApplication(Adw.Application):
@@ -45,7 +46,9 @@ class MonitorApplication(Adw.Application):
         We raise the application's main window, creating it if
         necessary.
         """
-        Controller.show_monitors()
+        # Controller.show_monitors()
+        SingleWindow(application=self).present()
+
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
