@@ -1,20 +1,8 @@
-from gi.repository import GObject
-
 from . import events
 from .event_broker import EventBroker
 from .preferences import Preferences
-from .monitor_windows.cpu_monitor_window import CPUMonitorWindow
-from .monitor_windows.gpu_monitor_window import GPUMonitorWindow
-from .monitor_windows.memory_monitor_window import MemoryMonitorWindow
 from .monitor_type import MonitorType
 from .theming import Theming
-
-
-_monitor_type_to_window_map = {
-    MonitorType.CPU: CPUMonitorWindow,
-    MonitorType.GPU: GPUMonitorWindow,
-    MonitorType.Memory: MemoryMonitorWindow,
-}
 
 
 class Controller:
@@ -62,20 +50,3 @@ class Controller:
             event = events.MONITOR_DISABLED
 
         EventBroker.notify(event, monitor_type)
-
-    @classmethod
-    def _create_monitor_window(self, monitor_type):
-        if monitor_type in self._get_active_monitor_types():
-            return
-        _monitor_type_to_window_map[monitor_type](application=self._application).present()
-
-    @classmethod
-    def _get_active_monitor_types(self):
-        windows = self._application.get_windows()
-        return [window.monitor_type for window in windows]
-
-    @classmethod
-    def _close_monitor_windows(self, type):
-        for monitor_window in self._application.get_windows():
-            if monitor_window.monitor_type == type:
-                monitor_window.close()
