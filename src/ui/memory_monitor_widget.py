@@ -6,7 +6,7 @@ from . import colors
 
 class MemoryMonitorWidget(MonitorWidget):
     def __init__(self, *args, **kwargs):
-        title = "title"
+        title = "Memory"
         sampler = MemorySampler()
         type = MonitorType.Memory
         color = colors.ORANGE

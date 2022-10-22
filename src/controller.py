@@ -35,13 +35,13 @@ class Controller:
     @classmethod
     def show_monitors(self):
         if Preferences.get("cpu_monitor.enabled"):
-            CPUMonitorWindow(application=self._application).present()
+            EventBroker.notify(events.MONITOR_ENABLED, MonitorType.CPU)
 
         if Preferences.get("gpu_monitor.enabled"):
-            GPUMonitorWindow(application=self._application).present()
+            EventBroker.notify(events.MONITOR_ENABLED, MonitorType.GPU)
 
         if Preferences.get("memory_monitor.enabled"):
-            MemoryMonitorWindow(application=self._application).present()
+            EventBroker.notify(events.MONITOR_ENABLED, MonitorType.Memory)
 
     @classmethod
     def _on_preference_changed(self, preference_key, value):
@@ -57,10 +57,11 @@ class Controller:
     @classmethod
     def _on_monitor_enabled_changed(self, monitor_type, enabled):
         if enabled:
-            GObject.idle_add(self._create_monitor_window, monitor_type)
+            event = events.MONITOR_ENABLED
+        else:
+            event = events.MONITOR_DISABLED
 
-        if not enabled:
-            GObject.idle_add(self._close_monitor_windows, monitor_type)
+        EventBroker.notify(event, monitor_type)
 
     @classmethod
     def _create_monitor_window(self, monitor_type):

@@ -10,13 +10,11 @@
       <object class="GtkOverlay" id="_overlay">
         <property name="child">
           <object class="GtkBox" id="_monitors_box">
-            <property name="homogeneous">True</property>
-            <property name="margin-bottom">5</property>
-            <property name="margin-end">5</property>
-            <property name="margin-start">5</property>
-            <property name="margin-top">5</property>
+            <property name="margin-bottom">2</property>
+            <property name="margin-end">2</property>
+            <property name="margin-start">2</property>
+            <property name="margin-top">2</property>
             <property name="orientation">vertical</property>
-            <property name="spacing">5</property>
           </object>
         </property>
       </object>

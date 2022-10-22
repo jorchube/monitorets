@@ -19,10 +19,8 @@ class PreferencesBox(Gtk.Box):
     _light_theme_toggle_button = Gtk.Template.Child()
     _dark_theme_toggle_button = Gtk.Template.Child()
 
-    def __init__(self, type, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self._type = type
-
         self._theme_toggle_wrapper = _ThemeToggleWrapper(self)
 
         self._setup_monitor_enable_action_row(MonitorType.CPU, "cpu_monitor.enabled", self._cpu_monitor_enable_action_row)
@@ -31,12 +29,7 @@ class PreferencesBox(Gtk.Box):
 
     def _setup_monitor_enable_action_row(self, monitor_type, enabled_preference_key, action_row):
         switch = _MonitorEnableSwitch(monitor_type, enabled_preference_key)
-        is_sensitive = monitor_type != self._type
-        self._setup_action_row(monitor_type, switch, is_sensitive, action_row)
-
-    def _setup_action_row(self, type, switch, is_sensitive, action_row):
         self._add_switch_to_action_row(switch, action_row)
-        action_row.set_sensitive(is_sensitive)
 
     def _add_switch_to_action_row(self, switch, action_row):
         action_row.add_suffix(switch)

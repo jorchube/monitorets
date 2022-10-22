@@ -6,7 +6,7 @@ from . import colors
 
 class GpuMonitorWidget(MonitorWidget):
     def __init__(self, *args, **kwargs):
-        title = "title"
+        title = "GPU"
         sampler = GpuSampler("/sys/class/drm/card0/device/gpu_busy_percent")
         type = MonitorType.GPU
         color = colors.GREEN

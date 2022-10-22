@@ -46,8 +46,8 @@ class MonitorApplication(Adw.Application):
         We raise the application's main window, creating it if
         necessary.
         """
-        # Controller.show_monitors()
         SingleWindow(application=self).present()
+        Controller.show_monitors()
 
 
     def on_about_action(self, widget, _):

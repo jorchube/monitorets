@@ -6,7 +6,7 @@ from . import colors
 
 class CpuMonitorWidget(MonitorWidget):
     def __init__(self, *args, **kwargs):
-        title = "title"
+        title = "CPU"
         sampler = CpuSampler()
         type = MonitorType.CPU
         color = colors.BLUE

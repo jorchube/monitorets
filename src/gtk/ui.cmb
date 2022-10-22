@@ -55,12 +55,10 @@
 	(7,1,"GtkWindow","default-height","200",None,None,None,None,None),
 	(7,1,"GtkWindow","default-width","160",None,None,None,None,None),
 	(7,2,"GtkOverlay","child",None,None,None,None,None,3),
-	(7,3,"GtkBox","homogeneous","True",None,None,None,None,None),
-	(7,3,"GtkBox","spacing","5",None,None,None,None,None),
 	(7,3,"GtkOrientable","orientation","vertical",None,None,None,None,None),
-	(7,3,"GtkWidget","margin-bottom","5",None,None,None,None,None),
-	(7,3,"GtkWidget","margin-end","5",None,None,None,None,None),
-	(7,3,"GtkWidget","margin-start","5",None,None,None,None,None),
-	(7,3,"GtkWidget","margin-top","5",None,None,None,None,None)
+	(7,3,"GtkWidget","margin-bottom","2",None,None,None,None,None),
+	(7,3,"GtkWidget","margin-end","2",None,None,None,None,None),
+	(7,3,"GtkWidget","margin-start","2",None,None,None,None,None),
+	(7,3,"GtkWidget","margin-top","2",None,None,None,None,None)
   </object_property>
 </cambalache-project>
