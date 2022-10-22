@@ -11,22 +11,16 @@ class MonitorWidget(Adw.Bin):
         self.add_css_class("card")
         self.add_css_class("frame")
 
-        self._title = title
+        title_label = self._build_title_label(title, color)
+        drawing_area = self._build_drawing_area()
+
         self._sampler = sampler
-        self._type = type
-        self._color = color
-        self._drawing_area = self._build_drawing_area()
-
-        self._overlay = Gtk.Overlay()
-        self.set_child(self._overlay)
-
-        self._overlay.set_child(self._drawing_area)
-
-        title = self._build_title_label()
-        self._overlay.add_overlay(title)
-
-        self._graph_area = self._build_graph_area()
+        self._graph_area = self._build_graph_area(drawing_area, color, sampler.sampling_frequency_seconds)
         self._sampler.install_new_sample_callback(self._graph_area.add_value)
+        self._overlay = Gtk.Overlay()
+        self._overlay.set_child(drawing_area)
+        self._overlay.add_overlay(title_label)
+        self.set_child(self._overlay)
 
     def start_sampling(self):
         self._sampler.start()
@@ -34,9 +28,9 @@ class MonitorWidget(Adw.Bin):
     def stop_sampling(self):
         self._sampler.stop()
 
-    def _build_title_label(self):
+    def _build_title_label(self, title, color):
         label = Gtk.Label()
-        label.set_markup(f"<span weight='bold' color='#{self._color.HTML}'>{self._title}</span>")
+        label.set_markup(f"<span weight='bold' color='#{color.HTML}'>{title}</span>")
         return label
 
     def _build_drawing_area(self):
@@ -46,5 +40,5 @@ class MonitorWidget(Adw.Bin):
 
         return drawing_area
 
-    def _build_graph_area(self):
-        return GraphArea(self._drawing_area, self._color, self._sampler.sampling_frequency_seconds)
+    def _build_graph_area(self, drawing_area, color, sampling_frequency_seconds):
+        return GraphArea(drawing_area, color, sampling_frequency_seconds)

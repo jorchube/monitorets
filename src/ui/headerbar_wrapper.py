@@ -4,8 +4,8 @@ from gi.repository import Adw, Gtk
 class HeaderBarWrapper:
     def __init__(self, preferences_box):
         self._preferences_box = preferences_box
-        self._settings_button = self._build_settings_button()
-        self._headerbar = self._build_headerbar()
+        self._preferences_button = self._build_preferences_button(self._preferences_box)
+        self._headerbar = self._build_headerbar(self._preferences_button)
 
         self._set_not_focused()
 
@@ -25,15 +25,16 @@ class HeaderBarWrapper:
     def _set_focused(self):
         self._headerbar.set_opacity(1)
 
-    def _build_headerbar(self):
+    def _build_headerbar(self, preferences_button):
         headerbar = Adw.HeaderBar()
         headerbar.set_vexpand(False)
         headerbar.add_css_class("flat")
         headerbar.set_title_widget(Gtk.Label(label=""))
-        headerbar.pack_start(self._settings_button)
+        headerbar.pack_start(preferences_button)
+
         return headerbar
 
-    def _build_settings_button(self):
+    def _build_preferences_button(self, preferences_box):
         button = Gtk.MenuButton()
         button.set_icon_name("document-properties-symbolic")
         button.add_css_class("circular")
@@ -42,6 +43,7 @@ class HeaderBarWrapper:
         button.set_valign(Gtk.Align.CENTER)
 
         popover = Gtk.Popover()
-        popover.set_child(self._preferences_box)
+        popover.set_child(preferences_box)
         button.set_popover(popover)
+
         return button

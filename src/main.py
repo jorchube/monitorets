@@ -23,7 +23,7 @@ import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Adw, GLib, GObject
+from gi.repository import Gio, Adw
 from .controller import Controller
 from .ui.single_window import SingleWindow
 

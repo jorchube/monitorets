@@ -7,6 +7,7 @@ class GraphArea:
     _ALPHA_FILL = 0.2
     _BUFFER_BEFORE_RELEASE_SAMPLE = 50
     _SPACING_PER_SECOND = 10
+    _MASK_CORNER_RADIUS = 12
 
     def __init__(self, gtk_drawing_area, color=None, sampling_frequency_seconds=1.0):
         self._color = color.RGB
@@ -78,19 +79,20 @@ class GraphArea:
             context.close_path()
 
     def _apply_mask(self, context, width, height):
-        RADIUS = 12
-
         context.set_operator(cairo.OPERATOR_DEST_IN)
         context.new_path()
-
-        context.line_to(width, height-RADIUS)
-        context.arc(width-RADIUS, height-RADIUS, RADIUS, 0, math.pi/2)
-        context.line_to(RADIUS, height)
-        context.arc(RADIUS, height-RADIUS, RADIUS, math.pi/2, math.pi)
-        context.line_to(0, RADIUS)
-        context.arc(RADIUS, RADIUS, RADIUS, math.pi, (3/2)*math.pi)
-        context.line_to(width-RADIUS, 0)
-        context.arc(width-RADIUS, RADIUS, RADIUS, (3/2)*math.pi, 0)
-
+        self._rectangle_path_with_corner_radius(context, width, height, self._MASK_CORNER_RADIUS)
         context.close_path()
         context.fill()
+
+    def _rectangle_path_with_corner_radius(self, context, width, height, radius):
+        context.new_path()
+
+        context.line_to(width, height-radius)
+        context.arc(width-radius, height-radius, radius, 0, math.pi/2)
+        context.line_to(radius, height)
+        context.arc(radius, height-radius, radius, math.pi/2, math.pi)
+        context.line_to(0, radius)
+        context.arc(radius, radius, radius, math.pi, (3/2)*math.pi)
+        context.line_to(width-radius, 0)
+        context.arc(width-radius, radius, radius, (3/2)*math.pi, 0)

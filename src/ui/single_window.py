@@ -31,8 +31,6 @@ from ..event_broker import EventBroker
 from .. import events
 
 
-
-
 @Gtk.Template(resource_path='/org/github/jorchube/gpumonitor/gtk/single-window.ui')
 class SingleWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'SingleWindow'
@@ -61,12 +59,14 @@ class SingleWindow(Adw.ApplicationWindow):
 
         self._headerbar_wrapper = HeaderBarWrapper(PreferencesBox())
         self._overlay.add_overlay(self._headerbar_wrapper.root_widget)
+        self._add_monitor_bins_to_monitors_box(self._monitor_bins, self._monitors_box)
 
         self.connect("close-request", self._close_request)
         self._install_motion_event_controller()
 
-        for bin in self._monitor_bins.values():
-            self._monitors_box.append(bin)
+    def _add_monitor_bins_to_monitors_box(self, monitor_bins, monitor_box):
+        for bin in monitor_bins.values():
+            monitor_box.append(bin)
 
     def _on_monitor_enabled(self, type):
         if self._monitor_bins[type].get_child() is not None:
@@ -74,10 +74,7 @@ class SingleWindow(Adw.ApplicationWindow):
 
         monitor = self._available_monitors[type]()
         monitor.start_sampling()
-        self._monitor_bins[type].set_margin_top(4)
-        self._monitor_bins[type].set_margin_bottom(4)
-        self._monitor_bins[type].set_margin_start(4)
-        self._monitor_bins[type].set_margin_end(4)
+        self._set_monitor_bin_enabled_style(self._monitor_bins[type])
         self._monitor_bins[type].set_child(monitor)
 
     def _on_monitor_disabled(self, type):
@@ -86,10 +83,7 @@ class SingleWindow(Adw.ApplicationWindow):
 
         monitor = self._monitor_bins[type].get_child()
         self._monitor_bins[type].set_child(None)
-        self._monitor_bins[type].set_margin_top(0)
-        self._monitor_bins[type].set_margin_bottom(0)
-        self._monitor_bins[type].set_margin_start(0)
-        self._monitor_bins[type].set_margin_end(0)
+        self._set_monitor_bin_disabled_style(self._monitor_bins[type])
         monitor.stop_sampling()
 
     def _set_horizontal_layout(self):
@@ -115,3 +109,15 @@ class SingleWindow(Adw.ApplicationWindow):
             monitor = monitor_bin.get_child()
             if monitor:
                 monitor.stop_sampling()
+
+    def _set_monitor_bin_disabled_style(self, monitor_bin):
+        monitor_bin.set_margin_top(0)
+        monitor_bin.set_margin_bottom(0)
+        monitor_bin.set_margin_start(0)
+        monitor_bin.set_margin_end(0)
+
+    def _set_monitor_bin_enabled_style(self, monitor_bin):
+        monitor_bin.set_margin_top(4)
+        monitor_bin.set_margin_bottom(4)
+        monitor_bin.set_margin_start(4)
+        monitor_bin.set_margin_end(4)

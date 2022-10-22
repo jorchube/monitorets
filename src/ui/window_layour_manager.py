@@ -2,7 +2,7 @@ from gi.repository import Gtk
 
 
 class WindowLayoutManager:
-    _SENSIBILITY = 1.5
+    _WIDTH_HEIGHT_RATIO_THRESHOLD = 1.5
 
     def __init__(self, window, set_horizontal_layout_callback, set_vertical_layout_callback):
         self._window = window
@@ -18,8 +18,14 @@ class WindowLayoutManager:
         new_width = self._window.get_width()
         new_height = self._window.get_height()
 
-        if (new_width / new_height) > self._SENSIBILITY:
+        if self._should_trigger_horizontal_layout(new_width, new_height, self._WIDTH_HEIGHT_RATIO_THRESHOLD):
             self._set_horizontal_layout()
 
-        if (new_height / new_width) > self._SENSIBILITY:
+        if self._should_trigger_vertical_layout(new_width, new_height, self._WIDTH_HEIGHT_RATIO_THRESHOLD):
             self._set_vertical_layout()
+
+    def _should_trigger_horizontal_layout(self, width, height, sensibility):
+        return (width / height) > sensibility
+
+    def _should_trigger_vertical_layout(self, width, height, sensibility):
+        return (height / width) > sensibility
