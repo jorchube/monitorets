@@ -4,7 +4,7 @@ from time import sleep
 
 
 class Sampler:
-    def __init__(self, sampling_frequency_seconds=1.0):
+    def __init__(self, sampling_frequency_seconds=0.1):
         self._sample_callback = None
         self._sampling_frequency_seconds = sampling_frequency_seconds
         self._task = None
