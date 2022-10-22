@@ -7,7 +7,7 @@ class HeaderBarWrapper:
         self._settings_button = self._build_settings_button()
         self._headerbar = self._build_headerbar()
 
-        self.on_mouse_exit()
+        self._set_not_focused()
 
     @property
     def root_widget(self):

@@ -59,13 +59,7 @@ class GraphArea:
 
         self._plot_data_points(context, width, height, close=True)
 
-        # pattern = cairo.LinearGradient(0, 0, 0, height)
-        # pattern.add_color_stop_rgba(0, *self._color, 0.7)
-        # pattern.add_color_stop_rgba(1, 0, 0, 0, 0)
-        # context.set_source(pattern)
-
         context.set_source_rgba(*self._color, self._ALPHA_FILL)
-
         context.fill()
 
     def _plot_data_points(self, context, width, height, close=False):

@@ -16,7 +16,6 @@ class EventBroker:
 
     @classmethod
     def notify(cls, event, *args, **kwargs):
-        print(f"[Event] {event} {args} {kwargs}")
         if event not in cls._subscriptions:
             return
 
