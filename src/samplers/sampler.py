@@ -1,18 +1,13 @@
-from io import SEEK_SET
 from threading import Thread
 from time import sleep
 
 
 class Sampler:
-    def __init__(self, sampling_frequency_seconds=0.1):
+    def __init__(self, sampling_frequency_hz=1):
         self._sample_callback = None
-        self._sampling_frequency_seconds = sampling_frequency_seconds
+        self._sampling_frequency_seconds = 1/sampling_frequency_hz
         self._task = None
         self._is_running = False
-
-    @property
-    def sampling_frequency_seconds(self):
-        return self._sampling_frequency_seconds
 
     def install_new_sample_callback(self, callback):
         self._sample_callback = callback

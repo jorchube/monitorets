@@ -2,7 +2,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 
 class EventBroker:
-    _NUMBER_OF_WORKERS = 2
+    _NUMBER_OF_WORKERS = 4
 
     _subscriptions = dict()
     _thread_pool_executor = None

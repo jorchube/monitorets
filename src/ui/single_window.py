@@ -73,7 +73,7 @@ class SingleWindow(Adw.ApplicationWindow):
             return
 
         monitor = self._available_monitors[type]()
-        monitor.start_sampling()
+        monitor.start()
         self._set_monitor_bin_enabled_style(self._monitor_bins[type])
         self._monitor_bins[type].set_child(monitor)
 
@@ -84,7 +84,7 @@ class SingleWindow(Adw.ApplicationWindow):
         monitor = self._monitor_bins[type].get_child()
         self._monitor_bins[type].set_child(None)
         self._set_monitor_bin_disabled_style(self._monitor_bins[type])
-        monitor.stop_sampling()
+        monitor.stop()
 
     def _set_horizontal_layout(self):
         self._monitors_box.set_orientation(Gtk.Orientation.HORIZONTAL)
@@ -108,7 +108,7 @@ class SingleWindow(Adw.ApplicationWindow):
         for monitor_bin in self._monitor_bins.values():
             monitor = monitor_bin.get_child()
             if monitor:
-                monitor.stop_sampling()
+                monitor.stop()
 
     def _set_monitor_bin_disabled_style(self, monitor_bin):
         monitor_bin.set_margin_top(0)

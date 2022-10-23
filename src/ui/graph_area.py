@@ -15,14 +15,14 @@ class GraphArea:
         self._gtk_drawing_area.set_draw_func(self._draw_func, None)
         self._spacing = self._SPACING_PER_SECOND * sampling_frequency_seconds
 
+        self._latest_value = 0
         self._values = []
 
-    def _redraw(self):
+    def redraw(self):
         self._gtk_drawing_area.queue_draw()
 
     def _draw_func(self, gtk_drawing_area, context, width, height, user_data):
-        if not self._values:
-            return
+        self._values.insert(0, self._latest_value)
 
         self._release_samples_if_needed(width)
 
@@ -36,8 +36,7 @@ class GraphArea:
             self._values = self._values[:max_values]
 
     def add_value(self, value):
-        self._values.insert(0, value)
-        self._redraw()
+        self._latest_value = value
 
     def _get_number_of_visible_values(self, width):
         return int(width / self._spacing) + self._BUFFER_BEFORE_RELEASE_SAMPLE

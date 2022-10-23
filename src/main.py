@@ -34,6 +34,8 @@ class MonitorApplication(Adw.Application):
     def __init__(self):
         super().__init__(application_id='org.github.jorchube.gpumonitor',flags=Gio.ApplicationFlags.FLAGS_NONE)
 
+        self.window = None
+
         self.create_action('quit', self.on_quit, ['<primary>q'])
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
@@ -46,7 +48,8 @@ class MonitorApplication(Adw.Application):
         We raise the application's main window, creating it if
         necessary.
         """
-        SingleWindow(application=self).present()
+        self.window = SingleWindow(application=self)
+        self.window.present()
         Controller.show_monitors()
 
 
