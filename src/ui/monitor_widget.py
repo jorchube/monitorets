@@ -7,7 +7,7 @@ from .graph_redraw_tick_manager import GraphRedrawTickManager
 
 class MonitorWidget(Adw.Bin):
 
-    _REDRAW_FREQUENCY_HZ = 30
+    _REDRAW_FREQUENCY_HZ = 10
 
     def __init__(self, title, sampler, type, color=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
