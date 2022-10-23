@@ -45,17 +45,17 @@
         <property name="title">Monitors</property>
         <child>
           <object class="AdwActionRow" id="_cpu_monitor_enable_action_row">
-            <property name="title">CPU monitor</property>
+            <property name="title">CPU</property>
           </object>
         </child>
         <child>
           <object class="AdwActionRow" id="_gpu_monitor_enable_action_row">
-            <property name="title">GPU monitor</property>
+            <property name="title">GPU (experimental)</property>
           </object>
         </child>
         <child>
           <object class="AdwActionRow" id="_memory_monitor_enable_action_row">
-            <property name="title">Memory monitor</property>
+            <property name="title">Memory</property>
           </object>
         </child>
       </object>
