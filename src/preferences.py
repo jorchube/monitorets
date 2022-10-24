@@ -14,7 +14,7 @@ class Preferences:
         "general.theme": "system",
         "cpu_monitor.enabled": True,
         "cpu_monitor.sampling_frequency_seconds": 0.1,
-        "gpu_monitor.enabled": True,
+        "gpu_monitor.enabled": False,
         "gpu_monitor.sampling_frequency_seconds": 0.1,
         "memory_monitor.enabled": True,
         "memory_monitor.sampling_frequency_seconds": 0.1,
