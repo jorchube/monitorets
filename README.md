@@ -1,5 +1,12 @@
 # Monitorets
 
+![icon](data/icons/hicolor/scalable/apps/org.github.jorchube.gpumonitor.svg)
+
+<p align="center">
+<img src="https://github.com/jorchube/monitorets/blob/master/data/icons/hicolor/scalable/apps/org.github.jorchube.gpumonitor.svg" />
+</p>
+
+
 **Monitorets** is a small utility application offering a simple and quick view at the usage of several of your computer resources. Almost like an applet or a widget for your Linux desktop.
 
 
