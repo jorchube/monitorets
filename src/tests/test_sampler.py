@@ -6,7 +6,7 @@ class TestSampler:
     class _TestSampler(Sampler):
         def __init__(self):
             self._samples_gotten = 0
-            super().__init__(sampling_frequency_seconds=0.05)
+            super().__init__(sampling_frequency_hz=20)
 
         def _get_sample(self):
             self._samples_gotten = self._samples_gotten + 1
