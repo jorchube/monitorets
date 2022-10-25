@@ -1,3 +1,5 @@
+[![Tests](https://github.com/jorchube/monitorets/actions/workflows/CI.yml/badge.svg)](https://github.com/jorchube/monitorets/actions/workflows/CI.yml)
+
 # Monitorets
 
 <p align="center">
