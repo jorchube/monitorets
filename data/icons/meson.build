@@ -1,4 +1,4 @@
-application_id = 'org.github.jorchube.gpumonitor'
+application_id = 'io.github.jorchube.monitorets'
 
 scalable_dir = join_paths('hicolor', 'scalable', 'apps')
 install_data(

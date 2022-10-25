@@ -1,6 +1,6 @@
-data/org.github.jorchube.gpumonitor.desktop.in
-data/org.github.jorchube.gpumonitor.appdata.xml.in
-data/org.github.jorchube.gpumonitor.gschema.xml
+data/io.github.jorchube.monitorets.desktop.in
+data/io.github.jorchube.monitorets.appdata.xml.in
+data/io.github.jorchube.monitorets.gschema.xml
 src/main.py
 src/window.py
 src/window.ui

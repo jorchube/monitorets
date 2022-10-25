@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=gpumonitor
 Exec=gpumonitor
-Icon=org.github.jorchube.gpumonitor
+Icon=io.github.jorchube.monitorets
 Terminal=false
 Type=Application
 Categories=GTK;
