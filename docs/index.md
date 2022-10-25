@@ -15,3 +15,9 @@
         <img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/>
     </a>
 </p>
+
+---
+
+[Code](https://github.com/jorchube/monitorets)
+
+[Issues](https://github.com/jorchube/monitorets/issues)
