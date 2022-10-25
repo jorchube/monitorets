@@ -2,7 +2,7 @@
     <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/logo.svg" />
 </p>
 
-**Monitorets** is a small utility application offering a simple and quick view at the usage of several of your computer resources. Almost like an applet or a widget for your Linux desktop.
+### **Monitorets** is a small utility application offering a simple and quick view at the usage of several of your computer resources. Almost like an applet or a widget for your Linux desktop.
 
 
 <p align="center">
