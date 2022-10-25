@@ -12,21 +12,21 @@ Have always at a glance the usage of system resources such as CPU, memory and GP
 **Monitorets** is a small utility application offering a simple and quick view at the usage of several of your computer resources. Almost like an applet or a widget for your Linux desktop.
 
 
-Choose between Light or Dark theme. Or perhaps you prefer to let **Monitorets** follow your system settings. Your choice:
+Choose between Light and Dark theme. Or perhaps you prefer to let **Monitorets** follow your system settings. Your choice:
 
 <p align="center">
     <img src="https://github.com/jorchube/monitorets/blob/master/imgs/themeable.png" />
 </p>
 
 
-**Monitorets** adapts automatically to the window size to offer you the best view for your systme resources:
+**Monitorets** adapts automatically to the window size to offer you the best view for your system resources:
 
 <p align="center">
     <img src="https://github.com/jorchube/monitorets/blob/master/imgs/adaptable.png" />
 </p>
 
 
-Only keep the information relevant to you:
+Only show the information relevant to you:
 
 
 <p align="center">
