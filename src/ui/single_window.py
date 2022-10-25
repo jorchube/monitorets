@@ -23,7 +23,7 @@ from gi.repository import Gtk
 from .headerbar_wrapper import HeaderBarWrapper
 from .preferences_box import PreferencesBox
 from .cpu_monitor_widget import CpuMonitorWidget
-from .gpu_monitor_widget import GpuMonitorWidget
+from .gpu_monitor_widget import monitoretsWidget
 from .memory_monitor_widget import MemoryMonitorWidget
 from ..monitor_type import MonitorType
 from .window_layour_manager import WindowLayoutManager
@@ -31,7 +31,7 @@ from ..event_broker import EventBroker
 from .. import events
 
 
-@Gtk.Template(resource_path='/org/github/jorchube/gpumonitor/gtk/single-window.ui')
+@Gtk.Template(resource_path='/org/github/jorchube/monitorets/gtk/single-window.ui')
 class SingleWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'SingleWindow'
 
@@ -40,7 +40,7 @@ class SingleWindow(Adw.ApplicationWindow):
 
     _available_monitors = {
         MonitorType.CPU: CpuMonitorWidget,
-        MonitorType.GPU: GpuMonitorWidget,
+        MonitorType.GPU: monitoretsWidget,
         MonitorType.Memory: MemoryMonitorWidget,
     }
 

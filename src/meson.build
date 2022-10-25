@@ -1,9 +1,9 @@
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
-moduledir = join_paths(pkgdatadir, 'gpumonitor')
+moduledir = join_paths(pkgdatadir, 'monitorets')
 gnome = import('gnome')
 
-gnome.compile_resources('gpumonitor',
-  'gpumonitor.gresource.xml',
+gnome.compile_resources('monitorets',
+  'monitorets.gresource.xml',
   gresource_bundle: true,
   install: true,
   install_dir: pkgdatadir,
@@ -18,14 +18,14 @@ conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)
 
 configure_file(
-  input: 'gpumonitor.in',
-  output: 'gpumonitor',
+  input: 'monitorets.in',
+  output: 'monitorets',
   configuration: conf,
   install: true,
   install_dir: get_option('bindir')
 )
 
-gpumonitor_sources = [
+monitorets_sources = [
   '__init__.py',
   'main.py',
   'event_broker.py',
@@ -36,7 +36,7 @@ gpumonitor_sources = [
   'theming.py',
 ]
 
-install_data(gpumonitor_sources, install_dir: moduledir)
+install_data(monitorets_sources, install_dir: moduledir)
 
 install_subdir('ui', install_dir: moduledir)
 install_subdir('samplers', install_dir: moduledir)

@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=gpumonitor
-Exec=gpumonitor
+Name=monitorets
+Exec=monitorets
 Icon=io.github.jorchube.monitorets
 Terminal=false
 Type=Application

@@ -3,7 +3,7 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",
-    "command" : "gpumonitor",
+    "command" : "monitorets",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
@@ -25,13 +25,13 @@
     "modules" : [
         "pypi-dependencies.json",
         {
-            "name" : "gpumonitor",
+            "name" : "monitorets",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///var/home/jorchube/Code/GPUMonitor"
+                    "url" : "file:///var/home/jorchube/Code/monitorets"
                 }
             ]
         }

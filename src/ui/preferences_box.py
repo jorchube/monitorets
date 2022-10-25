@@ -5,7 +5,7 @@ from .monitor_enable_switch import MonitorEnableSwitch
 from .theme_toggle_manager import ThemeToggleManager
 
 
-@Gtk.Template(resource_path='/org/github/jorchube/gpumonitor/gtk/preferences-box.ui')
+@Gtk.Template(resource_path='/org/github/jorchube/monitorets/gtk/preferences-box.ui')
 class PreferencesBox(Gtk.Box):
     __gtype_name__ = 'PreferencesBox'
 

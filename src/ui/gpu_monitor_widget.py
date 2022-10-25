@@ -4,7 +4,7 @@ from ..monitor_type import MonitorType
 from . import colors
 
 
-class GpuMonitorWidget(MonitorWidget):
+class monitoretsWidget(MonitorWidget):
     def __init__(self, *args, **kwargs):
         title = "GPU"
         sampler = GpuSampler("/sys/class/drm/card0/device/gpu_busy_percent")

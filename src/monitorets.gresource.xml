@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/org/github/jorchube/gpumonitor">
+  <gresource prefix="/org/github/jorchube/monitorets">
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
     <file preprocess="xml-stripblanks">gtk/single-window.ui</file>
     <file preprocess="xml-stripblanks">gtk/preferences-box.ui</file>

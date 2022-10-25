@@ -1,1 +1,1 @@
-i18n.gettext('gpumonitor', preset: 'glib')
+i18n.gettext('monitorets', preset: 'glib')
