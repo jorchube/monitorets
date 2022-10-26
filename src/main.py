@@ -56,7 +56,7 @@ class MonitorApplication(Adw.Application):
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
-                                application_name='monitorets',
+                                application_name='Monitorets',
                                 application_icon='com.github.jorchube.monitorets',
                                 developer_name='Jordi Chulia',
                                 version='0.1.0',

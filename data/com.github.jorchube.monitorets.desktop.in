@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=monitorets
+Name=Monitorets
 Exec=monitorets
 Icon=com.github.jorchube.monitorets
 Terminal=false
