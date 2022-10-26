@@ -32,7 +32,7 @@ class MonitorApplication(Adw.Application):
     """The main application singleton class."""
 
     def __init__(self):
-        super().__init__(application_id='io.github.jorchube.monitorets',flags=Gio.ApplicationFlags.FLAGS_NONE)
+        super().__init__(application_id='com.github.jorchube.monitorets',flags=Gio.ApplicationFlags.FLAGS_NONE)
 
         self.window = None
 
@@ -57,7 +57,7 @@ class MonitorApplication(Adw.Application):
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
                                 application_name='monitorets',
-                                application_icon='io.github.jorchube.monitorets',
+                                application_icon='com.github.jorchube.monitorets',
                                 developer_name='Jordi Chulia',
                                 version='0.1.0',
                                 developers=['Jordi Chulia'],

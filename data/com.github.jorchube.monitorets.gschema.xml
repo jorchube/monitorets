@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="monitorets">
-	<schema id="io.github.jorchube.monitorets" path="/org/github/jorchube/monitorets/">
+	<schema id="com.github.jorchube.monitorets" path="/org/github/jorchube/monitorets/">
 	</schema>
 </schemalist>
