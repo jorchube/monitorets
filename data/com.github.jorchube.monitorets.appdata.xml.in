@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
-	<id>com.github.jorchube.monitorets.desktop</id>
+<component type="desktop-application">
+	<id>com.github.jorchube.monitorets</id>
+	<summary>Have always at a glance the usage of system resources</summary>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
+	<developer_name>Jordi Chulia</developer_name>
+	<url type="homepage">https://github.com/jorchube/monitorets/</url>
+	<url type="bugtracker">https://github.com/jorchube/monitorets/issues</url>
+
+	<content_rating type="oars-1.1" />
+
 	<description>
-	  <p>No description</p>
+	  <p>Have always at a glance the usage of system resources</p>
+
+	  <p>Monitorets is a small utility application offering a simple and quick view at the usage of several of your computer resources. Almost like an applet or a widget for your desktop.</p>
 	</description>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/light_window.png</image>
+      <caption>Have always at a glance useful system information</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/themeable.png</image>
+      <caption>Choose between light and dark theme</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/adaptable.png</image>
+      <caption>Monitorets adapts automatically to the window size to offer you the best view for your system resources</caption>
+    </screenshot>
+  </screenshots>
+
+	<launchable type="desktop-id">com.github.jorchube.monitorets.desktop</launchable>
+
+  <provides>
+    <binary>monitorets</binary>
+  </provides>
+
+	<release version="0.1.0" date="2020-08-25"/>
 </component>
