@@ -61,7 +61,7 @@
       </object>
     </child>
     <child>
-      <object class="GtkToggleButton">
+      <object class="GtkButton" id="_about_button">
         <property name="action-name">app.about</property>
         <property name="halign">end</property>
         <property name="has-frame">False</property>

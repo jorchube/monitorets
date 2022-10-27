@@ -1,13 +1,19 @@
 from gi.repository import Adw, Gtk
 
+from ..event_broker import EventBroker
+from .. import events
+
 
 class HeaderBarWrapper:
     def __init__(self, preferences_box):
+        self._preferences_popover = Gtk.Popover()
         self._preferences_box = preferences_box
-        self._preferences_button = self._build_preferences_button(self._preferences_box)
+        self._preferences_button = self._build_preferences_button(self._preferences_box, self._preferences_popover)
         self._headerbar = self._build_headerbar(self._preferences_button)
 
         self._set_not_focused()
+
+        EventBroker.subscribe(events.ABOUT_DIALOG_TRIGGERED, self._dismiss_preferences_popover)
 
     @property
     def root_widget(self):
@@ -34,7 +40,7 @@ class HeaderBarWrapper:
 
         return headerbar
 
-    def _build_preferences_button(self, preferences_box):
+    def _build_preferences_button(self, preferences_box, popover):
         button = Gtk.MenuButton()
         button.set_icon_name("document-properties-symbolic")
         button.add_css_class("circular")
@@ -42,8 +48,10 @@ class HeaderBarWrapper:
         button.set_vexpand(False)
         button.set_valign(Gtk.Align.CENTER)
 
-        popover = Gtk.Popover()
         popover.set_child(preferences_box)
         button.set_popover(popover)
 
         return button
+
+    def _dismiss_preferences_popover(self, *args, **kwargs):
+        self._preferences_popover.popdown()
