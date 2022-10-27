@@ -7,7 +7,7 @@ from . import events
 
 
 class Preferences:
-    _folder_name = "org.github.jorchube.monitor"
+    _folder_name = "com.github.jorchube.monitorets"
     _file_name = "preferences.json"
 
     _default_preferences = {
