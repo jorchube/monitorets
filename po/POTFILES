@@ -1,6 +1,6 @@
-data/com.github.jorchube.monitorets.desktop.in
-data/com.github.jorchube.monitorets.appdata.xml.in
-data/com.github.jorchube.monitorets.gschema.xml
+data/io.github.jorchube.monitorets.desktop.in
+data/io.github.jorchube.monitorets.appdata.xml.in
+data/io.github.jorchube.monitorets.gschema.xml
 src/main.py
 src/window.py
 src/window.ui

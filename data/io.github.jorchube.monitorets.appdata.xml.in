@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-	<id>com.github.jorchube.monitorets</id>
+	<id>io.github.jorchube.monitorets</id>
 	<summary>Have always at a glance the usage of system resources</summary>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
@@ -31,7 +31,7 @@
     </screenshot>
   </screenshots>
 
-	<launchable type="desktop-id">com.github.jorchube.monitorets.desktop</launchable>
+	<launchable type="desktop-id">io.github.jorchube.monitorets.desktop</launchable>
 
   <provides>
     <binary>monitorets</binary>
