@@ -4,5 +4,6 @@ Exec=monitorets
 Icon=io.github.jorchube.monitorets
 Terminal=false
 Type=Application
-Categories=GTK;
+Categories=System;Utility;GNOME;GTK;
 StartupNotify=true
+Keywords=monitor;system monitor;System Monitor;Monitor;
