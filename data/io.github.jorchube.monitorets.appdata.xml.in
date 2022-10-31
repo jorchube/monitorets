@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-	<id>io.github.jorchube.monitorets</id>
+  <id>io.github.jorchube.monitorets</id>
   <name>Monitorets</name>
-	<summary>Have always at a glance the usage of system resources</summary>
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
-	<developer_name>Jordi Chulia</developer_name>
-	<url type="homepage">https://github.com/jorchube/monitorets/</url>
-	<url type="bugtracker">https://github.com/jorchube/monitorets/issues</url>
+  <summary>Have always at a glance the usage of system resources</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer_name>Jordi Chulia</developer_name>
+  <url type="homepage">https://github.com/jorchube/monitorets/</url>
+  <url type="bugtracker">https://github.com/jorchube/monitorets/issues</url>
 
-	<content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1" />
 
-	<description>
-	  <p>Have always at a glance the usage of system resources</p>
+  <description>
+    <p>Have always at a glance the usage of system resources</p>
 
-	  <p>Monitorets is a small utility application offering a simple and quick view at the usage of several of your computer resources. Almost like an applet or a widget for your desktop.</p>
-	</description>
+    <p>Monitorets is a small utility application offering a simple and quick view at the usage of several of your computer resources. Almost like an applet or a widget for your desktop.</p>
+  </description>
 
   <screenshots>
     <screenshot type="default">
@@ -32,14 +32,14 @@
     </screenshot>
   </screenshots>
 
-	<launchable type="desktop-id">io.github.jorchube.monitorets.desktop</launchable>
+  <launchable type="desktop-id">io.github.jorchube.monitorets.desktop</launchable>
 
   <provides>
     <binary>monitorets</binary>
   </provides>
 
   <releases>
-	  <release version="0.1.0" date="2020-08-25">
+    <release version="0.1.0" date="2020-08-25">
       <description>
         <p>First release</p>
       </description>
