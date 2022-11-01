@@ -13,7 +13,7 @@ class MonitorWidget(Adw.Bin):
         super().__init__(*args, **kwargs)
 
         self._redraw_frequency_seconds = 1.0/self._REDRAW_FREQUENCY_HZ
-        self._redraw_manager = GraphRedrawTickManager(self._queue_draw, self._redraw_frequency_seconds)
+        self._redraw_manager = GraphRedrawTickManager(self._tick, self._redraw_frequency_seconds)
 
         self.add_css_class("card")
         self.add_css_class("frame")
@@ -39,8 +39,8 @@ class MonitorWidget(Adw.Bin):
         self._sampler.stop()
         self._redraw_manager.stop()
 
-    def _queue_draw(self):
-        GObject.idle_add(self._graph_area.redraw)
+    def _tick(self):
+        GObject.idle_add(self._graph_area.tick)
 
     def _build_title_label(self, title, color):
         label = Gtk.Label()
