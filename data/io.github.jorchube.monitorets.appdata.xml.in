@@ -39,6 +39,14 @@
   </provides>
 
   <releases>
+    <release version="0.2.0" date="2022-01-01">
+      <description>
+        <p>Aesthetic:</p>
+        <p>  - Reworked graph drawing</p>
+        <p>Internal:</p>
+        <p>  - Decoupled several events that can trigger a graph redraw</p>
+      </description>
+    </release>
     <release version="0.1.0" date="2022-10-31">
       <description>
         <p>First release</p>
