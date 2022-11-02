@@ -39,7 +39,12 @@
   </provides>
 
   <releases>
-    <release version="0.2.0" date="2022-11-02">
+    <release version="0.2.1" date="2022-11-02">
+      <description>
+        <p>Under the hood tweaks</p>
+      </description>
+    </release>
+    <release version="0.2.0" date="2022-11-01">
       <description>
         <p>Aesthetic:</p>
         <p>  - Reworked graph drawing</p>
