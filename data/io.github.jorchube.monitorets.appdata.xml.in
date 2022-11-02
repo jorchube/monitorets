@@ -39,7 +39,7 @@
   </provides>
 
   <releases>
-    <release version="0.2.0" date="2022-01-01">
+    <release version="0.2.0" date="2022-11-02">
       <description>
         <p>Aesthetic:</p>
         <p>  - Reworked graph drawing</p>
