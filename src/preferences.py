@@ -6,17 +6,23 @@ from .event_broker import EventBroker
 from . import events
 
 
+class PreferenceKeys:
+    CPU_MONITOR_ENABLED = "cpu_monitor.enabled"
+    GPU_MONITOR_ENABLED = "gpu_monitor.enabled"
+    MEMORY_MONITOR_ENABLED = "memory_monitor.enabled"
+
+
 class Preferences:
     _folder_name = "io.github.jorchube.monitorets"
     _file_name = "preferences.json"
 
     _default_preferences = {
         "general.theme": "system",
-        "cpu_monitor.enabled": True,
-        "cpu_monitor.sampling_frequency_seconds": 0.1,
-        "gpu_monitor.enabled": False,
+        PreferenceKeys.CPU_MONITOR_ENABLED: True,
+        PreferenceKeys.GPU_MONITOR_ENABLED: False,
+        PreferenceKeys.MEMORY_MONITOR_ENABLED: True,
         "gpu_monitor.sampling_frequency_seconds": 0.1,
-        "memory_monitor.enabled": True,
+        "cpu_monitor.sampling_frequency_seconds": 0.1,
         "memory_monitor.sampling_frequency_seconds": 0.1,
     }
 
