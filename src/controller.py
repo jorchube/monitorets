@@ -7,10 +7,6 @@ from .monitor_descriptors import monitor_descriptor_list
 
 
 class Controller:
-    _CPU_MONITOR_ENABLED_KEY = "cpu_monitor.enabled"
-    _GPU_MONITOR_ENABLED_KEY = "gpu_monitor.enabled"
-    _MEMORY_MONITOR_ENABLED_KEY = "memory_monitor.enabled"
-
     @classmethod
     def initialize(self, application):
         self._application = application
