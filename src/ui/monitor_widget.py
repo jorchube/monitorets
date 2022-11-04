@@ -12,6 +12,8 @@ class MonitorWidget(Adw.Bin):
     def __init__(self, title, sampler, type, color=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        self.set_size_request(120, 40)
+
         self._redraw_frequency_seconds = 1.0/self._REDRAW_FREQUENCY_HZ
         self._redraw_manager = GraphRedrawTickManager(self._tick, self._redraw_frequency_seconds)
 
