@@ -13,3 +13,7 @@ class BLUE:
 class ORANGE:
     HTML = "ff8000"
     RGB = (1, 0.5, 0)
+
+class PURPLE:
+    HTML = "9f30ff"
+    RGB = (0.7, 0.2, 1)
