@@ -34,6 +34,7 @@ monitorets_sources = [
   'preferences.py',
   'controller.py',
   'theming.py',
+  'monitor_descriptors.py',
 ]
 
 install_data(monitorets_sources, install_dir: moduledir)

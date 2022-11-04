@@ -3,6 +3,7 @@ from .event_broker import EventBroker
 from .preferences import Preferences
 from .monitor_type import MonitorType
 from .theming import Theming
+from .monitor_descriptors import monitor_descriptor_list
 
 
 class Controller:
@@ -22,25 +23,16 @@ class Controller:
 
     @classmethod
     def show_monitors(self):
-        if Preferences.get("cpu_monitor.enabled"):
-            EventBroker.notify(events.MONITOR_ENABLED, MonitorType.CPU)
-
-        if Preferences.get("gpu_monitor.enabled"):
-            EventBroker.notify(events.MONITOR_ENABLED, MonitorType.GPU)
-
-        if Preferences.get("memory_monitor.enabled"):
-            EventBroker.notify(events.MONITOR_ENABLED, MonitorType.Memory)
+        for descriptor in monitor_descriptor_list:
+            if Preferences.get(descriptor["enabled_preference_key"]):
+                EventBroker.notify(events.MONITOR_ENABLED, descriptor["type"])
 
     @classmethod
     def _on_preference_changed(self, preference_key, value):
-        if preference_key == self._CPU_MONITOR_ENABLED_KEY:
-            self._on_monitor_enabled_changed(MonitorType.CPU, value)
-
-        if preference_key == self._GPU_MONITOR_ENABLED_KEY:
-            self._on_monitor_enabled_changed(MonitorType.GPU, value)
-
-        if preference_key == self._MEMORY_MONITOR_ENABLED_KEY:
-            self._on_monitor_enabled_changed(MonitorType.Memory, value)
+        for descriptor in monitor_descriptor_list:
+            if preference_key == descriptor["enabled_preference_key"]:
+                self._on_monitor_enabled_changed(descriptor["type"], value)
+                return
 
     @classmethod
     def _on_monitor_enabled_changed(self, monitor_type, enabled):
