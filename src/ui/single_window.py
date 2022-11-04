@@ -22,13 +22,10 @@ from gi.repository import Gtk
 
 from .headerbar_wrapper import HeaderBarWrapper
 from .preferences_box import PreferencesBox
-from .cpu_monitor_widget import CpuMonitorWidget
-from .gpu_monitor_widget import monitoretsWidget
-from .memory_monitor_widget import MemoryMonitorWidget
-from ..monitor_type import MonitorType
 from .window_layour_manager import WindowLayoutManager
 from ..event_broker import EventBroker
 from .. import events
+from ..monitor_descriptors import monitor_descriptor_list
 
 
 @Gtk.Template(resource_path='/org/github/jorchube/monitorets/gtk/single-window.ui')
@@ -38,24 +35,16 @@ class SingleWindow(Adw.ApplicationWindow):
     _overlay= Gtk.Template.Child()
     _monitors_box= Gtk.Template.Child()
 
-    _available_monitors = {
-        MonitorType.CPU: CpuMonitorWidget,
-        MonitorType.GPU: monitoretsWidget,
-        MonitorType.Memory: MemoryMonitorWidget,
-    }
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        self._available_monitors = self._build_available_monitors_dict()
+        self._monitor_bins = self._build_monitor_bins_dict()
+
         self._layout_managet = WindowLayoutManager(self, self._set_horizontal_layout, self._set_vertical_layout)
 
         EventBroker.subscribe(events.MONITOR_ENABLED, self._on_monitor_enabled)
         EventBroker.subscribe(events.MONITOR_DISABLED, self._on_monitor_disabled)
-
-        self._monitor_bins = {
-            MonitorType.CPU: Adw.Bin(),
-            MonitorType.GPU: Adw.Bin(),
-            MonitorType.Memory: Adw.Bin(),
-        }
 
         self._headerbar_wrapper = HeaderBarWrapper(PreferencesBox())
         self._overlay.add_overlay(self._headerbar_wrapper.root_widget)
@@ -63,6 +52,20 @@ class SingleWindow(Adw.ApplicationWindow):
 
         self.connect("close-request", self._close_request)
         self._install_motion_event_controller()
+
+    def _build_available_monitors_dict(self):
+        monitors_dict = {}
+        for descriptor in monitor_descriptor_list:
+            monitors_dict[descriptor["type"]] = descriptor["monitor_class"]
+
+        return monitors_dict
+
+    def _build_monitor_bins_dict(self):
+        bins_dict = {}
+        for descriptor in monitor_descriptor_list:
+            bins_dict[descriptor["type"]] = Adw.Bin()
+
+        return bins_dict
 
     def _add_monitor_bins_to_monitors_box(self, monitor_bins, monitor_box):
         for bin in monitor_bins.values():
