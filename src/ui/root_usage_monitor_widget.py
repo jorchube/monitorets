@@ -5,14 +5,11 @@ from ..monitor_type import MonitorType
 from . import colors
 
 
-class HomeUsageMonitorWidget(MonitorWidget):
+class RootUsageMonitorWidget(MonitorWidget):
     def __init__(self, *args, **kwargs):
-        title = "~"
-        sampler = DiskUsageSampler(self._home_path())
-        type = MonitorType.Home_usage
+        title = "/"
+        sampler = DiskUsageSampler("/")
+        type = MonitorType.Root_usage
         color = colors.PURPLE
 
         super().__init__(title, sampler, type, color, *args, **kwargs)
-
-    def _home_path(self):
-        return Path.home().absolute().as_posix()

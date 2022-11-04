@@ -2,4 +2,5 @@ class MonitorType:
     CPU = "cpu"
     GPU = "gpu"
     Memory = "memory"
-    Home_Usage = "home usage"
+    Home_usage = "home usage"
+    Root_usage = "root usage"

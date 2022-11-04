@@ -11,6 +11,7 @@ class PreferenceKeys:
     GPU_MONITOR_ENABLED = "gpu_monitor.enabled"
     MEMORY_MONITOR_ENABLED = "memory_monitor.enabled"
     HOME_USAGE_MONITOR_ENABLED = "home_usage_monitor.enabled"
+    ROOT_USAGE_MONITOR_ENABLED = "root_usage_monitor.enabled"
 
 
 class Preferences:
@@ -23,6 +24,7 @@ class Preferences:
         PreferenceKeys.GPU_MONITOR_ENABLED: False,
         PreferenceKeys.MEMORY_MONITOR_ENABLED: True,
         PreferenceKeys.HOME_USAGE_MONITOR_ENABLED: False,
+        PreferenceKeys.ROOT_USAGE_MONITOR_ENABLED: False,
         "gpu_monitor.sampling_frequency_seconds": 0.1,
         "cpu_monitor.sampling_frequency_seconds": 0.1,
         "memory_monitor.sampling_frequency_seconds": 0.1,
