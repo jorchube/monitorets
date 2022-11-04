@@ -32,10 +32,14 @@ class HeaderBarWrapper:
         self._headerbar.set_opacity(1)
 
     def _build_headerbar(self, preferences_button):
+        drag_icon = Gtk.Image.new_from_icon_name("list-drag-handle-symbolic")
+        drag_icon.set_tooltip_text("Drag window from here")
+
         headerbar = Adw.HeaderBar()
         headerbar.set_vexpand(False)
-        headerbar.add_css_class("flat")
-        headerbar.set_title_widget(Gtk.Label(label=""))
+        headerbar.set_valign(Gtk.Align.START)
+        headerbar.set_title_widget(drag_icon)
+        headerbar.set_decoration_layout(":close")
         headerbar.pack_start(preferences_button)
 
         return headerbar
