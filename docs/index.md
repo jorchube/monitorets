@@ -11,7 +11,7 @@
 
 
 <p align="center">
-    <a href='https://flathub.org/apps/details/org.gimp.GIMP'>
+    <a href='https://flathub.org/apps/details/io.github.jorchube.monitorets'>
         <img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/>
     </a>
 </p>
