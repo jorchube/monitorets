@@ -23,7 +23,7 @@ from gi.repository import Gtk
 from .headerbar_wrapper import HeaderBarWrapper
 from .preferences_box import PreferencesBox
 from .cpu_monitor_widget import CpuMonitorWidget
-from .gpu_monitor_widget import monitoretsWidget
+from .gpu_monitor_widget import GpuMonitorWidget
 from .memory_monitor_widget import MemoryMonitorWidget
 from ..monitor_type import MonitorType
 from .window_layour_manager import WindowLayoutManager
@@ -40,7 +40,7 @@ class SingleWindow(Adw.ApplicationWindow):
 
     _available_monitors = {
         MonitorType.CPU: CpuMonitorWidget,
-        MonitorType.GPU: monitoretsWidget,
+        MonitorType.GPU: GpuMonitorWidget,
         MonitorType.Memory: MemoryMonitorWidget,
     }
 
