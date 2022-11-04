@@ -1,7 +1,6 @@
 from . import events
 from .event_broker import EventBroker
 from .preferences import Preferences
-from .monitor_type import MonitorType
 from .theming import Theming
 from .monitor_descriptors import monitor_descriptor_list
 
