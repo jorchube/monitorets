@@ -3,7 +3,8 @@
 <cambalache-project version="0.10.3" target_tk="gtk-4.0">
   <ui>
 	(5,1,None,"preferences-box.ui",None,None,None,None,None,None),
-	(7,1,None,"single-window.ui",None,None,None,None,None,None)
+	(7,1,None,"single-window.ui",None,None,None,None,None,None),
+	(8,1,None,"tips-window.ui",None,None,None,None,None,None)
   </ui>
   <object>
 	(5,1,"GtkBox","PreferencesBox",None,None,None,None,None),
@@ -13,10 +14,16 @@
 	(5,8,"GtkToggleButton","_system_theme_toggle_button",7,None,None,None,None),
 	(5,9,"GtkToggleButton","_light_theme_toggle_button",7,None,None,None,1),
 	(5,10,"GtkToggleButton","_dark_theme_toggle_button",7,None,None,None,2),
-	(5,11,"GtkButton","_about_button",1,None,None,None,2),
+	(5,12,"GtkBox",None,1,None,None,None,2),
+	(5,13,"GtkButton","_about_button",12,None,None,None,1),
+	(5,14,"GtkButton","_tips_button",12,None,None,None,None),
 	(7,1,"AdwApplicationWindow","SingleWindow",None,None,None,None,None),
 	(7,2,"GtkOverlay","_overlay",1,None,None,None,None),
-	(7,3,"GtkBox","_monitors_box",2,None,None,None,None)
+	(7,3,"GtkBox","_monitors_box",2,None,None,None,None),
+	(8,1,"AdwWindow","TipsWindow",None,None,None,None,None),
+	(8,5,"GtkBox",None,1,None,None,None,None),
+	(8,6,"AdwHeaderBar","_headerbar",5,None,None,None,None),
+	(8,7,"GtkBox","_tips_box",5,None,None,None,1)
   </object>
   <object_property>
 	(5,1,"GtkBox","spacing","10",None,None,None,None,None),
@@ -35,10 +42,21 @@
 	(5,9,"GtkToggleButton","group","8",None,None,None,None,None),
 	(5,10,"GtkButton","label","Dark",None,None,None,None,None),
 	(5,10,"GtkToggleButton","group","8",None,None,None,None,None),
-	(5,11,"GtkActionable","action-name","app.about",None,None,None,None,None),
-	(5,11,"GtkButton","has-frame","False",None,None,None,None,None),
-	(5,11,"GtkButton","icon-name","help-about-symbolic",None,None,None,None,None),
-	(5,11,"GtkWidget","halign","end",None,None,None,None,None),
+	(5,12,"GtkBox","homogeneous","True",None,None,None,None,None),
+	(5,12,"GtkBox","spacing","10",None,None,None,None,None),
+	(5,12,"GtkWidget","css-classes","flat",None,None,None,None,None),
+	(5,12,"GtkWidget","halign","end",None,None,None,None,None),
+	(5,13,"GtkActionable","action-name","app.about",None,None,None,None,None),
+	(5,13,"GtkButton","has-frame","False",None,None,None,None,None),
+	(5,13,"GtkButton","icon-name","help-about-symbolic",None,None,None,None,None),
+	(5,13,"GtkWidget","css-classes","circular",None,None,None,None,None),
+	(5,13,"GtkWidget","halign","end",None,None,None,None,None),
+	(5,13,"GtkWidget","tooltip-text","About this application",None,None,None,None,None),
+	(5,14,"GtkActionable","action-name","app.tips",None,None,None,None,None),
+	(5,14,"GtkButton","has-frame","False",None,None,None,None,None),
+	(5,14,"GtkButton","icon-name","dialog-information-symbolic",None,None,None,None,None),
+	(5,14,"GtkWidget","css-classes","circular",None,None,None,None,None),
+	(5,14,"GtkWidget","tooltip-text","Hints and tips",None,None,None,None,None),
 	(7,1,"GtkWindow","default-height","40",None,None,None,None,None),
 	(7,1,"GtkWindow","default-width","120",None,None,None,None,None),
 	(7,2,"GtkOverlay","child",None,None,None,None,None,3),
@@ -46,6 +64,18 @@
 	(7,3,"GtkWidget","margin-bottom","2",None,None,None,None,None),
 	(7,3,"GtkWidget","margin-end","2",None,None,None,None,None),
 	(7,3,"GtkWidget","margin-start","2",None,None,None,None,None),
-	(7,3,"GtkWidget","margin-top","2",None,None,None,None,None)
+	(7,3,"GtkWidget","margin-top","2",None,None,None,None,None),
+	(8,1,"GtkWindow","modal","True",None,None,None,None,None),
+	(8,5,"GtkOrientable","orientation","vertical",None,None,None,None,None),
+	(8,6,"AdwHeaderBar","decoration-layout",":close",None,None,None,None,None),
+	(8,6,"GtkWidget","css-classes","flat",None,None,None,None,None),
+	(8,7,"GtkBox","spacing","5",None,None,None,None,None),
+	(8,7,"GtkOrientable","orientation","vertical",None,None,None,None,None),
+	(8,7,"GtkWidget","halign","center",None,None,None,None,None),
+	(8,7,"GtkWidget","hexpand","True",None,None,None,None,None),
+	(8,7,"GtkWidget","margin-bottom","10",None,None,None,None,None),
+	(8,7,"GtkWidget","margin-end","10",None,None,None,None,None),
+	(8,7,"GtkWidget","margin-start","10",None,None,None,None,None),
+	(8,7,"GtkWidget","margin-top","10",None,None,None,None,None)
   </object_property>
 </cambalache-project>

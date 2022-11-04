@@ -14,6 +14,7 @@ class HeaderBarWrapper:
         self._set_not_focused()
 
         EventBroker.subscribe(events.ABOUT_DIALOG_TRIGGERED, self._dismiss_preferences_popover)
+        EventBroker.subscribe(events.TIPS_DIALOG_TRIGGERED, self._dismiss_preferences_popover)
 
     @property
     def root_widget(self):
@@ -51,6 +52,7 @@ class HeaderBarWrapper:
         button.add_css_class("flat")
         button.set_vexpand(False)
         button.set_valign(Gtk.Align.CENTER)
+        button.set_tooltip_text("Preferences")
 
         popover.set_child(preferences_box)
         button.set_popover(popover)

@@ -18,6 +18,7 @@ class PreferencesBox(Gtk.Box):
     _dark_theme_toggle_button = Gtk.Template.Child()
 
     _about_button = Gtk.Template.Child()
+    _tips_button = Gtk.Template.Child()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -29,6 +30,7 @@ class PreferencesBox(Gtk.Box):
             )
 
         self._about_button.connect("clicked", self._on_about_button_clicked)
+        self._tips_button.connect("clicked", self._on_tips_button_clicked)
 
     def _add_monitor_enable_action_row(self, label, monitor_type, monitor_enabled_preference_key):
         action_row = self._new_action_row()
@@ -46,6 +48,9 @@ class PreferencesBox(Gtk.Box):
 
     def _on_about_button_clicked(self, user_data):
         EventBroker.notify(events.ABOUT_DIALOG_TRIGGERED)
+
+    def _on_tips_button_clicked(self, user_data):
+        EventBroker.notify(events.TIPS_DIALOG_TRIGGERED)
 
     def _new_action_row(self):
         return Adw.ActionRow()

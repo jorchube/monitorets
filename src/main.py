@@ -26,6 +26,7 @@ gi.require_version('Adw', '1')
 from gi.repository import Gio, Adw
 from .controller import Controller
 from .ui.single_window import SingleWindow
+from .ui.tips_window import TipsWindow
 
 
 class MonitorApplication(Adw.Application):
@@ -38,6 +39,7 @@ class MonitorApplication(Adw.Application):
 
         self.create_action('quit', self.on_quit, ['<primary>q'])
         self.create_action('about', self.on_about_action)
+        self.create_action('tips', self.on_tips_action)
         self.create_action('preferences', self.on_preferences_action)
 
         Controller.initialize(application=self)
@@ -63,6 +65,10 @@ class MonitorApplication(Adw.Application):
                                 developers=['Jordi Chulia'],
                                 copyright='© 2022 Jordi Chulia')
         about.present()
+
+    def on_tips_action(self, widget, _):
+        tips_window = TipsWindow(transient_for=self.props.active_window)
+        tips_window.present()
 
     def on_quit(self, *args, **kwargs):
         for window in self.get_windows():

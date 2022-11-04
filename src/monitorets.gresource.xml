@@ -3,6 +3,7 @@
   <gresource prefix="/org/github/jorchube/monitorets">
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
     <file preprocess="xml-stripblanks">gtk/single-window.ui</file>
+    <file preprocess="xml-stripblanks">gtk/tips-window.ui</file>
     <file preprocess="xml-stripblanks">gtk/preferences-box.ui</file>
   </gresource>
 </gresources>
