@@ -17,8 +17,8 @@ class TipsWindow(Adw.Window):
         self._headerbar.set_title_widget(title_label)
 
         tip = self._new_tip_content(
-            "Always on top",
-            "You can make the window stay on top of any other window: Press Alt+Space or press the right button in the window header bar to bring the window menu and then select \"Always on Top\"."
+            "Always on Top",
+            "You can make the window stay on top of any other window: Press <b><tt>Alt+Space</tt></b> or right click with your mouse in the window titlebar to bring the window menu, then select <b><i>Always on Top</i></b>."
         )
 
         self._tips_box.append(tip)
@@ -49,7 +49,8 @@ class TipsWindow(Adw.Window):
         return label
 
     def _build_description_label(self, description):
-        label = Gtk.Label(label=description)
+        label = Gtk.Label()
+        label.set_markup(description)
         label.set_margin_top(5)
         label.set_margin_bottom(20)
         label.set_margin_start(20)
