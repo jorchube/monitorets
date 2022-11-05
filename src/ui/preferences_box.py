@@ -2,6 +2,7 @@ from gi.repository import Gtk, Adw
 
 from .monitor_enable_switch import MonitorEnableSwitch
 from .theme_toggle_manager import ThemeToggleManager
+from .layout_toggle_manager import LayoutToggleManager
 from ..event_broker import EventBroker
 from .. import events
 from ..monitor_descriptors import monitor_descriptor_list
@@ -17,12 +18,17 @@ class PreferencesBox(Gtk.Box):
     _light_theme_toggle_button = Gtk.Template.Child()
     _dark_theme_toggle_button = Gtk.Template.Child()
 
+    _adaptive_layout_toggle_button = Gtk.Template.Child()
+    _horizontal_layout_toggle_button = Gtk.Template.Child()
+    _vertical_layout_toggle_button = Gtk.Template.Child()
+
     _about_button = Gtk.Template.Child()
     _tips_button = Gtk.Template.Child()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self._theme_toggle_wrapper = ThemeToggleManager(self)
+        self._theme_toggle_manager = ThemeToggleManager(self)
+        self._layout_toggle_manager = LayoutToggleManager(self)
 
         for descriptor in monitor_descriptor_list:
             self._add_monitor_enable_action_row(
