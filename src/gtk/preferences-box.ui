@@ -40,6 +40,50 @@
       </object>
     </child>
     <child>
+      <object class="AdwPreferencesGroup">
+        <property name="title">Layout</property>
+        <child>
+          <object class="GtkBox">
+            <property name="css-classes">linked
+</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkToggleButton" id="_adaptive_layout_toggle_button">
+                <property name="child">
+                  <object class="AdwButtonContent">
+                    <property name="icon-name">rotation-allowed-symbolic</property>
+                    <property name="label">Adaptive</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="_horizontal_layout_toggle_button">
+                <property name="child">
+                  <object class="AdwButtonContent">
+                    <property name="icon-name">object-flip-horizontal-symbolic</property>
+                    <property name="label">Horizontal</property>
+                  </object>
+                </property>
+                <property name="group">_adaptive_layout_toggle_button</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="_vertical_layout_toggle_button">
+                <property name="child">
+                  <object class="AdwButtonContent">
+                    <property name="icon-name">object-flip-vertical-symbolic</property>
+                    <property name="label">Vertical</property>
+                  </object>
+                </property>
+                <property name="group">_adaptive_layout_toggle_button</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
       <object class="AdwPreferencesGroup" id="_monitor_enable_preferences_group">
         <property name="description">Select which monitor(s) to enable </property>
         <property name="title">Monitors</property>
