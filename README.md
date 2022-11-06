@@ -3,35 +3,39 @@
 # Monitorets
 
 <p align="center">
-    <img src="https://github.com/jorchube/monitorets/blob/master/imgs/logo.svg" />
+    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/logo.svg" />
 </p>
-
-
-Have always at a glance the usage of system resources such as CPU, memory and GPU (1).
 
 **Monitorets** is a small utility application offering a simple and quick view at the usage of several of your computer resources. Almost like an applet or a widget for your Linux desktop.
 
-
-Choose between Light and Dark theme. Or perhaps you prefer to let **Monitorets** follow your system settings. Your choice:
-
 <p align="center">
-    <img src="https://github.com/jorchube/monitorets/blob/master/imgs/themeable.png" />
+    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/themeable.png" />
 </p>
 
+## Flexible:
 
-**Monitorets** adapts automatically to the window size to offer you the best view for your system resources:
-
-<p align="center">
-    <img src="https://github.com/jorchube/monitorets/blob/master/imgs/adaptable.png" />
-</p>
-
-
-Only show the information relevant to you:
-
+Select between *horizontal* and *vertical* layout. Or let the application decide based on the window shape.
 
 <p align="center">
-    <img src="https://github.com/jorchube/monitorets/blob/master/imgs/configurable.png" />
+    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/adaptable.png" />
 </p>
 
+## Configurable:
 
-(1) GPU monitoring is an experimental feature that may not work at all depending on your GPU vendor and drivers.
+Choose which resources you want to have visible:
+* Cpu
+* Gpu \[1\]
+* Memory
+* Home folder ( **~** ) space
+* Root ( **/** ) space
+
+
+<p align="center">
+    <a href='https://flathub.org/apps/details/io.github.jorchube.monitorets'>
+        <img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/>
+    </a>
+</p>
+
+---
+
+\[1\] GPU monitoring is an experimental feature that may not work at all depending on your GPU vendor and drivers.

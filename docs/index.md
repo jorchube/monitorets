@@ -4,10 +4,26 @@
 
 **Monitorets** is a small utility application offering a simple and quick view at the usage of several of your computer resources. Almost like an applet or a widget for your Linux desktop.
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/themeable.png" />
+</p>
+
+## Flexible:
+
+Select between *horizontal* and *vertical* layout. Or let the application decide based on the window shape.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/2.png" />
+    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/adaptable.png" />
 </p>
+
+## Configurable:
+
+Choose which resources you want to have visible:
+* Cpu
+* Gpu \[1\]
+* Memory
+* Home folder ( **~** ) space
+* Root ( **/** ) space
 
 
 <p align="center">
@@ -21,3 +37,7 @@
 [Code](https://github.com/jorchube/monitorets)
 
 [Issues](https://github.com/jorchube/monitorets/issues)
+
+---
+
+\[1\] GPU monitoring is an experimental feature that may not work at all depending on your GPU vendor and drivers.
