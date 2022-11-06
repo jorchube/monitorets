@@ -15,6 +15,15 @@
     <p>Have always at a glance the usage of system resources</p>
 
     <p>Monitorets is a small utility application offering a simple and quick view at the usage of several of your computer resources. Almost like an applet or a widget for your desktop.</p>
+
+    <p>Available monitors:</p>
+     <ul>
+      <li>Cpu</li>
+      <li>Gpu (experimental support)</li>
+      <li>Memory</li>
+      <li>Home folder space</li>
+      <li>Root space</li>
+    </ul>
   </description>
 
   <screenshots>
@@ -28,7 +37,7 @@
     </screenshot>
     <screenshot>
       <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/adaptable.png</image>
-      <caption>Monitorets adapts to the window size to offer you the best view for your system resources</caption>
+      <caption>Monitorets lets you choose the layout you prefer to view your system resources</caption>
     </screenshot>
   </screenshots>
 
@@ -39,6 +48,16 @@
   </provides>
 
   <releases>
+    <release version="0.3.0" date="2022-11-06">
+      <description>
+        <ul>
+          <li>Added home and root folder usage monitors</li>
+          <li>Added layout selector</li>
+          <li>Added Tips section</li>
+          <li>Improve close and preferences buttons visibility when shown</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.2.1" date="2022-11-02">
       <description>
         <p>Under the hood tweaks</p>
