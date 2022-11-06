@@ -1,14 +1,10 @@
 from gi.repository import Adw, GObject
 
 from .preferences import Preferences
+from .preference_keys import PreferenceKeys
 from .event_broker import EventBroker
 from . import events
-
-
-class Theme:
-    SYSTEM = "system"
-    DARK = "dark"
-    LIGHT = "light"
+from .theme import Theme
 
 
 class Theming:
@@ -17,8 +13,6 @@ class Theming:
         Theme.DARK: Adw.ColorScheme.FORCE_DARK,
         Theme.LIGHT: Adw.ColorScheme.FORCE_LIGHT,
     }
-
-    _PREFERENCES_KEY = "general.theme"
 
     @classmethod
     def initialize(self):
@@ -35,5 +29,5 @@ class Theming:
 
     @classmethod
     def _on_preferences_changed(self, preference_key, value):
-        if preference_key == self._PREFERENCES_KEY:
+        if preference_key == PreferenceKeys.THEME:
             self._refresh_theme_from_preferences()

@@ -4,7 +4,7 @@ from .ui.gpu_monitor_widget import GpuMonitorWidget
 from .ui.memory_monitor_widget import MemoryMonitorWidget
 from .ui.home_usage_monitor_widget import HomeUsageMonitorWidget
 from .ui.root_usage_monitor_widget import RootUsageMonitorWidget
-from .preferences import PreferenceKeys
+from .preference_keys import PreferenceKeys
 
 
 monitor_descriptor_list = [

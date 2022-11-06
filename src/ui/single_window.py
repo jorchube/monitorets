@@ -22,7 +22,7 @@ from gi.repository import Gtk
 
 from .headerbar_wrapper import HeaderBarWrapper
 from .preferences_box import PreferencesBox
-from .window_layour_manager import WindowLayoutManager
+from .window_layout_manager import WindowLayoutManager
 from ..event_broker import EventBroker
 from .. import events
 from ..monitor_descriptors import monitor_descriptor_list

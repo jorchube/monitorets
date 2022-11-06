@@ -32,8 +32,11 @@ monitorets_sources = [
   'events.py',
   'monitor_type.py',
   'preferences.py',
+  'preference_keys.py',
   'controller.py',
   'theming.py',
+  'theme.py',
+  'layout.py',
   'monitor_descriptors.py',
 ]
 

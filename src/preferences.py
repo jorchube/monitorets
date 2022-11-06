@@ -4,14 +4,9 @@ from xdg import xdg_config_home
 
 from .event_broker import EventBroker
 from . import events
-
-
-class PreferenceKeys:
-    CPU_MONITOR_ENABLED = "cpu_monitor.enabled"
-    GPU_MONITOR_ENABLED = "gpu_monitor.enabled"
-    MEMORY_MONITOR_ENABLED = "memory_monitor.enabled"
-    HOME_USAGE_MONITOR_ENABLED = "home_usage_monitor.enabled"
-    ROOT_USAGE_MONITOR_ENABLED = "root_usage_monitor.enabled"
+from .preference_keys import PreferenceKeys
+from .theme import Theme
+from .layout import Layout
 
 
 class Preferences:
@@ -19,7 +14,8 @@ class Preferences:
     _file_name = "preferences.json"
 
     _default_preferences = {
-        "general.theme": "system",
+        PreferenceKeys.THEME: Theme.SYSTEM,
+        PreferenceKeys.LAYOUT: Layout.VERTICAL,
         PreferenceKeys.CPU_MONITOR_ENABLED: True,
         PreferenceKeys.GPU_MONITOR_ENABLED: False,
         PreferenceKeys.MEMORY_MONITOR_ENABLED: True,

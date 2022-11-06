@@ -40,17 +40,80 @@
       </object>
     </child>
     <child>
+      <object class="AdwPreferencesGroup">
+        <property name="title">Layout</property>
+        <child>
+          <object class="GtkBox">
+            <property name="css-classes">linked
+</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkToggleButton" id="_adaptive_layout_toggle_button">
+                <property name="child">
+                  <object class="AdwButtonContent">
+                    <property name="icon-name">rotation-allowed-symbolic</property>
+                    <property name="label">Adaptive</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="_horizontal_layout_toggle_button">
+                <property name="child">
+                  <object class="AdwButtonContent">
+                    <property name="icon-name">object-flip-horizontal-symbolic</property>
+                    <property name="label">Horizontal</property>
+                  </object>
+                </property>
+                <property name="group">_adaptive_layout_toggle_button</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="_vertical_layout_toggle_button">
+                <property name="child">
+                  <object class="AdwButtonContent">
+                    <property name="icon-name">object-flip-vertical-symbolic</property>
+                    <property name="label">Vertical</property>
+                  </object>
+                </property>
+                <property name="group">_adaptive_layout_toggle_button</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
       <object class="AdwPreferencesGroup" id="_monitor_enable_preferences_group">
         <property name="description">Select which monitor(s) to enable </property>
         <property name="title">Monitors</property>
       </object>
     </child>
     <child>
-      <object class="GtkButton" id="_about_button">
-        <property name="action-name">app.about</property>
+      <object class="GtkBox">
+        <property name="css-classes">flat</property>
         <property name="halign">end</property>
-        <property name="has-frame">False</property>
-        <property name="icon-name">help-about-symbolic</property>
+        <property name="homogeneous">True</property>
+        <property name="spacing">10</property>
+        <child>
+          <object class="GtkButton" id="_tips_button">
+            <property name="action-name">app.tips</property>
+            <property name="css-classes">circular</property>
+            <property name="has-frame">False</property>
+            <property name="icon-name">dialog-information-symbolic</property>
+            <property name="tooltip-text">Hints and tips</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="_about_button">
+            <property name="action-name">app.about</property>
+            <property name="css-classes">circular</property>
+            <property name="halign">end</property>
+            <property name="has-frame">False</property>
+            <property name="icon-name">help-about-symbolic</property>
+            <property name="tooltip-text">About this application</property>
+          </object>
+        </child>
       </object>
     </child>
   </template>
