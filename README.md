@@ -12,7 +12,7 @@
     <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/themeable.png" />
 </p>
 
-## Flexible:
+### Flexible:
 
 Select between *horizontal* and *vertical* layout. Or let the application decide based on the window shape.
 
@@ -20,7 +20,7 @@ Select between *horizontal* and *vertical* layout. Or let the application decide
     <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/adaptable.png" />
 </p>
 
-## Configurable:
+### Configurable:
 
 Choose which resources you want to have visible:
 * Cpu
