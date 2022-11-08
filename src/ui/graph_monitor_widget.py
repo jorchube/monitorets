@@ -1,16 +1,16 @@
-from gi.repository import Adw
 from gi.repository import Gtk, GObject
 
+from .monitor_widget import MonitorWidget
 from .graph_area import GraphArea
 from .graph_redraw_tick_manager import GraphRedrawTickManager
 
 
-class MonitorWidget(Adw.Bin):
+class GraphMonitorWidget(MonitorWidget):
 
     _REDRAW_FREQUENCY_HZ = 10
 
     def __init__(self, title, sampler, color=None, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super().__init__(title, sampler, *args, **kwargs)
 
         self.set_size_request(120, 40)
 
