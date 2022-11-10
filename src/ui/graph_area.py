@@ -1,84 +1,92 @@
 import math
 import cairo
+from gi.repository import Gtk, GObject
 
 
 class GraphArea:
     _LINE_WIDTH = 1
     _ALPHA_FILL = 0.2
-    _BUFFER_BEFORE_RELEASE_SAMPLE = 50
-    _SPACING_PER_SECOND = 10
     _MASK_CORNER_RADIUS = 12
+    _X_SPACE_PER_VALUE = 10
 
-    def __init__(self, gtk_drawing_area, color=None, tick_frequency_seconds=1.0):
+    def __init__(self, color, redraw_frequency_seconds):
         self._color = color.RGB
-        self._gtk_drawing_area = gtk_drawing_area
-        self._gtk_drawing_area.set_draw_func(self._draw_func, None)
-        self._spacing_per_tick = self._SPACING_PER_SECOND * tick_frequency_seconds
-        self._x_step_offset_waiting_for_new_value = 0
+        self._refraw_frequency_seconds = redraw_frequency_seconds
+        self._x_step_per_tick = self._X_SPACE_PER_VALUE / redraw_frequency_seconds
+        self._drawing_area = self._build_drawing_area()
+        self._drawing_area.set_draw_func(self._draw_func, None)
+        self._values = None
+        self._current_x_tick_step = 0
 
-        self._values = []
+    def set_new_values(self, values):
+        self._values = values
+        self._current_x_step_offset = self._X_SPACE_PER_VALUE
+
+    def get_drawing_area_widget(self):
+        return self._drawing_area
+
+    def redraw_tick(self):
+        GObject.idle_add(self._redraw)
+        self._current_x_step_offset -= 1
+
+    def _build_drawing_area(self):
+        drawing_area = Gtk.DrawingArea()
+        drawing_area.set_hexpand(True)
+        drawing_area.set_vexpand(True)
+
+        return drawing_area
 
     def _redraw(self):
-        self._gtk_drawing_area.queue_draw()
-
-    def tick(self):
-        self._redraw()
-        self._x_step_offset_waiting_for_new_value -= 1
+        self._drawing_area.queue_draw()
 
     def _draw_func(self, gtk_drawing_area, context, width, height, user_data):
-        self._release_samples_if_needed(width)
+        if self._values is None:
+            return
 
-        self._plot_y_fill(context, width, height)
-        self._plot_y_values(context, width, height)
+        self._draw_values_fill(context, width, height)
+        self._draw_values_ouline(context, width, height)
         self._apply_mask(context, width, height)
 
-    def _release_samples_if_needed(self, width):
-        max_values = self._get_number_of_visible_values(width)
-        if len(self._values) > max_values:
-            self._values = self._values[:max_values]
-
-    def add_value(self, value):
-        self._values.insert(0, value)
-        self._x_step_offset_waiting_for_new_value = self._SPACING_PER_SECOND
-
-    def _get_number_of_visible_values(self, width):
-        return int(width / self._spacing_per_tick) + self._BUFFER_BEFORE_RELEASE_SAMPLE
-
-    def _plot_y_values(self, context, width, height):
+    def _draw_values_fill(self, context, width, height):
         context.new_path()
         context.set_line_join(cairo.LINE_JOIN_ROUND)
         context.set_line_cap(cairo.LINE_CAP_ROUND)
 
-        self._plot_data_points(context, width, height)
+        self._draw_values_shape(context, width, height, close=True)
+
+        context.set_source_rgba(*self._color, self._ALPHA_FILL)
+        context.fill()
+
+    def _draw_values_ouline(self, context, width, height):
+        context.new_path()
+        context.set_line_join(cairo.LINE_JOIN_ROUND)
+        context.set_line_cap(cairo.LINE_CAP_ROUND)
+
+        self._draw_values_shape(context, width, height)
 
         context.set_line_width(self._LINE_WIDTH)
         context.set_source_rgba(*self._color, 1)
         context.stroke()
 
-    def _plot_y_fill(self, context, width, height):
-        context.new_path()
-        context.set_line_join(cairo.LINE_JOIN_ROUND)
-        context.set_line_cap(cairo.LINE_CAP_ROUND)
+    def _draw_values_shape(self, context, width, height, close=False):
+        values = self._values
+        order = 0
 
-        self._plot_data_points(context, width, height, close=True)
-
-        context.set_source_rgba(*self._color, self._ALPHA_FILL)
-        context.fill()
-
-    def _plot_data_points(self, context, width, height, close=False):
-        points_drawn = 0
-
-        for value in self._values:
-            x = width - (points_drawn * (self._SPACING_PER_SECOND)) + self._x_step_offset_waiting_for_new_value
-            y = height - (height * (value/100.0))
+        for value in values:
+            x, y = self._value_point(width, height, value, order)
             context.line_to(x, y)
-
-            points_drawn = points_drawn + 1
+            order += 1
 
         if close:
             context.line_to(x, height)
             context.line_to(width, height)
             context.close_path()
+
+    def _value_point(self, width, height, value, order):
+        x = width - (order * self._X_SPACE_PER_VALUE) + self._current_x_step_offset
+        y = height - (height * (value/100.0))
+
+        return x, y
 
     def _apply_mask(self, context, width, height):
         context.set_operator(cairo.OPERATOR_DEST_IN)

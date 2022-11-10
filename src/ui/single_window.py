@@ -75,6 +75,12 @@ class SingleWindow(Adw.ApplicationWindow):
         if self._monitor_bins[type].get_child() is not None:
             return
 
+        try:
+            self._enable_monitor(type)
+        except Exception as e:
+            print(e)
+
+    def _enable_monitor(self, type):
         monitor = self._available_monitors[type]()
         monitor.start()
         self._set_monitor_bin_enabled_style(self._monitor_bins[type])
