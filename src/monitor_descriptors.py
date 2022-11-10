@@ -1,10 +1,11 @@
 from .monitor_type import MonitorType
-from .ui.cpu_monitor_widget import CpuMonitorWidget
-from .ui.gpu_monitor_widget import GpuMonitorWidget
-from .ui.memory_monitor_widget import MemoryMonitorWidget
-from .ui.home_usage_monitor_widget import HomeUsageMonitorWidget
-from .ui.root_usage_monitor_widget import RootUsageMonitorWidget
 from .preference_keys import PreferenceKeys
+from .ui.monitor_widgets.cpu_monitor_widget import CpuMonitorWidget
+from .ui.monitor_widgets.gpu_monitor_widget import GpuMonitorWidget
+from .ui.monitor_widgets.memory_monitor_widget import MemoryMonitorWidget
+from .ui.monitor_widgets.home_usage_monitor_widget import HomeUsageMonitorWidget
+from .ui.monitor_widgets.root_usage_monitor_widget import RootUsageMonitorWidget
+
 
 
 monitor_descriptor_list = [
