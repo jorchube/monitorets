@@ -9,7 +9,7 @@ class MonitorWidget(Adw.Bin):
     def __init__(self, monitor, title, color=None, redraw_freq_seconds=_REDRAW_FREQUENCY_SECONDS, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._monitor = monitor
-        self._graph_area = GraphArea(self._color, redraw_freq_seconds)
+        self._graph_area = self._graph_area_instance(self._color, redraw_freq_seconds)
 
         self.set_size_request(120, 40)
 
@@ -26,6 +26,9 @@ class MonitorWidget(Adw.Bin):
         self.set_child(self._overlay)
 
         self._setup_graph_area_callback()
+
+    def _graph_area_instance(self, color, redraw_freq_seconds):
+        return GraphArea(color, redraw_freq_seconds)
 
     def start(self):
         self._monitor.start()

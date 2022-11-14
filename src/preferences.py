@@ -19,6 +19,7 @@ class Preferences:
         PreferenceKeys.CPU_MONITOR_ENABLED: True,
         PreferenceKeys.GPU_MONITOR_ENABLED: False,
         PreferenceKeys.MEMORY_MONITOR_ENABLED: True,
+        PreferenceKeys.DOWNLINK_MONITOR_ENABLED: False,
         PreferenceKeys.HOME_USAGE_MONITOR_ENABLED: False,
         PreferenceKeys.ROOT_USAGE_MONITOR_ENABLED: False,
         "gpu_monitor.sampling_frequency_seconds": 0.1,

@@ -20,6 +20,7 @@
 from gi.repository import Adw
 from gi.repository import Gtk
 
+import traceback
 from .headerbar_wrapper import HeaderBarWrapper
 from .preferences_box import PreferencesBox
 from .window_layout_manager import WindowLayoutManager
@@ -78,7 +79,9 @@ class SingleWindow(Adw.ApplicationWindow):
         try:
             self._enable_monitor(type)
         except Exception as e:
-            print(e)
+            print(f"Exception: {e}")
+            traceback.print_exc()
+
 
     def _enable_monitor(self, type):
         monitor = self._available_monitors[type]()

@@ -16,7 +16,7 @@ class GraphArea:
         self._drawing_area = self._build_drawing_area()
         self._drawing_area.set_draw_func(self._draw_func, None)
         self._values = None
-        self._current_x_tick_step = 0
+        self._current_x_step_offset = 0
 
     def set_new_values(self, values):
         self._values = values

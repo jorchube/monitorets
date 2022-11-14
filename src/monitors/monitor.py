@@ -16,9 +16,6 @@ class Monitor:
     def install_new_values_callback(self, cb):
         self._new_values_callback = cb
 
-    def get_values(self):
-        return self._values
-
     def _new_sample(self, value):
         self._values.insert(0, value)
         if self._new_values_callback:

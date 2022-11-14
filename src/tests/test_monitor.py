@@ -9,10 +9,14 @@ class TestMonitor:
     def test_sampler(self):
         class _TestSampler(Sampler):
             def __init__(self, sampling_frequency_hz=1):
+                self.samples = [1, 3, 5, 10, 20]
+                self.samples_index = 0
                 super().__init__(sampling_frequency_hz)
 
             def take_sample(self):
-                self._sample_callback(33)
+                sample = self.samples[self.samples_index]
+                self.samples_index += 1
+                self._sample_callback(sample)
 
         return _TestSampler()
 
@@ -27,18 +31,36 @@ class TestMonitor:
             def trigger_new_sample(self):
                 self._sampler.take_sample()
 
-            def _new_sample(self, value):
-                self._sample = value
-
-            def get_sample_value(self):
-                return self._sample
+            def get_values(self):
+                return self._values
 
         return _TestMonitor()
 
 
-    def test_monitor_receives_new_sample_from_sampler(self, test_monitor):
+    def test_monitor_stores_one_sample_from_sampler(self, test_monitor):
         test_monitor.trigger_new_sample()
 
-        sample_value = test_monitor.get_sample_value()
+        values = test_monitor.get_values()
 
-        assert sample_value == 33
+        assert values == [1]
+
+    def test_monitor_stores_many_samples_from_sampler(self, test_monitor):
+        test_monitor.trigger_new_sample()
+        test_monitor.trigger_new_sample()
+        test_monitor.trigger_new_sample()
+
+        values = test_monitor.get_values()
+
+        assert values == [5, 3, 1]
+
+    def test_monitor_discards_samples_when_max_is_reached(self, test_monitor):
+        test_monitor._MAX_NUMBER_OF_VALUES_STORED = 2
+        test_monitor.trigger_new_sample()
+        test_monitor.trigger_new_sample()
+        test_monitor.trigger_new_sample()
+        test_monitor.trigger_new_sample()
+        test_monitor.trigger_new_sample()
+
+        values = test_monitor.get_values()
+
+        assert values == [20, 10]
