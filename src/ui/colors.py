@@ -1,6 +1,6 @@
 class RED:
-    HTML = "ff8500"
-    RGB = (1, 0, 0)
+    HTML = "ff5050"
+    RGB = (1, 0.2, 0.2)
 
 class GREEN:
     HTML = "00cc00"

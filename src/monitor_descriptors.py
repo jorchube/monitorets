@@ -4,6 +4,7 @@ from .ui.monitor_widgets.cpu_monitor_widget import CpuMonitorWidget
 from .ui.monitor_widgets.gpu_monitor_widget import GpuMonitorWidget
 from .ui.monitor_widgets.memory_monitor_widget import MemoryMonitorWidget
 from .ui.monitor_widgets.downlink_monitor_widget import DownlinkMonitorWidget
+from .ui.monitor_widgets.uplink_monitor_widget import UplinkMonitorWidget
 from .ui.monitor_widgets.home_usage_monitor_widget import HomeUsageMonitorWidget
 from .ui.monitor_widgets.root_usage_monitor_widget import RootUsageMonitorWidget
 
@@ -33,6 +34,12 @@ monitor_descriptor_list = [
         'enabled_preference_key': PreferenceKeys.DOWNLINK_MONITOR_ENABLED,
         'monitor_class': DownlinkMonitorWidget,
         'preference_toggle_label': 'Downlink',
+    },
+    {
+        'type': MonitorType.Uplink,
+        'enabled_preference_key': PreferenceKeys.UPLINK_MONITOR_ENABLED,
+        'monitor_class': UplinkMonitorWidget,
+        'preference_toggle_label': 'Uplink',
     },
     {
         'type': MonitorType.Home_usage,
