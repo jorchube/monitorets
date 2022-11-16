@@ -2,7 +2,10 @@ from .graph_area import GraphArea
 
 
 class RelativeGraphArea(GraphArea):
-    def __init__(self, color, redraw_frequency_seconds):
+    _MINIMUM_RELATIVE_VALUE = 1000
+
+    def __init__(self, color, redraw_frequency_seconds, minimum_relative_value=_MINIMUM_RELATIVE_VALUE):
+        self._minimum_relative_value = minimum_relative_value
         super().__init__(color, redraw_frequency_seconds)
 
     def set_new_values(self, values):
@@ -10,7 +13,7 @@ class RelativeGraphArea(GraphArea):
         return super().set_new_values(normalized_values)
 
     def _normalize_values(self, values):
-        max_value = max(values)
+        max_value = max(max(values), self._minimum_relative_value)
         normalized_values = []
 
         for value in values:

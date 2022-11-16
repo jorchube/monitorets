@@ -8,7 +8,11 @@ class UplinkSampler(DeltaSampler):
         super().__init__(*args, **kwargs)
 
     def _get_sample(self):
-        counters = psutil.net_io_counters()
-        sample = int(counters.bytes_sent)
+        per_nic_counters = psutil.net_io_counters(pernic=True)
 
-        return sample
+        counter = 0
+        for key, value in per_nic_counters.items():
+            if key != 'lo':
+                counter += value.bytes_sent
+
+        return int(counter)
