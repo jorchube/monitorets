@@ -3,9 +3,9 @@ from gi.repository import Adw, Gtk
 
 class BidirectionalClampContainerWidget(Adw.Bin):
     _MAX_HORIZONTAL_SIZE = 500
-    _HORIZONTAL_TIGHTENING_THRESHOLD = 250
-    _MAX_VERTICAL_SIZE = 200
-    _VERTICAL_TIGHTENING_THRESHOLD = 100
+    _HORIZONTAL_TIGHTENING_THRESHOLD = 400
+    _MAX_VERTICAL_SIZE = 100
+    _VERTICAL_TIGHTENING_THRESHOLD = 80
 
     def __init__(self):
         super().__init__()
