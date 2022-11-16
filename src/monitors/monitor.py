@@ -1,5 +1,5 @@
 class Monitor:
-    _MAX_NUMBER_OF_VALUES_STORED = 100
+    _MAX_NUMBER_OF_VALUES_STORED = 55
 
     def __init__(self, sampler):
         self._sampler = sampler
