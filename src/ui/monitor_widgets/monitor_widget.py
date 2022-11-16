@@ -1,6 +1,7 @@
 from gi.repository import Adw, Gtk
 from ..graph_area import GraphArea
 from ..graph_redraw_tick_manager import GraphRedrawTickManager
+from ..bidirectional_clamp_container_widget import BidirectionalClampContainerWidget
 
 
 class MonitorWidget(Adw.Bin):
@@ -15,17 +16,27 @@ class MonitorWidget(Adw.Bin):
 
         self._redraw_manager = GraphRedrawTickManager(self._tick, redraw_freq_seconds)
 
-        self.add_css_class("card")
-        self.add_css_class("frame")
-
         title_label = self._build_title_label(title, color)
 
+        self._clamp_container = BidirectionalClampContainerWidget()
+        self._overlay_bin = Adw.Bin()
+        self._overlay_bin.add_css_class("card")
         self._overlay = Gtk.Overlay()
+
+
+        self.set_child(self._clamp_container)
+        self._clamp_container.set_child(self._overlay_bin)
+        self._overlay_bin.set_child(self._overlay)
+
         self._overlay.set_child(self._graph_area.get_drawing_area_widget())
         self._overlay.add_overlay(title_label)
-        self.set_child(self._overlay)
 
         self._setup_graph_area_callback()
+
+    def _setup_widget_hierarchy(self):
+        self._clamp_container.set_child(self._overlay_bin)
+        self._overlay_bin.set_child(self._overlay)
+        self.set_child(self._clamp_container)
 
     def _graph_area_instance(self, color, redraw_freq_seconds):
         return GraphArea(color, redraw_freq_seconds)

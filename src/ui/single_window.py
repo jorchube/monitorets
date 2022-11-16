@@ -33,8 +33,8 @@ from ..monitor_descriptors import monitor_descriptor_list
 class SingleWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'SingleWindow'
 
-    _overlay= Gtk.Template.Child()
-    _monitors_box= Gtk.Template.Child()
+    _overlay = Gtk.Template.Child()
+    _monitors_box = Gtk.Template.Child()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -81,7 +81,6 @@ class SingleWindow(Adw.ApplicationWindow):
         except Exception as e:
             print(f"Exception: {e}")
             traceback.print_exc()
-
 
     def _enable_monitor(self, type):
         monitor = self._available_monitors[type]()

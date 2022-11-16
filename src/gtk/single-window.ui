@@ -10,10 +10,10 @@
       <object class="GtkOverlay" id="_overlay">
         <property name="child">
           <object class="GtkBox" id="_monitors_box">
-            <property name="margin-bottom">2</property>
-            <property name="margin-end">2</property>
-            <property name="margin-start">2</property>
-            <property name="margin-top">2</property>
+            <property name="margin-bottom">4</property>
+            <property name="margin-end">4</property>
+            <property name="margin-start">4</property>
+            <property name="margin-top">4</property>
             <property name="orientation">vertical</property>
           </object>
         </property>
