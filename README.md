@@ -31,6 +31,7 @@ Choose which resources you want to have visible:
 * Home folder ( **~** ) space
 * Root ( **/** ) space
 
+
 ### Get it now:
 
 You can download the latest version from flathub. Click on the banner below:

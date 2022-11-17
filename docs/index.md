@@ -22,15 +22,28 @@ Choose which resources you want to have visible:
 * Cpu
 * Gpu \[1\]
 * Memory
+* Network downlink traffic
+* Network uplink traffic
 * Home folder ( **~** ) space
 * Root ( **/** ) space
 
+
+### Get it now:
+
+You can download the latest version from flathub. Click on the banner below:
 
 <p align="center">
     <a href='https://flathub.org/apps/details/io.github.jorchube.monitorets'>
         <img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/>
     </a>
 </p>
+
+You can also install it using the command line with the following commands:
+
+```
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install io.github.jorchube.monitorets
+```
 
 ---
 
