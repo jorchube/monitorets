@@ -38,6 +38,7 @@ monitorets_sources = [
   'theme.py',
   'layout.py',
   'monitor_descriptors.py',
+  'discover_temperature_monitors.py',
 ]
 
 install_data(monitorets_sources, install_dir: moduledir)
@@ -45,3 +46,4 @@ install_data(monitorets_sources, install_dir: moduledir)
 install_subdir('ui', install_dir: moduledir)
 install_subdir('samplers', install_dir: moduledir)
 install_subdir('monitors', install_dir: moduledir)
+install_subdir('temperature_sensors', install_dir: moduledir)

@@ -27,6 +27,7 @@ from gi.repository import Gio, Adw
 from .controller import Controller
 from .ui.single_window import SingleWindow
 from .ui.tips_window import TipsWindow
+from . import discover_temperature_monitors
 
 
 class MonitorApplication(Adw.Application):
@@ -42,6 +43,8 @@ class MonitorApplication(Adw.Application):
         self.create_action('tips', self.on_tips_action)
         self.create_action('preferences', self.on_preferences_action)
 
+        self._discover_dynamic_monitors()
+
         Controller.initialize(application=self)
 
     def do_activate(self):
@@ -50,6 +53,7 @@ class MonitorApplication(Adw.Application):
         We raise the application's main window, creating it if
         necessary.
         """
+
         self.window = SingleWindow(application=self)
         self.window.present()
         Controller.show_monitors()
@@ -94,6 +98,9 @@ class MonitorApplication(Adw.Application):
         self.add_action(action)
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
+
+    def _discover_dynamic_monitors(self):
+        discover_temperature_monitors.execute()
 
 def main(version):
     """The application's entry point."""

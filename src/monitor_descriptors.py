@@ -78,3 +78,7 @@ def get_monitor_descriptors_grouped_by_preference_toggle_section():
             grouped_descriptors["section"][descriptor["preference_toggle_section_name"]].append(descriptor)
 
     return grouped_descriptors
+
+
+def register_monitor_descriptor(new_descriptor):
+    monitor_descriptor_list.append(new_descriptor)

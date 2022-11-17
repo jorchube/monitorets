@@ -81,3 +81,7 @@ class Preferences:
         base = xdg_config_home()
         full_path = base / self._folder_name / self._file_name
         return full_path
+
+    @classmethod
+    def register_preference_key_default(self, key, default_value):
+        self._default_preferences[key] = default_value
