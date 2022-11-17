@@ -21,6 +21,8 @@
       <li>Cpu</li>
       <li>Gpu (experimental support)</li>
       <li>Memory</li>
+      <li>Network downlink traffic</li>
+      <li>Network uplink traffic</li>
       <li>Home folder space</li>
       <li>Root space</li>
     </ul>
@@ -48,6 +50,14 @@
   </provides>
 
   <releases>
+    <release version="0.4.0" date="2022-11-17">
+      <description>
+        <ul>
+          <li>Added network downlink and uplink traffic monitors</li>
+          <li>Some cosmetic changes have been done</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.3.0" date="2022-11-06">
       <description>
         <ul>
