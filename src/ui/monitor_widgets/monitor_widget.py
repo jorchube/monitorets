@@ -1,4 +1,4 @@
-from gi.repository import Adw, Gtk
+from gi.repository import Adw, Gtk, Pango
 from ..graph_area import GraphArea
 from ..graph_redraw_tick_manager import GraphRedrawTickManager
 from ..bidirectional_clamp_container_widget import BidirectionalClampContainerWidget
@@ -52,7 +52,11 @@ class MonitorWidget(Adw.Bin):
 
     def _build_title_label(self, title, color):
         label = Gtk.Label()
+        label.set_margin_start(10)
+        label.set_margin_end(10)
         label.set_markup(f"<span weight='bold' color='#{color.HTML}'>{title}</span>")
+        label.set_ellipsize(Pango.EllipsizeMode.MIDDLE)
+
         return label
 
     def _tick(self):
