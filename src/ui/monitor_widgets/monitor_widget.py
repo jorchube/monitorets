@@ -9,6 +9,7 @@ class MonitorWidget(Adw.Bin):
 
     def __init__(self, monitor, title, color=None, redraw_freq_seconds=_REDRAW_FREQUENCY_SECONDS, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self._color = color
         self._monitor = monitor
         self._graph_area = self._graph_area_instance(self._color, redraw_freq_seconds)
 
