@@ -6,6 +6,10 @@ class GREEN:
     HTML = "00cc00"
     RGB = (0, 0.8, 0)
 
+class BROWN:
+    HTML = "b07000"
+    RGB = (0.61, 0.38, 0)
+
 class BLUE:
     HTML = "0080ff"
     RGB = (0, 0.5, 1)
