@@ -25,6 +25,7 @@
       <li>Network uplink traffic</li>
       <li>Home folder space</li>
       <li>Root space</li>
+      <li>Temperature sensors</li>
     </ul>
   </description>
 
@@ -50,6 +51,15 @@
   </provides>
 
   <releases>
+    <release version="0.5.0" date="2022-11-20">
+      <description>
+        <ul>
+          <li>Autodiscover temperature sensors and expose them as temperature monitors</li>
+          <li>Ellipsize monitor names when do not fit the available space</li>
+          <li>Add monitor groups for same-kind monitors in the preferences popover</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.4.0" date="2022-11-17">
       <description>
         <ul>
