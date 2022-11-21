@@ -51,6 +51,13 @@
   </provides>
 
   <releases>
+    <release version="0.5.1" date="2022-11-21">
+      <description>
+        <ul>
+          <li>Restored missing network permission needed for the network monitors</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.5.0" date="2022-11-20">
       <description>
         <ul>
