@@ -10,10 +10,9 @@ from .preferences import Preferences
 def _get_sensor_descriptors():
     sensors = psutil.sensors_temperatures()
     if not sensors:
-        return
+        return list()
 
     sensor_descriptor_list = list()
-
     for hardware_name, hardware_sensor_list in sensors.items():
         for hardware_sensor in hardware_sensor_list:
             hardware_sensor_name = hardware_sensor.label
