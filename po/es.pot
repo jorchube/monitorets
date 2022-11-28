@@ -1,0 +1,233 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Monitorets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-28 21:31+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/gtk/preferences-box.ui:15
+msgctxt "monitorets"
+msgid "Theme"
+msgstr "Tema"
+
+#: src/gtk/preferences-box.ui:23
+msgctxt "monitorets"
+msgid "System"
+msgstr "Sistema"
+
+#: src/gtk/preferences-box.ui:29
+msgctxt "monitorets"
+msgid "Light"
+msgstr "Claro"
+
+#: src/gtk/preferences-box.ui:35
+msgctxt "monitorets"
+msgid "Dark"
+msgstr "Oscuro"
+
+#: src/gtk/preferences-box.ui:44
+msgctxt "monitorets"
+msgid "Layout"
+msgstr "Diseño"
+
+#: src/gtk/preferences-box.ui:55
+msgctxt "monitorets"
+msgid "Adaptive"
+msgstr "Adaptativo"
+
+#: src/gtk/preferences-box.ui:65
+msgctxt "monitorets"
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: src/gtk/preferences-box.ui:76
+msgctxt "monitorets"
+msgid "Vertical"
+msgstr "Vertical"
+
+#: src/gtk/preferences-box.ui:88
+msgctxt "monitorets"
+msgid "Select which monitor(s) to enable "
+msgstr "Selecciona que monitor(es) habilitar"
+
+#: src/gtk/preferences-box.ui:89
+msgctxt "monitorets"
+msgid "Monitors"
+msgstr "Monitores"
+
+#: data/io.github.jorchube.monitorets.desktop.in:3
+#: data/io.github.jorchube.monitorets.appdata.xml.in:4
+msgid "Monitorets"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.desktop.in:10
+msgid "monitor;system monitor;System Monitor;Monitor;"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:5
+#: data/io.github.jorchube.monitorets.appdata.xml.in:15
+msgid "Have always at a glance the usage of system resources"
+msgstr "Comprueba el uso de los recursos del sistema de un vistazo"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:8
+msgid "Jordi Chulia"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:17
+msgid ""
+"Monitorets is a small utility application offering a simple and quick view "
+"at the usage of several of your computer resources. Almost like an applet or "
+"a widget for your desktop."
+msgstr "Monitorets es una pequeña utilidad que ofrece una manera sencilla y rápida de consultar el uso de recursos de tu sistema"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:19
+msgid "Available monitors:"
+msgstr "Monitores disponibles:"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:21
+msgid "Cpu"
+msgstr "Cpu"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:22
+msgid "Gpu (experimental support)"
+msgstr "Gpu (soporte experimental)"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:23
+#: src/translatable_strings/monitor_title.py:5
+#: src/translatable_strings/preference_toggle_label.py:5
+msgid "Memory"
+msgstr "Memoria"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:24
+msgid "Network downlink traffic"
+msgstr "Tráfico de red de bajada"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:25
+msgid "Network uplink traffic"
+msgstr "Tráfico de red de subida"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:26
+msgid "Home folder space"
+msgstr "Uso de disco de la carpeta personal"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:27
+msgid "Root space"
+msgstr "Uso de disco del directorio raiz"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:28
+msgid "Temperature sensors"
+msgstr "Sensores de temperatura"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:35
+msgid "Have always at a glance useful system information"
+msgstr "Comprueba el uso de los recursos del sistema de un vistazo"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:39
+msgid "Choose between light and dark theme"
+msgstr "Elige entre tema claro y oscuro"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:43
+msgid ""
+"Monitorets lets you choose the layout you prefer to view your system "
+"resources"
+msgstr "Monitorets te cambiar elegir el diseño con el que visualizar los recursos de tu sistema"
+
+#: src/translatable_strings/headerbar.py:3
+msgid "Drag window from here"
+msgstr "Arrastra la ventana desde aquí"
+
+#: src/translatable_strings/headerbar.py:4
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: src/translatable_strings/monitor_title.py:3
+#: src/translatable_strings/preference_toggle_label.py:3
+msgid "CPU"
+msgstr "CPU"
+
+#: src/translatable_strings/monitor_title.py:4
+msgid "GPU"
+msgstr "GPU"
+
+#: src/translatable_strings/monitor_title.py:6
+msgid "Network 🠅"
+msgstr "Tráfico 🠅"
+
+#: src/translatable_strings/monitor_title.py:7
+msgid "Network 🠇"
+msgstr "Tráfico 🠇"
+
+#: src/translatable_strings/monitor_title.py:8
+msgid "~"
+msgstr "~"
+
+#: src/translatable_strings/monitor_title.py:9
+msgid "/"
+msgstr "/"
+
+#: src/translatable_strings/monitor_title.py:10
+msgid "Temp"
+msgstr "Temp"
+
+#: src/translatable_strings/preference_toggle_label.py:4
+msgid "GPU (experimental)"
+msgstr "GPU (experimental)"
+
+#: src/translatable_strings/preference_toggle_label.py:6
+msgid "Downlink"
+msgstr "Tráfico de bajada"
+
+#: src/translatable_strings/preference_toggle_label.py:7
+msgid "Uplink"
+msgstr "Tráfico de subida"
+
+#: src/translatable_strings/preference_toggle_label.py:8
+msgid "Home folder usage"
+msgstr "Uso de carpeta personal"
+
+#: src/translatable_strings/preference_toggle_label.py:9
+msgid "Root folder usage"
+msgstr "Uso de directorio raiz"
+
+#: src/translatable_strings/preference_toggle_label.py:10
+#: src/translatable_strings/preference_toggle_section_name.py:5
+msgid "Temperature"
+msgstr "Temperatura"
+
+#: src/translatable_strings/preference_toggle_section_name.py:3
+msgid "Network"
+msgstr "Red"
+
+#: src/translatable_strings/preference_toggle_section_name.py:4
+msgid "Disk usage"
+msgstr "Uso de disco"
+
+#: src/translatable_strings/tips.py:3
+msgid "Tips"
+msgstr "Consejos"
+
+#: src/translatable_strings/tips.py:4
+msgid "Always on Top"
+msgstr "Siempre Encima"
+
+#: src/translatable_strings/tips.py:5
+msgid ""
+"You can make the window stay on top of any other window: Press <b><tt>Alt"
+"+Space</tt></b> or right click with your mouse in the window titlebar to "
+"bring the window menu, then select <b><i>Always on Top</i></b>."
+msgstr ""
+"Puedes hacer que la ventana de Monitorets se mantenga encima de cualquier otra ventana: "
+"Pulsa <b><tt>Alt+Espacio</tt> o pulsa el botón derecho del ratón en la barra de título de la ventana para "
+"mostrar el menú contextual de la ventana, luego selecctiona <b><i>Siempre Encima</i></b>."
