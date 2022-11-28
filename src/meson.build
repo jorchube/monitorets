@@ -43,6 +43,7 @@ monitorets_sources = [
 
 install_data(monitorets_sources, install_dir: moduledir)
 
+install_subdir('translatable_strings', install_dir: moduledir)
 install_subdir('ui', install_dir: moduledir)
 install_subdir('samplers', install_dir: moduledir)
 install_subdir('monitors', install_dir: moduledir)

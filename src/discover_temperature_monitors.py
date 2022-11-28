@@ -4,7 +4,10 @@ from .temperature_sensors.temperature_sensor_descriptor import TemperatureSensor
 from .ui.monitor_widgets.temperature_sensor_monitor_widget import TemperatureSensorMonitorWidget
 from . monitor_descriptors import register_monitor_descriptor
 from .preferences import Preferences
-
+from .translatable_strings import (
+    preference_toggle_label,
+    preference_toggle_section_name
+)
 
 
 def _get_sensor_descriptors():
@@ -27,15 +30,15 @@ def _build_monitor_descriptor(sensor_descriptor):
     monitor_type = f'temperature_sensor_{sensor_id}'
     enabled_preference_key = f'temp_monitor.{sensor_id}.enabled'
     widget_constructor = lambda: TemperatureSensorMonitorWidget(sensor_descriptor)
-    preference_toggle_label = f'Temperature ({sensor_id})'
-    preference_toggle_section_name = 'Temperature'
+    _preference_toggle_label = f'{preference_toggle_label.TEMPERATURE} ({sensor_id})'
+    _preference_toggle_section_name = preference_toggle_section_name.TEMPERATURE
 
     return {
         'type': monitor_type,
         'enabled_preference_key': enabled_preference_key,
         'monitor_class': widget_constructor,
-        'preference_toggle_label': preference_toggle_label,
-        'preference_toggle_section_name': preference_toggle_section_name,
+        'preference_toggle_label': _preference_toggle_label,
+        'preference_toggle_section_name': _preference_toggle_section_name,
     }
 
 

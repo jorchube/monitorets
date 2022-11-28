@@ -2,7 +2,7 @@ from gi.repository import Adw, Gtk
 
 from ..event_broker import EventBroker
 from .. import events
-
+from ..translatable_strings import headerbar as headerbar_strings
 
 class HeaderBarWrapper:
     def __init__(self, preferences_box):
@@ -34,7 +34,7 @@ class HeaderBarWrapper:
 
     def _build_headerbar(self, preferences_button):
         drag_icon = Gtk.Image.new_from_icon_name("list-drag-handle-symbolic")
-        drag_icon.set_tooltip_text("Drag window from here")
+        drag_icon.set_tooltip_text(headerbar_strings.DRAG_TOOLTIP)
 
         headerbar = Adw.HeaderBar()
         headerbar.set_vexpand(False)
@@ -52,7 +52,7 @@ class HeaderBarWrapper:
         button.add_css_class("flat")
         button.set_vexpand(False)
         button.set_valign(Gtk.Align.CENTER)
-        button.set_tooltip_text("Preferences")
+        button.set_tooltip_text(headerbar_strings.PREFERENCES_TOOLTIP)
 
         popover.set_child(preferences_box)
         button.set_popover(popover)

@@ -1,6 +1,8 @@
 from gi.repository import Adw
 from gi.repository import Gtk
 
+from ..translatable_strings import tips
+
 
 @Gtk.Template(resource_path='/org/github/jorchube/monitorets/gtk/tips-window.ui')
 class TipsWindow(Adw.Window):
@@ -13,12 +15,12 @@ class TipsWindow(Adw.Window):
         super().__init__(*args, **kwargs)
 
         title_label = Gtk.Label()
-        title_label.set_markup("<span weight=\"bold\">Tips</span>")
+        title_label.set_markup(f"<span weight=\"bold\">{tips.WINDOW_TITLE}</span>")
         self._headerbar.set_title_widget(title_label)
 
         tip = self._new_tip_content(
-            "Always on Top",
-            "You can make the window stay on top of any other window: Press <b><tt>Alt+Space</tt></b> or right click with your mouse in the window titlebar to bring the window menu, then select <b><i>Always on Top</i></b>."
+            tips.ALWAYS_ON_TOP_TITLE,
+            tips.ALWAYS_ON_TOP_BODY
         )
 
         self._tips_box.append(tip)
