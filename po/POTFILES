@@ -1,4 +1,4 @@
-gtk/preferences-box.ui
+src/gtk/preferences-box.ui
 data/io.github.jorchube.monitorets.desktop.in
 data/io.github.jorchube.monitorets.appdata.xml.in
 data/io.github.jorchube.monitorets.gschema.xml
