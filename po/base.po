@@ -67,6 +67,16 @@ msgctxt "monitorets"
 msgid "Monitors"
 msgstr ""
 
+#: src/gtk/preferences-box.ui:104
+msgctxt "monitorets"
+msgid "Hints and tips"
+msgstr ""
+
+#: src/gtk/preferences-box.ui:114
+msgctxt "monitorets"
+msgid "About this application"
+msgstr ""
+
 #: data/io.github.jorchube.monitorets.desktop.in:3
 #: data/io.github.jorchube.monitorets.appdata.xml.in:4
 msgid "Monitorets"

@@ -101,7 +101,7 @@
             <property name="css-classes">circular</property>
             <property name="has-frame">False</property>
             <property name="icon-name">dialog-information-symbolic</property>
-            <property name="tooltip-text">Hints and tips</property>
+            <property name="tooltip-text" translatable="yes" context="monitorets">Hints and tips</property>
           </object>
         </child>
         <child>
@@ -111,7 +111,7 @@
             <property name="halign">end</property>
             <property name="has-frame">False</property>
             <property name="icon-name">help-about-symbolic</property>
-            <property name="tooltip-text">About this application</property>
+            <property name="tooltip-text" translatable="yes" context="monitorets">About this application</property>
           </object>
         </child>
       </object>
