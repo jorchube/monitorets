@@ -234,7 +234,8 @@ msgstr ""
 
 #: src/translatable_strings/tips.py:5
 msgid ""
-"You can make the window stay on top of any other window: Press <b><tt>Alt"
-"+Space</tt></b> or right click with your mouse in the window titlebar to "
-"bring the window menu, then select <b><i>Always on Top</i></b>."
+"You can make the window stay on top of any other window: "
+"Press <span font_weight='bold'>Alt+Space</span> or right click with your "
+"mouse in the window titlebar to bring the window menu, then "
+"select <span font_weight='bold' font_style='italic'>Always on Top</span>."
 msgstr ""
