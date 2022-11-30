@@ -12,7 +12,7 @@
     <property name="width-request">200</property>
     <child>
       <object class="AdwPreferencesGroup">
-        <property name="title">Theme</property>
+        <property name="title" translatable="yes" context="monitorets">Theme</property>
         <child>
           <object class="GtkBox">
             <property name="css-classes">linked
@@ -20,19 +20,19 @@
             <property name="homogeneous">True</property>
             <child>
               <object class="GtkToggleButton" id="_system_theme_toggle_button">
-                <property name="label">System</property>
+                <property name="label" translatable="yes" context="monitorets">System</property>
               </object>
             </child>
             <child>
               <object class="GtkToggleButton" id="_light_theme_toggle_button">
                 <property name="group">_system_theme_toggle_button</property>
-                <property name="label">Light</property>
+                <property name="label" translatable="yes" context="monitorets">Light</property>
               </object>
             </child>
             <child>
               <object class="GtkToggleButton" id="_dark_theme_toggle_button">
                 <property name="group">_system_theme_toggle_button</property>
-                <property name="label">Dark</property>
+                <property name="label" translatable="yes" context="monitorets">Dark</property>
               </object>
             </child>
           </object>
@@ -41,7 +41,7 @@
     </child>
     <child>
       <object class="AdwPreferencesGroup">
-        <property name="title">Layout</property>
+        <property name="title" translatable="yes" context="monitorets">Layout</property>
         <child>
           <object class="GtkBox">
             <property name="css-classes">linked
@@ -52,7 +52,7 @@
                 <property name="child">
                   <object class="AdwButtonContent">
                     <property name="icon-name">rotation-allowed-symbolic</property>
-                    <property name="label">Adaptive</property>
+                    <property name="label" translatable="yes" context="monitorets">Adaptive</property>
                   </object>
                 </property>
               </object>
@@ -62,7 +62,7 @@
                 <property name="child">
                   <object class="AdwButtonContent">
                     <property name="icon-name">object-flip-horizontal-symbolic</property>
-                    <property name="label">Horizontal</property>
+                    <property name="label" translatable="yes" context="monitorets">Horizontal</property>
                   </object>
                 </property>
                 <property name="group">_adaptive_layout_toggle_button</property>
@@ -73,7 +73,7 @@
                 <property name="child">
                   <object class="AdwButtonContent">
                     <property name="icon-name">object-flip-vertical-symbolic</property>
-                    <property name="label">Vertical</property>
+                    <property name="label" translatable="yes" context="monitorets">Vertical</property>
                   </object>
                 </property>
                 <property name="group">_adaptive_layout_toggle_button</property>
@@ -85,8 +85,8 @@
     </child>
     <child>
       <object class="AdwPreferencesGroup" id="_monitor_enable_preferences_group">
-        <property name="description">Select which monitor(s) to enable </property>
-        <property name="title">Monitors</property>
+        <property name="description" translatable="yes" context="monitorets">Select which monitor(s) to enable </property>
+        <property name="title" translatable="yes" context="monitorets">Monitors</property>
       </object>
     </child>
     <child>
@@ -101,7 +101,7 @@
             <property name="css-classes">circular</property>
             <property name="has-frame">False</property>
             <property name="icon-name">dialog-information-symbolic</property>
-            <property name="tooltip-text">Hints and tips</property>
+            <property name="tooltip-text" translatable="yes" context="monitorets">Hints and tips</property>
           </object>
         </child>
         <child>
@@ -111,7 +111,7 @@
             <property name="halign">end</property>
             <property name="has-frame">False</property>
             <property name="icon-name">help-about-symbolic</property>
-            <property name="tooltip-text">About this application</property>
+            <property name="tooltip-text" translatable="yes" context="monitorets">About this application</property>
           </object>
         </child>
       </object>

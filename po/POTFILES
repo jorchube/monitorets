@@ -1,6 +1,9 @@
+src/gtk/preferences-box.ui
 data/io.github.jorchube.monitorets.desktop.in
 data/io.github.jorchube.monitorets.appdata.xml.in
 data/io.github.jorchube.monitorets.gschema.xml
-src/main.py
-src/window.py
-src/window.ui
+src/translatable_strings/headerbar.py
+src/translatable_strings/monitor_title.py
+src/translatable_strings/preference_toggle_label.py
+src/translatable_strings/preference_toggle_section_name.py
+src/translatable_strings/tips.py

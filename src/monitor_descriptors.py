@@ -9,7 +9,10 @@ from .ui.monitor_widgets.downlink_monitor_widget import DownlinkMonitorWidget
 from .ui.monitor_widgets.uplink_monitor_widget import UplinkMonitorWidget
 from .ui.monitor_widgets.home_usage_monitor_widget import HomeUsageMonitorWidget
 from .ui.monitor_widgets.root_usage_monitor_widget import RootUsageMonitorWidget
-
+from .translatable_strings import (
+    preference_toggle_label,
+    preference_toggle_section_name
+)
 
 
 monitor_descriptor_list = [
@@ -17,50 +20,50 @@ monitor_descriptor_list = [
         'type': MonitorType.CPU,
         'enabled_preference_key': PreferenceKeys.CPU_MONITOR_ENABLED,
         'monitor_class': CpuMonitorWidget,
-        'preference_toggle_label': 'CPU',
+        'preference_toggle_label': preference_toggle_label.CPU,
         'preference_toggle_section_name': None,
     },
     {
         'type': MonitorType.GPU,
         'enabled_preference_key': PreferenceKeys.GPU_MONITOR_ENABLED,
         'monitor_class': GpuMonitorWidget,
-        'preference_toggle_label': 'GPU (experimental)',
+        'preference_toggle_label': preference_toggle_label.GPU,
         'preference_toggle_section_name': None,
     },
     {
         'type': MonitorType.Memory,
         'enabled_preference_key': PreferenceKeys.MEMORY_MONITOR_ENABLED,
         'monitor_class': MemoryMonitorWidget,
-        'preference_toggle_label': 'Memory',
+        'preference_toggle_label': preference_toggle_label.MEMORY,
         'preference_toggle_section_name': None,
     },
     {
         'type': MonitorType.Downlink,
         'enabled_preference_key': PreferenceKeys.DOWNLINK_MONITOR_ENABLED,
         'monitor_class': DownlinkMonitorWidget,
-        'preference_toggle_label': 'Downlink',
-        'preference_toggle_section_name': 'Network',
+        'preference_toggle_label': preference_toggle_label.DOWNLINK,
+        'preference_toggle_section_name': preference_toggle_section_name.NETWORK,
     },
     {
         'type': MonitorType.Uplink,
         'enabled_preference_key': PreferenceKeys.UPLINK_MONITOR_ENABLED,
         'monitor_class': UplinkMonitorWidget,
-        'preference_toggle_label': 'Uplink',
-        'preference_toggle_section_name': 'Network',
+        'preference_toggle_label': preference_toggle_label.UPLINK,
+        'preference_toggle_section_name': preference_toggle_section_name.NETWORK,
     },
     {
         'type': MonitorType.Home_usage,
         'enabled_preference_key': PreferenceKeys.HOME_USAGE_MONITOR_ENABLED,
         'monitor_class': HomeUsageMonitorWidget,
-        'preference_toggle_label': 'Home folder usage',
-        'preference_toggle_section_name': 'Disk usage',
+        'preference_toggle_label': preference_toggle_label.HOME_FOLDER_USAGE,
+        'preference_toggle_section_name': preference_toggle_section_name.DISK_USAGE,
     },
     {
         'type': MonitorType.Root_usage,
         'enabled_preference_key': PreferenceKeys.ROOT_USAGE_MONITOR_ENABLED,
         'monitor_class': RootUsageMonitorWidget,
-        'preference_toggle_label': 'Root folder usage',
-        'preference_toggle_section_name': 'Disk usage',
+        'preference_toggle_label': preference_toggle_label.ROOT_FOLDER_USAGE,
+        'preference_toggle_section_name': preference_toggle_section_name.DISK_USAGE,
     },
 ]
 
