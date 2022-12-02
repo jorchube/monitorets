@@ -48,6 +48,13 @@
   </provides>
 
   <releases>
+    <release version="0.6.0" date="2022-12-02">
+      <description>
+        <ul>
+          <li>Added internationalization support</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.5.1" date="2022-11-21">
       <description>
         <ul>
