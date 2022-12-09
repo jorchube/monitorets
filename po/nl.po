@@ -1,0 +1,249 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Heimen Stoffels <vistausss@fastmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: Monitorets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-28 21:31+0100\n"
+"PO-Revision-Date: 2022-12-09 18:17+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: src/gtk/preferences-box.ui:15
+msgctxt "monitorets"
+msgid "Theme"
+msgstr "Thema"
+
+#: src/gtk/preferences-box.ui:23
+msgctxt "monitorets"
+msgid "System"
+msgstr "Systeemthema"
+
+#: src/gtk/preferences-box.ui:29
+msgctxt "monitorets"
+msgid "Light"
+msgstr "Licht thema"
+
+#: src/gtk/preferences-box.ui:35
+msgctxt "monitorets"
+msgid "Dark"
+msgstr "Donker thema"
+
+#: src/gtk/preferences-box.ui:44
+msgctxt "monitorets"
+msgid "Layout"
+msgstr "Indeling"
+
+#: src/gtk/preferences-box.ui:55
+msgctxt "monitorets"
+msgid "Adaptive"
+msgstr "Automatisch inpassen"
+
+#: src/gtk/preferences-box.ui:65
+msgctxt "monitorets"
+msgid "Horizontal"
+msgstr "Horizontaal"
+
+#: src/gtk/preferences-box.ui:76
+msgctxt "monitorets"
+msgid "Vertical"
+msgstr "Verticaal"
+
+#: src/gtk/preferences-box.ui:88
+msgctxt "monitorets"
+msgid "Select which monitor(s) to enable "
+msgstr "Selecteer de te tonen monitors "
+
+#: src/gtk/preferences-box.ui:89
+msgctxt "monitorets"
+msgid "Monitors"
+msgstr "Monitors"
+
+#: src/gtk/preferences-box.ui:104
+msgctxt "monitorets"
+msgid "Hints and tips"
+msgstr "Tips en trucs"
+
+#: src/gtk/preferences-box.ui:114
+msgctxt "monitorets"
+msgid "About this application"
+msgstr "Over deze toepassing"
+
+#: data/io.github.jorchube.monitorets.desktop.in:3
+#: data/io.github.jorchube.monitorets.appdata.xml.in:4
+msgid "Monitorets"
+msgstr "Monitorets"
+
+#: data/io.github.jorchube.monitorets.desktop.in:10
+msgid "monitor;system monitor;System Monitor;Monitor;"
+msgstr "monitor;systeemmonitor;Systeemmonitor;Monitor;"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:5
+#: data/io.github.jorchube.monitorets.appdata.xml.in:15
+msgid "Have always at a glance the usage of system resources"
+msgstr "Bekijk in één oogopslag uw systeemverbruik"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:8
+msgid "Jordi Chulia"
+msgstr "Jordi Chulia"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:17
+msgid ""
+"Monitorets is a small utility application offering a simple and quick view "
+"at the usage of several of your computer resources. Almost like an applet or "
+"a widget for your desktop."
+msgstr ""
+"Monitorets is een eenvoudige toepassing voor het tonen van uw "
+"systeemverbruik in één oogopslag, vergelijkbaar met een invoegtoepassing of "
+"widget."
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:19
+msgid "Available monitors:"
+msgstr "Beschikbare monitors:"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:21
+msgid "Cpu"
+msgstr "Cpu"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:22
+msgid "Gpu (experimental support)"
+msgstr "Gpu (experimenteel)"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:23
+#: src/translatable_strings/monitor_title.py:5
+#: src/translatable_strings/preference_toggle_label.py:5
+msgid "Memory"
+msgstr "Geheugen"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:24
+msgid "Network downlink traffic"
+msgstr "Netwerk (downloaden)"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:25
+msgid "Network uplink traffic"
+msgstr "Netwerk (uploaden)"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:26
+msgid "Home folder space"
+msgstr "Ruimte in persoonlijke map"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:27
+msgid "Root space"
+msgstr "Ruimte in systeemmap"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:28
+msgid "Temperature sensors"
+msgstr "Temperatuursensors"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:35
+msgid "Have always at a glance useful system information"
+msgstr "Bekijk in één oogopslag uw systeemverbruik"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:39
+msgid "Choose between light and dark theme"
+msgstr "Kies uit het lichte of donkere thema"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:43
+msgid ""
+"Monitorets lets you choose the layout you prefer to view your system "
+"resources"
+msgstr "Monitorets stelt u in staat om een voorkeursindeling te kiezen"
+
+#: src/translatable_strings/headerbar.py:3
+msgid "Drag window from here"
+msgstr "Versleep het venster vanaf hier"
+
+#: src/translatable_strings/headerbar.py:4
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+#: src/translatable_strings/monitor_title.py:3
+#: src/translatable_strings/preference_toggle_label.py:3
+msgid "CPU"
+msgstr "Cpu"
+
+#: src/translatable_strings/monitor_title.py:4
+msgid "GPU"
+msgstr "Gpu"
+
+#: src/translatable_strings/monitor_title.py:6
+msgid "Network 🠅"
+msgstr "Netwerk 🠅"
+
+#: src/translatable_strings/monitor_title.py:7
+msgid "Network 🠇"
+msgstr "Netwerk 🠇"
+
+#: src/translatable_strings/monitor_title.py:8
+msgid "~"
+msgstr "~"
+
+#: src/translatable_strings/monitor_title.py:9
+msgid "/"
+msgstr "/"
+
+#: src/translatable_strings/monitor_title.py:10
+msgid "Temp"
+msgstr "Temp."
+
+#: src/translatable_strings/preference_toggle_label.py:4
+msgid "GPU (experimental)"
+msgstr "Gpu (experimenteel)"
+
+#: src/translatable_strings/preference_toggle_label.py:6
+msgid "Downlink"
+msgstr "Downloaden"
+
+#: src/translatable_strings/preference_toggle_label.py:7
+msgid "Uplink"
+msgstr "Uploaden"
+
+#: src/translatable_strings/preference_toggle_label.py:8
+msgid "Home folder usage"
+msgstr "Ruimte in persoonlijke map"
+
+#: src/translatable_strings/preference_toggle_label.py:9
+msgid "Root folder usage"
+msgstr "Ruimte in systeemmap"
+
+#: src/translatable_strings/preference_toggle_label.py:10
+#: src/translatable_strings/preference_toggle_section_name.py:5
+msgid "Temperature"
+msgstr "Temperatuur"
+
+#: src/translatable_strings/preference_toggle_section_name.py:3
+msgid "Network"
+msgstr "Netwerk"
+
+#: src/translatable_strings/preference_toggle_section_name.py:4
+msgid "Disk usage"
+msgstr "Schijfgebruik"
+
+#: src/translatable_strings/tips.py:3
+msgid "Tips"
+msgstr "Tips"
+
+#: src/translatable_strings/tips.py:4
+msgid "Always on Top"
+msgstr "Altijd bovenaan"
+
+#: src/translatable_strings/tips.py:5
+msgid ""
+"You can make the window stay on top of any other window: Press <span "
+"font_weight='bold'>Alt+Space</span> or right click with your mouse in the "
+"window titlebar to bring the window menu, then select <span "
+"font_weight='bold' font_style='italic'>Always on Top</span>."
+msgstr ""
+"U kunt er voor kiezen om het venster altijd bovenop andere vensters te "
+"houden. Dit doet u als volgt: Druk op <span "
+"font_weight='bold'>Alt+spatiebalk</span> of rechtsklik op de titelbalk om "
+"het venstermenu te openen en kies <span font_weight='bold' "
+"font_style='italic'>Altijd bovenaan</span>."
