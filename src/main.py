@@ -28,6 +28,7 @@ from .controller import Controller
 from .ui.single_window import SingleWindow
 from .ui.tips_window import TipsWindow
 from . import discover_temperature_monitors
+from .translators import translators_credits
 
 
 class MonitorApplication(Adw.Application):
@@ -67,7 +68,8 @@ class MonitorApplication(Adw.Application):
                                 developer_name='Jordi Chulia',
                                 version='0.6.0',
                                 developers=['Jordi Chulia'],
-                                copyright='© 2022 Jordi Chulia')
+                                copyright='© 2022 Jordi Chulia',
+                                translator_credits=translators_credits.strip())
         about.present()
 
     def on_tips_action(self, widget, _):
