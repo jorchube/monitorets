@@ -107,7 +107,7 @@
 	(5,22,"AdwButtonContent","icon-name","rotation-allowed-symbolic",None,None,None,None,None),
 	(5,22,"AdwButtonContent","label","Adaptive",1,None,"monitorets",None,None),
 	(7,1,"GtkWindow","default-height","40",None,None,None,None,None),
-	(7,1,"GtkWindow","default-width","120",None,None,None,None,None),
+	(7,1,"GtkWindow","default-width","180",None,None,None,None,None),
 	(7,2,"GtkOverlay","child",None,None,None,None,None,3),
 	(7,3,"GtkOrientable","orientation","vertical",None,None,None,None,None),
 	(7,3,"GtkWidget","margin-bottom","4",None,None,None,None,None),

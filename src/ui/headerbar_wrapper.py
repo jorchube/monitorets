@@ -8,8 +8,7 @@ from ..translatable_strings import headerbar as headerbar_strings
 class HeaderBarWrapper:
     def __init__(self, parent_window):
         self._parent_window = parent_window
-        self._preferences_button = self._build_preferences_button()
-        self._headerbar = self._build_headerbar(self._preferences_button)
+        self._headerbar = self._build_headerbar()
 
         self._set_not_focused()
 
@@ -32,28 +31,48 @@ class HeaderBarWrapper:
     def _set_focused(self):
         self._headerbar.set_opacity(1)
 
-    def _build_headerbar(self, preferences_button):
-        drag_icon = Gtk.Image.new_from_icon_name("list-drag-handle-symbolic")
-        drag_icon.set_tooltip_text(headerbar_strings.DRAG_TOOLTIP)
-
+    def _build_headerbar(self):
         headerbar = Adw.HeaderBar()
-        headerbar.set_vexpand(False)
-        headerbar.set_valign(Gtk.Align.START)
-        headerbar.set_title_widget(drag_icon)
-        headerbar.set_decoration_layout(":close")
-        headerbar.pack_start(preferences_button)
+        headerbar.set_vexpand(True)
+        headerbar.add_css_class("flat")
+        headerbar.set_title_widget(Gtk.Label())
+        headerbar.set_decoration_layout(":")
+
+        close_button = self._build_close_button()
+        preferences_button = self._build_preferences_button()
+
+        headerbar.pack_start(self._build_headerbar_button_box(preferences_button))
+        headerbar.pack_end(self._build_headerbar_button_box(close_button))
 
         return headerbar
 
+    def _build_headerbar_button_box(self, button):
+        control_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        control_box.set_valign(Gtk.Align.START)
+        control_box.append(button)
+
+        return control_box
+
+    def _close_button_clicked(self, *args, **kwargs):
+        EventBroker.notify(events.CLOSE_APPLICATION_REQUESTED)
+
+    def _build_close_button(self):
+        button = Gtk.Button()
+        button.set_icon_name("window-close")
+        button.add_css_class("circular")
+        button.add_css_class("raised")
+        button.add_css_class("osd")
+        button.connect("clicked", self._close_button_clicked)
+
+        return button
+
     def _build_preferences_button(self):
         button = Gtk.Button()
-        button.set_icon_name("document-properties-symbolic")
+        button.set_icon_name("open-menu-symbolic")
         button.add_css_class("circular")
-        button.add_css_class("flat")
-        button.set_vexpand(False)
-        button.set_valign(Gtk.Align.CENTER)
+        button.add_css_class("raised")
+        button.add_css_class("osd")
         button.set_tooltip_text(headerbar_strings.PREFERENCES_TOOLTIP)
-
         button.connect("clicked", self._present_preferences_window)
 
         return button
