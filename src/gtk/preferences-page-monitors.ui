@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+  <requires lib="libadwaita" version="1.1"/>
+  <template class="PreferencesPageMonitors" parent="AdwPreferencesPage">
+    <property name="name">Monitors</property>
+    <property name="title" translatable="yes" context="monitorets">Monitors</property>
+    <child>
+      <object class="AdwPreferencesGroup" id="_cpu_preferences_group">
+        <property name="title">Cpu</property>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup" id="_gpu_preferences_group">
+        <property name="title">Gpu</property>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup" id="_memory_preferences_group">
+        <property name="title">Memory</property>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup" id="_network_preferences_group">
+        <property name="title">Network</property>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup" id="_disk_preferences_group">
+        <property name="title">Disk usage</property>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup" id="_temperature_preferences_group">
+        <property name="title">Temperature sensors</property>
+      </object>
+    </child>
+  </template>
+</interface>

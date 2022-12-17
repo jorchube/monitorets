@@ -5,5 +5,8 @@
     <file preprocess="xml-stripblanks">gtk/single-window.ui</file>
     <file preprocess="xml-stripblanks">gtk/tips-window.ui</file>
     <file preprocess="xml-stripblanks">gtk/preferences-box.ui</file>
+    <file preprocess="xml-stripblanks">gtk/preferences-window.ui</file>
+    <file preprocess="xml-stripblanks">gtk/preferences-page-appearance.ui</file>
+    <file preprocess="xml-stripblanks">gtk/preferences-page-monitors.ui</file>
   </gresource>
 </gresources>

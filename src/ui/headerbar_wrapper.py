@@ -1,14 +1,14 @@
 from gi.repository import Adw, Gtk
 
+from .preferences.preferences_window import PreferencesWindow
 from ..event_broker import EventBroker
 from .. import events
 from ..translatable_strings import headerbar as headerbar_strings
 
 class HeaderBarWrapper:
-    def __init__(self, preferences_box):
-        self._preferences_popover = Gtk.Popover()
-        self._preferences_box = preferences_box
-        self._preferences_button = self._build_preferences_button(self._preferences_box, self._preferences_popover)
+    def __init__(self, parent_window):
+        self._parent_window = parent_window
+        self._preferences_button = self._build_preferences_button()
         self._headerbar = self._build_headerbar(self._preferences_button)
 
         self._set_not_focused()
@@ -45,8 +45,8 @@ class HeaderBarWrapper:
 
         return headerbar
 
-    def _build_preferences_button(self, preferences_box, popover):
-        button = Gtk.MenuButton()
+    def _build_preferences_button(self):
+        button = Gtk.Button()
         button.set_icon_name("document-properties-symbolic")
         button.add_css_class("circular")
         button.add_css_class("flat")
@@ -54,10 +54,13 @@ class HeaderBarWrapper:
         button.set_valign(Gtk.Align.CENTER)
         button.set_tooltip_text(headerbar_strings.PREFERENCES_TOOLTIP)
 
-        popover.set_child(preferences_box)
-        button.set_popover(popover)
+        button.connect("clicked", self._present_preferences_window)
 
         return button
+
+    def _present_preferences_window(self, data):
+        preferences_window = PreferencesWindow(transient_for=self._parent_window)
+        preferences_window.present()
 
     def _dismiss_preferences_popover(self, *args, **kwargs):
         self._preferences_popover.popdown()

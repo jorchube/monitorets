@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+  <requires lib="libadwaita" version="1.1"/>
+  <template class="PreferencesWindow" parent="AdwPreferencesWindow"/>
+</interface>

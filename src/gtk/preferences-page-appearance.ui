@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+  <requires lib="gtk" version="4.6"/>
+  <requires lib="libadwaita" version="1.1"/>
+  <template class="PreferencesPageAppearance" parent="AdwPreferencesPage">
+    <property name="name">Appearance</property>
+    <property name="title" translatable="yes" context="monitorets">Appearance</property>
+    <child>
+      <object class="AdwClamp">
+        <child>
+          <object class="GtkBox" id="PreferencesBox">
+            <property name="margin-end">10</property>
+            <property name="margin-start">10</property>
+            <property name="margin-top">10</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">10</property>
+            <property name="width-request">200</property>
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title" translatable="yes" context="monitorets">Theme</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="css-classes">linked
+</property>
+                    <property name="homogeneous">True</property>
+                    <child>
+                      <object class="GtkToggleButton" id="_system_theme_toggle_button">
+                        <property name="label" translatable="yes" context="monitorets">System</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="_light_theme_toggle_button">
+                        <property name="group">_system_theme_toggle_button</property>
+                        <property name="label" translatable="yes" context="monitorets">Light</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="_dark_theme_toggle_button">
+                        <property name="group">_system_theme_toggle_button</property>
+                        <property name="label" translatable="yes" context="monitorets">Dark</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title" translatable="yes" context="monitorets">Layout</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="css-classes">linked
+</property>
+                    <property name="homogeneous">True</property>
+                    <child>
+                      <object class="GtkToggleButton" id="_adaptive_layout_toggle_button">
+                        <property name="child">
+                          <object class="AdwButtonContent">
+                            <property name="icon-name">rotation-allowed-symbolic</property>
+                            <property name="label" translatable="yes" context="monitorets">Adaptive</property>
+                          </object>
+                        </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="_horizontal_layout_toggle_button">
+                        <property name="child">
+                          <object class="AdwButtonContent">
+                            <property name="icon-name">object-flip-horizontal-symbolic</property>
+                            <property name="label" translatable="yes" context="monitorets">Horizontal</property>
+                          </object>
+                        </property>
+                        <property name="group">_adaptive_layout_toggle_button</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="_vertical_layout_toggle_button">
+                        <property name="child">
+                          <object class="AdwButtonContent">
+                            <property name="icon-name">object-flip-vertical-symbolic</property>
+                            <property name="label" translatable="yes" context="monitorets">Vertical</property>
+                          </object>
+                        </property>
+                        <property name="group">_adaptive_layout_toggle_button</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
