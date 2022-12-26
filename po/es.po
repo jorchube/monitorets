@@ -152,7 +152,7 @@ msgstr "Elige entre tema claro y oscuro"
 msgid ""
 "Monitorets lets you choose the layout you prefer to view your system "
 "resources"
-msgstr "Monitorets te cambiar elegir el diseño con el que visualizar los recursos de tu sistema"
+msgstr "Monitorets te permite elegir el diseño con el que visualizar los recursos de tu sistema"
 
 #: src/translatable_strings/headerbar.py:3
 msgid "Drag window from here"
