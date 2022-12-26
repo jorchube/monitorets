@@ -142,22 +142,27 @@ msgid "GPU"
 msgstr "Gpu"
 
 #: src/translatable_strings/monitor_title.py:6
+#: src/translatable_strings/monitor_title.py:7
 msgid "Network 🠅"
 msgstr "Netwerk 🠅"
 
 #: src/translatable_strings/monitor_title.py:7
+#: src/translatable_strings/monitor_title.py:8
 msgid "Network 🠇"
 msgstr "Netwerk 🠇"
 
 #: src/translatable_strings/monitor_title.py:8
+#: src/translatable_strings/monitor_title.py:9
 msgid "~"
 msgstr "~"
 
 #: src/translatable_strings/monitor_title.py:9
+#: src/translatable_strings/monitor_title.py:10
 msgid "/"
 msgstr "/"
 
 #: src/translatable_strings/monitor_title.py:10
+#: src/translatable_strings/monitor_title.py:11
 msgid "Temp"
 msgstr "Temp."
 
@@ -166,24 +171,29 @@ msgid "GPU (experimental)"
 msgstr "Gpu (experimenteel)"
 
 #: src/translatable_strings/preference_toggle_label.py:6
+#: src/translatable_strings/preference_toggle_label.py:7
 msgid "Downlink"
 msgstr "Downloaden"
 
 #: src/translatable_strings/preference_toggle_label.py:7
+#: src/translatable_strings/preference_toggle_label.py:8
 msgid "Uplink"
 msgstr "Uploaden"
 
 #: src/translatable_strings/preference_toggle_label.py:8
+#: src/translatable_strings/preference_toggle_label.py:9
 msgid "Home folder usage"
 msgstr "Ruimte in persoonlijke map"
 
 #: src/translatable_strings/preference_toggle_label.py:9
+#: src/translatable_strings/preference_toggle_label.py:10
 msgid "Root folder usage"
 msgstr "Ruimte in systeemmap"
 
 #: src/translatable_strings/preference_toggle_label.py:10
 #: src/translatable_strings/preference_toggle_section_name.py:5
 #: src/translatable_strings/preference_toggle_section_name.py:8
+#: src/translatable_strings/preference_toggle_label.py:11
 msgid "Temperature"
 msgstr "Temperatuur"
 
@@ -368,4 +378,9 @@ msgstr ""
 #: src/gtk/preferences-page-monitors.ui:37
 msgctxt "monitors_preference_group"
 msgid "Temperature sensors"
+msgstr ""
+
+#: src/translatable_strings/monitor_title.py:6
+#: src/translatable_strings/preference_toggle_label.py:6
+msgid "Swap"
 msgstr ""
