@@ -143,7 +143,7 @@
             <child>
               <object class="AdwPreferencesGroup">
                 <property name="description" translatable="yes" context="monitorets">Choose how to organize the enabled resource monitors.</property>
-                <property name="title">Layout</property>
+                <property name="title" translatable="yes" context="monitorets">Layout</property>
                 <child>
                   <object class="AdwActionRow" id="_vertical_layout_action_row">
                     <property name="subtitle" translatable="yes" context="monitorets">Monitors stacked in a single column.</property>
