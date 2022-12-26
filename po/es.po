@@ -17,65 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/gtk/preferences-box.ui:15
+#: src/gtk/preferences-page-appearance.ui:25
 msgctxt "monitorets"
 msgid "Theme"
 msgstr "Tema"
 
-#: src/gtk/preferences-box.ui:23
+#: src/gtk/preferences-page-appearance.ui:63
 msgctxt "monitorets"
 msgid "System"
 msgstr "Sistema"
 
-#: src/gtk/preferences-box.ui:29
+#: src/gtk/preferences-page-appearance.ui:95
 msgctxt "monitorets"
 msgid "Light"
 msgstr "Claro"
 
-#: src/gtk/preferences-box.ui:35
+#: src/gtk/preferences-page-appearance.ui:128
 msgctxt "monitorets"
 msgid "Dark"
 msgstr "Oscuro"
 
-#: src/gtk/preferences-box.ui:44
-msgctxt "monitorets"
-msgid "Layout"
-msgstr "Diseño"
-
-#: src/gtk/preferences-box.ui:55
-msgctxt "monitorets"
-msgid "Adaptive"
-msgstr "Adaptativo"
-
-#: src/gtk/preferences-box.ui:65
-msgctxt "monitorets"
-msgid "Horizontal"
-msgstr "Horizontal"
-
-#: src/gtk/preferences-box.ui:76
-msgctxt "monitorets"
-msgid "Vertical"
-msgstr "Vertical"
-
-#: src/gtk/preferences-box.ui:88
-msgctxt "monitorets"
-msgid "Select which monitor(s) to enable "
-msgstr "Selecciona que monitor(es) habilitar"
-
-#: src/gtk/preferences-box.ui:89
+#: src/gtk/preferences-page-monitors.ui:8
 msgctxt "monitorets"
 msgid "Monitors"
 msgstr "Monitores"
-
-#: src/gtk/preferences-box.ui:104
-msgctxt "monitorets"
-msgid "Hints and tips"
-msgstr "Consejos"
-
-#: src/gtk/preferences-box.ui:114
-msgctxt "monitorets"
-msgid "About this application"
-msgstr "Acerca de"
 
 #: data/io.github.jorchube.monitorets.desktop.in:3
 #: data/io.github.jorchube.monitorets.appdata.xml.in:4
@@ -100,13 +65,16 @@ msgid ""
 "Monitorets is a small utility application offering a simple and quick view "
 "at the usage of several of your computer resources. Almost like an applet or "
 "a widget for your desktop."
-msgstr "Monitorets es una pequeña utilidad que ofrece una manera sencilla y rápida de consultar el uso de recursos de tu sistema"
+msgstr ""
+"Monitorets es una pequeña utilidad que ofrece una manera sencilla y rápida "
+"de consultar el uso de recursos de tu sistema"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:19
 msgid "Available monitors:"
 msgstr "Monitores disponibles:"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:21
+#: src/translatable_strings/preference_toggle_section_name.py:3
 msgid "Cpu"
 msgstr "Cpu"
 
@@ -117,6 +85,7 @@ msgstr "Gpu (soporte experimental)"
 #: data/io.github.jorchube.monitorets.appdata.xml.in:23
 #: src/translatable_strings/monitor_title.py:5
 #: src/translatable_strings/preference_toggle_label.py:5
+#: src/translatable_strings/preference_toggle_section_name.py:5
 msgid "Memory"
 msgstr "Memoria"
 
@@ -152,13 +121,15 @@ msgstr "Elige entre tema claro y oscuro"
 msgid ""
 "Monitorets lets you choose the layout you prefer to view your system "
 "resources"
-msgstr "Monitorets te permite elegir el diseño con el que visualizar los recursos de tu sistema"
+msgstr ""
+"Monitorets te permite elegir el diseño con el que visualizar los recursos de "
+"tu sistema"
 
 #: src/translatable_strings/headerbar.py:3
 msgid "Drag window from here"
 msgstr "Arrastra la ventana desde aquí"
 
-#: src/translatable_strings/headerbar.py:4
+#: src/translatable_strings/headerbar.py:4 src/gtk/main-menu-model.ui:6
 msgid "Preferences"
 msgstr "Preferencias"
 
@@ -213,18 +184,21 @@ msgstr "Uso de directorio raiz"
 
 #: src/translatable_strings/preference_toggle_label.py:10
 #: src/translatable_strings/preference_toggle_section_name.py:5
+#: src/translatable_strings/preference_toggle_section_name.py:8
 msgid "Temperature"
 msgstr "Temperatura"
 
 #: src/translatable_strings/preference_toggle_section_name.py:3
+#: src/translatable_strings/preference_toggle_section_name.py:6
 msgid "Network"
 msgstr "Red"
 
 #: src/translatable_strings/preference_toggle_section_name.py:4
+#: src/translatable_strings/preference_toggle_section_name.py:7
 msgid "Disk usage"
 msgstr "Uso de disco"
 
-#: src/translatable_strings/tips.py:3
+#: src/translatable_strings/tips.py:3 src/gtk/main-menu-model.ui:12
 msgid "Tips"
 msgstr "Consejos"
 
@@ -234,12 +208,123 @@ msgstr "Siempre Encima"
 
 #: src/translatable_strings/tips.py:5
 msgid ""
-"You can make the window stay on top of any other window: "
-"Press <span font_weight='bold'>Alt+Space</span> or right click with your "
-"mouse in the window titlebar to bring the window menu, then "
-"select <span font_weight='bold' font_style='italic'>Always on Top</span>."
+"You can make the window stay on top of any other window: Press <span "
+"font_weight='bold'>Alt+Space</span> or right click with your mouse in the "
+"window titlebar to bring the window menu, then select <span "
+"font_weight='bold' font_style='italic'>Always on Top</span>."
 msgstr ""
-"Puedes hacer que la ventana de Monitorets se mantenga encima de cualquier otra ventana: "
-"Pulsa <span font_weight='bold'>Alt+Espacio</span> o pulsa el botón derecho del ratón "
-"en la barra de título de la ventana para mostrar el menú contextual de la ventana, luego "
-"selecciona <span font_weight='bold' font_style='italic'>Siempre Encima</span>."
+"Puedes hacer que la ventana de Monitorets se mantenga encima de cualquier "
+"otra ventana: Pulsa <span font_weight='bold'>Alt+Espacio</span> o pulsa el "
+"botón derecho del ratón en la barra de título de la ventana para mostrar el "
+"menú contextual de la ventana, luego selecciona <span font_weight='bold' "
+"font_style='italic'>Siempre Encima</span>."
+
+#: src/gtk/preferences-page-appearance.ui:13
+msgctxt "monitorets"
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: src/gtk/preferences-page-appearance.ui:23
+msgctxt "monitorets"
+msgid "Choose between light, dark or the global system theme."
+msgstr "Escoge entre tema claro, oscuro o el tema global del sistema."
+
+#: src/gtk/preferences-page-appearance.ui:145
+msgctxt "monitorets"
+msgid "Choose how to organize the enabled resource monitors."
+msgstr "Escoge cómo organizar los monitores de recursos activos."
+
+#: src/gtk/preferences-page-appearance.ui:149
+msgctxt "monitorets"
+msgid "Monitors stacked in a single column."
+msgstr "Monitores apilados en una columna."
+
+#: src/gtk/preferences-page-appearance.ui:155
+msgctxt "monitorets"
+msgid "Monitors aligned in a single row."
+msgstr "Monitores alineados en una fila."
+
+#: src/gtk/main-menu-model.ui:16
+msgid "About"
+msgstr "Acerca de"
+
+#: src/gtk/main-menu-model.ui:22
+msgid "Quit"
+msgstr "Salir"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:54
+msgid "Added Dutch language support"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:61
+msgid "Added internationalization support"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:68
+msgid "Restored missing network permission needed for the network monitors"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:75
+msgid ""
+"Autodiscover temperature sensors and expose them as temperature monitors"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:76
+msgid "Ellipsize monitor names when do not fit the available space"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:77
+msgid "Add monitor groups for same-kind monitors in the preferences popover"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:84
+msgid "Added network downlink and uplink traffic monitors"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:85
+msgid "Some cosmetic changes have been done"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:92
+msgid "Added home and root folder usage monitors"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:93
+msgid "Added layout selector"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:94
+msgid "Added Tips section"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:95
+msgid "Improve close and preferences buttons visibility when shown"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:101
+msgid "Under the hood tweaks"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:106
+msgid "Aesthetic:"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:107
+msgid "- Reworked graph drawing"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:108
+msgid "Internal:"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:109
+msgid "- Decoupled several events that can trigger a graph redraw"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:114
+msgid "First release"
+msgstr ""
+
+#: src/translatable_strings/preference_toggle_section_name.py:4
+msgid "Gpu"
+msgstr "Gpu"
