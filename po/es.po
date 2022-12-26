@@ -328,3 +328,45 @@ msgstr ""
 #: src/translatable_strings/preference_toggle_section_name.py:4
 msgid "Gpu"
 msgstr "Gpu"
+
+#: src/gtk/preferences-page-appearance.ui:146
+msgctxt "monitorets"
+msgid "Layout"
+msgstr "Diseño"
+
+#: src/gtk/preferences-page-monitors.ui:11
+msgctxt "monitors_preference_group"
+msgid "Cpu"
+msgstr "Cpu"
+
+#: src/gtk/preferences-page-monitors.ui:16
+msgctxt "monitors_preference_group"
+msgid "Gpu"
+msgstr "Gpu"
+
+#: src/gtk/preferences-page-monitors.ui:21
+msgctxt "monitors_preference_group"
+msgid "Memory"
+msgstr "Memoria"
+
+#: src/gtk/preferences-page-monitors.ui:26
+msgctxt "monitors_preference_group"
+msgid "Network"
+msgstr "Red"
+
+#: src/gtk/preferences-page-monitors.ui:31
+msgctxt "monitors_preference_group"
+msgid "Disk usage"
+msgstr "Uso de disco"
+
+#: src/gtk/preferences-page-monitors.ui:36
+msgctxt "monitorets"
+msgid ""
+"These are all the temperature sensors that Monitorets has been able to "
+"discover in your setup."
+msgstr "Estos son todos los sensores de temperatura que Monitorets ha descubierto en tu sistema."
+
+#: src/gtk/preferences-page-monitors.ui:37
+msgctxt "monitors_preference_group"
+msgid "Temperature sensors"
+msgstr "Sensores de temperatura"

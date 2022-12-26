@@ -8,33 +8,33 @@
     <property name="title" translatable="yes" context="monitorets">Monitors</property>
     <child>
       <object class="AdwPreferencesGroup" id="_cpu_preferences_group">
-        <property name="title" translatable="yes" context="monitorets">Cpu</property>
+        <property name="title" translatable="yes" context="monitors_preference_group">Cpu</property>
       </object>
     </child>
     <child>
       <object class="AdwPreferencesGroup" id="_gpu_preferences_group">
-        <property name="title" translatable="yes" context="monitorets">Gpu</property>
+        <property name="title" translatable="yes" context="monitors_preference_group">Gpu</property>
       </object>
     </child>
     <child>
       <object class="AdwPreferencesGroup" id="_memory_preferences_group">
-        <property name="title" translatable="yes" context="monitorets">Memory</property>
+        <property name="title" translatable="yes" context="monitors_preference_group">Memory</property>
       </object>
     </child>
     <child>
       <object class="AdwPreferencesGroup" id="_network_preferences_group">
-        <property name="title" translatable="yes" context="monitorets">Network</property>
+        <property name="title" translatable="yes" context="monitors_preference_group">Network</property>
       </object>
     </child>
     <child>
       <object class="AdwPreferencesGroup" id="_disk_preferences_group">
-        <property name="title" translatable="yes" context="monitorets">Disk usage</property>
+        <property name="title" translatable="yes" context="monitors_preference_group">Disk usage</property>
       </object>
     </child>
     <child>
       <object class="AdwPreferencesGroup" id="_temperature_preferences_group">
         <property name="description" translatable="yes" context="monitorets">These are all the temperature sensors that Monitorets has been able to discover in your setup.</property>
-        <property name="title" translatable="yes" context="monitorets">Temperature sensors</property>
+        <property name="title" translatable="yes" context="monitors_preference_group">Temperature sensors</property>
       </object>
     </child>
   </template>

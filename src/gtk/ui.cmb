@@ -132,12 +132,12 @@
 	(14,1,"AdwPreferencesPage","icon-name","tablet-symbolic",None,None,None,None,None),
 	(14,1,"AdwPreferencesPage","title","Monitors",1,None,"monitorets",None,None),
 	(14,1,"GtkWidget","name","Monitors",None,None,None,None,None),
-	(14,2,"AdwPreferencesGroup","title","Cpu",1,None,"monitorets",None,None),
-	(14,3,"AdwPreferencesGroup","title","Gpu",1,None,"monitorets",None,None),
-	(14,4,"AdwPreferencesGroup","title","Memory",1,None,"monitorets",None,None),
-	(14,5,"AdwPreferencesGroup","title","Network",1,None,"monitorets",None,None),
-	(14,6,"AdwPreferencesGroup","title","Disk usage",1,None,"monitorets",None,None),
+	(14,2,"AdwPreferencesGroup","title","Cpu",1,None,"monitors_preference_group",None,None),
+	(14,3,"AdwPreferencesGroup","title","Gpu",1,None,"monitors_preference_group",None,None),
+	(14,4,"AdwPreferencesGroup","title","Memory",1,None,"monitors_preference_group",None,None),
+	(14,5,"AdwPreferencesGroup","title","Network",1,None,"monitors_preference_group",None,None),
+	(14,6,"AdwPreferencesGroup","title","Disk usage",1,None,"monitors_preference_group",None,None),
 	(14,7,"AdwPreferencesGroup","description","These are all the temperature sensors that Monitorets has been able to discover in your setup.",1,None,"monitorets",None,None),
-	(14,7,"AdwPreferencesGroup","title","Temperature sensors",1,None,"monitorets",None,None)
+	(14,7,"AdwPreferencesGroup","title","Temperature sensors",1,None,"monitors_preference_group",None,None)
   </object_property>
 </cambalache-project>
