@@ -25,6 +25,7 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gio, Adw
 from .controller import Controller
+from .ui.preferences.preferences_window import PreferencesWindow
 from .ui.single_window import SingleWindow
 from .ui.tips_window import TipsWindow
 from . import discover_temperature_monitors
@@ -89,6 +90,8 @@ class MonitorApplication(Adw.Application):
     def on_preferences_action(self, widget, _):
         """Callback for the app.preferences action."""
         print('app.preferences action activated')
+        preferences_window = PreferencesWindow(transient_for=self.props.active_window)
+        preferences_window.present()
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.

@@ -3,6 +3,7 @@
 <interface>
   <requires lib="libadwaita" version="1.1"/>
   <template class="PreferencesPageMonitors" parent="AdwPreferencesPage">
+    <property name="icon-name">tablet-symbolic</property>
     <property name="name">Monitors</property>
     <property name="title" translatable="yes" context="monitorets">Monitors</property>
     <child>
@@ -32,6 +33,7 @@
     </child>
     <child>
       <object class="AdwPreferencesGroup" id="_temperature_preferences_group">
+        <property name="description">These are all the temperature sensors that Monitorets has been able to discover in your setup.</property>
         <property name="title">Temperature sensors</property>
       </object>
     </child>

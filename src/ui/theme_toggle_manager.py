@@ -6,22 +6,22 @@ from ..theme import Theme
 
 
 class ThemeToggleManager:
-    def __init__(self, preferences_box):
+    def __init__(self, preferences_page):
         self._theme_to_toggle_button_map = {
             Theme.SYSTEM: None,
             Theme.LIGHT: None,
             Theme.DARK: None,
         }
 
-        self._preferences_box = preferences_box
+        self._preferences_page = preferences_page
 
-        self._theme_to_toggle_button_map[Theme.SYSTEM] = self._preferences_box._system_theme_toggle_button
-        self._theme_to_toggle_button_map[Theme.LIGHT] = self._preferences_box._light_theme_toggle_button
-        self._theme_to_toggle_button_map[Theme.DARK] = self._preferences_box._dark_theme_toggle_button
+        self._theme_to_toggle_button_map[Theme.SYSTEM] = self._preferences_page._system_theme_toggle_button
+        self._theme_to_toggle_button_map[Theme.LIGHT] = self._preferences_page._light_theme_toggle_button
+        self._theme_to_toggle_button_map[Theme.DARK] = self._preferences_page._dark_theme_toggle_button
 
-        self._preferences_box._system_theme_toggle_button.connect("clicked", self._on_system_theme_button_clicked)
-        self._preferences_box._light_theme_toggle_button.connect("clicked", self._on_light_theme_button_clicked)
-        self._preferences_box._dark_theme_toggle_button.connect("clicked", self._on_dark_theme_button_clicked)
+        self._preferences_page._system_theme_toggle_button.connect("clicked", self._on_system_theme_button_clicked)
+        self._preferences_page._light_theme_toggle_button.connect("clicked", self._on_light_theme_button_clicked)
+        self._preferences_page._dark_theme_toggle_button.connect("clicked", self._on_dark_theme_button_clicked)
 
         theme = Preferences.get(PreferenceKeys.THEME)
         self._set_active_toggle_for_theme(theme)

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+  <requires lib="gtk" version="4.6"/>
+  <template class="PopoverMenu" parent="GtkPopover">
+    <property name="css-classes">menu</property>
+    <child>
+      <object class="GtkListBox">
+        <child>
+          <object class="GtkListBoxRow">
+            <property name="child">
+              <object class="GtkLabel">
+                <property name="css-classes">
+
+
+</property>
+                <property name="label" translatable="yes" context="monitorets">Preferences</property>
+                <property name="xalign">0.0</property>
+              </object>
+            </property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkListBoxRow">
+            <property name="child">
+              <object class="GtkLabel">
+                <property name="label">Tips</property>
+                <property name="xalign">0.0</property>
+              </object>
+            </property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkListBoxRow">
+            <property name="child">
+              <object class="GtkLabel">
+                <property name="label">About</property>
+                <property name="xalign">0.0</property>
+              </object>
+            </property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkListBoxRow">
+            <property name="child">
+              <object class="GtkLabel">
+                <property name="label">Quit</property>
+                <property name="xalign">0.0</property>
+              </object>
+            </property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

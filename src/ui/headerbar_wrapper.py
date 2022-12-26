@@ -1,9 +1,7 @@
 from gi.repository import Adw, Gtk
 
-from .preferences.preferences_window import PreferencesWindow
 from ..event_broker import EventBroker
 from .. import events
-from ..translatable_strings import headerbar as headerbar_strings
 
 class HeaderBarWrapper:
     def __init__(self, parent_window):
@@ -11,9 +9,6 @@ class HeaderBarWrapper:
         self._headerbar = self._build_headerbar()
 
         self._set_not_focused()
-
-        EventBroker.subscribe(events.ABOUT_DIALOG_TRIGGERED, self._dismiss_preferences_popover)
-        EventBroker.subscribe(events.TIPS_DIALOG_TRIGGERED, self._dismiss_preferences_popover)
 
     @property
     def root_widget(self):
@@ -39,9 +34,9 @@ class HeaderBarWrapper:
         headerbar.set_decoration_layout(":")
 
         close_button = self._build_close_button()
-        preferences_button = self._build_preferences_button()
+        menu_button = self._build_menu_button()
 
-        headerbar.pack_start(self._build_headerbar_button_box(preferences_button))
+        headerbar.pack_start(self._build_headerbar_button_box(menu_button))
         headerbar.pack_end(self._build_headerbar_button_box(close_button))
 
         return headerbar
@@ -61,25 +56,21 @@ class HeaderBarWrapper:
         button.set_icon_name("window-close")
         button.add_css_class("circular")
         button.add_css_class("raised")
-        button.add_css_class("osd")
         button.connect("clicked", self._close_button_clicked)
 
         return button
 
-    def _build_preferences_button(self):
-        button = Gtk.Button()
+    def _build_menu_button(self):
+        button = Gtk.MenuButton()
         button.set_icon_name("open-menu-symbolic")
         button.add_css_class("circular")
         button.add_css_class("raised")
-        button.add_css_class("osd")
-        button.set_tooltip_text(headerbar_strings.PREFERENCES_TOOLTIP)
-        button.connect("clicked", self._present_preferences_window)
+
+        builder = Gtk.Builder.new_from_resource("/org/github/jorchube/monitorets/gtk/main-menu-model.xml")
+        menu = builder.get_object("main_menu")
+
+        popover = Gtk.PopoverMenu.new_from_model(menu)
+
+        button.set_popover(popover)
 
         return button
-
-    def _present_preferences_window(self, data):
-        preferences_window = PreferencesWindow(transient_for=self._parent_window)
-        preferences_window.present()
-
-    def _dismiss_preferences_popover(self, *args, **kwargs):
-        self._preferences_popover.popdown()
