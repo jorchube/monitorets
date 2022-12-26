@@ -3,6 +3,7 @@ from gettext import gettext as _
 CPU = _("CPU")
 GPU = _("GPU (experimental)")
 MEMORY = _("Memory")
+SWAP = _("Swap")
 DOWNLINK = _("Downlink")
 UPLINK = _("Uplink")
 HOME_FOLDER_USAGE = _("Home folder usage")

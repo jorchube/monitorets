@@ -5,6 +5,7 @@ from .preference_keys import PreferenceKeys
 from .ui.monitor_widgets.cpu_monitor_widget import CpuMonitorWidget
 from .ui.monitor_widgets.gpu_monitor_widget import GpuMonitorWidget
 from .ui.monitor_widgets.memory_monitor_widget import MemoryMonitorWidget
+from .ui.monitor_widgets.swap_monitor_widget import SwapMonitorWidget
 from .ui.monitor_widgets.downlink_monitor_widget import DownlinkMonitorWidget
 from .ui.monitor_widgets.uplink_monitor_widget import UplinkMonitorWidget
 from .ui.monitor_widgets.home_usage_monitor_widget import HomeUsageMonitorWidget
@@ -35,6 +36,13 @@ monitor_descriptor_list = [
         'enabled_preference_key': PreferenceKeys.MEMORY_MONITOR_ENABLED,
         'monitor_class': MemoryMonitorWidget,
         'preference_toggle_label': preference_toggle_label.MEMORY,
+        'preference_toggle_section_name': preference_toggle_section_name.MEMORY,
+    },
+    {
+        'type': MonitorType.Swap,
+        'enabled_preference_key': PreferenceKeys.SWAP_MONITOR_ENABLED,
+        'monitor_class': SwapMonitorWidget,
+        'preference_toggle_label': preference_toggle_label.SWAP,
         'preference_toggle_section_name': preference_toggle_section_name.MEMORY,
     },
     {

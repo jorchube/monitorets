@@ -4,6 +4,7 @@ class PreferenceKeys:
     CPU_MONITOR_ENABLED = "cpu_monitor.enabled"
     GPU_MONITOR_ENABLED = "gpu_monitor.enabled"
     MEMORY_MONITOR_ENABLED = "memory_monitor.enabled"
+    SWAP_MONITOR_ENABLED = "swap_monitor.enabled"
     DOWNLINK_MONITOR_ENABLED = "downlink_monitor.enabled"
     UPLINK_MONITOR_ENABLED = "uplink_monitor.enabled"
     HOME_USAGE_MONITOR_ENABLED = "home_usage_monitor.enabled"
