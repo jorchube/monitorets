@@ -5,7 +5,6 @@ src/gtk/main-menu-model.xml
 data/io.github.jorchube.monitorets.desktop.in
 data/io.github.jorchube.monitorets.appdata.xml.in
 data/io.github.jorchube.monitorets.gschema.xml
-src/translatable_strings/headerbar.py
 src/translatable_strings/monitor_title.py
 src/translatable_strings/preference_toggle_label.py
 src/translatable_strings/preference_toggle_section_name.py
