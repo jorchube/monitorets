@@ -48,6 +48,14 @@
   </provides>
 
   <releases>
+  <release version="0.6.90" date="2022-12-27">
+      <description>
+        <ul>
+          <li>Added Swap memory monitor</li>
+          <li>Refactored dropdown menu and preferences</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.6.1" date="2022-12-09">
       <description>
         <ul>
