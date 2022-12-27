@@ -125,11 +125,7 @@ msgstr ""
 "Monitorets te permite elegir el diseño con el que visualizar los recursos de "
 "tu sistema"
 
-#: src/translatable_strings/headerbar.py:3
-msgid "Drag window from here"
-msgstr "Arrastra la ventana desde aquí"
-
-#: src/translatable_strings/headerbar.py:4 src/gtk/main-menu-model.ui:6
+#: src/gtk/main-menu-model.ui:6
 msgid "Preferences"
 msgstr "Preferencias"
 

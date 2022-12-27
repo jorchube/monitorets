@@ -124,11 +124,7 @@ msgid ""
 "resources"
 msgstr "Monitorets stelt u in staat om een voorkeursindeling te kiezen"
 
-#: src/translatable_strings/headerbar.py:3
-msgid "Drag window from here"
-msgstr "Versleep het venster vanaf hier"
-
-#: src/translatable_strings/headerbar.py:4 src/gtk/main-menu-model.ui:6
+#: src/gtk/main-menu-model.ui:6
 msgid "Preferences"
 msgstr "Voorkeuren"
 
