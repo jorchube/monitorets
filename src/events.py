@@ -5,3 +5,5 @@ MONITOR_DISABLED = "monitor disabled"
 
 ABOUT_DIALOG_TRIGGERED = "about dialog triggered"
 TIPS_DIALOG_TRIGGERED = "tips dialog triggered"
+
+CLOSE_APPLICATION_REQUESTED = "close application requested"

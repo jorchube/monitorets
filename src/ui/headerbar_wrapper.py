@@ -2,19 +2,13 @@ from gi.repository import Adw, Gtk
 
 from ..event_broker import EventBroker
 from .. import events
-from ..translatable_strings import headerbar as headerbar_strings
 
 class HeaderBarWrapper:
-    def __init__(self, preferences_box):
-        self._preferences_popover = Gtk.Popover()
-        self._preferences_box = preferences_box
-        self._preferences_button = self._build_preferences_button(self._preferences_box, self._preferences_popover)
-        self._headerbar = self._build_headerbar(self._preferences_button)
+    def __init__(self, parent_window):
+        self._parent_window = parent_window
+        self._headerbar = self._build_headerbar()
 
         self._set_not_focused()
-
-        EventBroker.subscribe(events.ABOUT_DIALOG_TRIGGERED, self._dismiss_preferences_popover)
-        EventBroker.subscribe(events.TIPS_DIALOG_TRIGGERED, self._dismiss_preferences_popover)
 
     @property
     def root_widget(self):
@@ -32,32 +26,51 @@ class HeaderBarWrapper:
     def _set_focused(self):
         self._headerbar.set_opacity(1)
 
-    def _build_headerbar(self, preferences_button):
-        drag_icon = Gtk.Image.new_from_icon_name("list-drag-handle-symbolic")
-        drag_icon.set_tooltip_text(headerbar_strings.DRAG_TOOLTIP)
-
+    def _build_headerbar(self):
         headerbar = Adw.HeaderBar()
-        headerbar.set_vexpand(False)
-        headerbar.set_valign(Gtk.Align.START)
-        headerbar.set_title_widget(drag_icon)
-        headerbar.set_decoration_layout(":close")
-        headerbar.pack_start(preferences_button)
+        headerbar.set_vexpand(True)
+        headerbar.add_css_class("flat")
+        headerbar.set_title_widget(Gtk.Label())
+        headerbar.set_decoration_layout(":")
+
+        close_button = self._build_close_button()
+        menu_button = self._build_menu_button()
+
+        headerbar.pack_start(self._build_headerbar_button_box(menu_button))
+        headerbar.pack_end(self._build_headerbar_button_box(close_button))
 
         return headerbar
 
-    def _build_preferences_button(self, preferences_box, popover):
-        button = Gtk.MenuButton()
-        button.set_icon_name("document-properties-symbolic")
-        button.add_css_class("circular")
-        button.add_css_class("flat")
-        button.set_vexpand(False)
-        button.set_valign(Gtk.Align.CENTER)
-        button.set_tooltip_text(headerbar_strings.PREFERENCES_TOOLTIP)
+    def _build_headerbar_button_box(self, button):
+        control_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        control_box.set_valign(Gtk.Align.START)
+        control_box.append(button)
 
-        popover.set_child(preferences_box)
-        button.set_popover(popover)
+        return control_box
+
+    def _close_button_clicked(self, *args, **kwargs):
+        EventBroker.notify(events.CLOSE_APPLICATION_REQUESTED)
+
+    def _build_close_button(self):
+        button = Gtk.Button()
+        button.set_icon_name("window-close")
+        button.add_css_class("circular")
+        button.add_css_class("raised")
+        button.connect("clicked", self._close_button_clicked)
 
         return button
 
-    def _dismiss_preferences_popover(self, *args, **kwargs):
-        self._preferences_popover.popdown()
+    def _build_menu_button(self):
+        button = Gtk.MenuButton()
+        button.set_icon_name("open-menu-symbolic")
+        button.add_css_class("circular")
+        button.add_css_class("raised")
+
+        builder = Gtk.Builder.new_from_resource("/org/github/jorchube/monitorets/gtk/main-menu-model.ui")
+        menu = builder.get_object("main_menu")
+
+        popover = Gtk.PopoverMenu.new_from_model(menu)
+
+        button.set_popover(popover)
+
+        return button

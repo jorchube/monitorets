@@ -30,7 +30,7 @@ def _build_monitor_descriptor(sensor_descriptor):
     monitor_type = f'temperature_sensor_{sensor_id}'
     enabled_preference_key = f'temp_monitor.{sensor_id}.enabled'
     widget_constructor = lambda: TemperatureSensorMonitorWidget(sensor_descriptor)
-    _preference_toggle_label = f'{preference_toggle_label.TEMPERATURE} ({sensor_id})'
+    _preference_toggle_label = f'{sensor_id}'
     _preference_toggle_section_name = preference_toggle_section_name.TEMPERATURE
 
     return {

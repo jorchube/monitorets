@@ -5,7 +5,7 @@
   <requires lib="libadwaita" version="1.1"/>
   <template class="SingleWindow" parent="AdwApplicationWindow">
     <property name="default-height">40</property>
-    <property name="default-width">120</property>
+    <property name="default-width">180</property>
     <child>
       <object class="GtkOverlay" id="_overlay">
         <property name="child">

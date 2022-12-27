@@ -25,10 +25,13 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gio, Adw
 from .controller import Controller
+from .ui.preferences.preferences_window import PreferencesWindow
 from .ui.single_window import SingleWindow
 from .ui.tips_window import TipsWindow
 from . import discover_temperature_monitors
 from .translators import translators_credits
+from . import events
+from .event_broker import EventBroker
 
 
 class MonitorApplication(Adw.Application):
@@ -47,6 +50,8 @@ class MonitorApplication(Adw.Application):
         self._discover_dynamic_monitors()
 
         Controller.initialize(application=self)
+
+        EventBroker.subscribe(events.CLOSE_APPLICATION_REQUESTED, self.on_quit)
 
     def do_activate(self):
         """Called when the application is activated.
@@ -85,6 +90,8 @@ class MonitorApplication(Adw.Application):
     def on_preferences_action(self, widget, _):
         """Callback for the app.preferences action."""
         print('app.preferences action activated')
+        preferences_window = PreferencesWindow(transient_for=self.props.active_window)
+        preferences_window.present()
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.

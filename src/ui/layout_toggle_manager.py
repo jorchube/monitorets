@@ -7,39 +7,36 @@ from .. import events
 
 class LayoutToggleManager:
 
-    def __init__(self, preferences_box):
+    def __init__(self, preferences_page):
         self._layout_to_toggle_button_map = {
             Layout.ADAPTIVE: None,
             Layout.HORIZONTAL: None,
             Layout.VERTICAL: None,
         }
 
-        self._preferences_box = preferences_box
+        self._preferences_page = preferences_page
 
-        self._layout_to_toggle_button_map[Layout.ADAPTIVE] = self._preferences_box._adaptive_layout_toggle_button
-        self._layout_to_toggle_button_map[Layout.HORIZONTAL] = self._preferences_box._horizontal_layout_toggle_button
-        self._layout_to_toggle_button_map[Layout.VERTICAL] = self._preferences_box._vertical_layout_toggle_button
+        self._layout_to_toggle_button_map[Layout.HORIZONTAL] = self._preferences_page._horizontal_check_button
+        self._layout_to_toggle_button_map[Layout.VERTICAL] = self._preferences_page._vertical_check_button
 
-        self._preferences_box._adaptive_layout_toggle_button.connect("clicked", self._on_adaptive_layout_button_clicked)
-        self._preferences_box._horizontal_layout_toggle_button.connect("clicked", self._on_horizontal_layout_button_clicked)
-        self._preferences_box._vertical_layout_toggle_button.connect("clicked", self._on_vertical_layout_button_clicked)
+        self._preferences_page._vertical_check_button.connect("toggled", self._on_vertical_check_button_toggled)
+        self._preferences_page._horizontal_check_button.connect("toggled", self._on_horizontal_check_button_toggled)
 
         EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preference_changed)
 
         layout = Preferences.get(PreferenceKeys.LAYOUT)
         self._set_active_toggle_for_layout(layout)
 
-    def _on_adaptive_layout_button_clicked(self, user_data):
-        Preferences.set(PreferenceKeys.LAYOUT, Layout.ADAPTIVE)
-
-    def _on_horizontal_layout_button_clicked(self, user_data):
-        Preferences.set(PreferenceKeys.LAYOUT, Layout.HORIZONTAL)
-
-    def _on_vertical_layout_button_clicked(self, user_data):
-        Preferences.set(PreferenceKeys.LAYOUT, Layout.VERTICAL)
-
     def _set_active_toggle_for_layout(self, layout):
         self._layout_to_toggle_button_map[layout].set_active(True)
+
+    def _on_vertical_check_button_toggled(self, toggle_button):
+        if toggle_button.get_active():
+            Preferences.set(PreferenceKeys.LAYOUT, Layout.VERTICAL)
+
+    def _on_horizontal_check_button_toggled(self, toggle_button):
+        if toggle_button.get_active():
+            Preferences.set(PreferenceKeys.LAYOUT, Layout.HORIZONTAL)
 
     def _on_preference_changed(self, key, value):
         if key == PreferenceKeys.LAYOUT:

@@ -19,6 +19,7 @@ class Preferences:
         PreferenceKeys.CPU_MONITOR_ENABLED: True,
         PreferenceKeys.GPU_MONITOR_ENABLED: False,
         PreferenceKeys.MEMORY_MONITOR_ENABLED: True,
+        PreferenceKeys.SWAP_MONITOR_ENABLED: False,
         PreferenceKeys.DOWNLINK_MONITOR_ENABLED: False,
         PreferenceKeys.UPLINK_MONITOR_ENABLED: False,
         PreferenceKeys.HOME_USAGE_MONITOR_ENABLED: False,

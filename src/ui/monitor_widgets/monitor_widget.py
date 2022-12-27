@@ -13,7 +13,7 @@ class MonitorWidget(Adw.Bin):
         self._monitor = monitor
         self._graph_area = self._graph_area_instance(self._color, redraw_freq_seconds)
 
-        self.set_size_request(120, 40)
+        self.set_size_request(120, 60)
 
         self._redraw_manager = GraphRedrawTickManager(self._tick, redraw_freq_seconds)
 

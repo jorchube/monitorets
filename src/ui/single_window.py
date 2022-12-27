@@ -22,7 +22,6 @@ from gi.repository import Gtk
 
 import traceback
 from .headerbar_wrapper import HeaderBarWrapper
-from .preferences_box import PreferencesBox
 from .window_layout_manager import WindowLayoutManager
 from ..event_broker import EventBroker
 from .. import events
@@ -47,7 +46,7 @@ class SingleWindow(Adw.ApplicationWindow):
         EventBroker.subscribe(events.MONITOR_ENABLED, self._on_monitor_enabled)
         EventBroker.subscribe(events.MONITOR_DISABLED, self._on_monitor_disabled)
 
-        self._headerbar_wrapper = HeaderBarWrapper(PreferencesBox())
+        self._headerbar_wrapper = HeaderBarWrapper(parent_window=self)
         self._overlay.add_overlay(self._headerbar_wrapper.root_widget)
         self._add_monitor_bins_to_monitors_box(self._monitor_bins, self._monitors_box)
 
