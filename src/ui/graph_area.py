@@ -4,7 +4,7 @@ from gi.repository import Gtk, GObject
 
 
 class GraphArea:
-    _LINE_WIDTH = 1
+    _LINE_WIDTH = 0.2
     _ALPHA_FILL = 0.2
     _MASK_CORNER_RADIUS = 12
     _X_SPACE_PER_VALUE = 10
