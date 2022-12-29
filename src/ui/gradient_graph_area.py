@@ -10,12 +10,12 @@ class GradientGraphArea(GraphArea):
         self._end_color = end_color.RGB
         super().__init__(start_color, redraw_frequency_seconds)
 
-    def _draw_values_fill(self, context, width, height):
+    def _draw_values_fill(self, context, values, width, height):
         context.new_path()
         context.set_line_join(cairo.LINE_JOIN_ROUND)
         context.set_line_cap(cairo.LINE_CAP_ROUND)
 
-        self._draw_values_shape(context, width, height, close=True)
+        self._draw_values_shape(context, values, width, height, close=True)
 
         gradient = cairo.LinearGradient(0, 0, 0, height)
         gradient.add_color_stop_rgba(0, *self._end_color, self._ALPHA_FILL)
@@ -25,12 +25,12 @@ class GradientGraphArea(GraphArea):
 
         context.fill()
 
-    def _draw_values_ouline(self, context, width, height):
+    def _draw_values_ouline(self, context, values, width, height):
         context.new_path()
         context.set_line_join(cairo.LINE_JOIN_ROUND)
         context.set_line_cap(cairo.LINE_CAP_ROUND)
 
-        self._draw_values_shape(context, width, height)
+        self._draw_values_shape(context, values, width, height)
 
         context.set_line_width(self._LINE_WIDTH)
 

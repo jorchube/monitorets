@@ -42,34 +42,34 @@ class GraphArea:
     def _draw_func(self, gtk_drawing_area, context, width, height, user_data):
         if self._values is None:
             return
+        values = self._values
 
-        self._draw_values_fill(context, width, height)
-        self._draw_values_ouline(context, width, height)
+        self._draw_values_fill(context, values, width, height)
+        self._draw_values_ouline(context, values, width, height)
         self._apply_mask(context, width, height)
 
-    def _draw_values_fill(self, context, width, height):
+    def _draw_values_fill(self, context, values, width, height):
         context.new_path()
         context.set_line_join(cairo.LINE_JOIN_ROUND)
         context.set_line_cap(cairo.LINE_CAP_ROUND)
 
-        self._draw_values_shape(context, width, height, close=True)
+        self._draw_values_shape(context, values, width, height, close=True)
 
         context.set_source_rgba(*self._color, self._ALPHA_FILL)
         context.fill()
 
-    def _draw_values_ouline(self, context, width, height):
+    def _draw_values_ouline(self, context, values, width, height):
         context.new_path()
         context.set_line_join(cairo.LINE_JOIN_ROUND)
         context.set_line_cap(cairo.LINE_CAP_ROUND)
 
-        self._draw_values_shape(context, width, height)
+        self._draw_values_shape(context, values, width, height)
 
         context.set_line_width(self._LINE_WIDTH)
         context.set_source_rgba(*self._color, 1)
         context.stroke()
 
-    def _draw_values_shape(self, context, width, height, close=False):
-        values = self._values
+    def _draw_values_shape(self, context, values, width, height, close=False):
         order = 0
 
         for value in values:
