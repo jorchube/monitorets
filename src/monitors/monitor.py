@@ -19,10 +19,13 @@ class Monitor:
     def _new_sample(self, value):
         self._values.insert(0, value)
         if self._new_values_callback:
-            self._new_values_callback(self._values)
+            self._report_values()
 
         if self._has_reached_max_values_stored():
             self._free_old_values()
+
+    def _report_values(self):
+        self._new_values_callback(self._values)
 
     def _has_reached_max_values_stored(self):
         return len(self._values) > self._MAX_NUMBER_OF_VALUES_STORED
