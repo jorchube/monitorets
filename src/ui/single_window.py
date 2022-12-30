@@ -19,6 +19,7 @@
 
 from gi.repository import Adw
 from gi.repository import Gtk
+from gi.repository import GObject
 
 import traceback
 from .headerbar_wrapper import HeaderBarWrapper
@@ -43,8 +44,8 @@ class SingleWindow(Adw.ApplicationWindow):
 
         self._layout_managet = WindowLayoutManager(self, self._set_horizontal_layout, self._set_vertical_layout)
 
-        EventBroker.subscribe(events.MONITOR_ENABLED, self._on_monitor_enabled)
-        EventBroker.subscribe(events.MONITOR_DISABLED, self._on_monitor_disabled)
+        EventBroker.subscribe(events.MONITOR_ENABLED, self._handle_on_monitor_enabled)
+        EventBroker.subscribe(events.MONITOR_DISABLED, self._handle_on_monitor_disabled)
 
         self._headerbar_wrapper = HeaderBarWrapper(parent_window=self)
         self._overlay.add_overlay(self._headerbar_wrapper.root_widget)
@@ -70,6 +71,12 @@ class SingleWindow(Adw.ApplicationWindow):
     def _add_monitor_bins_to_monitors_box(self, monitor_bins, monitor_box):
         for bin in monitor_bins.values():
             monitor_box.append(bin)
+
+    def _handle_on_monitor_enabled(self, type):
+        GObject.idle_add(self._on_monitor_enabled, type)
+
+    def _handle_on_monitor_disabled(self, type):
+        GObject.idle_add(self._on_monitor_disabled, type)
 
     def _on_monitor_enabled(self, type):
         if self._monitor_bins[type].get_child() is not None:

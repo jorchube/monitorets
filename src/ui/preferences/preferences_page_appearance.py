@@ -2,6 +2,8 @@ from gi.repository import Adw, Gtk
 
 from ..theme_toggle_manager import ThemeToggleManager
 from ..layout_toggle_manager import LayoutToggleManager
+from ..preference_switch import PreferenceSwitch
+from ...preference_keys import PreferenceKeys
 
 
 @Gtk.Template(resource_path='/org/github/jorchube/monitorets/gtk/preferences-page-appearance.ui')
@@ -23,6 +25,8 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
 
     _horizontal_layout_action_row = Gtk.Template.Child()
     _vertical_layout_action_row = Gtk.Template.Child()
+
+    _smooth_graphs_action_row = Gtk.Template.Child()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -50,3 +54,7 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
         self._horizontal_check_button.set_group(self._vertical_check_button)
         self._horizontal_layout_action_row.add_prefix(self._horizontal_check_button)
         self._horizontal_layout_action_row.set_activatable_widget(self._horizontal_check_button)
+
+        smooth_graph_switch = PreferenceSwitch(PreferenceKeys.SMOOTH_GRAPH)
+        self._smooth_graphs_action_row.add_suffix(smooth_graph_switch)
+        self._smooth_graphs_action_row.set_activatable_widget(smooth_graph_switch)

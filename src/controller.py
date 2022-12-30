@@ -23,7 +23,19 @@ class Controller:
                 EventBroker.notify(events.MONITOR_ENABLED, descriptor["type"])
 
     @classmethod
+    def _restart_monitors(self):
+        import time
+        for descriptor in monitor_descriptor_list:
+            EventBroker.notify(events.MONITOR_DISABLED, descriptor["type"])
+
+        self.show_monitors()
+
+    @classmethod
     def _on_preference_changed(self, preference_key, value):
+        if preference_key == "general.smooth_graph":
+            self._restart_monitors()
+            return
+
         for descriptor in monitor_descriptor_list:
             if preference_key == descriptor["enabled_preference_key"]:
                 self._on_monitor_enabled_changed(descriptor["type"], value)

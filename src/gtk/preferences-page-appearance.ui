@@ -158,6 +158,16 @@
                 </child>
               </object>
             </child>
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title">Graphs</property>
+                <child>
+                  <object class="AdwActionRow" id="_smooth_graphs_action_row">
+                    <property name="title">Draw smooth graphs</property>
+                  </object>
+                </child>
+              </object>
+            </child>
           </object>
         </child>
       </object>
