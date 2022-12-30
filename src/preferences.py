@@ -16,6 +16,7 @@ class Preferences:
     _default_preferences = {
         PreferenceKeys.THEME: Theme.SYSTEM,
         PreferenceKeys.LAYOUT: Layout.VERTICAL,
+        PreferenceKeys.SMOOTH_GRAPH: True,
         PreferenceKeys.CPU_MONITOR_ENABLED: True,
         PreferenceKeys.CPU_PER_CORE_MONITOR_ENABLED: False,
         PreferenceKeys.GPU_MONITOR_ENABLED: False,

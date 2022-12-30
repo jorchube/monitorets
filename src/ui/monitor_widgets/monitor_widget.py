@@ -2,6 +2,8 @@ from gi.repository import Adw, Gtk, Pango
 from ..graph_area import GraphArea
 from ..graph_redraw_tick_manager import GraphRedrawTickManager
 from ..bidirectional_clamp_container_widget import BidirectionalClampContainerWidget
+from ...preferences import Preferences
+from ...preference_keys import PreferenceKeys
 
 
 class MonitorWidget(Adw.Bin):
@@ -11,7 +13,8 @@ class MonitorWidget(Adw.Bin):
         super().__init__(*args, **kwargs)
         self._color = color
         self._monitor = monitor
-        self._graph_area = self._graph_area_instance(self._color, redraw_freq_seconds)
+        draw_smooth_graph = Preferences.get(PreferenceKeys.SMOOTH_GRAPH)
+        self._graph_area = self._graph_area_instance(self._color, redraw_freq_seconds, draw_smooth_graph)
 
         self.set_size_request(120, 60)
 
@@ -39,8 +42,8 @@ class MonitorWidget(Adw.Bin):
         self._overlay_bin.set_child(self._overlay)
         self.set_child(self._clamp_container)
 
-    def _graph_area_instance(self, color, redraw_freq_seconds):
-        return GraphArea(color, redraw_freq_seconds)
+    def _graph_area_instance(self, color, redraw_freq_seconds, draw_smooth_graph):
+        return GraphArea(color, redraw_freq_seconds, smooth_graph=draw_smooth_graph)
 
     def start(self):
         self._monitor.start()
