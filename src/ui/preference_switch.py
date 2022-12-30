@@ -5,11 +5,10 @@ from .. import events
 from ..preferences import Preferences
 
 
-class MonitorEnableSwitch(Gtk.Switch):
-    def __init__(self, monitor_type, preference_key, *args, **kwargs):
+class PreferenceSwitch(Gtk.Switch):
+    def __init__(self, preference_key, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.set_valign(Gtk.Align.CENTER)
-        self._monitor_type = monitor_type
         self._preference_key = preference_key
 
         is_active = Preferences.get(self._preference_key)
