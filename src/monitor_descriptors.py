@@ -3,6 +3,7 @@ from collections import defaultdict
 from .monitor_type import MonitorType
 from .preference_keys import PreferenceKeys
 from .ui.monitor_widgets.cpu_monitor_widget import CpuMonitorWidget
+from .ui.monitor_widgets.cpu_per_core_monitor_widget import CpuPerCoreMonitorWidget
 from .ui.monitor_widgets.gpu_monitor_widget import GpuMonitorWidget
 from .ui.monitor_widgets.memory_monitor_widget import MemoryMonitorWidget
 from .ui.monitor_widgets.swap_monitor_widget import SwapMonitorWidget
