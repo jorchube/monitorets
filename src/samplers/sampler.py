@@ -15,6 +15,7 @@ class Sampler:
     def start(self):
         self._is_running = True
         self._task = Thread(target=self._sample_forever)
+        self._task.daemon = True
         self._task.start()
 
     def stop(self):
