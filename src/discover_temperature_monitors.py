@@ -38,6 +38,7 @@ def _build_monitor_descriptor(sensor_descriptor):
         'enabled_preference_key': enabled_preference_key,
         'monitor_class': widget_constructor,
         'preference_toggle_label': _preference_toggle_label,
+        'preference_toggle_description': None,
         'preference_toggle_section_name': _preference_toggle_section_name,
     }
 

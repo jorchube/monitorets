@@ -1,5 +1,6 @@
 class MonitorType:
     CPU = "cpu"
+    CPU_PER_CORE = "cpu per core"
     GPU = "gpu"
     Memory = "memory"
     Swap = "swap"

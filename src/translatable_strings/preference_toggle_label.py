@@ -1,7 +1,8 @@
 from gettext import gettext as _
 
 CPU = _("CPU")
-GPU = _("GPU (experimental)")
+CPU_PER_CORE = _("CPU per core")
+GPU = _("GPU")
 MEMORY = _("Memory")
 SWAP = _("Swap")
 DOWNLINK = _("Downlink")

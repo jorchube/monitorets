@@ -52,6 +52,11 @@ class PreferencesPageMonitors(Adw.PreferencesPage):
 
         action_row = Adw.ActionRow()
         action_row.set_title(label)
+
+        description = monitor_descriptor.get("preference_toggle_description")
+        if description is not None:
+            action_row.set_subtitle(description)
+
         self._setup_monitor_enable_action_row(enabled_preference_key, action_row)
 
         return action_row
