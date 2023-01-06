@@ -6,7 +6,8 @@
 	(8,1,None,"tips-window.ui",None,None,None,None,None,None),
 	(9,1,None,"preferences-window.ui",None,None,None,None,None,None),
 	(13,1,None,"preferences-page-appearance.ui",None,None,None,None,None,None),
-	(14,1,None,"preferences-page-monitors.ui",None,None,None,None,None,None)
+	(14,1,None,"preferences-page-monitors.ui",None,None,None,None,None,None),
+	(15,1,None,"rename-monitor-popover.ui",None,None,None,None,None,None)
   </ui>
   <object>
 	(7,1,"AdwApplicationWindow","SingleWindow",None,None,None,None,None),
@@ -52,7 +53,15 @@
 	(14,4,"AdwPreferencesGroup","_memory_preferences_group",1,None,None,None,None),
 	(14,5,"AdwPreferencesGroup","_network_preferences_group",1,None,None,None,None),
 	(14,6,"AdwPreferencesGroup","_disk_preferences_group",1,None,None,None,None),
-	(14,7,"AdwPreferencesGroup","_temperature_preferences_group",1,None,None,None,None)
+	(14,7,"AdwPreferencesGroup","_temperature_preferences_group",1,None,None,None,None),
+	(15,1,"GtkPopover","RenameMonitorPopover",None,None,None,None,None),
+	(15,8,"AdwBin",None,1,None,None,None,None),
+	(15,9,"GtkBox",None,8,None,None,None,None),
+	(15,10,"GtkLabel",None,9,None,None,None,None),
+	(15,11,"GtkEntry","_text_entry",9,None,None,None,1),
+	(15,12,"GtkBox",None,9,None,None,None,3),
+	(15,14,"GtkButton","_rename_button",12,None,None,None,1),
+	(15,15,"GtkLabel",None,9,None,None,None,2)
   </object>
   <object_property>
 	(7,1,"GtkWindow","default-height","40",None,None,None,None,None),
@@ -142,6 +151,20 @@
 	(14,5,"AdwPreferencesGroup","title","Network",1,None,"monitors_preference_group",None,None),
 	(14,6,"AdwPreferencesGroup","title","Disk usage",1,None,"monitors_preference_group",None,None),
 	(14,7,"AdwPreferencesGroup","description","These are all the temperature sensors that Monitorets has been able to discover in your setup.",1,None,"monitorets",None,None),
-	(14,7,"AdwPreferencesGroup","title","Temperature sensors",1,None,"monitors_preference_group",None,None)
+	(14,7,"AdwPreferencesGroup","title","Temperature sensors",1,None,"monitors_preference_group",None,None),
+	(15,1,"GtkPopover","child",None,None,None,None,None,8),
+	(15,9,"GtkBox","spacing","15",None,None,None,None,None),
+	(15,9,"GtkOrientable","orientation","vertical",None,None,None,None,None),
+	(15,9,"GtkWidget","margin-bottom","20",None,None,None,None,None),
+	(15,9,"GtkWidget","margin-end","20",None,None,None,None,None),
+	(15,9,"GtkWidget","margin-start","20",None,None,None,None,None),
+	(15,9,"GtkWidget","margin-top","20",None,None,None,None,None),
+	(15,10,"GtkLabel","label","Rename monitor","yes",None,"rename_monitor",None,None),
+	(15,10,"GtkWidget","css-classes","title-4",None,None,None,None,None),
+	(15,12,"GtkWidget","halign","end",None,None,None,None,None),
+	(15,14,"GtkButton","label","Rename","yes",None,"rename_monitor",None,None),
+	(15,14,"GtkWidget","css-classes","suggested-action",None,None,None,None,None),
+	(15,15,"GtkLabel","label","Leaving this text empty will restore the original name.",1,None,"rename_monitor",None,None),
+	(15,15,"GtkWidget","css-classes","caption",None,None,None,None,None)
   </object_property>
 </cambalache-project>

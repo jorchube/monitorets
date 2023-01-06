@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+  <requires lib="gtk" version="4.6"/>
+  <requires lib="libadwaita" version="1.1"/>
+  <template class="RenameMonitorPopover" parent="GtkPopover">
+    <property name="child">
+      <object class="AdwBin">
+        <child>
+          <object class="GtkBox">
+            <property name="margin-bottom">20</property>
+            <property name="margin-end">20</property>
+            <property name="margin-start">20</property>
+            <property name="margin-top">20</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">15</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="css-classes">title-4</property>
+                <property name="label" translatable="yes" context="rename_monitor">Rename monitor</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="_text_entry"/>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="css-classes">caption</property>
+                <property name="label" translatable="yes" context="rename_monitor">Leaving this text empty will restore the original name.</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="halign">end</property>
+                <child>
+                  <object class="GtkButton" id="_rename_button">
+                    <property name="css-classes">suggested-action</property>
+                    <property name="label" translatable="yes" context="rename_monitor">Rename</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </property>
+  </template>
+</interface>
