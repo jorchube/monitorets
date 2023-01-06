@@ -436,3 +436,26 @@ msgstr "Dejar este texto vacío restaura el nombre original."
 msgctxt "rename_monitor"
 msgid "Rename"
 msgstr "Renombrar"
+
+#: src/gtk/preferences-page-appearance.ui:163
+msgctxt "preferences_page_appearance"
+msgid "Graphs"
+msgstr "Gráficas"
+
+#: src/gtk/preferences-page-appearance.ui:166
+msgctxt "preferences_page_appearance"
+msgid "Draw smooth graphs"
+msgstr "Dibujar gráficas suavizadas"
+
+#: src/translatable_strings/preference_toggle_description.py:3
+msgid "Shown as"
+msgstr "Mostrado como"
+
+#: src/translatable_strings/preference_toggle_description.py:5
+msgid ""
+"The monitor will draw as many graphs as cores are present in the system."
+msgstr "El monitor dibujará tantas gráficas como cores tenga el sistema."
+
+#: src/translatable_strings/preference_toggle_description.py:6
+msgid "Experimental. This is only known to work on some AMD GPUs currently."
+msgstr "Experimental. Funciona únicamente en algunas GPU de AMD."
