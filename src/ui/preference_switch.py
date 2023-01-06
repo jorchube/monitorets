@@ -1,7 +1,5 @@
 from gi.repository import Gtk
 
-from ..event_broker import EventBroker
-from .. import events
 from ..preferences import Preferences
 
 

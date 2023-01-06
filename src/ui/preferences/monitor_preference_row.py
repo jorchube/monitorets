@@ -2,7 +2,7 @@ from gi.repository import Adw, Gtk
 from .rename_monitor_popover import RenameMonitorPopover
 from ..preference_switch import PreferenceSwitch
 from ...preferences import Preferences
-from ...preference_keys import PreferenceKeys
+from ...translatable_strings import preference_toggle_description
 
 
 class MonitorPreferenceRow(Adw.ActionRow):
@@ -54,7 +54,7 @@ class MonitorPreferenceRow(Adw.ActionRow):
     def _set_custom_name(self, custom_name, persist=True):
         self._custom_name = custom_name
         self._custom_name_label.set_size_request(120, -1)
-        self._custom_name_label.set_markup(f"<span weight=\"normal\" style=\"oblique\">Shown as:\n</span><span>{custom_name}</span>")
+        self._custom_name_label.set_markup(f"<span weight=\"normal\" style=\"oblique\">{preference_toggle_description.SHOWN_AS}:\n</span><span>{custom_name}</span>")
 
         self._rename_popover.set_text(custom_name)
 

@@ -160,10 +160,10 @@
             </child>
             <child>
               <object class="AdwPreferencesGroup">
-                <property name="title">Graphs</property>
+                <property name="title" translatable="yes" context="preferences_page_appearance">Graphs</property>
                 <child>
                   <object class="AdwActionRow" id="_smooth_graphs_action_row">
-                    <property name="title">Draw smooth graphs</property>
+                    <property name="title" translatable="yes" context="preferences_page_appearance">Draw smooth graphs</property>
                   </object>
                 </child>
               </object>
