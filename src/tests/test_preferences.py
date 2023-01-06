@@ -23,6 +23,7 @@ class TestPreferences:
             "cpu_monitor.enabled": True,
             "gpu_monitor.enabled": True,
             "memory_monitor.enabled": True,
+            "custom_name": {}
         }
 
     @pytest.fixture
@@ -56,7 +57,7 @@ class TestPreferences:
 
         mock_write_file.assert_called_once_with(
             mock.ANY,
-            '{"cpu_monitor.enabled": true, "gpu_monitor.enabled": true, "memory_monitor.enabled": true}'
+            '{"cpu_monitor.enabled": true, "gpu_monitor.enabled": true, "memory_monitor.enabled": true, "custom_name": {}}'
         )
 
     @pytest.mark.usefixtures("mock_read_file", "mock_file_exists", "mock_write_file")
@@ -75,7 +76,7 @@ class TestPreferences:
 
         mock_write_file.assert_called_once_with(
             mock.ANY,
-            '{"cpu_monitor.enabled": true, "gpu_monitor.enabled": false, "memory_monitor.enabled": false}'
+            '{"cpu_monitor.enabled": true, "gpu_monitor.enabled": false, "memory_monitor.enabled": false, "custom_name": {}}'
         )
 
     @pytest.mark.usefixtures("mock_file_exists", "mock_read_file", "mock_write_file")
@@ -92,7 +93,7 @@ class TestPreferences:
             sleep(0.1)
             retries = retries - 1
 
-        mock_subscription.assert_called_once()
+        mock_subscription.assert_called_once_with("memory_monitor.enabled", False)
 
     @pytest.mark.usefixtures("mock_file_exists", "mock_read_file", "mock_write_file")
     def test_it_adds_new_fields_when_default_preferences_has_more_fields_than_persisted_preferences(self):
@@ -104,3 +105,46 @@ class TestPreferences:
         assert Preferences.get("cpu_monitor.enabled") is True
         assert Preferences.get("gpu_monitor.enabled") is False
         assert Preferences.get("memory_monitor.enabled") is True
+
+    @pytest.mark.usefixtures("mock_file_exists", "mock_read_file", "mock_write_file")
+    def test_it_returns_None_when_there_is_no_custom_name_set_for_a_monitor_type(self):
+        Preferences.load()
+
+        assert Preferences.get_custom_name("a monitor type") == None
+
+
+    @pytest.mark.usefixtures("mock_file_exists", "mock_read_file", "mock_write_file")
+    def test_it_returns_custom_name_when_there_is_custom_name_set_for_a_monitor_type(self):
+        Preferences._default_preferences["custom_name"]["a monitor type"]= "new value"
+
+        Preferences.load()
+
+        assert Preferences.get_custom_name("a monitor type") == "new value"
+
+    @pytest.mark.usefixtures("mock_file_exists", "mock_read_file")
+    def test_it_sets_and_returns_custom_name_for_a_monitor_type(self, mock_write_file):
+        Preferences.load()
+
+        Preferences.set_custom_name("a monitor type", "Custom name")
+
+        assert Preferences.get_custom_name("a monitor type") == "Custom name"
+        mock_write_file.assert_called_once_with(
+            mock.ANY,
+            '{"cpu_monitor.enabled": true, "gpu_monitor.enabled": false, "memory_monitor.enabled": true, "custom_name": {"a monitor type": "Custom name"}}'
+        )
+
+    @pytest.mark.usefixtures("mock_file_exists", "mock_read_file", "mock_write_file")
+    def test_it_notifies_when_a_custom_name_changes(self):
+        mock_subscription = mock.MagicMock()
+        EventBroker.initialize()
+        EventBroker.subscribe(events.MONITOR_RENAMED, mock_subscription)
+        Preferences.load()
+
+        Preferences.set_custom_name("a monitor type", "Custom name")
+
+        retries = 5
+        while mock_subscription.call_count == 0 and retries > 0:
+            sleep(0.1)
+            retries = retries - 1
+
+        mock_subscription.assert_called_once_with("a monitor type", "Custom name")
