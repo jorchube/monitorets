@@ -29,6 +29,7 @@ class Preferences:
         "gpu_monitor.sampling_frequency_seconds": 0.1,
         "cpu_monitor.sampling_frequency_seconds": 0.1,
         "memory_monitor.sampling_frequency_seconds": 0.1,
+        "custom_name": {}
     }
 
     _preferences = {}
@@ -42,6 +43,16 @@ class Preferences:
         self._preferences[preference_path] = value
         self._persist_preferences()
         EventBroker.notify(events.PREFERENCES_CHANGED, preference_path, value)
+
+    @classmethod
+    def get_custom_name(self, monitor_type):
+        return self._preferences["custom_name"].get(monitor_type)
+
+    @classmethod
+    def set_custom_name(self, monitor_type, name):
+        self._preferences["custom_name"][monitor_type] = name
+        self._persist_preferences()
+        EventBroker.notify(events.MONITOR_RENAMED, monitor_type, name)
 
     @classmethod
     def _persist_preferences(self):

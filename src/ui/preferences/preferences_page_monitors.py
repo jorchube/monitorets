@@ -1,7 +1,7 @@
 from gi.repository import Adw, Gtk
 
 from ...translatable_strings import preference_toggle_section_name
-from ..preference_switch import PreferenceSwitch
+from .monitor_preference_row import MonitorPreferenceRow
 from ...monitor_descriptors import get_monitor_descriptors_grouped_by_preference_toggle_section
 
 
@@ -47,24 +47,9 @@ class PreferencesPageMonitors(Adw.PreferencesPage):
         group.add(action_row)
 
     def _build_toggle_action_row(self, monitor_descriptor):
+        monitor_type = monitor_descriptor["type"]
         label = monitor_descriptor["preference_toggle_label"]
         enabled_preference_key = monitor_descriptor["enabled_preference_key"]
-
-        action_row = Adw.ActionRow()
-        action_row.set_title(label)
-
         description = monitor_descriptor.get("preference_toggle_description")
-        if description is not None:
-            action_row.set_subtitle(description)
 
-        self._setup_monitor_enable_action_row(enabled_preference_key, action_row)
-
-        return action_row
-
-    def _setup_monitor_enable_action_row(self, enabled_preference_key, action_row):
-        switch = PreferenceSwitch(enabled_preference_key)
-        self._add_switch_to_action_row(switch, action_row)
-
-    def _add_switch_to_action_row(self, switch, action_row):
-        action_row.add_suffix(switch)
-        action_row.set_activatable_widget(switch)
+        return MonitorPreferenceRow(monitor_type, label, enabled_preference_key, subtitle=description)
