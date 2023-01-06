@@ -7,6 +7,7 @@
     <file preprocess="xml-stripblanks">gtk/preferences-window.ui</file>
     <file preprocess="xml-stripblanks">gtk/preferences-page-appearance.ui</file>
     <file preprocess="xml-stripblanks">gtk/preferences-page-monitors.ui</file>
+    <file preprocess="xml-stripblanks">gtk/rename-monitor-popover.ui</file>
     <file preprocess="xml-stripblanks">gtk/main-menu-model.ui</file>
     <file >gtk/icons/system.png</file>
     <file >gtk/icons/light.png</file>
