@@ -2,6 +2,7 @@ src/gtk/preferences-window.ui
 src/gtk/preferences-page-appearance.ui
 src/gtk/preferences-page-monitors.ui
 src/gtk/main-menu-model.ui
+src/gtk/rename-monitor-popover.ui
 data/io.github.jorchube.monitorets.desktop.in
 data/io.github.jorchube.monitorets.appdata.xml.in
 data/io.github.jorchube.monitorets.gschema.xml
