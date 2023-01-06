@@ -31,10 +31,7 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/layouts_large.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/dark_large.png</image>
+      <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/main.png</image>
     </screenshot>
     <screenshot>
       <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/preferences_appearance.png</image>
@@ -51,6 +48,14 @@
   </provides>
 
   <releases>
+  <release version="0.7.0" date="2023-01-06">
+      <description>
+        <ul>
+          <li>Added support for custom monitor names</li>
+          <li>Added smooth graph drawing</li>
+        </ul>
+      </description>
+    </release>
   <release version="0.6.90" date="2022-12-27">
       <description>
         <ul>
