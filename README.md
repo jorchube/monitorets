@@ -9,15 +9,15 @@
 **Monitorets** is a small utility application offering a simple and quick view at the usage of several of your computer resources. Almost like an applet or a widget for your Linux desktop.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/themeable.png" />
+    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/main.png" />
 </p>
 
 ### Flexible:
 
-Select between *horizontal* and *vertical* layout. Or let the application decide based on the window shape.
+Select between *horizontal* and *vertical* layout. Choose Light or Dark theme.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/adaptable.png" />
+    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/preferences_appearance.png" />
 </p>
 
 ### Configurable:
@@ -26,11 +26,16 @@ Choose which resources you want to have visible:
 * Cpu
 * Gpu \[1\]
 * Memory
+* Swap
 * Network downlink traffic
 * Network uplink traffic
 * Home folder ( **~** ) space
 * Root ( **/** ) space
+* Temperature sensors
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/preferences_monitors.png" />
+</p>
 
 ### Get it now:
 
