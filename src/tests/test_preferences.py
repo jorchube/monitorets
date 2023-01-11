@@ -20,6 +20,7 @@ class TestPreferences:
     @pytest.fixture(autouse=True)
     def default_preferences(self):
         Preferences._default_preferences = {
+            "general.layout": "vertical",
             "cpu_monitor.enabled": True,
             "gpu_monitor.enabled": True,
             "memory_monitor.enabled": True,
@@ -43,6 +44,22 @@ class TestPreferences:
         with mock.patch('src.preferences.Preferences._write_file') as mock_write:
             yield mock_write
 
+    @pytest.fixture
+    def settings_content_with_adaptive_layout(self):
+        return '''{
+            "general.layout": "adaptive",
+            "cpu_monitor.enabled": true,
+            "gpu_monitor.enabled": false,
+            "memory_monitor.enabled": true
+        }
+        '''
+
+    @pytest.fixture
+    def mock_read_file_with_adaptive_layout(self, settings_content_with_adaptive_layout):
+        with mock.patch('src.preferences.Preferences._read_file') as mock_read:
+            mock_read.return_value = settings_content_with_adaptive_layout
+            yield mock_read
+
     @pytest.mark.usefixtures("mock_file_exists", "mock_read_file")
     def test_it_loads_preferences_from_file_when_requested_to_load_them(self):
         Preferences.load()
@@ -57,7 +74,7 @@ class TestPreferences:
 
         mock_write_file.assert_called_once_with(
             mock.ANY,
-            '{"cpu_monitor.enabled": true, "gpu_monitor.enabled": true, "memory_monitor.enabled": true, "custom_name": {}}'
+            '{"general.layout": "vertical", "cpu_monitor.enabled": true, "gpu_monitor.enabled": true, "memory_monitor.enabled": true, "custom_name": {}}'
         )
 
     @pytest.mark.usefixtures("mock_read_file", "mock_file_exists", "mock_write_file")
@@ -76,7 +93,7 @@ class TestPreferences:
 
         mock_write_file.assert_called_once_with(
             mock.ANY,
-            '{"cpu_monitor.enabled": true, "gpu_monitor.enabled": false, "memory_monitor.enabled": false, "custom_name": {}}'
+            '{"general.layout": "vertical", "cpu_monitor.enabled": true, "gpu_monitor.enabled": false, "memory_monitor.enabled": false, "custom_name": {}}'
         )
 
     @pytest.mark.usefixtures("mock_file_exists", "mock_read_file", "mock_write_file")
@@ -130,7 +147,7 @@ class TestPreferences:
         assert Preferences.get_custom_name("a monitor type") == "Custom name"
         mock_write_file.assert_called_once_with(
             mock.ANY,
-            '{"cpu_monitor.enabled": true, "gpu_monitor.enabled": false, "memory_monitor.enabled": true, "custom_name": {"a monitor type": "Custom name"}}'
+            '{"general.layout": "vertical", "cpu_monitor.enabled": true, "gpu_monitor.enabled": false, "memory_monitor.enabled": true, "custom_name": {"a monitor type": "Custom name"}}'
         )
 
     @pytest.mark.usefixtures("mock_file_exists", "mock_read_file", "mock_write_file")
@@ -148,3 +165,9 @@ class TestPreferences:
             retries = retries - 1
 
         mock_subscription.assert_called_once_with("a monitor type", "Custom name")
+
+    @pytest.mark.usefixtures("mock_file_exists", "mock_read_file_with_adaptive_layout", "mock_write_file")
+    def test_migrates_deprecated_adaptive_layout_preference(self):
+        Preferences.load()
+
+        assert Preferences.get("general.layout") == "vertical"
