@@ -9,7 +9,6 @@ class LayoutToggleManager:
 
     def __init__(self, preferences_page):
         self._layout_to_toggle_button_map = {
-            Layout.ADAPTIVE: None,
             Layout.HORIZONTAL: None,
             Layout.VERTICAL: None,
         }
