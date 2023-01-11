@@ -71,7 +71,7 @@ class MonitorApplication(Adw.Application):
                                 application_name='Monitorets',
                                 application_icon='io.github.jorchube.monitorets',
                                 developer_name='Jordi Chulia',
-                                version='0.7.0',
+                                version='0.7.1',
                                 developers=['Jordi Chulia'],
                                 copyright='© 2022 Jordi Chulia',
                                 translator_credits=translators_credits.strip())
