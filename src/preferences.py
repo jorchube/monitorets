@@ -67,6 +67,8 @@ class Preferences:
 
         self._preferences = self._default_preferences | self._read_preferences(file_path)
 
+        self._migrate_deprecated_adaptive_layout_value()
+
     @classmethod
     def _read_preferences(self, file_path):
         json_content = self._read_file(file_path)
@@ -99,3 +101,8 @@ class Preferences:
     @classmethod
     def register_preference_key_default(self, key, default_value):
         self._default_preferences[key] = default_value
+
+    @classmethod
+    def _migrate_deprecated_adaptive_layout_value(self):
+        if Preferences.get(PreferenceKeys.LAYOUT) == "adaptive":
+            Preferences.set(PreferenceKeys.LAYOUT, Layout.VERTICAL)
