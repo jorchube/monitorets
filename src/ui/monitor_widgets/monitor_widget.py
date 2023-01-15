@@ -1,4 +1,4 @@
-from gi.repository import Adw, Gtk, Pango
+from gi.repository import Adw, Gtk, Pango, GObject
 from ..graph_area import GraphArea
 from ..graph_redraw_tick_manager import GraphRedrawTickManager
 from ..bidirectional_clamp_container_widget import BidirectionalClampContainerWidget
@@ -105,5 +105,5 @@ class MonitorWidget(Adw.Bin):
 
     def _new_values(self, values, readable_value=None):
         value_as_str = readable_value if readable_value is not None else ""
-        self._value_label.set_label(value_as_str)
+        GObject.idle_add(self._value_label.set_label, value_as_str)
         self._graph_area.set_new_values(values)
