@@ -1,6 +1,7 @@
 import psutil
 
 from .sampler import Sampler
+from .sample import Sample
 
 
 class CpuSampler(Sampler):
@@ -8,5 +9,10 @@ class CpuSampler(Sampler):
         super().__init__(*args, **kwargs)
 
     def _get_sample(self):
-        value = psutil.cpu_percent()
-        return int(value)
+        value = int(psutil.cpu_percent())
+        sample = Sample(
+            to_plot=value,
+            single_value=value,
+            units="%"
+        )
+        return sample

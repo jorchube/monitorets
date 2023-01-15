@@ -166,6 +166,11 @@
                     <property name="title" translatable="yes" context="preferences_page_appearance">Draw smooth graphs</property>
                   </object>
                 </child>
+                <child>
+                  <object class="AdwActionRow" id="_show_current_value_action_row">
+                    <property name="title" translatable="yes" context="preferences_page_appearance">Show current value</property>
+                  </object>
+                </child>
               </object>
             </child>
           </object>

@@ -1,6 +1,7 @@
 import psutil
 
 from .sampler import Sampler
+from .sample import Sample
 
 
 class TemperatureSensorSampler(Sampler):
@@ -15,9 +16,13 @@ class TemperatureSensorSampler(Sampler):
         for sensor in sensor_list:
             if sensor.label == self._sensor_descriptor.hardware_sensor_name:
                 sample = self._get_sample_from_sensor(sensor)
-                return int(sample)
+                return sample
 
-        return 0
+        return Sample(
+            to_plot=0,
+            single_value=0,
+            units="-"
+        )
 
     def _get_sample_from_sensor(self, sensor):
         current_temp = sensor.current
@@ -25,4 +30,10 @@ class TemperatureSensorSampler(Sampler):
 
         temp_as_percent = (current_temp * 100) / max_temp
 
-        return temp_as_percent
+        sample = Sample(
+            to_plot=int(temp_as_percent),
+            single_value=round(current_temp),
+            units="℃"
+        )
+
+        return sample

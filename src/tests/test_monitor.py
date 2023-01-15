@@ -2,14 +2,25 @@ import pytest
 
 from ..monitors.monitor import Monitor
 from ..samplers.sampler import Sampler
+from ..samplers.sample import Sample
 
 
 class TestMonitor:
     @pytest.fixture
-    def test_sampler(self):
+    def samples(self):
+        return [
+            Sample(to_plot=1, single_value=1, units="unit"),
+            Sample(to_plot=3, single_value=3, units="unit"),
+            Sample(to_plot=5, single_value=5, units="unit"),
+            Sample(to_plot=10, single_value=10, units="unit"),
+            Sample(to_plot=20, single_value=20, units="unit"),
+        ]
+
+    @pytest.fixture
+    def test_sampler(self, samples):
         class _TestSampler(Sampler):
             def __init__(self, sampling_frequency_hz=1):
-                self.samples = [1, 3, 5, 10, 20]
+                self.samples = samples
                 self.samples_index = 0
                 super().__init__(sampling_frequency_hz)
 
@@ -32,7 +43,7 @@ class TestMonitor:
                 self._sampler.take_sample()
 
             def get_values(self):
-                return self._values
+                return self._graph_values
 
         return _TestMonitor()
 

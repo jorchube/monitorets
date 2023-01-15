@@ -3,39 +3,19 @@ from ..samplers.delta_sampler import DeltaSampler
 from time import sleep
 
 class TestDeltaSampler:
-    class _TestSampler(DeltaSampler):
-        def __init__(self):
-            self._sample_values = [1, 2, 5, 10, 20]
-            self._sample_index = 0
-            super().__init__(sampling_frequency_hz=20)
+    def test_it_returns_zero_on_first_sample(self):
+        delta_sampler = DeltaSampler()
 
-        def _get_sample(self):
-            sample = self._sample_values[self._sample_index]
-            self._sample_index += 1
-            return sample
+        value = delta_sampler.process_sample(1)
 
-    def test_it_does_not_call_callback_on_first_sample(self):
-        samples = []
-        def mock_new_sample_callback(value):
-            samples.append(value)
+        assert value == 0
 
-        test_sampler = self._TestSampler()
-        test_sampler.install_new_sample_callback(mock_new_sample_callback)
-        test_sampler._sample()
+    def test_it_returns_delta_values_on_subsequent_calls_after_first_one(self):
+        delta_sampler = DeltaSampler()
 
-        assert samples == []
+        delta_sampler.process_sample(1)
 
-    def test_it_does_stores_delta_values_after_first_sample(self):
-        samples = []
-        def mock_new_sample_callback(value):
-            samples.append(value)
-
-        test_sampler = self._TestSampler()
-        test_sampler.install_new_sample_callback(mock_new_sample_callback)
-        test_sampler._sample()
-        test_sampler._sample()
-        test_sampler._sample()
-        test_sampler._sample()
-        test_sampler._sample()
-
-        assert samples == [1, 3, 5, 10]
+        assert delta_sampler.process_sample(2) == 1
+        assert delta_sampler.process_sample(5) == 3
+        assert delta_sampler.process_sample(10) == 5
+        assert delta_sampler.process_sample(20) == 10
