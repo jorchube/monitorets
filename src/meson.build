@@ -39,7 +39,8 @@ monitorets_sources = [
   'layout.py',
   'monitor_descriptors.py',
   'discover_temperature_monitors.py',
-  'translators.py'
+  'translators.py',
+  'units.py',
 ]
 
 install_data(monitorets_sources, install_dir: moduledir)
