@@ -6,14 +6,12 @@ class DeltaSampler(Sampler):
         super().__init__(sampling_frequency_hz)
         self._previous_value = None
 
-    def _sample(self):
-        value = self._get_sample()
-
+    def process_sample(self, value):
         if self._previous_value == None:
             self._previous_value = value
-            return
+            return 0
 
         delta_value = value - self._previous_value
         self._previous_value = value
 
-        self._sample_callback(delta_value)
+        return delta_value
