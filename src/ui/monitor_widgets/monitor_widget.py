@@ -17,6 +17,8 @@ class MonitorWidget(Adw.Bin):
         self._color = color
         self._monitor = monitor
         self._title = title
+        self._show_current_value_label = Preferences.get(PreferenceKeys.SHOW_CURRENT_VALUE)
+
         draw_smooth_graph = Preferences.get(PreferenceKeys.SMOOTH_GRAPH)
         self._graph_area = self._graph_area_instance(self._color, redraw_freq_seconds, draw_smooth_graph)
 
@@ -45,6 +47,7 @@ class MonitorWidget(Adw.Bin):
         self._setup_graph_area_callback()
 
         EventBroker.subscribe(events.MONITOR_RENAMED, self._on_monitor_renamed)
+        EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preference_changed)
 
     def _build_overlay(self, title_label, value_label):
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
@@ -71,6 +74,13 @@ class MonitorWidget(Adw.Bin):
             else:
                 self._set_title(name)
 
+    def _on_preference_changed(self, key, value):
+        if key == PreferenceKeys.SHOW_CURRENT_VALUE:
+            self._on_show_current_value_changed(value)
+
+    def _on_show_current_value_changed(self, new_value):
+        self._show_current_value_label = new_value
+
     def start(self):
         self._monitor.start()
         self._redraw_manager.start()
@@ -88,12 +98,12 @@ class MonitorWidget(Adw.Bin):
         return label
 
     def _build_value_label(self):
-        label = Gtk.Label(label="1234ASD")
+        label = Gtk.Label(label="")
         return label
 
     def _set_value_label(self, value):
         value_as_str = value if value is not None else ""
-        markup = f"<span size='small' color='#{self._color.HTML}'>{value_as_str}</span>"
+        markup = f"<span size='small' weight='bold' color='#{self._color.HTML}'>{value_as_str}</span>"
         GObject.idle_add(self._value_label.set_markup, markup)
 
     def _refresh_title(self):
@@ -113,5 +123,9 @@ class MonitorWidget(Adw.Bin):
         self._monitor.install_new_values_callback(self._new_values)
 
     def _new_values(self, values, readable_value=None):
-        self._set_value_label(readable_value)
+        if self._show_current_value_label:
+            self._set_value_label(readable_value)
+        else:
+            self._set_value_label(None)
+
         self._graph_area.set_new_values(values)
