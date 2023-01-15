@@ -1,9 +1,10 @@
 from gi.repository import Adw, Gtk
 
-from ..theme_toggle_manager import ThemeToggleManager
-from ..layout_toggle_manager import LayoutToggleManager
 from ..preference_switch import PreferenceSwitch
+from ...preferences import Preferences
 from ...preference_keys import PreferenceKeys
+from ...theme import Theme
+from ...layout import Layout
 
 
 @Gtk.Template(resource_path='/org/github/jorchube/monitorets/gtk/preferences-page-appearance.ui')
@@ -36,8 +37,18 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
         self._horizontal_check_button = Gtk.CheckButton()
         self._init_toggles()
 
-        self._theme_toggle_manager = ThemeToggleManager(self)
-        self._layout_toggle_manager = LayoutToggleManager(self)
+        theme = Preferences.get(PreferenceKeys.THEME)
+        self._set_active_toggle_for_theme(theme)
+
+        layout = Preferences.get(PreferenceKeys.LAYOUT)
+        self._set_active_toggle_for_layout(layout)
+
+        self._system_theme_toggle_button.connect("clicked", self._on_system_theme_button_clicked)
+        self._light_theme_toggle_button.connect("clicked", self._on_light_theme_button_clicked)
+        self._dark_theme_toggle_button.connect("clicked", self._on_dark_theme_button_clicked)
+
+        self._vertical_check_button.connect("toggled", self._on_vertical_check_button_toggled)
+        self._horizontal_check_button.connect("toggled", self._on_horizontal_check_button_toggled)
 
     def _init_toggles(self):
         self._system_theme_toggle_button_image_big.set_from_resource("/org/github/jorchube/monitorets/gtk/icons/system.png")
@@ -63,3 +74,35 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
         show_current_value_switch = PreferenceSwitch(PreferenceKeys.SHOW_CURRENT_VALUE)
         self._show_current_value_action_row.add_suffix(show_current_value_switch)
         self._show_current_value_action_row.set_activatable_widget(show_current_value_switch)
+
+    def _on_system_theme_button_clicked(self, user_data):
+        Preferences.set(PreferenceKeys.THEME, Theme.SYSTEM)
+
+    def _on_light_theme_button_clicked(self, user_data):
+        Preferences.set(PreferenceKeys.THEME, Theme.LIGHT)
+
+    def _on_dark_theme_button_clicked(self, user_data):
+        Preferences.set(PreferenceKeys.THEME, Theme.DARK)
+
+    def _set_active_toggle_for_theme(self, theme):
+        theme_to_toggle_button_map = {
+            Theme.SYSTEM: self._system_theme_toggle_button,
+            Theme.LIGHT: self._light_theme_toggle_button,
+            Theme.DARK: self._dark_theme_toggle_button,
+        }
+        theme_to_toggle_button_map[theme].set_active(True)
+
+    def _set_active_toggle_for_layout(self, layout):
+        layout_to_toggle_button_map = {
+            Layout.HORIZONTAL: self._horizontal_check_button,
+            Layout.VERTICAL: self._vertical_check_button,
+        }
+        layout_to_toggle_button_map[layout].set_active(True)
+
+    def _on_vertical_check_button_toggled(self, toggle_button):
+        if toggle_button.get_active():
+            Preferences.set(PreferenceKeys.LAYOUT, Layout.VERTICAL)
+
+    def _on_horizontal_check_button_toggled(self, toggle_button):
+        if toggle_button.get_active():
+            Preferences.set(PreferenceKeys.LAYOUT, Layout.HORIZONTAL)
