@@ -27,6 +27,7 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
     _vertical_layout_action_row = Gtk.Template.Child()
 
     _smooth_graphs_action_row = Gtk.Template.Child()
+    _show_current_value_action_row = Gtk.Template.Child()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -58,3 +59,7 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
         smooth_graph_switch = PreferenceSwitch(PreferenceKeys.SMOOTH_GRAPH)
         self._smooth_graphs_action_row.add_suffix(smooth_graph_switch)
         self._smooth_graphs_action_row.set_activatable_widget(smooth_graph_switch)
+
+        show_current_value_switch = PreferenceSwitch(PreferenceKeys.SHOW_CURRENT_VALUE)
+        self._show_current_value_action_row.add_suffix(show_current_value_switch)
+        self._show_current_value_action_row.set_activatable_widget(show_current_value_switch)
