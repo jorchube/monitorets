@@ -30,5 +30,5 @@ class Sampler:
         value = self._get_sample()
         self._sample_callback(value)
 
-    def _get_sample(self) -> int:
+    def _get_sample(self):
         raise NotImplementedError

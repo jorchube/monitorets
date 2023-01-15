@@ -1,5 +1,6 @@
 import psutil
 
+from .. import units
 from .sampler import Sampler
 from .sample import Sample
 
@@ -16,15 +17,12 @@ class MemorySampler(Sampler):
         used = total - available
 
         percent_value = int((used/total) * 100)
-        single_value = self._to_GiB(used)
+        single_value = units.convert(used, units.Byte, units.GiB)
 
         sample = Sample(
             to_plot=percent_value,
             single_value=round(single_value, 1),
-            units="GiB"
+            units=units.GiB.unit
         )
 
         return sample
-
-    def _to_GiB(self, bytes) -> float:
-        return bytes / (1024 * 1024 * 1024)
