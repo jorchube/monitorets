@@ -27,6 +27,8 @@ class MonitorWidget(Adw.Bin):
         self._title_label = self._build_title_label()
         self._refresh_title()
 
+        self._value_label = Gtk.Label(label="1234 ABD")
+
         self._clamp_container = BidirectionalClampContainerWidget()
         self._overlay_bin = Adw.Bin()
         self._overlay_bin.add_css_class("card")
@@ -37,11 +39,22 @@ class MonitorWidget(Adw.Bin):
         self._overlay_bin.set_child(self._overlay)
 
         self._overlay.set_child(self._graph_area.get_drawing_area_widget())
-        self._overlay.add_overlay(self._title_label)
+
+        overlay = self._build_overlay(self._title_label, self._value_label)
+        self._overlay.add_overlay(overlay)
 
         self._setup_graph_area_callback()
 
         EventBroker.subscribe(events.MONITOR_RENAMED, self._on_monitor_renamed)
+
+    def _build_overlay(self, title_label, value_label):
+        bin = Adw.Bin()
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        bin.set_child(box)
+        box.set_valign(Gtk.Align.CENTER)
+        box.append(title_label)
+        box.append(value_label)
+        return bin
 
     def _setup_widget_hierarchy(self):
         self._clamp_container.set_child(self._overlay_bin)
@@ -90,5 +103,7 @@ class MonitorWidget(Adw.Bin):
     def _setup_graph_area_callback(self):
         self._monitor.install_new_values_callback(self._new_values)
 
-    def _new_values(self, values):
+    def _new_values(self, values, readable_value=None):
+        value_as_str = readable_value if readable_value is not None else ""
+        self._value_label.set_label(value_as_str)
         self._graph_area.set_new_values(values)
