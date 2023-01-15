@@ -1,6 +1,8 @@
 import psutil
 
+from .. import units
 from .sampler import Sampler
+from .sample import Sample
 
 
 class DiskUsageSampler(Sampler):
@@ -9,7 +11,15 @@ class DiskUsageSampler(Sampler):
         self._path = path
 
     def _get_sample(self):
-        value_aggregate = psutil.disk_usage(self._path)
-        value = value_aggregate.percent
+        usage = psutil.disk_usage(self._path)
 
-        return int(value)
+        value_percent = usage.percent
+        single_value = units.convert(usage.used, units.Byte, units.GiB)
+
+        sample = Sample(
+            to_plot=value_percent,
+            single_value=round(single_value),
+            units=units.GiB.unit
+        )
+
+        return sample
