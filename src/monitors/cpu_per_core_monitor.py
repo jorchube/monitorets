@@ -8,5 +8,5 @@ class CpuPerCoreMonitor(Monitor):
         super().__init__(sampler)
 
     def _report_values(self):
-        values = list(zip(*self._values))
-        self._new_values_callback(values)
+        values = list(zip(*self._graph_values))
+        self._new_values_callback(values, self._last_readable_value)
