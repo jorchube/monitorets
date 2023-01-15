@@ -26,8 +26,7 @@ class MonitorWidget(Adw.Bin):
 
         self._title_label = self._build_title_label()
         self._refresh_title()
-
-        self._value_label = Gtk.Label(label="1234 ABD")
+        self._value_label = self._build_value_label()
 
         self._clamp_container = BidirectionalClampContainerWidget()
         self._overlay_bin = Adw.Bin()
@@ -48,10 +47,11 @@ class MonitorWidget(Adw.Bin):
         EventBroker.subscribe(events.MONITOR_RENAMED, self._on_monitor_renamed)
 
     def _build_overlay(self, title_label, value_label):
-        bin = Adw.Bin()
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        bin.set_child(box)
         box.set_valign(Gtk.Align.CENTER)
+        bin = Adw.Bin()
+        bin.set_child(box)
+        box.append(Gtk.Label())
         box.append(title_label)
         box.append(value_label)
         return bin
@@ -87,6 +87,15 @@ class MonitorWidget(Adw.Bin):
 
         return label
 
+    def _build_value_label(self):
+        label = Gtk.Label(label="1234ASD")
+        return label
+
+    def _set_value_label(self, value):
+        value_as_str = value if value is not None else ""
+        markup = f"<span size='small' color='#{self._color.HTML}'>{value_as_str}</span>"
+        GObject.idle_add(self._value_label.set_markup, markup)
+
     def _refresh_title(self):
         custom_name = Preferences.get_custom_name(self._type)
         if custom_name:
@@ -104,6 +113,5 @@ class MonitorWidget(Adw.Bin):
         self._monitor.install_new_values_callback(self._new_values)
 
     def _new_values(self, values, readable_value=None):
-        value_as_str = readable_value if readable_value is not None else ""
-        GObject.idle_add(self._value_label.set_label, value_as_str)
+        self._set_value_label(readable_value)
         self._graph_area.set_new_values(values)
