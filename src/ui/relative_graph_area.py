@@ -2,10 +2,8 @@ from .graph_area import GraphArea
 
 
 class RelativeGraphArea(GraphArea):
-    _MINIMUM_RELATIVE_VALUE = 1000
-
-    def __init__(self, color, redraw_frequency_seconds, draw_smooth_graph, minimum_relative_value=_MINIMUM_RELATIVE_VALUE):
-        self._minimum_relative_value = minimum_relative_value
+    def __init__(self, color, redraw_frequency_seconds, draw_smooth_graph):
+        self._minimum_relative_value = 1000
         super().__init__(color, redraw_frequency_seconds, draw_smooth_graph)
 
     def set_new_values(self, values):
