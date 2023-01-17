@@ -12,3 +12,4 @@ class PreferenceKeys:
     UPLINK_MONITOR_ENABLED = "uplink_monitor.enabled"
     HOME_USAGE_MONITOR_ENABLED = "home_usage_monitor.enabled"
     ROOT_USAGE_MONITOR_ENABLED = "root_usage_monitor.enabled"
+    UNIFIED_SCALE_FOR_NETWORK_MONITORS_ENABLED = "network.unified_scale.enabled"
