@@ -6,7 +6,7 @@ from ...translatable_strings import preference_toggle_description
 
 
 class MonitorPreferenceRow(Adw.ActionRow):
-    def __init__(self, monitor_type, title, preference_key, subtitle=None, is_label_customizable=False):
+    def __init__(self, monitor_type, title, preference_key, subtitle=None):
         super().__init__()
 
         self._monitor_type = monitor_type

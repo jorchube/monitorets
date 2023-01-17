@@ -1,6 +1,7 @@
 from .event_broker import EventBroker
 from . import events
 
+
 class NetworkMonitorScaleManager:
     @classmethod
     def initialize(self):
