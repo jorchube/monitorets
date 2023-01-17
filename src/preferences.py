@@ -27,7 +27,7 @@ class Preferences:
         PreferenceKeys.UPLINK_MONITOR_ENABLED: False,
         PreferenceKeys.HOME_USAGE_MONITOR_ENABLED: False,
         PreferenceKeys.ROOT_USAGE_MONITOR_ENABLED: False,
-        PreferenceKeys.UNIFIED_SCALE_FOR_NETWORK_MONITORS_ENABLED: True,
+        PreferenceKeys.UNIFIED_SCALE_FOR_NETWORK_MONITORS_ENABLED: False,
         "gpu_monitor.sampling_frequency_seconds": 0.1,
         "cpu_monitor.sampling_frequency_seconds": 0.1,
         "memory_monitor.sampling_frequency_seconds": 0.1,
