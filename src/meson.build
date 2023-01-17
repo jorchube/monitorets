@@ -41,6 +41,7 @@ monitorets_sources = [
   'discover_temperature_monitors.py',
   'translators.py',
   'units.py',
+  'network_monitor_scale_manager.py',
 ]
 
 install_data(monitorets_sources, install_dir: moduledir)
