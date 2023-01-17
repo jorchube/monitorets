@@ -3,6 +3,7 @@ from .event_broker import EventBroker
 from .preferences import Preferences
 from .theming import Theming
 from .monitor_descriptors import monitor_descriptor_list
+from .network_monitor_scale_manager import NetworkMonitorScaleManager
 
 
 class Controller:
@@ -13,6 +14,7 @@ class Controller:
         EventBroker.initialize()
         Preferences.load()
         Theming.initialize()
+        NetworkMonitorScaleManager.initialize()
 
         EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preference_changed)
 
