@@ -12,6 +12,7 @@ class Controller:
         self._application = application
 
         EventBroker.initialize()
+        Preferences.initialize()
         Preferences.load()
         Theming.initialize()
         NetworkMonitorScaleManager.initialize()
