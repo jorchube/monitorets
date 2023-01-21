@@ -109,7 +109,7 @@ msgstr "Schijfgebruik"
 
 #: src/gtk/preferences-page-monitors.ui:36
 msgctxt "monitorets"
-msgid ""These are all the temperature sensors that Monitorets has been able to "
+msgid "These are all the temperature sensors that Monitorets has been able to "
 "discover in your setup."
 msgstr "Dit zijn alle door Monitorets aangetroffen temperatuursensors."
 
