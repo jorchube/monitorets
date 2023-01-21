@@ -32,10 +32,10 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/main.png</image>
+      <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/main_0_8_0.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/preferences_appearance.png</image>
+      <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/preferences_appearance_0_8_0.png</image>
     </screenshot>
     <screenshot>
       <image>https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/preferences_monitors.png</image>
@@ -49,6 +49,15 @@
   </provides>
 
   <releases>
+    <release version="0.8.0" date="2023-01-21">
+      <description>
+        <ul>
+          <li>Added support to show the current value of a monitor</li>
+          <li>Remember window size on close</li>
+          <li>Use the same scaling for network uplink and downlink monitors to avoid confusion</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.7.1" date="2023-01-11">
       <description>
         <ul>
