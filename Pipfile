@@ -10,6 +10,7 @@ xdg = "==5.1.1"
 [dev-packages]
 pytest = "*"
 requirements-parser = "*"
+black = "*"
 
 [requires]
 python_version = "3.10"
