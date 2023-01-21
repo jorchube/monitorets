@@ -18,9 +18,6 @@ jobs:
     - name: install pipenv
       run: pip install pipenv
 
-    - name: activate virtual environment
-      run: pipenv shell
-
     - name: Install dependencies
       run: make install-dev-requirements
 
