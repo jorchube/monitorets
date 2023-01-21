@@ -3,7 +3,9 @@ from .graph_area import GraphArea
 
 class OverlappingGraphsArea(GraphArea):
     def __init__(self, color, redraw_frequency_seconds, draw_smooth_graph):
-        super().__init__(color, redraw_frequency_seconds, smooth_graph=draw_smooth_graph)
+        super().__init__(
+            color, redraw_frequency_seconds, smooth_graph=draw_smooth_graph
+        )
         self._ALPHA_FILL = None
 
     def _draw_func(self, gtk_drawing_area, context, width, height, user_data):

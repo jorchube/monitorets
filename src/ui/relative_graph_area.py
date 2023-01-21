@@ -2,7 +2,13 @@ from .graph_area import GraphArea
 
 
 class RelativeGraphArea(GraphArea):
-    def __init__(self, color, redraw_frequency_seconds, draw_smooth_graph, new_reference_value_callback):
+    def __init__(
+        self,
+        color,
+        redraw_frequency_seconds,
+        draw_smooth_graph,
+        new_reference_value_callback,
+    ):
         self._minimum_reference_value = 1000
         self._reference_value = self._minimum_reference_value
         self._own_reference_value = self._minimum_reference_value

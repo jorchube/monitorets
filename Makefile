@@ -1,3 +1,4 @@
+SOURCE_DIR=src
 REQUIREMENTS_TXT=requirements.txt
 
 install-dev-requirements:
@@ -8,6 +9,9 @@ update-po-files:
 
 test:
 	pipenv run pytest
+
+linting:
+	pipenv run black $(SOURCE_DIR)
 
 _generate-requirements-txt:
 	pipenv requirements > $(REQUIREMENTS_TXT)

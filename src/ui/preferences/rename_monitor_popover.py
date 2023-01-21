@@ -1,9 +1,11 @@
 from gi.repository import Adw, Gtk
 
 
-@Gtk.Template(resource_path='/org/github/jorchube/monitorets/gtk/rename-monitor-popover.ui')
+@Gtk.Template(
+    resource_path="/org/github/jorchube/monitorets/gtk/rename-monitor-popover.ui"
+)
 class RenameMonitorPopover(Gtk.Popover):
-    __gtype_name__ = 'RenameMonitorPopover'
+    __gtype_name__ = "RenameMonitorPopover"
 
     _text_entry = Gtk.Template.Child()
     _rename_button = Gtk.Template.Child()

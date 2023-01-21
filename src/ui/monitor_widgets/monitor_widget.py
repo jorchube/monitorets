@@ -11,16 +11,29 @@ from ... import events
 class MonitorWidget(Adw.Bin):
     _REDRAW_FREQUENCY_SECONDS = 0.1
 
-    def __init__(self, monitor, type, title, color=None, redraw_freq_seconds=_REDRAW_FREQUENCY_SECONDS, *args, **kwargs):
+    def __init__(
+        self,
+        monitor,
+        type,
+        title,
+        color=None,
+        redraw_freq_seconds=_REDRAW_FREQUENCY_SECONDS,
+        *args,
+        **kwargs,
+    ):
         super().__init__(*args, **kwargs)
         self._type = type
         self._color = color
         self._monitor = monitor
         self._title = title
-        self._show_current_value_label = Preferences.get(PreferenceKeys.SHOW_CURRENT_VALUE)
+        self._show_current_value_label = Preferences.get(
+            PreferenceKeys.SHOW_CURRENT_VALUE
+        )
 
         draw_smooth_graph = Preferences.get(PreferenceKeys.SMOOTH_GRAPH)
-        self._graph_area = self._graph_area_instance(self._color, redraw_freq_seconds, draw_smooth_graph)
+        self._graph_area = self._graph_area_instance(
+            self._color, redraw_freq_seconds, draw_smooth_graph
+        )
 
         self.set_size_request(120, 60)
 
@@ -114,7 +127,9 @@ class MonitorWidget(Adw.Bin):
             self._set_title(self._title)
 
     def _set_title(self, title):
-        self._title_label.set_markup(f"<span weight='bold' color='#{self._color.HTML}'>{title}</span>")
+        self._title_label.set_markup(
+            f"<span weight='bold' color='#{self._color.HTML}'>{title}</span>"
+        )
 
     def _tick(self):
         self._graph_area.redraw_tick()

@@ -4,9 +4,9 @@ from gi.repository import Gtk
 from ..translatable_strings import tips
 
 
-@Gtk.Template(resource_path='/org/github/jorchube/monitorets/gtk/tips-window.ui')
+@Gtk.Template(resource_path="/org/github/jorchube/monitorets/gtk/tips-window.ui")
 class TipsWindow(Adw.Window):
-    __gtype_name__ = 'TipsWindow'
+    __gtype_name__ = "TipsWindow"
 
     _headerbar = Gtk.Template.Child()
     _tips_box = Gtk.Template.Child()
@@ -15,13 +15,10 @@ class TipsWindow(Adw.Window):
         super().__init__(*args, **kwargs)
 
         title_label = Gtk.Label()
-        title_label.set_markup(f"<span weight=\"bold\">{tips.WINDOW_TITLE}</span>")
+        title_label.set_markup(f'<span weight="bold">{tips.WINDOW_TITLE}</span>')
         self._headerbar.set_title_widget(title_label)
 
-        tip = self._new_tip_content(
-            tips.ALWAYS_ON_TOP_TITLE,
-            tips.ALWAYS_ON_TOP_BODY
-        )
+        tip = self._new_tip_content(tips.ALWAYS_ON_TOP_TITLE, tips.ALWAYS_ON_TOP_BODY)
 
         self._tips_box.append(tip)
 

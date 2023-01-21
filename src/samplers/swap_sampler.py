@@ -18,7 +18,7 @@ class SwapSampler(Sampler):
         sample = Sample(
             to_plot=percent_value,
             single_value=round(single_value, 1),
-            units=units.GiB.unit
+            units=units.GiB.unit,
         )
 
         return sample

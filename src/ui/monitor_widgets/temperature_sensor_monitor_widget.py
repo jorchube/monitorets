@@ -11,4 +11,6 @@ class TemperatureSensorMonitorWidget(MonitorWidget):
         self._color = colors.BROWN
         self._monitor = TemperatureMonitor(temperature_sensor_descriptor)
 
-        super().__init__(self._monitor, self._type, self._title, self._color, *args, **kwargs)
+        super().__init__(
+            self._monitor, self._type, self._title, self._color, *args, **kwargs
+        )

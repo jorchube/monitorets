@@ -19,7 +19,7 @@ class DiskUsageSampler(Sampler):
         sample = Sample(
             to_plot=value_percent,
             single_value=round(single_value),
-            units=units.GiB.unit
+            units=units.GiB.unit,
         )
 
         return sample

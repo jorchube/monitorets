@@ -2,6 +2,7 @@ from ..samplers.sampler import Sampler
 
 from time import sleep
 
+
 class TestSampler:
     class _TestSampler(Sampler):
         def __init__(self):
@@ -14,6 +15,7 @@ class TestSampler:
 
     def test_it_samples_values_until_stopped(self):
         samples = []
+
         def mock_new_sample_callback(value):
             samples.append(value)
 

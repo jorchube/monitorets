@@ -12,4 +12,6 @@ class GpuMonitorWidget(MonitorWidget):
         self._color = colors.GREEN
         self._monitor = GpuMonitor()
 
-        super().__init__(self._monitor, self._type, self._title, self._color, *args, **kwargs)
+        super().__init__(
+            self._monitor, self._type, self._title, self._color, *args, **kwargs
+        )

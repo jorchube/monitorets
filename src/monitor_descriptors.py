@@ -20,90 +20,89 @@ from .translatable_strings import (
 
 monitor_descriptor_list = [
     {
-        'type': MonitorType.CPU,
-        'enabled_preference_key': PreferenceKeys.CPU_MONITOR_ENABLED,
-        'monitor_class': CpuMonitorWidget,
-        'preference_toggle_label': preference_toggle_label.CPU,
-        'preference_toggle_description': None,
-        'preference_toggle_section_name': preference_toggle_section_name.CPU,
+        "type": MonitorType.CPU,
+        "enabled_preference_key": PreferenceKeys.CPU_MONITOR_ENABLED,
+        "monitor_class": CpuMonitorWidget,
+        "preference_toggle_label": preference_toggle_label.CPU,
+        "preference_toggle_description": None,
+        "preference_toggle_section_name": preference_toggle_section_name.CPU,
     },
     {
-        'type': MonitorType.CPU_PER_CORE,
-        'enabled_preference_key': PreferenceKeys.CPU_PER_CORE_MONITOR_ENABLED,
-        'monitor_class': CpuPerCoreMonitorWidget,
-        'preference_toggle_label': preference_toggle_label.CPU_PER_CORE,
-        'preference_toggle_description': preference_toggle_description.CPU_PER_CORE,
-        'preference_toggle_section_name': preference_toggle_section_name.CPU,
+        "type": MonitorType.CPU_PER_CORE,
+        "enabled_preference_key": PreferenceKeys.CPU_PER_CORE_MONITOR_ENABLED,
+        "monitor_class": CpuPerCoreMonitorWidget,
+        "preference_toggle_label": preference_toggle_label.CPU_PER_CORE,
+        "preference_toggle_description": preference_toggle_description.CPU_PER_CORE,
+        "preference_toggle_section_name": preference_toggle_section_name.CPU,
     },
     {
-        'type': MonitorType.GPU,
-        'enabled_preference_key': PreferenceKeys.GPU_MONITOR_ENABLED,
-        'monitor_class': GpuMonitorWidget,
-        'preference_toggle_label': preference_toggle_label.GPU,
-        'preference_toggle_description': preference_toggle_description.GPU,
-        'preference_toggle_section_name': preference_toggle_section_name.GPU,
+        "type": MonitorType.GPU,
+        "enabled_preference_key": PreferenceKeys.GPU_MONITOR_ENABLED,
+        "monitor_class": GpuMonitorWidget,
+        "preference_toggle_label": preference_toggle_label.GPU,
+        "preference_toggle_description": preference_toggle_description.GPU,
+        "preference_toggle_section_name": preference_toggle_section_name.GPU,
     },
     {
-        'type': MonitorType.Memory,
-        'enabled_preference_key': PreferenceKeys.MEMORY_MONITOR_ENABLED,
-        'monitor_class': MemoryMonitorWidget,
-        'preference_toggle_label': preference_toggle_label.MEMORY,
-        'preference_toggle_description': None,
-        'preference_toggle_section_name': preference_toggle_section_name.MEMORY,
+        "type": MonitorType.Memory,
+        "enabled_preference_key": PreferenceKeys.MEMORY_MONITOR_ENABLED,
+        "monitor_class": MemoryMonitorWidget,
+        "preference_toggle_label": preference_toggle_label.MEMORY,
+        "preference_toggle_description": None,
+        "preference_toggle_section_name": preference_toggle_section_name.MEMORY,
     },
     {
-        'type': MonitorType.Swap,
-        'enabled_preference_key': PreferenceKeys.SWAP_MONITOR_ENABLED,
-        'monitor_class': SwapMonitorWidget,
-        'preference_toggle_label': preference_toggle_label.SWAP,
-        'preference_toggle_description': None,
-        'preference_toggle_section_name': preference_toggle_section_name.MEMORY,
+        "type": MonitorType.Swap,
+        "enabled_preference_key": PreferenceKeys.SWAP_MONITOR_ENABLED,
+        "monitor_class": SwapMonitorWidget,
+        "preference_toggle_label": preference_toggle_label.SWAP,
+        "preference_toggle_description": None,
+        "preference_toggle_section_name": preference_toggle_section_name.MEMORY,
     },
     {
-        'type': MonitorType.Downlink,
-        'enabled_preference_key': PreferenceKeys.DOWNLINK_MONITOR_ENABLED,
-        'monitor_class': DownlinkMonitorWidget,
-        'preference_toggle_label': preference_toggle_label.DOWNLINK,
-        'preference_toggle_description': None,
-        'preference_toggle_section_name': preference_toggle_section_name.NETWORK,
+        "type": MonitorType.Downlink,
+        "enabled_preference_key": PreferenceKeys.DOWNLINK_MONITOR_ENABLED,
+        "monitor_class": DownlinkMonitorWidget,
+        "preference_toggle_label": preference_toggle_label.DOWNLINK,
+        "preference_toggle_description": None,
+        "preference_toggle_section_name": preference_toggle_section_name.NETWORK,
     },
     {
-        'type': MonitorType.Uplink,
-        'enabled_preference_key': PreferenceKeys.UPLINK_MONITOR_ENABLED,
-        'monitor_class': UplinkMonitorWidget,
-        'preference_toggle_label': preference_toggle_label.UPLINK,
-        'preference_toggle_description': None,
-        'preference_toggle_section_name': preference_toggle_section_name.NETWORK,
+        "type": MonitorType.Uplink,
+        "enabled_preference_key": PreferenceKeys.UPLINK_MONITOR_ENABLED,
+        "monitor_class": UplinkMonitorWidget,
+        "preference_toggle_label": preference_toggle_label.UPLINK,
+        "preference_toggle_description": None,
+        "preference_toggle_section_name": preference_toggle_section_name.NETWORK,
     },
     {
-        'type': MonitorType.Home_usage,
-        'enabled_preference_key': PreferenceKeys.HOME_USAGE_MONITOR_ENABLED,
-        'monitor_class': HomeUsageMonitorWidget,
-        'preference_toggle_label': preference_toggle_label.HOME_FOLDER_USAGE,
-        'preference_toggle_description': None,
-        'preference_toggle_section_name': preference_toggle_section_name.DISK_USAGE,
+        "type": MonitorType.Home_usage,
+        "enabled_preference_key": PreferenceKeys.HOME_USAGE_MONITOR_ENABLED,
+        "monitor_class": HomeUsageMonitorWidget,
+        "preference_toggle_label": preference_toggle_label.HOME_FOLDER_USAGE,
+        "preference_toggle_description": None,
+        "preference_toggle_section_name": preference_toggle_section_name.DISK_USAGE,
     },
     {
-        'type': MonitorType.Root_usage,
-        'enabled_preference_key': PreferenceKeys.ROOT_USAGE_MONITOR_ENABLED,
-        'monitor_class': RootUsageMonitorWidget,
-        'preference_toggle_label': preference_toggle_label.ROOT_FOLDER_USAGE,
-        'preference_toggle_description': None,
-        'preference_toggle_section_name': preference_toggle_section_name.DISK_USAGE,
+        "type": MonitorType.Root_usage,
+        "enabled_preference_key": PreferenceKeys.ROOT_USAGE_MONITOR_ENABLED,
+        "monitor_class": RootUsageMonitorWidget,
+        "preference_toggle_label": preference_toggle_label.ROOT_FOLDER_USAGE,
+        "preference_toggle_description": None,
+        "preference_toggle_section_name": preference_toggle_section_name.DISK_USAGE,
     },
 ]
 
 
 def get_monitor_descriptors_grouped_by_preference_toggle_section():
-    grouped_descriptors = {
-        "toplevel": list(),
-        "section": defaultdict(list)
-    }
+    grouped_descriptors = {"toplevel": list(), "section": defaultdict(list)}
 
     grouped_descriptors = defaultdict(list)
 
     for descriptor in monitor_descriptor_list:
-        grouped_descriptors[descriptor["preference_toggle_section_name"]].append(descriptor)
+        grouped_descriptors[descriptor["preference_toggle_section_name"]].append(
+            descriptor
+        )
 
     return grouped_descriptors
 

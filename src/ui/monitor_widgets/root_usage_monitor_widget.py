@@ -12,4 +12,6 @@ class RootUsageMonitorWidget(MonitorWidget):
         self._color = colors.PURPLE
         self._monitor = RootUsageMonitor()
 
-        super().__init__(self._monitor, self._type, self._title, self._color, *args, **kwargs)
+        super().__init__(
+            self._monitor, self._type, self._title, self._color, *args, **kwargs
+        )

@@ -10,9 +10,5 @@ class CpuSampler(Sampler):
 
     def _get_sample(self):
         value = int(psutil.cpu_percent())
-        sample = Sample(
-            to_plot=value,
-            single_value=value,
-            units="%"
-        )
+        sample = Sample(to_plot=value, single_value=value, units="%")
         return sample

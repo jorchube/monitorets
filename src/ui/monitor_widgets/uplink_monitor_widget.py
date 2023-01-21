@@ -17,20 +17,33 @@ class UplinkMonitorWidget(MonitorWidget):
         self._color = colors.RED
         self._monitor = UplinkMonitor()
         self._relative_graph_area = None
-        self._use_unified_network_scale = Preferences.get(PreferenceKeys.UNIFIED_SCALE_FOR_NETWORK_MONITORS_ENABLED)
+        self._use_unified_network_scale = Preferences.get(
+            PreferenceKeys.UNIFIED_SCALE_FOR_NETWORK_MONITORS_ENABLED
+        )
 
         EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preference_changed)
-        EventBroker.subscribe(events.NETWORK_MONITOR_NEW_REFERENCE_VALUE, self._set_new_reference_value)
+        EventBroker.subscribe(
+            events.NETWORK_MONITOR_NEW_REFERENCE_VALUE, self._set_new_reference_value
+        )
 
-        super().__init__(self._monitor, self._type, self._title, self._color, *args, **kwargs)
+        super().__init__(
+            self._monitor, self._type, self._title, self._color, *args, **kwargs
+        )
 
     def _graph_area_instance(self, color, redraw_freq_seconds, draw_smooth_graph):
-        self._relative_graph_area = RelativeGraphArea(color, redraw_freq_seconds, draw_smooth_graph, new_reference_value_callback=self._new_reference_value)
+        self._relative_graph_area = RelativeGraphArea(
+            color,
+            redraw_freq_seconds,
+            draw_smooth_graph,
+            new_reference_value_callback=self._new_reference_value,
+        )
         return self._relative_graph_area
 
     def _new_reference_value(self, value):
         if self._use_unified_network_scale:
-            EventBroker.notify(events.UPLINK_NETWORK_MONITOR_NEW_REFERENCE_VALUE_PROPOSAL, value)
+            EventBroker.notify(
+                events.UPLINK_NETWORK_MONITOR_NEW_REFERENCE_VALUE_PROPOSAL, value
+            )
         else:
             self._relative_graph_area.set_reference_value(value)
 

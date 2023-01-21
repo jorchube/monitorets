@@ -9,7 +9,9 @@ from ..layout import Layout
 class WindowLayoutManager:
     _WIDTH_HEIGHT_RATIO_THRESHOLD = 1.5
 
-    def __init__(self, window, set_horizontal_layout_callback, set_vertical_layout_callback):
+    def __init__(
+        self, window, set_horizontal_layout_callback, set_vertical_layout_callback
+    ):
         self._window = window
         self._set_horizontal_layout = set_horizontal_layout_callback
         self._set_vertical_layout = set_vertical_layout_callback
@@ -19,7 +21,7 @@ class WindowLayoutManager:
 
         self._layout_selected_callbacks = {
             Layout.HORIZONTAL: self._horizontal_layout_selected,
-            Layout.VERTICAL: self._vertical_layout_selected
+            Layout.VERTICAL: self._vertical_layout_selected,
         }
 
         EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preferences_changed)

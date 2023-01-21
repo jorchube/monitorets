@@ -16,13 +16,13 @@ class MemorySampler(Sampler):
         total = vmem.total
         used = total - available
 
-        percent_value = int((used/total) * 100)
+        percent_value = int((used / total) * 100)
         single_value = units.convert(used, units.Byte, units.GiB)
 
         sample = Sample(
             to_plot=percent_value,
             single_value=round(single_value, 1),
-            units=units.GiB.unit
+            units=units.GiB.unit,
         )
 
         return sample

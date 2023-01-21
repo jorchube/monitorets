@@ -47,7 +47,6 @@ class TestMonitor:
 
         return _TestMonitor()
 
-
     def test_monitor_stores_one_sample_from_sampler(self, test_monitor):
         test_monitor.trigger_new_sample()
 
