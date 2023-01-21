@@ -109,8 +109,7 @@ msgstr "Schijfgebruik"
 
 #: src/gtk/preferences-page-monitors.ui:36
 msgctxt "monitorets"
-msgid ""
-"These are all the temperature sensors that Monitorets has been able to "
+msgid ""These are all the temperature sensors that Monitorets has been able to "
 "discover in your setup."
 msgstr "Dit zijn alle door Monitorets aangetroffen temperatuursensors."
 
@@ -169,12 +168,10 @@ msgid "Jordi Chulia"
 msgstr "Jordi Chulia"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:17
-msgid ""
-"Monitorets is a small utility application offering a simple and quick view "
+msgid "Monitorets is a small utility application offering a simple and quick view "
 "at the usage of several of your computer resources. Almost like an applet or "
 "a widget for your desktop."
-msgstr ""
-"Monitorets is een eenvoudige toepassing voor het tonen van uw "
+msgstr "Monitorets is een eenvoudige toepassing voor het tonen van uw "
 "systeemverbruik in één oogopslag, vergelijkbaar met een invoegtoepassing of "
 "widget."
 
@@ -328,8 +325,7 @@ msgstr "Intern:"
 #: data/io.github.jorchube.monitorets.appdata.xml.in:126
 #: data/io.github.jorchube.monitorets.appdata.xml.in:133
 msgid "- Decoupled several events that can trigger a graph redraw"
-msgstr ""
-"- Enkele gebeurtenissen die het opnieuw intekenen van grafieken triggerde "
+msgstr "- Enkele gebeurtenissen die het opnieuw intekenen van grafieken triggerde "
 "zijn ontkoppeld"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:131
@@ -409,14 +405,12 @@ msgid "Shown as"
 msgstr "Tonen als"
 
 #: src/translatable_strings/preference_toggle_description.py:5
-msgid ""
-"The monitor will draw as many graphs as cores are present in the system."
+msgid "The monitor will draw as many graphs as cores are present in the system."
 msgstr "De monitor zal alle kernen als grafieken tonen."
 
 #: src/translatable_strings/preference_toggle_description.py:6
 msgid "Experimental. This is only known to work on some AMD GPUs currently."
-msgstr ""
-"Let op: deze functie is experimenteel en werkt mogelijk alleen bij gebruik "
+msgstr "Let op: deze functie is experimenteel en werkt mogelijk alleen bij gebruik "
 "van AMD-gpu's."
 
 #: src/translatable_strings/tips.py:4
@@ -424,13 +418,11 @@ msgid "Always on Top"
 msgstr "Altijd bovenaan"
 
 #: src/translatable_strings/tips.py:5
-msgid ""
-"You can make the window stay on top of any other window: Press <span "
+msgid "You can make the window stay on top of any other window: Press <span "
 "font_weight='bold'>Alt+Space</span> or right click with your mouse in the "
 "window titlebar to bring the window menu, then select <span "
 "font_weight='bold' font_style='italic'>Always on Top</span>."
-msgstr ""
-"U kunt er voor kiezen om het venster altijd bovenop andere vensters te "
+msgstr "U kunt er voor kiezen om het venster altijd bovenop andere vensters te "
 "houden. Dit doet u als volgt: Druk op <span font_weight='bold'>Alt"
 "+spatiebalk</span> of rechtsklik op de titelbalk om het venstermenu te "
 "openen en kies <span font_weight='bold' font_style='italic'>Altijd bovenaan</"
@@ -439,10 +431,10 @@ msgstr ""
 #: src/gtk/preferences-page-appearance.ui:171
 msgctxt "preferences_page_appearance"
 msgid "Show current value"
-msgstr ""
+msgstr "Huidige waarde tonen"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:55
-msgid ""
-"Fixed a bug preventing the preferences window from opening (Thanks to "
+msgid "Fixed a bug preventing the preferences window from opening (Thanks to "
 "@jrdmellow)"
-msgstr ""
+msgstr "Opgelost: bug die het openen van het voorkeurenvenster verhinderde "
+"(met dank aan @jrdmellow!)"
