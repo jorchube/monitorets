@@ -16,7 +16,7 @@ _delete-requirements-txt:
 	rm $(REQUIREMENTS_TXT)
 
 _generate-dependencies-json-file:
-	python ./build_helper/flatpak-pip-generator.py --requirements-file=./requirements.txt --output pypi-dependencies
+	python ./build_helper/flatpak-pip-generator.py --requirements-file=$(REQUIREMENTS_TXT) --output pypi-dependencies
 
 update-dependencies-manifest: _generate-requirements-txt _generate-dependencies-json-file _delete-requirements-txt
 
