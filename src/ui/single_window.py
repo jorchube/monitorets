@@ -150,5 +150,7 @@ class SingleWindow(Adw.ApplicationWindow):
         monitor_bin.set_margin_end(4)
 
     def _persist_window_geometry(self):
-        window_geometry = WindowGeometry(width=self.get_width(), height=self.get_height())
+        window_geometry = WindowGeometry(
+            width=self.get_width(), height=self.get_height()
+        )
         Preferences.set(PreferenceKeys.WINDOW_GEOMETRY, window_geometry)

@@ -42,9 +42,9 @@ class Preferences:
     @classmethod
     def initialize(self):
         self._custom_key_handler[PreferenceKeys.WINDOW_GEOMETRY] = {
-                "set": self._set_window_geometry,
-                "get": self._get_window_geometry,
-            }
+            "set": self._set_window_geometry,
+            "get": self._get_window_geometry,
+        }
 
     @classmethod
     def get(self, preference_path):
@@ -138,7 +138,9 @@ class Preferences:
 
     @classmethod
     def _set_window_geometry(self, window_geometry):
-        self._default_set_handler(PreferenceKeys.WINDOW_GEOMETRY, window_geometry.as_dict())
+        self._default_set_handler(
+            PreferenceKeys.WINDOW_GEOMETRY, window_geometry.as_dict()
+        )
 
     @classmethod
     def _get_window_geometry(self):

@@ -192,9 +192,7 @@ class TestPreferences:
     def test_uses_custom_handler_to_get_a_preference(self):
         custom_get = mock.MagicMock()
         custom_get.return_value = "value"
-        Preferences._custom_key_handler["a key"] = {
-            "get": custom_get
-        }
+        Preferences._custom_key_handler["a key"] = {"get": custom_get}
 
         assert Preferences.get("a key") == "value"
         assert Preferences.get("cpu_monitor.enabled") == True
@@ -202,9 +200,7 @@ class TestPreferences:
     @pytest.mark.usefixtures("mock_file_exists", "mock_read_file", "mock_write_file")
     def test_uses_custom_handler_to_set_a_preference(self):
         custom_set = mock.MagicMock()
-        Preferences._custom_key_handler["a key"] = {
-            "set": custom_set
-        }
+        Preferences._custom_key_handler["a key"] = {"set": custom_set}
 
         Preferences.set("a key", "value")
 
