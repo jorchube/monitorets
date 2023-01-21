@@ -10,6 +10,9 @@ update-po-files:
 test:
 	pipenv run pytest
 
+check-linting:
+	pipenv run black --check $(SOURCE_DIR)
+
 linting:
 	pipenv run black $(SOURCE_DIR)
 
