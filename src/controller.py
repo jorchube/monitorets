@@ -27,6 +27,7 @@ class Controller:
     @classmethod
     def _restart_monitors(self):
         import time
+
         for descriptor in monitor_descriptor_list:
             EventBroker.notify(events.MONITOR_DISABLED, descriptor["type"])
 

@@ -32,4 +32,4 @@ class Monitor:
         return len(self._graph_values) > self._MAX_NUMBER_OF_VALUES_STORED
 
     def _free_old_values(self):
-        self._graph_values = self._graph_values[:self._MAX_NUMBER_OF_VALUES_STORED]
+        self._graph_values = self._graph_values[: self._MAX_NUMBER_OF_VALUES_STORED]

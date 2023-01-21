@@ -29,9 +29,9 @@ from .. import events
 from ..monitor_descriptors import monitor_descriptor_list
 
 
-@Gtk.Template(resource_path='/org/github/jorchube/monitorets/gtk/single-window.ui')
+@Gtk.Template(resource_path="/org/github/jorchube/monitorets/gtk/single-window.ui")
 class SingleWindow(Adw.ApplicationWindow):
-    __gtype_name__ = 'SingleWindow'
+    __gtype_name__ = "SingleWindow"
 
     _overlay = Gtk.Template.Child()
     _monitors_box = Gtk.Template.Child()
@@ -42,7 +42,9 @@ class SingleWindow(Adw.ApplicationWindow):
         self._available_monitors = self._build_available_monitors_dict()
         self._monitor_bins = self._build_monitor_bins_dict()
 
-        self._layout_managet = WindowLayoutManager(self, self._set_horizontal_layout, self._set_vertical_layout)
+        self._layout_managet = WindowLayoutManager(
+            self, self._set_horizontal_layout, self._set_vertical_layout
+        )
 
         EventBroker.subscribe(events.MONITOR_ENABLED, self._handle_on_monitor_enabled)
         EventBroker.subscribe(events.MONITOR_DISABLED, self._handle_on_monitor_disabled)

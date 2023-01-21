@@ -12,4 +12,6 @@ class SwapMonitorWidget(MonitorWidget):
         self._color = colors.PURPLE
         self._monitor = SwapMonitor()
 
-        super().__init__(self._monitor, self._type, self._title, self._color, *args, **kwargs)
+        super().__init__(
+            self._monitor, self._type, self._title, self._color, *args, **kwargs
+        )

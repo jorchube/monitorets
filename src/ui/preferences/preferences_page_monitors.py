@@ -2,12 +2,16 @@ from gi.repository import Adw, Gtk
 
 from ...translatable_strings import preference_toggle_section_name
 from .monitor_preference_row import MonitorPreferenceRow
-from ...monitor_descriptors import get_monitor_descriptors_grouped_by_preference_toggle_section
+from ...monitor_descriptors import (
+    get_monitor_descriptors_grouped_by_preference_toggle_section,
+)
 
 
-@Gtk.Template(resource_path='/org/github/jorchube/monitorets/gtk/preferences-page-monitors.ui')
+@Gtk.Template(
+    resource_path="/org/github/jorchube/monitorets/gtk/preferences-page-monitors.ui"
+)
 class PreferencesPageMonitors(Adw.PreferencesPage):
-    __gtype_name__ = 'PreferencesPageMonitors'
+    __gtype_name__ = "PreferencesPageMonitors"
 
     _cpu_preferences_group = Gtk.Template.Child()
     _gpu_preferences_group = Gtk.Template.Child()
@@ -52,4 +56,6 @@ class PreferencesPageMonitors(Adw.PreferencesPage):
         enabled_preference_key = monitor_descriptor["enabled_preference_key"]
         description = monitor_descriptor.get("preference_toggle_description")
 
-        return MonitorPreferenceRow(monitor_type, label, enabled_preference_key, subtitle=description)
+        return MonitorPreferenceRow(
+            monitor_type, label, enabled_preference_key, subtitle=description
+        )

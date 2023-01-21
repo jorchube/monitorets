@@ -13,11 +13,7 @@ class GpuSampler(Sampler):
     def _get_sample(self):
         value = int(self._read_file(self._file_handle))
 
-        sample = Sample(
-            to_plot=value,
-            single_value=value,
-            units="%"
-        )
+        sample = Sample(to_plot=value, single_value=value, units="%")
 
         return sample
 

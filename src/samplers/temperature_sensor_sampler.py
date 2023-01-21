@@ -18,11 +18,7 @@ class TemperatureSensorSampler(Sampler):
                 sample = self._get_sample_from_sensor(sensor)
                 return sample
 
-        return Sample(
-            to_plot=0,
-            single_value=0,
-            units="-"
-        )
+        return Sample(to_plot=0, single_value=0, units="-")
 
     def _get_sample_from_sensor(self, sensor):
         current_temp = sensor.current
@@ -31,9 +27,7 @@ class TemperatureSensorSampler(Sampler):
         temp_as_percent = (current_temp * 100) / max_temp
 
         sample = Sample(
-            to_plot=int(temp_as_percent),
-            single_value=round(current_temp),
-            units="℃"
+            to_plot=int(temp_as_percent), single_value=round(current_temp), units="℃"
         )
 
         return sample

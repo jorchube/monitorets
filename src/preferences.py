@@ -31,7 +31,7 @@ class Preferences:
         "gpu_monitor.sampling_frequency_seconds": 0.1,
         "cpu_monitor.sampling_frequency_seconds": 0.1,
         "memory_monitor.sampling_frequency_seconds": 0.1,
-        "custom_name": {}
+        "custom_name": {},
     }
 
     _preferences = {}
@@ -67,7 +67,9 @@ class Preferences:
         if not self._file_exists(file_path):
             self._write_preferences(self._default_preferences, file_path)
 
-        self._preferences = self._default_preferences | self._read_preferences(file_path)
+        self._preferences = self._default_preferences | self._read_preferences(
+            file_path
+        )
 
         self._migrate_deprecated_adaptive_layout_value()
 

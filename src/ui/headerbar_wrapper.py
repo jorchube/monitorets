@@ -3,6 +3,7 @@ from gi.repository import Adw, Gtk
 from ..event_broker import EventBroker
 from .. import events
 
+
 class HeaderBarWrapper:
     def __init__(self, parent_window):
         self._parent_window = parent_window
@@ -66,7 +67,9 @@ class HeaderBarWrapper:
         button.add_css_class("circular")
         button.add_css_class("raised")
 
-        builder = Gtk.Builder.new_from_resource("/org/github/jorchube/monitorets/gtk/main-menu-model.ui")
+        builder = Gtk.Builder.new_from_resource(
+            "/org/github/jorchube/monitorets/gtk/main-menu-model.ui"
+        )
         menu = builder.get_object("main_menu")
 
         popover = Gtk.PopoverMenu.new_from_model(menu)

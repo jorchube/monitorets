@@ -20,8 +20,8 @@
 import sys
 import gi
 
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
+gi.require_version("Gtk", "4.0")
+gi.require_version("Adw", "1")
 
 from gi.repository import Gio, Adw
 from .controller import Controller
@@ -38,14 +38,17 @@ class MonitorApplication(Adw.Application):
     """The main application singleton class."""
 
     def __init__(self):
-        super().__init__(application_id='io.github.jorchube.monitorets',flags=Gio.ApplicationFlags.FLAGS_NONE)
+        super().__init__(
+            application_id="io.github.jorchube.monitorets",
+            flags=Gio.ApplicationFlags.FLAGS_NONE,
+        )
 
         self.window = None
 
-        self.create_action('quit', self.on_quit, ['<primary>q'])
-        self.create_action('about', self.on_about_action)
-        self.create_action('tips', self.on_tips_action)
-        self.create_action('preferences', self.on_preferences_action)
+        self.create_action("quit", self.on_quit, ["<primary>q"])
+        self.create_action("about", self.on_about_action)
+        self.create_action("tips", self.on_tips_action)
+        self.create_action("preferences", self.on_preferences_action)
 
         self._discover_dynamic_monitors()
 
@@ -64,17 +67,18 @@ class MonitorApplication(Adw.Application):
         self.window.present()
         Controller.show_monitors()
 
-
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
-        about = Adw.AboutWindow(transient_for=self.props.active_window,
-                                application_name='Monitorets',
-                                application_icon='io.github.jorchube.monitorets',
-                                developer_name='Jordi Chulia',
-                                version='0.7.1',
-                                developers=['Jordi Chulia'],
-                                copyright='© 2022 Jordi Chulia',
-                                translator_credits=translators_credits.strip())
+        about = Adw.AboutWindow(
+            transient_for=self.props.active_window,
+            application_name="Monitorets",
+            application_icon="io.github.jorchube.monitorets",
+            developer_name="Jordi Chulia",
+            version="0.7.1",
+            developers=["Jordi Chulia"],
+            copyright="© 2022 Jordi Chulia",
+            translator_credits=translators_credits.strip(),
+        )
         about.present()
 
     def on_tips_action(self, widget, _):
@@ -89,7 +93,7 @@ class MonitorApplication(Adw.Application):
 
     def on_preferences_action(self, widget, _):
         """Callback for the app.preferences action."""
-        print('app.preferences action activated')
+        print("app.preferences action activated")
         preferences_window = PreferencesWindow(transient_for=self.props.active_window)
         preferences_window.present()
 
@@ -110,6 +114,7 @@ class MonitorApplication(Adw.Application):
 
     def _discover_dynamic_monitors(self):
         discover_temperature_monitors.execute()
+
 
 def main(version):
     """The application's entry point."""

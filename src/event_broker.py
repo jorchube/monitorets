@@ -25,7 +25,9 @@ class EventBroker:
 
     @classmethod
     def initialize(cls):
-        cls._thread_pool_executor = ThreadPoolExecutor(max_workers=cls._NUMBER_OF_WORKERS)
+        cls._thread_pool_executor = ThreadPoolExecutor(
+            max_workers=cls._NUMBER_OF_WORKERS
+        )
 
     @classmethod
     def _execute_in_thread(cls, call, *args, **kwargs):

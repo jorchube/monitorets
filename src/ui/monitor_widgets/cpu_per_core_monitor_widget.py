@@ -12,4 +12,6 @@ class CpuPerCoreMonitorWidget(OverlappingGraphsMonitorWidget):
         self._color = colors.BLUE
         self._monitor = CpuPerCoreMonitor()
 
-        super().__init__(self._monitor, self._type, self._title, self._color, *args, **kwargs)
+        super().__init__(
+            self._monitor, self._type, self._title, self._color, *args, **kwargs
+        )

@@ -91,7 +91,7 @@ class GraphArea:
 
     def _value_point(self, width, height, value, order):
         x = width - (order * self._X_SPACE_PER_VALUE) + self._current_x_step_offset
-        y = height - (height * (value/100.0))
+        y = height - (height * (value / 100.0))
 
         return x, y
 
@@ -100,14 +100,14 @@ class GraphArea:
 
         x, _ = self._smooth_value_point(width, height, values[0], order)
 
-        for i in range(len(values)-1):
+        for i in range(len(values) - 1):
             v0 = values[i]
-            v3 = values[i+1]
+            v3 = values[i + 1]
 
             x0, y0 = self._smooth_value_point(width, height, v0, order)
-            x3, y3 = self._smooth_value_point(width, height, v3, order+1)
+            x3, y3 = self._smooth_value_point(width, height, v3, order + 1)
 
-            mid_x = (x0 + x3)/2
+            mid_x = (x0 + x3) / 2
             x1, y1 = mid_x, y0
             x2, y2 = mid_x, y3
 
@@ -121,26 +121,32 @@ class GraphArea:
             context.close_path()
 
     def _smooth_value_point(self, width, height, value, order):
-        x = width - ((order-1) * self._X_SPACE_PER_VALUE) + self._current_x_step_offset
-        y = height - (height * (value/100.0))
+        x = (
+            width
+            - ((order - 1) * self._X_SPACE_PER_VALUE)
+            + self._current_x_step_offset
+        )
+        y = height - (height * (value / 100.0))
 
         return x, y
 
     def _apply_mask(self, context, width, height):
         context.set_operator(cairo.OPERATOR_DEST_IN)
         context.new_path()
-        self._rectangle_path_with_corner_radius(context, width, height, self._MASK_CORNER_RADIUS)
+        self._rectangle_path_with_corner_radius(
+            context, width, height, self._MASK_CORNER_RADIUS
+        )
         context.close_path()
         context.fill()
 
     def _rectangle_path_with_corner_radius(self, context, width, height, radius):
         context.new_path()
 
-        context.line_to(width, height-radius)
-        context.arc(width-radius, height-radius, radius, 0, math.pi/2)
+        context.line_to(width, height - radius)
+        context.arc(width - radius, height - radius, radius, 0, math.pi / 2)
         context.line_to(radius, height)
-        context.arc(radius, height-radius, radius, math.pi/2, math.pi)
+        context.arc(radius, height - radius, radius, math.pi / 2, math.pi)
         context.line_to(0, radius)
-        context.arc(radius, radius, radius, math.pi, (3/2)*math.pi)
-        context.line_to(width-radius, 0)
-        context.arc(width-radius, radius, radius, (3/2)*math.pi, 0)
+        context.arc(radius, radius, radius, math.pi, (3 / 2) * math.pi)
+        context.line_to(width - radius, 0)
+        context.arc(width - radius, radius, radius, (3 / 2) * math.pi, 0)

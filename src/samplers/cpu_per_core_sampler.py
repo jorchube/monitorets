@@ -14,9 +14,7 @@ class CpuPerCoreSampler(Sampler):
 
         int_values = list(map(int, value_list))
         sample = Sample(
-            to_plot=int_values,
-            single_value=int(mean(int_values)),
-            units="%"
+            to_plot=int_values, single_value=int(mean(int_values)), units="%"
         )
 
         return sample

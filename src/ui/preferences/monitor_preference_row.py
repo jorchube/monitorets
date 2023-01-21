@@ -34,8 +34,6 @@ class MonitorPreferenceRow(Adw.ActionRow):
 
         self._install_motion_event_controller()
 
-
-
     def _on_rename(self, new_name):
         if new_name:
             self._set_custom_name(new_name)
@@ -54,7 +52,9 @@ class MonitorPreferenceRow(Adw.ActionRow):
     def _set_custom_name(self, custom_name, persist=True):
         self._custom_name = custom_name
         self._custom_name_label.set_size_request(120, -1)
-        self._custom_name_label.set_markup(f"<span weight=\"normal\" style=\"oblique\">{preference_toggle_description.SHOWN_AS}:\n</span><span>{custom_name}</span>")
+        self._custom_name_label.set_markup(
+            f'<span weight="normal" style="oblique">{preference_toggle_description.SHOWN_AS}:\n</span><span>{custom_name}</span>'
+        )
 
         self._rename_popover.set_text(custom_name)
 
