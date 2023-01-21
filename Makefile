@@ -7,7 +7,7 @@ update-po-files:
 	find . -name *.po -exec xgettext --omit-header -j -f po/POTFILES -o {} \;
 
 test:
-	pytest .
+	pipenv run pytest
 
 _generate-requirements-txt:
 	pipenv requirements > $(REQUIREMENTS_TXT)
