@@ -42,6 +42,7 @@ monitorets_sources = [
   'translators.py',
   'units.py',
   'network_monitor_scale_manager.py',
+  'window_geometry.py',
 ]
 
 install_data(monitorets_sources, install_dir: moduledir)

@@ -3,6 +3,7 @@ class PreferenceKeys:
     LAYOUT = "general.layout"
     SMOOTH_GRAPH = "general.smooth_graph"
     SHOW_CURRENT_VALUE = "general.show_current_value"
+    WINDOW_GEOMETRY = "general.window_geometry"
     CPU_MONITOR_ENABLED = "cpu_monitor.enabled"
     CPU_PER_CORE_MONITOR_ENABLED = "cpu_per_core_monitor.enabled"
     GPU_MONITOR_ENABLED = "gpu_monitor.enabled"

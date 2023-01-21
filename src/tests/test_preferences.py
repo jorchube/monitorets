@@ -34,6 +34,12 @@ class TestPreferences:
             yield mock_exists
 
     @pytest.fixture
+    def mock_file_does_not_exists(self):
+        with mock.patch("src.preferences.Preferences._file_exists") as mock_exists:
+            mock_exists.return_value = False
+            yield mock_exists
+
+    @pytest.fixture
     def mock_read_file(self, settings_content):
         with mock.patch("src.preferences.Preferences._read_file") as mock_read:
             mock_read.return_value = settings_content
@@ -70,12 +76,11 @@ class TestPreferences:
         assert Preferences.get("gpu_monitor.enabled") is False
         assert Preferences.get("memory_monitor.enabled") is True
 
-    @pytest.mark.usefixtures("mock_read_file")
+    @pytest.mark.usefixtures("mock_read_file", "mock_file_does_not_exists")
     def test_it_writes_default_preferences_when_requested_to_load_them_and_do_not_exist(
         self, mock_write_file
     ):
         Preferences.load()
-
         mock_write_file.assert_called_once_with(
             mock.ANY,
             '{"general.layout": "vertical", "cpu_monitor.enabled": true, "gpu_monitor.enabled": true, "memory_monitor.enabled": true, "custom_name": {}}',
@@ -182,3 +187,21 @@ class TestPreferences:
         Preferences.load()
 
         assert Preferences.get("general.layout") == "vertical"
+
+    @pytest.mark.usefixtures("mock_file_exists", "mock_read_file", "mock_write_file")
+    def test_uses_custom_handler_to_get_a_preference(self):
+        custom_get = mock.MagicMock()
+        custom_get.return_value = "value"
+        Preferences._custom_key_handler["a key"] = {"get": custom_get}
+
+        assert Preferences.get("a key") == "value"
+        assert Preferences.get("cpu_monitor.enabled") == True
+
+    @pytest.mark.usefixtures("mock_file_exists", "mock_read_file", "mock_write_file")
+    def test_uses_custom_handler_to_set_a_preference(self):
+        custom_set = mock.MagicMock()
+        Preferences._custom_key_handler["a key"] = {"set": custom_set}
+
+        Preferences.set("a key", "value")
+
+        custom_set.assert_called_once_with("value")

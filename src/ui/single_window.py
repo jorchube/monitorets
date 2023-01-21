@@ -27,6 +27,9 @@ from .window_layout_manager import WindowLayoutManager
 from ..event_broker import EventBroker
 from .. import events
 from ..monitor_descriptors import monitor_descriptor_list
+from ..preferences import Preferences
+from ..preference_keys import PreferenceKeys
+from ..window_geometry import WindowGeometry
 
 
 @Gtk.Template(resource_path="/org/github/jorchube/monitorets/gtk/single-window.ui")
@@ -45,6 +48,9 @@ class SingleWindow(Adw.ApplicationWindow):
         self._layout_managet = WindowLayoutManager(
             self, self._set_horizontal_layout, self._set_vertical_layout
         )
+
+        window_geometry = Preferences.get(PreferenceKeys.WINDOW_GEOMETRY)
+        self.set_default_size(window_geometry.width, window_geometry.height)
 
         EventBroker.subscribe(events.MONITOR_ENABLED, self._handle_on_monitor_enabled)
         EventBroker.subscribe(events.MONITOR_DISABLED, self._handle_on_monitor_disabled)
@@ -124,6 +130,8 @@ class SingleWindow(Adw.ApplicationWindow):
         self._headerbar_wrapper.on_mouse_exit()
 
     def _close_request(self, user_data):
+        self._persist_window_geometry()
+
         for monitor_bin in self._monitor_bins.values():
             monitor = monitor_bin.get_child()
             if monitor:
@@ -140,3 +148,9 @@ class SingleWindow(Adw.ApplicationWindow):
         monitor_bin.set_margin_bottom(4)
         monitor_bin.set_margin_start(4)
         monitor_bin.set_margin_end(4)
+
+    def _persist_window_geometry(self):
+        window_geometry = WindowGeometry(
+            width=self.get_width(), height=self.get_height()
+        )
+        Preferences.set(PreferenceKeys.WINDOW_GEOMETRY, window_geometry)
