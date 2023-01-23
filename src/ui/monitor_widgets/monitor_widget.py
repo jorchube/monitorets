@@ -9,6 +9,7 @@ from ... import events
 
 class MonitorWidget(Adw.Bin):
     _REDRAW_FREQUENCY_SECONDS = 0.1
+    _WIDTH_PER_SAMPLE = 10
 
     def __init__(
         self,
@@ -33,6 +34,7 @@ class MonitorWidget(Adw.Bin):
         self._graph_area = self._graph_area_instance(
             self._color, redraw_freq_seconds, draw_smooth_graph
         )
+        self._graph_area.set_width_per_sample(self._WIDTH_PER_SAMPLE)
 
         self.set_size_request(120, 60)
 
