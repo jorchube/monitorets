@@ -150,7 +150,6 @@ class MonitorWidget(Adw.Bin):
 
     def _set_max_stored_samples_for_width(self, width):
         num_needed_samples = self._calculate_needed_samples_for_width(width)
-        print(f"{self._type} needed samples: {num_needed_samples} for width: {width}")
         self._monitor.set_max_number_of_stored_samples(num_needed_samples)
 
     def _calculate_needed_samples_for_width(self, width):
