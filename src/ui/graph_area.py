@@ -33,7 +33,6 @@ class GraphArea:
 
     def redraw_tick(self):
         GObject.idle_add(self._redraw)
-        # self._current_x_step_offset -= 1
         self._current_x_step_offset -= self._x_step_per_tick
 
     def _build_drawing_area(self):

@@ -16,9 +16,6 @@ class WindowLayoutManager:
         self._set_horizontal_layout = set_horizontal_layout_callback
         self._set_vertical_layout = set_vertical_layout_callback
 
-        self._paintable = Gtk.WidgetPaintable()
-        self._paintable.set_widget(self._window)
-
         self._layout_selected_callbacks = {
             Layout.HORIZONTAL: self._horizontal_layout_selected,
             Layout.VERTICAL: self._vertical_layout_selected,

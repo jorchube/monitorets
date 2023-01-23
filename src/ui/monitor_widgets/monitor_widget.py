@@ -1,3 +1,4 @@
+import math
 from gi.repository import Adw, Gtk, Pango, GObject
 from ..graph_area import GraphArea
 from ..graph_redraw_tick_manager import GraphRedrawTickManager
@@ -60,6 +61,10 @@ class MonitorWidget(Adw.Bin):
 
         EventBroker.subscribe(events.MONITOR_RENAMED, self._on_monitor_renamed)
         EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preference_changed)
+
+        self._paintable = Gtk.WidgetPaintable()
+        self._paintable.set_widget(self)
+        self._paintable.connect("invalidate-size", self._on_size_changed)
 
     def _build_overlay(self, title_label, value_label):
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
@@ -138,3 +143,16 @@ class MonitorWidget(Adw.Bin):
             self._set_value_label(None)
 
         self._graph_area.set_new_values(values)
+
+    def _on_size_changed(self, paintable):
+        new_width = self.get_width()
+        self._set_max_stored_samples_for_width(new_width)
+
+    def _set_max_stored_samples_for_width(self, width):
+        num_needed_samples = self._calculate_needed_samples_for_width(width)
+        print(f"{self._type} needed samples: {num_needed_samples} for width: {width}")
+        self._monitor.set_max_number_of_stored_samples(num_needed_samples)
+
+    def _calculate_needed_samples_for_width(self, width):
+        num_samples = math.ceil(width / self._WIDTH_PER_SAMPLE)
+        return num_samples
