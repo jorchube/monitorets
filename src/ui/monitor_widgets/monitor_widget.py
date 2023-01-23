@@ -1,7 +1,6 @@
 from gi.repository import Adw, Gtk, Pango, GObject
 from ..graph_area import GraphArea
 from ..graph_redraw_tick_manager import GraphRedrawTickManager
-from ..bidirectional_clamp_container_widget import BidirectionalClampContainerWidget
 from ...preferences import Preferences
 from ...preference_keys import PreferenceKeys
 from ...event_broker import EventBroker
@@ -43,13 +42,11 @@ class MonitorWidget(Adw.Bin):
         self._refresh_title()
         self._value_label = self._build_value_label()
 
-        self._clamp_container = BidirectionalClampContainerWidget()
         self._overlay_bin = Adw.Bin()
         self._overlay_bin.add_css_class("card")
         self._overlay = Gtk.Overlay()
 
-        self.set_child(self._clamp_container)
-        self._clamp_container.set_child(self._overlay_bin)
+        self.set_child(self._overlay_bin)
         self._overlay_bin.set_child(self._overlay)
 
         self._overlay.set_child(self._graph_area.get_drawing_area_widget())
@@ -71,11 +68,6 @@ class MonitorWidget(Adw.Bin):
         box.append(title_label)
         box.append(value_label)
         return bin
-
-    def _setup_widget_hierarchy(self):
-        self._clamp_container.set_child(self._overlay_bin)
-        self._overlay_bin.set_child(self._overlay)
-        self.set_child(self._clamp_container)
 
     def _graph_area_instance(self, color, redraw_freq_seconds, draw_smooth_graph):
         return GraphArea(color, redraw_freq_seconds, smooth_graph=draw_smooth_graph)
