@@ -6,6 +6,7 @@ from ...preferences import Preferences
 from ...preference_keys import PreferenceKeys
 from ...event_broker import EventBroker
 from ... import events
+from ..monitor_title_overlay import MonitorTitleOverlay
 
 
 class MonitorWidget(Adw.Bin):
@@ -41,10 +42,6 @@ class MonitorWidget(Adw.Bin):
 
         self._redraw_manager = GraphRedrawTickManager(self._tick, redraw_freq_seconds)
 
-        self._title_label = self._build_title_label()
-        self._refresh_title()
-        self._value_label = self._build_value_label()
-
         self._overlay_bin = Adw.Bin()
         self._overlay_bin.add_css_class("card")
         self._overlay = Gtk.Overlay()
@@ -54,8 +51,9 @@ class MonitorWidget(Adw.Bin):
 
         self._overlay.set_child(self._graph_area.get_drawing_area_widget())
 
-        overlay = self._build_overlay(self._title_label, self._value_label)
-        self._overlay.add_overlay(overlay)
+        self._monitor_title_overlay = MonitorTitleOverlay(self._color.HTML)
+        self._overlay.add_overlay(self._monitor_title_overlay)
+        self._refresh_title()
 
         self._setup_graph_area_callback()
 
@@ -65,16 +63,6 @@ class MonitorWidget(Adw.Bin):
         self._paintable = Gtk.WidgetPaintable()
         self._paintable.set_widget(self)
         self._paintable.connect("invalidate-size", self._on_size_changed)
-
-    def _build_overlay(self, title_label, value_label):
-        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        box.set_valign(Gtk.Align.CENTER)
-        bin = Adw.Bin()
-        bin.set_child(box)
-        box.append(Gtk.Label())
-        box.append(title_label)
-        box.append(value_label)
-        return bin
 
     def _graph_area_instance(self, color, redraw_freq_seconds, draw_smooth_graph):
         return GraphArea(color, redraw_freq_seconds, smooth_graph=draw_smooth_graph)
@@ -101,22 +89,8 @@ class MonitorWidget(Adw.Bin):
         self._monitor.stop()
         self._redraw_manager.stop()
 
-    def _build_title_label(self):
-        label = Gtk.Label()
-        label.set_margin_start(10)
-        label.set_margin_end(10)
-        label.set_ellipsize(Pango.EllipsizeMode.MIDDLE)
-
-        return label
-
-    def _build_value_label(self):
-        label = Gtk.Label(label="")
-        return label
-
     def _set_value_label(self, value):
-        value_as_str = value if value is not None else ""
-        markup = f"<span size='small' weight='bold' color='#{self._color.HTML}'>{value_as_str}</span>"
-        GObject.idle_add(self._value_label.set_markup, markup)
+        self._monitor_title_overlay.set_value(value)
 
     def _refresh_title(self):
         custom_name = Preferences.get_custom_name(self._type)
@@ -126,9 +100,7 @@ class MonitorWidget(Adw.Bin):
             self._set_title(self._title)
 
     def _set_title(self, title):
-        self._title_label.set_markup(
-            f"<span weight='bold' color='#{self._color.HTML}'>{title}</span>"
-        )
+        self._monitor_title_overlay.set_title(title)
 
     def _tick(self):
         self._graph_area.redraw_tick()
