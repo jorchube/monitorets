@@ -38,7 +38,7 @@ class MonitorWidget(Adw.Bin):
         )
         self._graph_area.set_width_per_sample(self._WIDTH_PER_SAMPLE)
 
-        self.set_size_request(120, 60)
+        self.set_size_request(120, 65)
 
         self._redraw_manager = GraphRedrawTickManager(self._tick, redraw_freq_seconds)
 
