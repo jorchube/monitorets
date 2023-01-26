@@ -64,7 +64,8 @@ class TestMonitor:
         assert values == [5, 3, 1]
 
     def test_monitor_discards_samples_when_max_is_reached(self, test_monitor):
-        test_monitor._MAX_NUMBER_OF_VALUES_STORED = 2
+        test_monitor._EXTRA_BUFFER_OF_STORED_SAMPLES = 0
+        test_monitor.set_max_number_of_stored_samples(2)
         test_monitor.trigger_new_sample()
         test_monitor.trigger_new_sample()
         test_monitor.trigger_new_sample()

@@ -7,28 +7,33 @@ class GraphArea:
     _LINE_WIDTH = 0.2
     _ALPHA_FILL = 0.2
     _MASK_CORNER_RADIUS = 12
-    _X_SPACE_PER_VALUE = 10
+    _DEFAULT_WIDTH_PER_SAMPLE = 10
 
     def __init__(self, color, redraw_frequency_seconds, smooth_graph=False):
         self._color = color.RGB
-        self._refraw_frequency_seconds = redraw_frequency_seconds
-        self._x_step_per_tick = self._X_SPACE_PER_VALUE / redraw_frequency_seconds
+        self._redraw_frequency_seconds = redraw_frequency_seconds
+        self._width_per_sample = None
+        self.set_width_per_sample(self._DEFAULT_WIDTH_PER_SAMPLE)
         self._drawing_area = self._build_drawing_area()
         self._drawing_area.set_draw_func(self._draw_func, None)
         self._values = None
         self._current_x_step_offset = 0
         self._draw_smooth_graph = smooth_graph
 
+    def set_width_per_sample(self, value):
+        self._width_per_sample = value
+        self._x_step_per_tick = self._width_per_sample * self._redraw_frequency_seconds
+
     def set_new_values(self, values):
         self._values = values
-        self._current_x_step_offset = self._X_SPACE_PER_VALUE
+        self._current_x_step_offset = self._width_per_sample
 
     def get_drawing_area_widget(self):
         return self._drawing_area
 
     def redraw_tick(self):
         GObject.idle_add(self._redraw)
-        self._current_x_step_offset -= 1
+        self._current_x_step_offset -= self._x_step_per_tick
 
     def _build_drawing_area(self):
         drawing_area = Gtk.DrawingArea()
@@ -90,7 +95,7 @@ class GraphArea:
             context.close_path()
 
     def _value_point(self, width, height, value, order):
-        x = width - (order * self._X_SPACE_PER_VALUE) + self._current_x_step_offset
+        x = width - (order * self._width_per_sample) + self._current_x_step_offset
         y = height - (height * (value / 100.0))
 
         return x, y
@@ -121,11 +126,7 @@ class GraphArea:
             context.close_path()
 
     def _smooth_value_point(self, width, height, value, order):
-        x = (
-            width
-            - ((order - 1) * self._X_SPACE_PER_VALUE)
-            + self._current_x_step_offset
-        )
+        x = width - ((order - 1) * self._width_per_sample) + self._current_x_step_offset
         y = height - (height * (value / 100.0))
 
         return x, y
