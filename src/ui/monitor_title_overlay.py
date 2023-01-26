@@ -15,7 +15,7 @@ class MonitorTitleOverlay(Adw.Bin):
         self._small_view = _SmallMonitorTitleOverlayView(self._html_color_code)
 
         self._squeezer = Adw.Squeezer()
-        self._squeezer.set_transition_duration(500)
+        self._squeezer.set_transition_duration(250)
         self._squeezer.set_transition_type(Adw.SqueezerTransitionType.CROSSFADE)
         self._squeezer_page_big = self._squeezer.add(self._big_view)
         self._squeezer_page_small = self._squeezer.add(self._small_view)
