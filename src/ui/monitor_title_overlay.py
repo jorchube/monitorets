@@ -29,7 +29,6 @@ class MonitorTitleOverlay(Adw.Bin):
 
         self._refresh_visible_view()
 
-
     def set_title(self, title):
         self._huge_view.set_title(title)
         self._big_view.set_title(title)

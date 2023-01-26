@@ -126,11 +126,7 @@ class GraphArea:
             context.close_path()
 
     def _smooth_value_point(self, width, height, value, order):
-        x = (
-            width
-            - ((order - 1) * self._width_per_sample)
-            + self._current_x_step_offset
-        )
+        x = width - ((order - 1) * self._width_per_sample) + self._current_x_step_offset
         y = height - (height * (value / 100.0))
 
         return x, y
