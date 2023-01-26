@@ -5,174 +5,159 @@
   <requires lib="libadwaita" version="1.1"/>
   <template class="PreferencesPageAppearance" parent="AdwPreferencesPage">
     <property name="icon-name">preferences-desktop-appearance-symbolic</property>
-    <property name="margin-bottom">25</property>
-    <property name="margin-end">25</property>
-    <property name="margin-start">25</property>
-    <property name="margin-top">25</property>
     <property name="name">Appearance</property>
     <property name="title" translatable="yes" context="monitorets">Appearance</property>
     <child>
-      <object class="AdwClamp">
+      <object class="AdwPreferencesGroup">
+        <property name="description" translatable="yes" context="monitorets">Choose between light, dark or the global system theme.</property>
+        <property name="margin-bottom">15</property>
+        <property name="title" translatable="yes" context="monitorets">Theme</property>
         <child>
-          <object class="GtkBox" id="PreferencesBox">
-            <property name="orientation">vertical</property>
-            <property name="spacing">10</property>
-            <property name="width-request">200</property>
+          <object class="AdwClamp">
+            <property name="css-classes">card</property>
             <child>
-              <object class="AdwPreferencesGroup">
-                <property name="description" translatable="yes" context="monitorets">Choose between light, dark or the global system theme.</property>
-                <property name="margin-bottom">15</property>
-                <property name="title" translatable="yes" context="monitorets">Theme</property>
-                <child>
-                  <object class="AdwClamp">
-                    <property name="css-classes">card</property>
-                    <child>
-                      <object class="GtkBox">
-                        <property name="css-classes">
+              <object class="GtkBox">
+                <property name="css-classes">
 </property>
-                        <property name="homogeneous">True</property>
-                        <property name="margin-bottom">10</property>
-                        <property name="margin-end">10</property>
-                        <property name="margin-start">10</property>
-                        <property name="margin-top">10</property>
+                <property name="homogeneous">True</property>
+                <property name="margin-bottom">10</property>
+                <property name="margin-end">10</property>
+                <property name="margin-start">10</property>
+                <property name="margin-top">10</property>
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkToggleButton" id="_system_theme_toggle_button">
+                    <property name="child">
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
                         <property name="spacing">10</property>
                         <child>
-                          <object class="GtkToggleButton" id="_system_theme_toggle_button">
-                            <property name="child">
-                              <object class="GtkBox">
-                                <property name="orientation">vertical</property>
-                                <property name="spacing">10</property>
-                                <child>
-                                  <object class="AdwSqueezer" id="_system_theme_toggle_image_squeezer">
-                                    <property name="interpolate-size">True</property>
-                                    <child>
-                                      <object class="GtkImage" id="_system_theme_toggle_button_image_small">
-                                        <property name="pixel-size">48</property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkImage" id="_system_theme_toggle_button_image_big">
-                                        <property name="pixel-size">128</property>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="css-classes">body</property>
-                                    <property name="label" translatable="yes" context="monitorets">System</property>
-                                  </object>
-                                </child>
+                          <object class="AdwSqueezer" id="_system_theme_toggle_image_squeezer">
+                            <property name="interpolate-size">True</property>
+                            <child>
+                              <object class="GtkImage" id="_system_theme_toggle_button_image_small">
+                                <property name="pixel-size">48</property>
                               </object>
-                            </property>
-                            <property name="css-classes">flat</property>
+                            </child>
+                            <child>
+                              <object class="GtkImage" id="_system_theme_toggle_button_image_big">
+                                <property name="pixel-size">128</property>
+                              </object>
+                            </child>
                           </object>
                         </child>
                         <child>
-                          <object class="GtkToggleButton" id="_light_theme_toggle_button">
-                            <property name="child">
-                              <object class="GtkBox">
-                                <property name="orientation">vertical</property>
-                                <property name="spacing">10</property>
-                                <child>
-                                  <object class="AdwSqueezer" id="_light_theme_toggle_image_squeezer">
-                                    <property name="interpolate-size">True</property>
-                                    <child>
-                                      <object class="GtkImage" id="_light_theme_toggle_button_image_small">
-                                        <property name="pixel-size">48</property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkImage" id="_light_theme_toggle_button_image_big">
-                                        <property name="pixel-size">128</property>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="css-classes">body</property>
-                                    <property name="label" translatable="yes" context="monitorets">Light</property>
-                                  </object>
-                                </child>
-                              </object>
-                            </property>
-                            <property name="css-classes">flat</property>
-                            <property name="group">_system_theme_toggle_button</property>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkToggleButton" id="_dark_theme_toggle_button">
-                            <property name="child">
-                              <object class="GtkBox">
-                                <property name="orientation">vertical</property>
-                                <property name="spacing">10</property>
-                                <child>
-                                  <object class="AdwSqueezer" id="_dark_theme_toggle_image_squeezer">
-                                    <property name="interpolate-size">True</property>
-                                    <child>
-                                      <object class="GtkImage" id="_dark_theme_toggle_button_image_small">
-                                        <property name="pixel-size">48</property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkImage" id="_dark_theme_toggle_button_image_big">
-                                        <property name="pixel-size">128</property>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="css-classes">body</property>
-                                    <property name="label" translatable="yes" context="monitorets">Dark</property>
-                                  </object>
-                                </child>
-                              </object>
-                            </property>
-                            <property name="css-classes">flat</property>
-                            <property name="group">_system_theme_toggle_button</property>
+                          <object class="GtkLabel">
+                            <property name="css-classes">body</property>
+                            <property name="label" translatable="yes" context="monitorets">System</property>
                           </object>
                         </child>
                       </object>
-                    </child>
+                    </property>
+                    <property name="css-classes">flat</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkToggleButton" id="_light_theme_toggle_button">
+                    <property name="child">
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">10</property>
+                        <child>
+                          <object class="AdwSqueezer" id="_light_theme_toggle_image_squeezer">
+                            <property name="interpolate-size">True</property>
+                            <child>
+                              <object class="GtkImage" id="_light_theme_toggle_button_image_small">
+                                <property name="pixel-size">48</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImage" id="_light_theme_toggle_button_image_big">
+                                <property name="pixel-size">128</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="css-classes">body</property>
+                            <property name="label" translatable="yes" context="monitorets">Light</property>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                    <property name="css-classes">flat</property>
+                    <property name="group">_system_theme_toggle_button</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkToggleButton" id="_dark_theme_toggle_button">
+                    <property name="child">
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">10</property>
+                        <child>
+                          <object class="AdwSqueezer" id="_dark_theme_toggle_image_squeezer">
+                            <property name="interpolate-size">True</property>
+                            <child>
+                              <object class="GtkImage" id="_dark_theme_toggle_button_image_small">
+                                <property name="pixel-size">48</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImage" id="_dark_theme_toggle_button_image_big">
+                                <property name="pixel-size">128</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="css-classes">body</property>
+                            <property name="label" translatable="yes" context="monitorets">Dark</property>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                    <property name="css-classes">flat</property>
+                    <property name="group">_system_theme_toggle_button</property>
                   </object>
                 </child>
               </object>
             </child>
-            <child>
-              <object class="AdwPreferencesGroup">
-                <property name="description" translatable="yes" context="monitorets">Choose how to organize the enabled resource monitors.</property>
-                <property name="title" translatable="yes" context="monitorets">Layout</property>
-                <child>
-                  <object class="AdwActionRow" id="_vertical_layout_action_row">
-                    <property name="subtitle" translatable="yes" context="monitorets">Monitors stacked in a single column.</property>
-                    <property name="title">Vertical</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="AdwActionRow" id="_horizontal_layout_action_row">
-                    <property name="subtitle" translatable="yes" context="monitorets">Monitors aligned in a single row.</property>
-                    <property name="title">Horizontal</property>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child>
-              <object class="AdwPreferencesGroup">
-                <property name="title" translatable="yes" context="preferences_page_appearance">Graphs</property>
-                <child>
-                  <object class="AdwActionRow" id="_smooth_graphs_action_row">
-                    <property name="title" translatable="yes" context="preferences_page_appearance">Draw smooth graphs</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="AdwActionRow" id="_show_current_value_action_row">
-                    <property name="title" translatable="yes" context="preferences_page_appearance">Show current value</property>
-                  </object>
-                </child>
-              </object>
-            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup">
+        <property name="description" translatable="yes" context="monitorets">Choose how to organize the enabled resource monitors.</property>
+        <property name="title" translatable="yes" context="monitorets">Layout</property>
+        <child>
+          <object class="AdwActionRow" id="_vertical_layout_action_row">
+            <property name="subtitle" translatable="yes" context="monitorets">Monitors stacked in a single column.</property>
+            <property name="title">Vertical</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow" id="_horizontal_layout_action_row">
+            <property name="subtitle" translatable="yes" context="monitorets">Monitors aligned in a single row.</property>
+            <property name="title">Horizontal</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup">
+        <property name="title" translatable="yes" context="preferences_page_appearance">Graphs</property>
+        <child>
+          <object class="AdwActionRow" id="_smooth_graphs_action_row">
+            <property name="title" translatable="yes" context="preferences_page_appearance">Draw smooth graphs</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow" id="_show_current_value_action_row">
+            <property name="title" translatable="yes" context="preferences_page_appearance">Show current value</property>
           </object>
         </child>
       </object>
