@@ -54,7 +54,9 @@ class SingleWindow(Adw.ApplicationWindow):
 
         self._headerbar_wrapper = HeaderBarWrapper(parent_window=self)
         self._overlay.add_overlay(self._headerbar_wrapper.root_widget)
-        self._monitors_container_bin.set_child(self._layout_manager.get_container_widget())
+        self._monitors_container_bin.set_child(
+            self._layout_manager.get_container_widget()
+        )
 
         self.connect("close-request", self._close_request)
         self._install_motion_event_controller()

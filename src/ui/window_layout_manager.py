@@ -22,7 +22,6 @@ class WindowLayoutManager:
 
         self._refresh_layout_from_preferences()
 
-
     def add_monitor(self, monitor):
         self._monitors_flow_box.append(monitor)
 
