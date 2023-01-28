@@ -4,6 +4,7 @@ from .preferences import Preferences
 from .theming import Theming
 from .monitor_descriptors import monitor_descriptor_list
 from .network_monitor_scale_manager import NetworkMonitorScaleManager
+from .ui.window_layout_manager import WindowLayoutManager
 
 
 class Controller:
@@ -16,8 +17,12 @@ class Controller:
         Preferences.load()
         Theming.initialize()
         NetworkMonitorScaleManager.initialize()
+        WindowLayoutManager.initialize()
 
         EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preference_changed)
+
+        # self._available_monitors = self._build_available_monitors_dict()
+        # self._enabled_monitors = dict()
 
     @classmethod
     def show_monitors(self):
@@ -27,8 +32,6 @@ class Controller:
 
     @classmethod
     def _restart_monitors(self):
-        import time
-
         for descriptor in monitor_descriptor_list:
             EventBroker.notify(events.MONITOR_DISABLED, descriptor["type"])
 
@@ -53,3 +56,11 @@ class Controller:
             event = events.MONITOR_DISABLED
 
         EventBroker.notify(event, monitor_type)
+
+    @classmethod
+    def _build_available_monitors_dict(self):
+        monitors_dict = {}
+        for descriptor in monitor_descriptor_list:
+            monitors_dict[descriptor["type"]] = descriptor["monitor_class"]
+
+        return monitors_dict

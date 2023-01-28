@@ -44,8 +44,6 @@ class SingleWindow(Adw.ApplicationWindow):
         self._available_monitors = self._build_available_monitors_dict()
         self._enabled_monitors = dict()
 
-        self._layout_manager = WindowLayoutManager()
-
         window_geometry = Preferences.get(PreferenceKeys.WINDOW_GEOMETRY)
         self.set_default_size(window_geometry.width, window_geometry.height)
 
@@ -55,7 +53,7 @@ class SingleWindow(Adw.ApplicationWindow):
         self._headerbar_wrapper = HeaderBarWrapper(parent_window=self)
         self._overlay.add_overlay(self._headerbar_wrapper.root_widget)
         self._monitors_container_bin.set_child(
-            self._layout_manager.get_container_widget()
+            WindowLayoutManager.get_container_widget()
         )
 
         self.connect("close-request", self._close_request)
@@ -89,7 +87,7 @@ class SingleWindow(Adw.ApplicationWindow):
         monitor = self._available_monitors[type]()
         self._enabled_monitors[type] = monitor
         monitor.start()
-        self._layout_manager.add_monitor(monitor)
+        WindowLayoutManager.add_monitor(monitor)
 
     def _on_monitor_disabled(self, type):
         self._disable_monitor(type)
@@ -101,7 +99,7 @@ class SingleWindow(Adw.ApplicationWindow):
             return
 
         self._enabled_monitors[type] = None
-        self._layout_manager.remove_monitor(monitor)
+        WindowLayoutManager.remove_monitor(monitor)
         monitor.stop()
 
     def _install_motion_event_controller(self):
