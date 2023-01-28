@@ -1,3 +1,5 @@
+from gi.repository import GObject
+import traceback
 from . import events
 from .event_broker import EventBroker
 from .preferences import Preferences
@@ -20,9 +22,11 @@ class Controller:
         WindowLayoutManager.initialize()
 
         EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preference_changed)
+        EventBroker.subscribe(events.MONITOR_ENABLED, self._handle_on_monitor_enabled)
+        EventBroker.subscribe(events.MONITOR_DISABLED, self._handle_on_monitor_disabled)
 
-        # self._available_monitors = self._build_available_monitors_dict()
-        # self._enabled_monitors = dict()
+        self._available_monitors = self._build_available_monitors_dict()
+        self._enabled_monitors = dict()
 
     @classmethod
     def show_monitors(self):
@@ -56,6 +60,48 @@ class Controller:
             event = events.MONITOR_DISABLED
 
         EventBroker.notify(event, monitor_type)
+
+    @classmethod
+    def _handle_on_monitor_enabled(self, type):
+        GObject.idle_add(self._on_monitor_enabled, type)
+
+    @classmethod
+    def _handle_on_monitor_disabled(self, type):
+        GObject.idle_add(self._on_monitor_disabled, type)
+
+    @classmethod
+    def _on_monitor_enabled(self, type):
+        try:
+            self._enable_monitor(type)
+        except Exception as e:
+            print(f"Exception: {e}")
+            traceback.print_exc()
+
+    @classmethod
+    def _enable_monitor(self, type):
+        if self._enabled_monitors.get(type) is not None:
+            print(f"[Warning] {type} monitor is already enabled")
+            return
+
+        monitor = self._available_monitors[type]()
+        self._enabled_monitors[type] = monitor
+        monitor.start()
+        WindowLayoutManager.add_monitor(monitor)
+
+    @classmethod
+    def _on_monitor_disabled(self, type):
+        self._disable_monitor(type)
+
+    @classmethod
+    def _disable_monitor(self, type):
+        monitor = self._enabled_monitors.get(type)
+        if monitor is None:
+            print(f"[Warning] {type} monitor is already disabled")
+            return
+
+        self._enabled_monitors[type] = None
+        WindowLayoutManager.remove_monitor(monitor)
+        monitor.stop()
 
     @classmethod
     def _build_available_monitors_dict(self):

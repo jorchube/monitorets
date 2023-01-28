@@ -19,14 +19,9 @@
 
 from gi.repository import Adw
 from gi.repository import Gtk
-from gi.repository import GObject
 
-import traceback
 from .headerbar_wrapper import HeaderBarWrapper
 from .window_layout_manager import WindowLayoutManager
-from ..event_broker import EventBroker
-from .. import events
-from ..monitor_descriptors import monitor_descriptor_list
 from ..preferences import Preferences
 from ..preference_keys import PreferenceKeys
 from ..window_geometry import WindowGeometry
@@ -41,14 +36,9 @@ class SingleWindow(Adw.ApplicationWindow):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self._available_monitors = self._build_available_monitors_dict()
-        self._enabled_monitors = dict()
 
         window_geometry = Preferences.get(PreferenceKeys.WINDOW_GEOMETRY)
         self.set_default_size(window_geometry.width, window_geometry.height)
-
-        EventBroker.subscribe(events.MONITOR_ENABLED, self._handle_on_monitor_enabled)
-        EventBroker.subscribe(events.MONITOR_DISABLED, self._handle_on_monitor_disabled)
 
         self._headerbar_wrapper = HeaderBarWrapper(parent_window=self)
         self._overlay.add_overlay(self._headerbar_wrapper.root_widget)
@@ -58,49 +48,6 @@ class SingleWindow(Adw.ApplicationWindow):
 
         self.connect("close-request", self._close_request)
         self._install_motion_event_controller()
-
-    def _build_available_monitors_dict(self):
-        monitors_dict = {}
-        for descriptor in monitor_descriptor_list:
-            monitors_dict[descriptor["type"]] = descriptor["monitor_class"]
-
-        return monitors_dict
-
-    def _handle_on_monitor_enabled(self, type):
-        GObject.idle_add(self._on_monitor_enabled, type)
-
-    def _handle_on_monitor_disabled(self, type):
-        GObject.idle_add(self._on_monitor_disabled, type)
-
-    def _on_monitor_enabled(self, type):
-        try:
-            self._enable_monitor(type)
-        except Exception as e:
-            print(f"Exception: {e}")
-            traceback.print_exc()
-
-    def _enable_monitor(self, type):
-        if self._enabled_monitors.get(type) is not None:
-            print(f"[Warning] {type} monitor is already enabled")
-            return
-
-        monitor = self._available_monitors[type]()
-        self._enabled_monitors[type] = monitor
-        monitor.start()
-        WindowLayoutManager.add_monitor(monitor)
-
-    def _on_monitor_disabled(self, type):
-        self._disable_monitor(type)
-
-    def _disable_monitor(self, type):
-        monitor = self._enabled_monitors.get(type)
-        if monitor is None:
-            print(f"[Warning] {type} monitor is already disabled")
-            return
-
-        self._enabled_monitors[type] = None
-        WindowLayoutManager.remove_monitor(monitor)
-        monitor.stop()
 
     def _install_motion_event_controller(self):
         controller = Gtk.EventControllerMotion()
