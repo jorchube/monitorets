@@ -35,6 +35,12 @@ class Controller:
                 EventBroker.notify(events.MONITOR_ENABLED, descriptor["type"])
 
     @classmethod
+    def stop_all_monitors(self):
+        for monitor in self._enabled_monitors.values():
+            if monitor is not None:
+                monitor.stop()
+
+    @classmethod
     def _restart_monitors(self):
         for descriptor in monitor_descriptor_list:
             EventBroker.notify(events.MONITOR_DISABLED, descriptor["type"])

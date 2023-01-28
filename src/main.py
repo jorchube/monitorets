@@ -86,9 +86,9 @@ class MonitorApplication(Adw.Application):
         tips_window.present()
 
     def on_quit(self, *args, **kwargs):
+        Controller.stop_all_monitors()
         for window in self.get_windows():
             window.close()
-
         self.quit()
 
     def on_preferences_action(self, widget, _):

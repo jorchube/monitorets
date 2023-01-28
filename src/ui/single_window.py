@@ -63,9 +63,6 @@ class SingleWindow(Adw.ApplicationWindow):
 
     def _close_request(self, user_data):
         self._persist_window_geometry()
-        for monitor in self._enabled_monitors.values():
-            if monitor is not None:
-                monitor.stop()
 
     def _persist_window_geometry(self):
         window_geometry = WindowGeometry(
