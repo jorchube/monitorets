@@ -7,14 +7,11 @@ from ..layout import Layout
 
 
 class WindowLayoutManager:
-    _WIDTH_HEIGHT_RATIO_THRESHOLD = 1.5
-
-    def __init__(
-        self, window, set_horizontal_layout_callback, set_vertical_layout_callback
-    ):
-        self._window = window
-        self._set_horizontal_layout = set_horizontal_layout_callback
-        self._set_vertical_layout = set_vertical_layout_callback
+    def __init__(self):
+        self._monitors_flow_box = Gtk.FlowBox()
+        self._monitors_flow_box.set_max_children_per_line(1)
+        self._monitors_flow_box.set_row_spacing(5)
+        self._monitors_flow_box.set_column_spacing(5)
 
         self._layout_selected_callbacks = {
             Layout.HORIZONTAL: self._horizontal_layout_selected,
@@ -23,11 +20,17 @@ class WindowLayoutManager:
 
         EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preferences_changed)
 
-        self._set_initial_layout()
+        self._refresh_layout_from_preferences()
 
-    def _set_initial_layout(self):
-        layout = Preferences.get(PreferenceKeys.LAYOUT)
-        self._layout_selected_callbacks[layout]()
+
+    def add_monitor(self, monitor):
+        self._monitors_flow_box.append(monitor)
+
+    def remove_monitor(self, monitor):
+        self._monitors_flow_box.remove(monitor)
+
+    def get_container_widget(self):
+        return self._monitors_flow_box
 
     def _refresh_layout_from_preferences(self):
         layout = Preferences.get(PreferenceKeys.LAYOUT)
@@ -38,7 +41,7 @@ class WindowLayoutManager:
             self._refresh_layout_from_preferences()
 
     def _horizontal_layout_selected(self):
-        self._set_horizontal_layout()
+        self._monitors_flow_box.set_orientation(Gtk.Orientation.VERTICAL)
 
     def _vertical_layout_selected(self):
-        self._set_vertical_layout()
+        self._monitors_flow_box.set_orientation(Gtk.Orientation.HORIZONTAL)

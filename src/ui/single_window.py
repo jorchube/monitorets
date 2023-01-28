@@ -37,17 +37,14 @@ class SingleWindow(Adw.ApplicationWindow):
     __gtype_name__ = "SingleWindow"
 
     _overlay = Gtk.Template.Child()
-    _monitors_box = Gtk.Template.Child()
+    _monitors_container_bin = Gtk.Template.Child()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-
         self._available_monitors = self._build_available_monitors_dict()
-        self._monitor_bins = self._build_monitor_bins_dict()
+        self._enabled_monitors = dict()
 
-        self._layout_managet = WindowLayoutManager(
-            self, self._set_horizontal_layout, self._set_vertical_layout
-        )
+        self._layout_manager = WindowLayoutManager()
 
         window_geometry = Preferences.get(PreferenceKeys.WINDOW_GEOMETRY)
         self.set_default_size(window_geometry.width, window_geometry.height)
@@ -57,7 +54,7 @@ class SingleWindow(Adw.ApplicationWindow):
 
         self._headerbar_wrapper = HeaderBarWrapper(parent_window=self)
         self._overlay.add_overlay(self._headerbar_wrapper.root_widget)
-        self._add_monitor_bins_to_monitors_box(self._monitor_bins, self._monitors_box)
+        self._monitors_container_bin.set_child(self._layout_manager.get_container_widget())
 
         self.connect("close-request", self._close_request)
         self._install_motion_event_controller()
@@ -69,17 +66,6 @@ class SingleWindow(Adw.ApplicationWindow):
 
         return monitors_dict
 
-    def _build_monitor_bins_dict(self):
-        bins_dict = {}
-        for descriptor in monitor_descriptor_list:
-            bins_dict[descriptor["type"]] = Adw.Bin()
-
-        return bins_dict
-
-    def _add_monitor_bins_to_monitors_box(self, monitor_bins, monitor_box):
-        for bin in monitor_bins.values():
-            monitor_box.append(bin)
-
     def _handle_on_monitor_enabled(self, type):
         GObject.idle_add(self._on_monitor_enabled, type)
 
@@ -87,9 +73,6 @@ class SingleWindow(Adw.ApplicationWindow):
         GObject.idle_add(self._on_monitor_disabled, type)
 
     def _on_monitor_enabled(self, type):
-        if self._monitor_bins[type].get_child() is not None:
-            return
-
         try:
             self._enable_monitor(type)
         except Exception as e:
@@ -97,25 +80,27 @@ class SingleWindow(Adw.ApplicationWindow):
             traceback.print_exc()
 
     def _enable_monitor(self, type):
-        monitor = self._available_monitors[type]()
-        monitor.start()
-        self._set_monitor_bin_enabled_style(self._monitor_bins[type])
-        self._monitor_bins[type].set_child(monitor)
-
-    def _on_monitor_disabled(self, type):
-        if self._monitor_bins[type].get_child() is None:
+        if self._enabled_monitors.get(type) is not None:
+            print(f"[Warning] {type} monitor is already enabled")
             return
 
-        monitor = self._monitor_bins[type].get_child()
-        self._monitor_bins[type].set_child(None)
-        self._set_monitor_bin_disabled_style(self._monitor_bins[type])
+        monitor = self._available_monitors[type]()
+        self._enabled_monitors[type] = monitor
+        monitor.start()
+        self._layout_manager.add_monitor(monitor)
+
+    def _on_monitor_disabled(self, type):
+        self._disable_monitor(type)
+
+    def _disable_monitor(self, type):
+        monitor = self._enabled_monitors.get(type)
+        if monitor is None:
+            print(f"[Warning] {type} monitor is already disabled")
+            return
+
+        self._enabled_monitors[type] = None
+        self._layout_manager.remove_monitor(monitor)
         monitor.stop()
-
-    def _set_horizontal_layout(self):
-        self._monitors_box.set_orientation(Gtk.Orientation.HORIZONTAL)
-
-    def _set_vertical_layout(self):
-        self._monitors_box.set_orientation(Gtk.Orientation.VERTICAL)
 
     def _install_motion_event_controller(self):
         controller = Gtk.EventControllerMotion()
@@ -131,23 +116,9 @@ class SingleWindow(Adw.ApplicationWindow):
 
     def _close_request(self, user_data):
         self._persist_window_geometry()
-
-        for monitor_bin in self._monitor_bins.values():
-            monitor = monitor_bin.get_child()
-            if monitor:
+        for monitor in self._enabled_monitors.values():
+            if monitor is not None:
                 monitor.stop()
-
-    def _set_monitor_bin_disabled_style(self, monitor_bin):
-        monitor_bin.set_margin_top(0)
-        monitor_bin.set_margin_bottom(0)
-        monitor_bin.set_margin_start(0)
-        monitor_bin.set_margin_end(0)
-
-    def _set_monitor_bin_enabled_style(self, monitor_bin):
-        monitor_bin.set_margin_top(4)
-        monitor_bin.set_margin_bottom(4)
-        monitor_bin.set_margin_start(4)
-        monitor_bin.set_margin_end(4)
 
     def _persist_window_geometry(self):
         window_geometry = WindowGeometry(

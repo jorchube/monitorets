@@ -9,12 +9,11 @@
     <child>
       <object class="GtkOverlay" id="_overlay">
         <property name="child">
-          <object class="GtkBox" id="_monitors_box">
-            <property name="margin-bottom">8</property>
-            <property name="margin-end">8</property>
-            <property name="margin-start">8</property>
-            <property name="margin-top">8</property>
-            <property name="orientation">vertical</property>
+          <object class="AdwBin" id="_monitors_container_bin">
+            <property name="margin-bottom">10</property>
+            <property name="margin-end">10</property>
+            <property name="margin-start">10</property>
+            <property name="margin-top">10</property>
           </object>
         </property>
       </object>
