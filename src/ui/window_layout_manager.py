@@ -4,7 +4,7 @@ from .. import events
 from ..preferences import Preferences
 from ..preference_keys import PreferenceKeys
 from ..layout import Layout
-
+from .. import monitor_descriptors
 
 class WindowLayoutManager:
     @classmethod
@@ -22,6 +22,7 @@ class WindowLayoutManager:
         EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preferences_changed)
 
         self._refresh_layout_from_preferences()
+        self._monitors_flow_box.set_sort_func(self._sort_function, None, None)
 
     @classmethod
     def add_monitor(self, monitor):
@@ -52,3 +53,13 @@ class WindowLayoutManager:
     @classmethod
     def _vertical_layout_selected(self):
         self._monitors_flow_box.set_orientation(Gtk.Orientation.HORIZONTAL)
+
+    @classmethod
+    def _sort_function(self, flow_box_child_1, flow_box_child_2, *_):
+        monitor_1 = flow_box_child_1.get_child()
+        monitor_2 = flow_box_child_2.get_child()
+
+        ordering_dict = monitor_descriptors.get_ordering_dict()
+        monitor_1_order = ordering_dict[monitor_1.type]
+        monitor_2_order = ordering_dict[monitor_2.type]
+        return monitor_1_order - monitor_2_order
