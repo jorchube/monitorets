@@ -1,0 +1,2 @@
+CELSIUS = "celsius"
+FAHRENHEIT = "fahrenheit"
