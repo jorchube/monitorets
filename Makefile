@@ -4,6 +4,9 @@ REQUIREMENTS_TXT=requirements.txt
 install-dev-requirements:
 	pipenv install --dev
 
+dev-shell:
+	pipenv shell
+
 update-po-files:
 	find . -name *.po -exec xgettext --omit-header -j -f po/POTFILES -o {} \;
 
