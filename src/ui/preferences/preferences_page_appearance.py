@@ -28,6 +28,7 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
 
     _horizontal_layout_action_row = Gtk.Template.Child()
     _vertical_layout_action_row = Gtk.Template.Child()
+    _grid_layout_action_row = Gtk.Template.Child()
 
     _smooth_graphs_action_row = Gtk.Template.Child()
     _show_current_value_action_row = Gtk.Template.Child()
@@ -37,6 +38,7 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
 
         self._vertical_check_button = Gtk.CheckButton()
         self._horizontal_check_button = Gtk.CheckButton()
+        self._grid_check_button = Gtk.CheckButton()
         self._init_toggles()
 
         theme = Preferences.get(PreferenceKeys.THEME)
@@ -60,6 +62,9 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
         )
         self._horizontal_check_button.connect(
             "toggled", self._on_horizontal_check_button_toggled
+        )
+        self._grid_check_button.connect(
+            "toggled", self._on_grid_check_button_toggled
         )
 
     def _init_toggles(self):
@@ -95,6 +100,12 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
             self._horizontal_check_button
         )
 
+        self._grid_check_button.set_group(self._vertical_check_button)
+        self._grid_layout_action_row.add_prefix(self._grid_check_button)
+        self._grid_layout_action_row.set_activatable_widget(
+            self._grid_check_button
+        )
+
         smooth_graph_switch = PreferenceSwitch(PreferenceKeys.SMOOTH_GRAPH)
         self._smooth_graphs_action_row.add_suffix(smooth_graph_switch)
         self._smooth_graphs_action_row.set_activatable_widget(smooth_graph_switch)
@@ -126,6 +137,7 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
         layout_to_toggle_button_map = {
             Layout.HORIZONTAL: self._horizontal_check_button,
             Layout.VERTICAL: self._vertical_check_button,
+            Layout.GRID: self._grid_check_button,
         }
         layout_to_toggle_button_map[layout].set_active(True)
 
@@ -136,3 +148,7 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
     def _on_horizontal_check_button_toggled(self, toggle_button):
         if toggle_button.get_active():
             Preferences.set(PreferenceKeys.LAYOUT, Layout.HORIZONTAL)
+
+    def _on_grid_check_button_toggled(self, toggle_button):
+        if toggle_button.get_active():
+            Preferences.set(PreferenceKeys.LAYOUT, Layout.GRID)

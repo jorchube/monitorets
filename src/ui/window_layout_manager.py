@@ -18,6 +18,7 @@ class WindowLayoutManager:
         self._layout_selected_callbacks = {
             Layout.HORIZONTAL: self._horizontal_layout_selected,
             Layout.VERTICAL: self._vertical_layout_selected,
+            Layout.GRID: self._grid_layout_selected,
         }
 
         EventBroker.subscribe(events.PREFERENCES_CHANGED, self._on_preferences_changed)
