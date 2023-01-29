@@ -6,6 +6,7 @@ from ...preference_keys import PreferenceKeys
 from ...theme import Theme
 from ...layout import Layout
 from .temperature_units_toggle_widget import TemperatureUnitsToggleWidget
+from .redraw_frequency_toggle_widget import RedrawFrequencyToggleWidget
 
 
 @Gtk.Template(
@@ -34,6 +35,7 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
     _smooth_graphs_action_row = Gtk.Template.Child()
     _show_current_value_action_row = Gtk.Template.Child()
     _temperature_units_action_row = Gtk.Template.Child()
+    _redraw_frequency_action_row = Gtk.Template.Child()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -115,6 +117,8 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
         )
 
         self._temperature_units_action_row.add_suffix(TemperatureUnitsToggleWidget())
+
+        self._redraw_frequency_action_row.add_suffix(RedrawFrequencyToggleWidget())
 
     def _on_system_theme_button_clicked(self, user_data):
         Preferences.set(PreferenceKeys.THEME, Theme.SYSTEM)

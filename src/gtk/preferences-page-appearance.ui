@@ -171,6 +171,12 @@
             <property name="title" translatable="yes" context="preferences_appearance">Temperature units</property>
           </object>
         </child>
+        <child>
+          <object class="AdwActionRow" id="_redraw_frequency_action_row">
+            <property name="subtitle" translatable="yes" context="preferences_appearance">Higher means a smoother redraw but also a slight increase in the resources used by the application itself.</property>
+            <property name="title" translatable="yes" context="preferences_appearance">Redraw frequency</property>
+          </object>
+        </child>
       </object>
     </child>
   </template>
