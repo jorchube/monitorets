@@ -43,6 +43,7 @@ monitorets_sources = [
   'units.py',
   'network_monitor_scale_manager.py',
   'window_geometry.py',
+  'temperature.py',
 ]
 
 install_data(monitorets_sources, install_dir: moduledir)
