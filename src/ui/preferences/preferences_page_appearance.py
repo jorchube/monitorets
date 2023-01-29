@@ -5,6 +5,7 @@ from ...preferences import Preferences
 from ...preference_keys import PreferenceKeys
 from ...theme import Theme
 from ...layout import Layout
+from .temperature_units_toggle_widget import TemperatureUnitsToggleWidget
 
 
 @Gtk.Template(
@@ -32,6 +33,7 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
 
     _smooth_graphs_action_row = Gtk.Template.Child()
     _show_current_value_action_row = Gtk.Template.Child()
+    _temperature_units_action_row = Gtk.Template.Child()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -111,6 +113,8 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
         self._show_current_value_action_row.set_activatable_widget(
             show_current_value_switch
         )
+
+        self._temperature_units_action_row.add_suffix(TemperatureUnitsToggleWidget())
 
     def _on_system_theme_button_clicked(self, user_data):
         Preferences.set(PreferenceKeys.THEME, Theme.SYSTEM)

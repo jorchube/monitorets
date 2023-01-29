@@ -166,6 +166,11 @@
             <property name="title" translatable="yes" context="preferences_page_appearance">Show current value</property>
           </object>
         </child>
+        <child>
+          <object class="AdwActionRow" id="_temperature_units_action_row">
+            <property name="title" translatable="yes" context="preferences_appearance">Temperature units</property>
+          </object>
+        </child>
       </object>
     </child>
   </template>
