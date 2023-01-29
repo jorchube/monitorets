@@ -5,14 +5,15 @@ from ..preferences import Preferences
 from ..preference_keys import PreferenceKeys
 from ..layout import Layout
 from .. import monitor_descriptors
+from math import ceil
 
 class WindowLayoutManager:
     @classmethod
     def initialize(self):
         self._monitors_flow_box = Gtk.FlowBox()
-        self._monitors_flow_box.set_max_children_per_line(1)
         self._monitors_flow_box.set_row_spacing(5)
         self._monitors_flow_box.set_column_spacing(5)
+        self._num_monitors = 0
 
         self._layout_selected_callbacks = {
             Layout.HORIZONTAL: self._horizontal_layout_selected,
@@ -27,10 +28,27 @@ class WindowLayoutManager:
     @classmethod
     def add_monitor(self, monitor):
         self._monitors_flow_box.append(monitor)
+        self._num_monitors += 1
+        self._refresh_grid_row_limit()
 
     @classmethod
     def remove_monitor(self, monitor):
         self._monitors_flow_box.remove(monitor)
+        self._num_monitors -= 1
+        self._refresh_grid_row_limit()
+
+    @classmethod
+    def _refresh_grid_row_limit(self):
+        layout = Preferences.get(PreferenceKeys.LAYOUT)
+        if layout in [Layout.HORIZONTAL, Layout.VERTICAL]:
+            self._set_grid_row_limit(1)
+            return
+        self._set_grid_row_limit(ceil(self._num_monitors/3))
+
+    @classmethod
+    def _set_grid_row_limit(self, value):
+        self._monitors_flow_box.set_max_children_per_line(value)
+        self._monitors_flow_box.set_min_children_per_line(value)
 
     @classmethod
     def get_container_widget(self):
@@ -49,10 +67,17 @@ class WindowLayoutManager:
     @classmethod
     def _horizontal_layout_selected(self):
         self._monitors_flow_box.set_orientation(Gtk.Orientation.VERTICAL)
+        self._refresh_grid_row_limit()
 
     @classmethod
     def _vertical_layout_selected(self):
         self._monitors_flow_box.set_orientation(Gtk.Orientation.HORIZONTAL)
+        self._refresh_grid_row_limit()
+
+    @classmethod
+    def _grid_layout_selected(self):
+        self._monitors_flow_box.set_orientation(Gtk.Orientation.HORIZONTAL)
+        self._refresh_grid_row_limit()
 
     @classmethod
     def _sort_function(self, flow_box_child_1, flow_box_child_2, *_):
