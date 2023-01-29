@@ -1,10 +1,5 @@
-<!--
-Hello!
-
-Please try to answer the following questions so that a reviewer can better understand the changes proposed in this PR.
-
-Thank you :)
- -->
+<!-- Hello! Please try to answer the following questions so that a reviewer can better understand the changes proposed in this PR.
+Thank you :) -->
 
 ## What?
 <!-- Please describe the change introduced in this PR -->
