@@ -14,7 +14,7 @@ class TemperatureUnitsToggleWidget(Adw.Bin):
         self._celsius_toggle = Gtk.ToggleButton(label="℃")
         self._celsius_toggle.set_group(self._fahrenheit_toggle)
 
-        buttons_container = Gtk.Box(orientation= Gtk.Orientation.HORIZONTAL)
+        buttons_container = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         buttons_container.add_css_class("linked")
         buttons_container.append(self._celsius_toggle)
         buttons_container.append(self._fahrenheit_toggle)
