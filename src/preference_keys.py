@@ -5,6 +5,7 @@ class PreferenceKeys:
     SHOW_CURRENT_VALUE = "general.show_current_value"
     WINDOW_GEOMETRY = "general.window_geometry"
     TEMPERATURE_UNITS = "general.temperature_units"
+    REDRAW_FREQUENCY_SECONDS = "general.redraw_frequency_seconds"
     CPU_MONITOR_ENABLED = "cpu_monitor.enabled"
     CPU_PER_CORE_MONITOR_ENABLED = "cpu_per_core_monitor.enabled"
     GPU_MONITOR_ENABLED = "gpu_monitor.enabled"
