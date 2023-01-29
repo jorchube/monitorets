@@ -136,13 +136,19 @@
         <child>
           <object class="AdwActionRow" id="_vertical_layout_action_row">
             <property name="subtitle" translatable="yes" context="monitorets">Monitors stacked in a single column.</property>
-            <property name="title">Vertical</property>
+            <property name="title" translatable="yes">Vertical</property>
           </object>
         </child>
         <child>
           <object class="AdwActionRow" id="_horizontal_layout_action_row">
             <property name="subtitle" translatable="yes" context="monitorets">Monitors aligned in a single row.</property>
-            <property name="title">Horizontal</property>
+            <property name="title" translatable="yes">Horizontal</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow" id="_grid_layout_action_row">
+            <property name="subtitle" translatable="yes" context="monitorets">Monitors aligned in a grid.</property>
+            <property name="title" translatable="yes">Grid</property>
           </object>
         </child>
       </object>

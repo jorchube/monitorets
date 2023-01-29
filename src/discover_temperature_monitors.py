@@ -50,6 +50,7 @@ def _build_monitor_descriptor(sensor_descriptor):
         "preference_toggle_label": _preference_toggle_label,
         "preference_toggle_description": None,
         "preference_toggle_section_name": _preference_toggle_section_name,
+        "default_order": None,
     }
 
 

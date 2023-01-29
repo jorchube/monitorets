@@ -64,6 +64,10 @@ class MonitorWidget(Adw.Bin):
         self._paintable.set_widget(self)
         self._paintable.connect("invalidate-size", self._on_size_changed)
 
+    @property
+    def type(self):
+        return self._type
+
     def _graph_area_instance(self, color, redraw_freq_seconds, draw_smooth_graph):
         return GraphArea(color, redraw_freq_seconds, smooth_graph=draw_smooth_graph)
 

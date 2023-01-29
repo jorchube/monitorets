@@ -26,6 +26,7 @@ monitor_descriptor_list = [
         "preference_toggle_label": preference_toggle_label.CPU,
         "preference_toggle_description": None,
         "preference_toggle_section_name": preference_toggle_section_name.CPU,
+        "default_order": 1,
     },
     {
         "type": MonitorType.CPU_PER_CORE,
@@ -34,6 +35,7 @@ monitor_descriptor_list = [
         "preference_toggle_label": preference_toggle_label.CPU_PER_CORE,
         "preference_toggle_description": preference_toggle_description.CPU_PER_CORE,
         "preference_toggle_section_name": preference_toggle_section_name.CPU,
+        "default_order": 2,
     },
     {
         "type": MonitorType.GPU,
@@ -42,6 +44,7 @@ monitor_descriptor_list = [
         "preference_toggle_label": preference_toggle_label.GPU,
         "preference_toggle_description": preference_toggle_description.GPU,
         "preference_toggle_section_name": preference_toggle_section_name.GPU,
+        "default_order": 3,
     },
     {
         "type": MonitorType.Memory,
@@ -50,6 +53,7 @@ monitor_descriptor_list = [
         "preference_toggle_label": preference_toggle_label.MEMORY,
         "preference_toggle_description": None,
         "preference_toggle_section_name": preference_toggle_section_name.MEMORY,
+        "default_order": 4,
     },
     {
         "type": MonitorType.Swap,
@@ -58,6 +62,7 @@ monitor_descriptor_list = [
         "preference_toggle_label": preference_toggle_label.SWAP,
         "preference_toggle_description": None,
         "preference_toggle_section_name": preference_toggle_section_name.MEMORY,
+        "default_order": 5,
     },
     {
         "type": MonitorType.Downlink,
@@ -66,6 +71,7 @@ monitor_descriptor_list = [
         "preference_toggle_label": preference_toggle_label.DOWNLINK,
         "preference_toggle_description": None,
         "preference_toggle_section_name": preference_toggle_section_name.NETWORK,
+        "default_order": 6,
     },
     {
         "type": MonitorType.Uplink,
@@ -74,6 +80,7 @@ monitor_descriptor_list = [
         "preference_toggle_label": preference_toggle_label.UPLINK,
         "preference_toggle_description": None,
         "preference_toggle_section_name": preference_toggle_section_name.NETWORK,
+        "default_order": 7,
     },
     {
         "type": MonitorType.Home_usage,
@@ -82,6 +89,7 @@ monitor_descriptor_list = [
         "preference_toggle_label": preference_toggle_label.HOME_FOLDER_USAGE,
         "preference_toggle_description": None,
         "preference_toggle_section_name": preference_toggle_section_name.DISK_USAGE,
+        "default_order": 8,
     },
     {
         "type": MonitorType.Root_usage,
@@ -90,6 +98,7 @@ monitor_descriptor_list = [
         "preference_toggle_label": preference_toggle_label.ROOT_FOLDER_USAGE,
         "preference_toggle_description": None,
         "preference_toggle_section_name": preference_toggle_section_name.DISK_USAGE,
+        "default_order": 9,
     },
 ]
 
@@ -107,5 +116,14 @@ def get_monitor_descriptors_grouped_by_preference_toggle_section():
     return grouped_descriptors
 
 
+def get_ordering_dict():
+    ordering = dict()
+    for descriptor in monitor_descriptor_list:
+        ordering[descriptor["type"]] = descriptor["default_order"]
+
+    return ordering
+
+
 def register_monitor_descriptor(new_descriptor):
+    new_descriptor["default_order"] = len(monitor_descriptor_list) + 1
     monitor_descriptor_list.append(new_descriptor)
