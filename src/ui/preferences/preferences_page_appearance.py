@@ -63,9 +63,7 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
         self._horizontal_check_button.connect(
             "toggled", self._on_horizontal_check_button_toggled
         )
-        self._grid_check_button.connect(
-            "toggled", self._on_grid_check_button_toggled
-        )
+        self._grid_check_button.connect("toggled", self._on_grid_check_button_toggled)
 
     def _init_toggles(self):
         self._system_theme_toggle_button_image_big.set_from_resource(
@@ -102,9 +100,7 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
 
         self._grid_check_button.set_group(self._vertical_check_button)
         self._grid_layout_action_row.add_prefix(self._grid_check_button)
-        self._grid_layout_action_row.set_activatable_widget(
-            self._grid_check_button
-        )
+        self._grid_layout_action_row.set_activatable_widget(self._grid_check_button)
 
         smooth_graph_switch = PreferenceSwitch(PreferenceKeys.SMOOTH_GRAPH)
         self._smooth_graphs_action_row.add_suffix(smooth_graph_switch)

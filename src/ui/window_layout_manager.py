@@ -7,6 +7,7 @@ from ..layout import Layout
 from .. import monitor_descriptors
 from math import ceil
 
+
 class WindowLayoutManager:
     @classmethod
     def initialize(self):
@@ -44,7 +45,7 @@ class WindowLayoutManager:
         if layout in [Layout.HORIZONTAL, Layout.VERTICAL]:
             self._set_grid_row_limit(1)
             return
-        self._set_grid_row_limit(ceil(self._num_monitors/3))
+        self._set_grid_row_limit(ceil(self._num_monitors / 3))
 
     @classmethod
     def _set_grid_row_limit(self, value):

@@ -115,12 +115,14 @@ def get_monitor_descriptors_grouped_by_preference_toggle_section():
 
     return grouped_descriptors
 
+
 def get_ordering_dict():
     ordering = dict()
     for descriptor in monitor_descriptor_list:
         ordering[descriptor["type"]] = descriptor["default_order"]
 
     return ordering
+
 
 def register_monitor_descriptor(new_descriptor):
     new_descriptor["default_order"] = len(monitor_descriptor_list) + 1
