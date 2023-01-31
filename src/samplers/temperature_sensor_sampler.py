@@ -20,7 +20,7 @@ class TemperatureSensorSampler(Sampler):
         self._fahrenheit = True
 
     def _get_sample(self):
-        discovered_hardware = psutil.sensors_temperatures(fahrenheit=self._fahrenheit)
+        discovered_hardware = psutil.sensors_temperatures()
         sensor_list = discovered_hardware[self._sensor_descriptor.hardware_name]
 
         for sensor in sensor_list:
@@ -31,15 +31,16 @@ class TemperatureSensorSampler(Sampler):
         return Sample(to_plot=0, single_value=0, units="-")
 
     def _get_sample_from_sensor(self, sensor):
-        max_default = self._MAX_FAHRENHEIT if self._fahrenheit else self._MAX_CELSIUS
+        max_default = self._MAX_CELSIUS
         units = self._get_units()
 
         current_temp = sensor.current
         max_temp = sensor.high if sensor.high else max_default
         temp_as_percent = self._get_temp_as_percent(current_temp, max_temp)
 
+        single_value = self._celsius_to_fahrenheit(current_temp) if self._fahrenheit else current_temp
         sample = Sample(
-            to_plot=int(temp_as_percent), single_value=round(current_temp), units=units
+            to_plot=int(temp_as_percent), single_value=round(single_value), units=units
         )
 
         return sample
@@ -48,14 +49,7 @@ class TemperatureSensorSampler(Sampler):
         return "℉" if self._fahrenheit else "℃"
 
     def _get_temp_as_percent(self, current_temp, max_temp):
-        if self._fahrenheit:
-            normalized_current_temp = self._normalize_fahrenheit_for_percentage(
-                current_temp
-            )
-            normalized_max_temp = self._normalize_fahrenheit_for_percentage(max_temp)
-            return (normalized_current_temp * 100) / normalized_max_temp
-
         return (current_temp * 100) / max_temp
 
-    def _normalize_fahrenheit_for_percentage(self, value):
-        return value - 32
+    def _celsius_to_fahrenheit(self, celsius):
+        return (celsius * 1.8) + 32
