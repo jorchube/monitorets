@@ -38,7 +38,10 @@ class TemperatureSensorSampler(Sampler):
         max_temp = sensor.high if sensor.high else max_default
         temp_as_percent = self._get_temp_as_percent(current_temp, max_temp)
 
-        single_value = self._celsius_to_fahrenheit(current_temp) if self._fahrenheit else current_temp
+        single_value = current_temp
+        if self._fahrenheit:
+            single_value = self._celsius_to_fahrenheit(current_temp)
+
         sample = Sample(
             to_plot=int(temp_as_percent), single_value=round(single_value), units=units
         )
