@@ -9,6 +9,7 @@ from .theme import Theme
 from .layout import Layout
 from .window_geometry import WindowGeometry
 from .temperature import CELSIUS
+from .ui import monitor_redraw_frequency_seconds_values
 
 
 class Preferences:
@@ -21,7 +22,7 @@ class Preferences:
         PreferenceKeys.SMOOTH_GRAPH: True,
         PreferenceKeys.SHOW_CURRENT_VALUE: False,
         PreferenceKeys.TEMPERATURE_UNITS: CELSIUS,
-        PreferenceKeys.REDRAW_FREQUENCY_SECONDS: 0.1,
+        PreferenceKeys.REDRAW_FREQUENCY_SECONDS: monitor_redraw_frequency_seconds_values.HIGH,
         PreferenceKeys.WINDOW_GEOMETRY: WindowGeometry(width=180, height=40).as_dict(),
         PreferenceKeys.CPU_MONITOR_ENABLED: True,
         PreferenceKeys.CPU_PER_CORE_MONITOR_ENABLED: False,

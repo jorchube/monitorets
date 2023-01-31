@@ -1,4 +1,7 @@
-VERY_HIGH = "Very High"
-HIGH = "High"
-LOW = "Low"
-VERY_LOW = "Very Low"
+from gettext import gettext as _
+
+
+VERY_HIGH = _("Very High")
+HIGH = _("High")
+LOW = _("Low")
+VERY_LOW = _("Very Low")
