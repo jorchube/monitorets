@@ -44,6 +44,7 @@ monitorets_sources = [
   'network_monitor_scale_manager.py',
   'window_geometry.py',
   'temperature.py',
+  'monitor_redraw_frequency_seconds_values.py',
 ]
 
 install_data(monitorets_sources, install_dir: moduledir)

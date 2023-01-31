@@ -3,6 +3,7 @@ import traceback
 from . import events
 from .event_broker import EventBroker
 from .preferences import Preferences
+from .preference_keys import PreferenceKeys
 from .theming import Theming
 from .monitor_descriptors import monitor_descriptor_list
 from .network_monitor_scale_manager import NetworkMonitorScaleManager
@@ -10,6 +11,11 @@ from .ui.window_layout_manager import WindowLayoutManager
 
 
 class Controller:
+    _PREFERENCES_NEEDING_MONITORS_RESTART = [
+        PreferenceKeys.SMOOTH_GRAPH,
+        PreferenceKeys.REDRAW_FREQUENCY_SECONDS,
+    ]
+
     @classmethod
     def initialize(self, application):
         self._application = application
@@ -49,7 +55,7 @@ class Controller:
 
     @classmethod
     def _on_preference_changed(self, preference_key, value):
-        if preference_key == "general.smooth_graph":
+        if preference_key in self._PREFERENCES_NEEDING_MONITORS_RESTART:
             self._restart_monitors()
             return
 

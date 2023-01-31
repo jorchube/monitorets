@@ -31,7 +31,7 @@ class MonitorWidget(Adw.Bin):
         self._show_current_value_label = Preferences.get(
             PreferenceKeys.SHOW_CURRENT_VALUE
         )
-
+        redraw_freq_seconds = Preferences.get(PreferenceKeys.REDRAW_FREQUENCY_SECONDS)
         draw_smooth_graph = Preferences.get(PreferenceKeys.SMOOTH_GRAPH)
         self._graph_area = self._graph_area_instance(
             self._color, redraw_freq_seconds, draw_smooth_graph
