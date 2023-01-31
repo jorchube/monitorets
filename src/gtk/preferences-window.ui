@@ -2,5 +2,8 @@
 <!-- Created with Cambalache 0.10.3 -->
 <interface>
   <requires lib="libadwaita" version="1.1"/>
-  <template class="PreferencesWindow" parent="AdwPreferencesWindow"/>
+  <template class="PreferencesWindow" parent="AdwPreferencesWindow">
+    <property name="default-height">645</property>
+    <property name="default-width">680</property>
+  </template>
 </interface>

@@ -85,6 +85,8 @@
 	(8,7,"GtkWidget","margin-end","25",None,None,None,None,None),
 	(8,7,"GtkWidget","margin-start","25",None,None,None,None,None),
 	(8,7,"GtkWidget","margin-top","25",None,None,None,None,None),
+	(9,1,"GtkWindow","default-height","645",None,None,None,None,None),
+	(9,1,"GtkWindow","default-width","680",None,None,None,None,None),
 	(13,1,"AdwPreferencesPage","icon-name","preferences-desktop-appearance-symbolic",None,None,None,None,None),
 	(13,1,"AdwPreferencesPage","title","Appearance",1,None,"monitorets",None,None),
 	(13,1,"GtkWidget","name","Appearance",None,None,None,None,None),
