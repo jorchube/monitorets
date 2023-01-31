@@ -13,7 +13,7 @@ from .ui.window_layout_manager import WindowLayoutManager
 class Controller:
     _PREFERENCES_NEEDING_MONITORS_RESTART = [
         PreferenceKeys.SMOOTH_GRAPH,
-        PreferenceKeys.REDRAW_FREQUENCY_SECONDS
+        PreferenceKeys.REDRAW_FREQUENCY_SECONDS,
     ]
 
     @classmethod

@@ -14,19 +14,19 @@ class RedrawFrequencyToggleWidget(Adw.Bin):
         self._options_map = {
             0: {
                 "value": redraw_frequency_values.VERY_HIGH,
-                "label": redraw_frequency_labels.VERY_HIGH
+                "label": redraw_frequency_labels.VERY_HIGH,
             },
             1: {
                 "value": redraw_frequency_values.HIGH,
-                "label": redraw_frequency_labels.HIGH
+                "label": redraw_frequency_labels.HIGH,
             },
             2: {
                 "value": redraw_frequency_values.LOW,
-                "label": redraw_frequency_labels.LOW
+                "label": redraw_frequency_labels.LOW,
             },
             3: {
                 "value": redraw_frequency_values.VERY_LOW,
-                "label": redraw_frequency_labels.VERY_LOW
+                "label": redraw_frequency_labels.VERY_LOW,
             },
         }
 
