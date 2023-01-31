@@ -11,7 +11,7 @@ from .ui.window_layout_manager import WindowLayoutManager
 
 
 class Controller:
-    _PREFERENCES_NEEDING_RESTART = [
+    _PREFERENCES_NEEDING_MONITORS_RESTART = [
         PreferenceKeys.SMOOTH_GRAPH,
         PreferenceKeys.REDRAW_FREQUENCY_SECONDS
     ]
@@ -55,7 +55,7 @@ class Controller:
 
     @classmethod
     def _on_preference_changed(self, preference_key, value):
-        if preference_key in self._PREFERENCES_NEEDING_RESTART:
+        if preference_key in self._PREFERENCES_NEEDING_MONITORS_RESTART:
             self._restart_monitors()
             return
 
