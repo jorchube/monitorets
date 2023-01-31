@@ -32,13 +32,30 @@ class TemperatureSensorSampler(Sampler):
 
     def _get_sample_from_sensor(self, sensor):
         max_default = self._MAX_FAHRENHEIT if self._fahrenheit else self._MAX_CELSIUS
-        units = "℉" if self._fahrenheit else "℃"
+        units = self._get_units()
 
         current_temp = sensor.current
         max_temp = sensor.high if sensor.high else max_default
-        temp_as_percent = (current_temp * 100) / max_temp
+        temp_as_percent = self._get_temp_as_percent(current_temp, max_temp)
+
         sample = Sample(
             to_plot=int(temp_as_percent), single_value=round(current_temp), units=units
         )
 
         return sample
+
+    def _get_units(self):
+        return "℉" if self._fahrenheit else "℃"
+
+    def _get_temp_as_percent(self, current_temp, max_temp):
+        if self._fahrenheit:
+            normalized_current_temp = self._normalize_fahrenheit_for_percentage(
+                current_temp
+            )
+            normalized_max_temp = self._normalize_fahrenheit_for_percentage(max_temp)
+            return (normalized_current_temp * 100) / normalized_max_temp
+
+        return (current_temp * 100) / max_temp
+
+    def _normalize_fahrenheit_for_percentage(self, value):
+        return value - 32
