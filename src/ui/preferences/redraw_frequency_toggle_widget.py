@@ -2,7 +2,7 @@ from gi.repository import Adw, Gtk
 from ...preferences import Preferences
 from ...preference_keys import PreferenceKeys
 from ...translatable_strings import redraw_frequency as redraw_frequency_labels
-from .. import monitor_redraw_frequency_seconds_values as redraw_frequency_values
+from ... import monitor_redraw_frequency_seconds_values as redraw_frequency_values
 
 
 class RedrawFrequencyToggleWidget(Adw.Bin):

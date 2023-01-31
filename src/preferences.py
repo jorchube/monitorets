@@ -9,7 +9,7 @@ from .theme import Theme
 from .layout import Layout
 from .window_geometry import WindowGeometry
 from .temperature import CELSIUS
-from .ui import monitor_redraw_frequency_seconds_values
+from . import monitor_redraw_frequency_seconds_values
 
 
 class Preferences:
