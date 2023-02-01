@@ -11,3 +11,4 @@ src/translatable_strings/preference_toggle_label.py
 src/translatable_strings/preference_toggle_section_name.py
 src/translatable_strings/preference_toggle_description.py
 src/translatable_strings/tips.py
+src/translatable_strings/redraw_frequency.py
