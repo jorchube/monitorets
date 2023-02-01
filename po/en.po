@@ -515,10 +515,10 @@ msgstr "Added support to arrange monitors in a grid layout"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:60
 msgid ""
-"Added support to select between Celsius anf Fahrenheit units for the "
+"Added support to select between Celsius and Fahrenheit units for the "
 "temperature sensors"
 msgstr ""
-"Added support to select between Celsius anf Fahrenheit units for the "
+"Added support to select between Celsius and Fahrenheit units for the "
 "temperature sensors"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:61

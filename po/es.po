@@ -515,23 +515,24 @@ msgstr "Añadido soporte para organizar los monitores en cuadrícula"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:60
 msgid ""
-"Added support to select between Celsius anf Fahrenheit units for the "
+"Added support to select between Celsius and Fahrenheit units for the "
 "temperature sensors"
 msgstr ""
-"Añadido soporte para seleccionar entre unidades Celsius y Fahrenheit"
-"en los monitores de temperatura"
+"Añadido soporte para seleccionar entre unidades Celsius y Fahrenheiten los "
+"monitores de temperatura"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:61
 msgid "Added support to configure the redraw rate of the monitor graphs"
-msgstr "Añadido soporte para configurar la frecuencia de dibujado de las gráficas"
+msgstr ""
+"Añadido soporte para configurar la frecuencia de dibujado de las gráficas"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:62
 msgid ""
 "Added a keyboard shortcut to open the preferences window (Kudos to github."
 "com/gregorni/)"
 msgstr ""
-"Añadido atajo de teclado para abrir la ventana de preferencias"
-"(Kudos a github.com/gregorni/)"
+"Añadido atajo de teclado para abrir la ventana de preferencias(Kudos a "
+"github.com/gregorni/)"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:63
 msgid "Added french translation (Kudos to github.com/rene-coty/)"
