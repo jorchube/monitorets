@@ -57,7 +57,7 @@
         <ul>
           <li>Added support for arbitrarily large monitor size</li>
           <li>Added support to arrange monitors in a grid layout</li>
-          <li>Added support to select between Celsius anf Fahrenheit units for the temperature sensors</li>
+          <li>Added support to select between Celsius and Fahrenheit units for the temperature sensors</li>
           <li>Added support to configure the redraw rate of the monitor graphs</li>
           <li>Added a keyboard shortcut to open the preferences window (Kudos to github.com/gregorni/)</li>
           <li>Added french translation (Kudos to github.com/rene-coty/)</li>

@@ -516,7 +516,7 @@ msgstr ""
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:60
 msgid ""
-"Added support to select between Celsius anf Fahrenheit units for the "
+"Added support to select between Celsius and Fahrenheit units for the "
 "temperature sensors"
 msgstr ""
 
