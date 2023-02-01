@@ -477,3 +477,19 @@ msgid ""
 "Use the same scaling for network uplink and downlink monitors to avoid "
 "confusion"
 msgstr ""
+
+#: src/translatable_strings/redraw_frequency.py:4
+msgid "Very High"
+msgstr ""
+
+#: src/translatable_strings/redraw_frequency.py:5
+msgid "High"
+msgstr ""
+
+#: src/translatable_strings/redraw_frequency.py:6
+msgid "Low"
+msgstr ""
+
+#: src/translatable_strings/redraw_frequency.py:7
+msgid "Very Low"
+msgstr ""
