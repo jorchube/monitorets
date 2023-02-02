@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Monitorets\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-08 20:16+0100\n"
-"PO-Revision-Date: 2023-01-22 20:20+0100\n"
+"PO-Revision-Date: 2023-02-02 11:39+0100\n"
 "Last-Translator: Irénée Thirion <irenee.thirion@e.email>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -444,25 +444,25 @@ msgstr ""
 
 #: src/gtk/preferences-page-appearance.ui:139
 msgid "Vertical"
-msgstr ""
+msgstr "Vertical"
 
 #: src/gtk/preferences-page-appearance.ui:145
 msgid "Horizontal"
-msgstr ""
+msgstr "Horizontal"
 
 #: src/gtk/preferences-page-appearance.ui:150
 msgctxt "monitorets"
 msgid "Monitors aligned in a grid."
-msgstr ""
+msgstr "Moniteurs alignés en une grille"
 
 #: src/gtk/preferences-page-appearance.ui:151
 msgid "Grid"
-msgstr ""
+msgstr "Grille"
 
 #: src/gtk/preferences-page-appearance.ui:171
 msgctxt "preferences_appearance"
 msgid "Temperature units"
-msgstr ""
+msgstr "Unités de température"
 
 #: src/gtk/preferences-page-appearance.ui:176
 msgctxt "preferences_appearance"
@@ -470,66 +470,77 @@ msgid ""
 "Higher means a smoother redraw but also a slight increase in the resources "
 "used by the application itself."
 msgstr ""
+"Une fréquence élevée induit un dessin plus fluide mais également une légère "
+"augmentation des ressources utilisées par l’application."
 
 #: src/gtk/preferences-page-appearance.ui:177
 msgctxt "preferences_appearance"
 msgid "Redraw frequency"
-msgstr ""
+msgstr "Fréquence de rafraîchissement"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:70
 msgid "Added support to show the current value of a monitor"
-msgstr ""
+msgstr "Ajout de l’affichage de la valeur actuelle d’un moniteur"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:71
 msgid "Remember window size on close"
-msgstr ""
+msgstr "Taille de la fenêtre mémorisée lors de la fermeture"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:72
 msgid ""
 "Use the same scaling for network uplink and downlink monitors to avoid "
 "confusion"
 msgstr ""
+"Utilisation de la même échelle pour les moniteurs de réseau descendant ou "
+"ascendant pour éviter toute confusion"
 
 #: src/translatable_strings/redraw_frequency.py:4
 msgid "Very High"
-msgstr ""
+msgstr "Très élevée"
 
 #: src/translatable_strings/redraw_frequency.py:5
 msgid "High"
-msgstr ""
+msgstr "Élevée"
 
 #: src/translatable_strings/redraw_frequency.py:6
 msgid "Low"
-msgstr ""
+msgstr "Basse"
 
 #: src/translatable_strings/redraw_frequency.py:7
 msgid "Very Low"
-msgstr ""
+msgstr "Très basse"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:58
 msgid "Added support for arbitrarily large monitor size"
-msgstr ""
+msgstr "Ajout de la prise en charge d’un écran de taille arbitraire"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:59
 msgid "Added support to arrange monitors in a grid layout"
-msgstr ""
+msgstr "Ajout d’une disposition des moniteurs sous forme de grille"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:60
 msgid ""
 "Added support to select between Celsius and Fahrenheit units for the "
 "temperature sensors"
 msgstr ""
+"Ajout de la possibilité de sélectionner Celsius ou Fahrenheit pour les "
+"unités de température"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:61
 msgid "Added support to configure the redraw rate of the monitor graphs"
 msgstr ""
+"Ajout d’une fonction permettant de configurer la fréquence de "
+"rafraîchissement des graphiques du moniteur"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:62
 msgid ""
 "Added a keyboard shortcut to open the preferences window (Kudos to github."
 "com/gregorni/)"
 msgstr ""
+"Ajout d’un raccourci clavier pour ouvrir la fenêtre des préférences "
+"(remerciements à github.com/gregorni/)"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:63
 msgid "Added french translation (Kudos to github.com/rene-coty/)"
 msgstr ""
+"Ajout d’une traduction française (remerciements à github.com/rene-coty/)"
