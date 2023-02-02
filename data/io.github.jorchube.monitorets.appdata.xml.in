@@ -52,7 +52,7 @@
   </provides>
 
   <releases>
-    <release version="0.9.0" date="2023-02-06">
+    <release version="0.9.0" date="2023-02-03">
       <description>
         <ul>
           <li>Added support for arbitrarily large monitor size</li>
