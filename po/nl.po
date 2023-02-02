@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Monitorets\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-08 20:16+0100\n"
-"PO-Revision-Date: 2023-01-08 20:19+0100\n"
+"PO-Revision-Date: 2023-02-02 18:13+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -409,10 +409,10 @@ msgid ""
 "font_weight='bold' font_style='italic'>Always on Top</span>."
 msgstr ""
 "U kunt er voor kiezen om het venster altijd bovenop andere vensters te "
-"houden. Dit doet u als volgt: Druk op <span font_weight='bold'>Alt"
-"+spatiebalk</span> of rechtsklik op de titelbalk om het venstermenu te "
-"openen en kies <span font_weight='bold' font_style='italic'>Altijd bovenaan</"
-"span>."
+"houden. Dit doet u als volgt: Druk op <span "
+"font_weight='bold'>Alt+spatiebalk</span> of rechtsklik op de titelbalk om "
+"het venstermenu te openen en kies <span font_weight='bold' "
+"font_style='italic'>Altijd bovenaan</span>."
 
 #: src/gtk/preferences-page-appearance.ui:166
 msgctxt "preferences_page_appearance"
@@ -429,92 +429,95 @@ msgstr ""
 
 #: src/gtk/preferences-page-appearance.ui:139
 msgid "Vertical"
-msgstr ""
+msgstr "Verticaal"
 
 #: src/gtk/preferences-page-appearance.ui:145
 msgid "Horizontal"
-msgstr ""
+msgstr "Horizontaal"
 
 #: src/gtk/preferences-page-appearance.ui:150
 msgctxt "monitorets"
 msgid "Monitors aligned in a grid."
-msgstr ""
+msgstr "Alle monitors op een rooster."
 
 #: src/gtk/preferences-page-appearance.ui:151
 msgid "Grid"
-msgstr ""
+msgstr "Rooster"
 
 #: src/gtk/preferences-page-appearance.ui:171
 msgctxt "preferences_appearance"
 msgid "Temperature units"
-msgstr ""
+msgstr "Temperatuureenheden"
 
 #: src/gtk/preferences-page-appearance.ui:176
 msgctxt "preferences_appearance"
 msgid ""
 "Higher means a smoother redraw but also a slight increase in the resources "
 "used by the application itself."
-msgstr ""
+msgstr "Hoger = vloeiender doch intensiever geheugengebruik."
 
 #: src/gtk/preferences-page-appearance.ui:177
 msgctxt "preferences_appearance"
 msgid "Redraw frequency"
-msgstr ""
+msgstr "Tekenfrequentie"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:70
 msgid "Added support to show the current value of a monitor"
-msgstr ""
+msgstr "Nieuw: toon de huidige waarde van een monitor"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:71
 msgid "Remember window size on close"
-msgstr ""
+msgstr "Verbeterd: onthoud de vensterafmetingen na afsluiten"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:72
 msgid ""
 "Use the same scaling for network uplink and downlink monitors to avoid "
 "confusion"
-msgstr ""
+msgstr "Verbeterd: up- en downloadmonitors zijn voortaan even groot"
 
 #: src/translatable_strings/redraw_frequency.py:4
 msgid "Very High"
-msgstr ""
+msgstr "Erg hoog"
 
 #: src/translatable_strings/redraw_frequency.py:5
 msgid "High"
-msgstr ""
+msgstr "Hoog"
 
 #: src/translatable_strings/redraw_frequency.py:6
 msgid "Low"
-msgstr ""
+msgstr "Laag"
 
 #: src/translatable_strings/redraw_frequency.py:7
 msgid "Very Low"
-msgstr ""
+msgstr "Erg laag"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:58
 msgid "Added support for arbitrarily large monitor size"
-msgstr ""
+msgstr "Nieuw: ondersteuning voor grote monitors"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:59
 msgid "Added support to arrange monitors in a grid layout"
-msgstr ""
+msgstr "Nieuw: toon monitors op een rooster"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:60
 msgid ""
 "Added support to select between Celsius and Fahrenheit units for the "
 "temperature sensors"
 msgstr ""
+"Nieuw: ondersteuning voor Celsius en Fahrenheit in de temperatuursensoren"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:61
 msgid "Added support to configure the redraw rate of the monitor graphs"
-msgstr ""
+msgstr "Nieuw: stel de tekenfrequentie van grafieken in"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:62
 msgid ""
 "Added a keyboard shortcut to open the preferences window (Kudos to github."
 "com/gregorni/)"
 msgstr ""
+"Nieuw: sneltoets om de voorkeuren te openen (met dan aan github.com/"
+"gregorni/!)"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:63
 msgid "Added french translation (Kudos to github.com/rene-coty/)"
-msgstr ""
+msgstr "Nieuw: Franse vertaling (met dank aan github.com/rene-coty/!)"
