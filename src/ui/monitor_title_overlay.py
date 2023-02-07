@@ -68,10 +68,12 @@ class _MonitorTitleOverlayView(Gtk.Box):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
 
         self._html_color_code = html_color_code
+        self._padding_top_label = self._build_padding_top_label()
         self._title_label = self._build_title_label()
         self._value_label = self._build_value_label()
 
         self.set_valign(Gtk.Align.CENTER)
+        self.append(self._padding_top_label)
         self.append(self._title_label)
         self.append(self._value_label)
 
@@ -80,10 +82,13 @@ class _MonitorTitleOverlayView(Gtk.Box):
         label.set_margin_start(10)
         label.set_margin_end(10)
         label.set_ellipsize(Pango.EllipsizeMode.MIDDLE)
-
         return label
 
     def _build_value_label(self):
+        label = Gtk.Label()
+        return label
+
+    def _build_padding_top_label(self):
         label = Gtk.Label()
         return label
 
@@ -95,6 +100,10 @@ class _MonitorTitleOverlayView(Gtk.Box):
         value_as_str = value if value is not None else ""
         markup = f"<span weight='{self._value_weight()}' size='{self._value_size()}' color='#{self._html_color_code}'>{value_as_str}</span>"
         GObject.idle_add(self._value_label.set_markup, markup)
+        padding_markup = (
+            f"<span weight='{self._value_weight()}' size='{self._value_size()}'></span>"
+        )
+        GObject.idle_add(self._padding_top_label.set_markup, padding_markup)
 
     def _title_size(self):
         raise NotImplementedError
