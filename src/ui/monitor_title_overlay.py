@@ -100,7 +100,10 @@ class _MonitorTitleOverlayView(Gtk.Box):
         value_as_str = value if value is not None else ""
         markup = f"<span weight='{self._value_weight()}' size='{self._value_size()}' color='#{self._html_color_code}'>{value_as_str}</span>"
         GObject.idle_add(self._value_label.set_markup, markup)
-        GObject.idle_add(self._padding_top_label.set_markup, f"<span weight='{self._value_weight()}' size='{self._value_size()}'></span>")
+        padding_markup = (
+            f"<span weight='{self._value_weight()}' size='{self._value_size()}'></span>"
+        )
+        GObject.idle_add(self._padding_top_label.set_markup, padding_markup)
 
     def _title_size(self):
         raise NotImplementedError
