@@ -4,6 +4,11 @@ REQUIREMENTS_TXT=requirements.txt
 install-dev-requirements:
 	pipenv install --dev
 
+generate-python-gtk-symbols: install-dev-requirements
+	pipenv run gengir --gtk 4
+
+setup-dev-environment: install-dev-requirements generate-python-gtk-symbols
+
 dev-shell:
 	pipenv shell
 
