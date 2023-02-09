@@ -1,0 +1,21 @@
+{
+	"name": "gnome-43-python-devel",
+
+	"image": "quay.io/gnome_infrastructure/gnome-runtime-images:gnome-43",
+
+	"shutdownAction": "stopContainer",
+
+	"postCreateCommand": "bash .devcontainer/on_create.sh",
+
+	"remoteUser": "root",
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.isort"
+			]
+		}
+	}
+}
