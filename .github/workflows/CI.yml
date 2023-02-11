@@ -15,14 +15,7 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: install python devel packages
-      run: sudo apt install -y python3-all-dev gobject-introspection libgirepository1.0-dev
-
-    - name: install pipenv
-      run: pip install pipenv
-
-    - name: Install dependencies
-      run: make install-dev-requirements
+    - uses: ./.github/actions/prepare-environment
 
     - name: Run tests
       run: make test
