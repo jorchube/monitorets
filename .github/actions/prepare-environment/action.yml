@@ -1,5 +1,6 @@
 name: 'Prepare Environment'
 runs:
+  using: "composite"
   steps:
     - name: install python devel packages
       run: sudo apt install -y python3-all-dev gobject-introspection libgirepository1.0-dev
