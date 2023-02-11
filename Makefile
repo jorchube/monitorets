@@ -2,7 +2,7 @@ SOURCE_DIR=src
 REQUIREMENTS_TXT=requirements.txt
 
 install-dev-requirements:
-	pipenv install --dev
+	pipenv sync --dev --verbose
 
 generate-python-gtk-symbols: install-dev-requirements
 	pipenv run gengir --gtk 4
