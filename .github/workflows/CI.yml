@@ -15,11 +15,7 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: install pipenv
-      run: pip install pipenv
-
-    - name: Install dependencies
-      run: make install-dev-requirements
+    - uses: ./.github/actions/prepare-environment
 
     - name: Run tests
       run: make test
@@ -32,11 +28,7 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: install pipenv
-      run: pip install pipenv
-
-    - name: Install dependencies
-      run: make install-dev-requirements
+    - uses: ./.github/actions/prepare-environment
 
     - name: Check linting
       run: make check-linting

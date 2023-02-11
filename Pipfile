@@ -11,6 +11,8 @@ xdg = "==5.1.1"
 pytest = "*"
 requirements-parser = "*"
 black = "*"
+pygobject = "*"
+gengir = "*"
 
 [requires]
 python_version = "3.10"
