@@ -1,0 +1,11 @@
+name: 'Prepare Environment'
+runs:
+  steps:
+    - name: install python devel packages
+      run: sudo apt install -y python3-all-dev gobject-introspection libgirepository1.0-dev
+
+    - name: install pipenv
+      run: pip install pipenv
+
+    - name: Install dependencies
+      run: make install-dev-requirements
