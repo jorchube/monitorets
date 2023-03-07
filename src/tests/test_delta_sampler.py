@@ -1,7 +1,5 @@
 from ..samplers.delta_sampler import DeltaSampler
 
-from time import sleep
-
 
 class TestDeltaSampler:
     def test_it_returns_zero_on_first_sample(self):
