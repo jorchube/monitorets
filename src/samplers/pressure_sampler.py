@@ -8,7 +8,7 @@ class PressureSampler(Sampler):
     def __init__(self, pressure_file_path, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._file_handle = open(pressure_file_path, "r")
-        self._regex = re.compile(".*avg10=(\d\.\d\d).*")
+        self._regex = re.compile(".*avg10=(\d+\.\d\d).*")
 
     def _get_sample(self):
         line = self._read_line_from_file(self._file_handle)
