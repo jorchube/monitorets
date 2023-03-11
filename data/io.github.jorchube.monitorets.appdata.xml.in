@@ -26,6 +26,7 @@
       <li>Network uplink traffic</li>
       <li>Home folder space</li>
       <li>Root space</li>
+      <li>CPU, Memory and I/O pressure</li>
       <li>Temperature sensors</li>
     </ul>
   </description>
@@ -52,6 +53,13 @@
   </provides>
 
   <releases>
+    <release version="0.10.0" date="2023-03-20">
+      <description>
+        <ul>
+          <li>Added CPU, Memory and I/O pressure monitors</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.9.2" date="2023-02-11">
       <description>
         <ul>
