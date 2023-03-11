@@ -23,5 +23,5 @@ class TestPressureSampler:
 
         mock_open.assert_called_once_with("test_file", "r")
         assert sample.units == "%"
-        assert sample.single_value == 7.7
+        assert sample.single_value == 7
         assert sample.to_plot == 7

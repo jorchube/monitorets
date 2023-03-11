@@ -8,3 +8,6 @@ class MonitorType:
     Uplink = "uplink"
     Home_usage = "home usage"
     Root_usage = "root usage"
+    CPU_PRESSURE = "cpu pressure"
+    MEMORY_PRESSURE = "memory pressure"
+    IO_PRESSURE = "io pressure"

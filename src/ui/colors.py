@@ -26,3 +26,8 @@ class ORANGE:
 class PURPLE:
     HTML = "9f30ff"
     RGB = (0.7, 0.2, 1)
+
+
+class YELLOW:
+    HTML = "bbbb00"
+    RGB = (0.73, 0.73, 0)

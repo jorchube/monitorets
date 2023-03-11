@@ -32,6 +32,12 @@
       </object>
     </child>
     <child>
+      <object class="AdwPreferencesGroup" id="_pressure_preferences_group">
+        <property name="description" translatable="yes" context="monitors_preference_group">Pressure stall quantifies resource scarcity between processes. The more processes are stalled waiting for a resource (because it is being used by something else) the higher the pressure over that resource will be.</property>
+        <property name="title" translatable="yes" context="monitors_preference_group">Pressure</property>
+      </object>
+    </child>
+    <child>
       <object class="AdwPreferencesGroup" id="_temperature_preferences_group">
         <property name="description" translatable="yes" context="monitorets">These are all the temperature sensors that Monitorets has been able to discover in your setup.</property>
         <property name="title" translatable="yes" context="monitors_preference_group">Temperature sensors</property>

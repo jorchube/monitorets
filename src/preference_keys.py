@@ -15,4 +15,7 @@ class PreferenceKeys:
     UPLINK_MONITOR_ENABLED = "uplink_monitor.enabled"
     HOME_USAGE_MONITOR_ENABLED = "home_usage_monitor.enabled"
     ROOT_USAGE_MONITOR_ENABLED = "root_usage_monitor.enabled"
+    CPU_PRESSURE_MONITOR_ENABLED = "cpu_pressure_monitor.enabled"
+    MEMORY_PRESSURE_MONITOR_ENABLED = "memory_pressure_monitor.enabled"
+    IO_PRESSURE_MONITOR_ENABLED = "io_pressure_monitor.enabled"
     UNIFIED_SCALE_FOR_NETWORK_MONITORS_ENABLED = "network.unified_scale.enabled"

@@ -13,9 +13,9 @@ class PressureSampler(Sampler):
     def _get_sample(self):
         line = self._read_line_from_file(self._file_handle)
 
-        value = self._get_avg10_value(line)
+        value = int(self._get_avg10_value(line))
 
-        sample = Sample(to_plot=int(value), single_value=round(value, 1), units="%")
+        sample = Sample(to_plot=value, single_value=value, units="%")
 
         return sample
 
