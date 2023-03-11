@@ -108,7 +108,7 @@ msgctxt "monitors_preference_group"
 msgid "Disk usage"
 msgstr "Utilisation du disque"
 
-#: src/gtk/preferences-page-monitors.ui:36
+#: src/gtk/preferences-page-monitors.ui:42
 msgctxt "monitorets"
 msgid ""
 "These are all the temperature sensors that Monitorets has been able to "
@@ -117,7 +117,7 @@ msgstr ""
 "Ce sont tous les capteurs de température que Monitorets a pu trouver sur "
 "votre appareil."
 
-#: src/gtk/preferences-page-monitors.ui:37
+#: src/gtk/preferences-page-monitors.ui:43
 msgctxt "monitors_preference_group"
 msgid "Temperature sensors"
 msgstr "Capteurs de température"
@@ -223,108 +223,86 @@ msgstr "Espace de stockage du dossier personnel"
 msgid "Root space"
 msgstr "Espace root"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:29
+#: data/io.github.jorchube.monitorets.appdata.xml.in:30
 msgid "Temperature sensors"
 msgstr "Capteurs de température"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:86
 msgid "Added support for custom monitor names"
 msgstr "Ajout de la prise en charge de noms de moniteurs spécifiés"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:87
 msgid "Added smooth graph drawing"
 msgstr "Ajout d’un dessin lisse des graphiques"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:94
 msgid "Added Swap memory monitor"
 msgstr "Ajout d’un moniteur de mémoire Swap"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:95
 msgid "Refactored dropdown menu and preferences"
 msgstr "Menu déroulant et Préférences retravaillés"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:102
 msgid "Added Dutch language support"
 msgstr "Ajout de la prise en charge du néerlandais"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:109
 msgid "Added internationalization support"
 msgstr "Ajout de la prise en charge des traductions"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:116
 msgid "Restored missing network permission needed for the network monitors"
 msgstr ""
 "Restauration de la permission réseau manquante, nécessaire pour les "
 "moniteurs réseau"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:123
 msgid ""
 "Autodiscover temperature sensors and expose them as temperature monitors"
 msgstr ""
 "Recherche automatique des capteurs de température, exposés ensuite comme "
 "moniteurs de température"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:124
 msgid "Ellipsize monitor names when do not fit the available space"
 msgstr ""
 "Les noms des moniteurs seront tronqués lorsqu’ils dépassent l’espace "
 "disponible"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:125
 msgid "Add monitor groups for same-kind monitors in the preferences popover"
 msgstr ""
 "Ajout de groupes de moniteurs pour les moniteurs du même type dans la "
 "fenêtre Préférences"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:132
 msgid "Added network downlink and uplink traffic monitors"
 msgstr "Ajout de moniteurs de trafic réseau réceptionné et envoyé"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:133
 msgid "Some cosmetic changes have been done"
 msgstr "Quelques changements esthétiques"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:140
 msgid "Added home and root folder usage monitors"
 msgstr "Ajout de moniteurs d’utilisation de l’espace root et utilisateur"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:141
 msgid "Added layout selector"
 msgstr "Ajout d’un sélecteur de disposition"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:142
 msgid "Added Tips section"
 msgstr "Ajout d’une section Conseils"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:143
 msgid "Improve close and preferences buttons visibility when shown"
 msgstr ""
 "Amélioration de la visibilité des boutons Fermer et Préférences lorsqu’ils "
 "sont affichés"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:149
 msgid "Under the hood tweaks"
 msgstr "Ajustements sous le capot"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:154
 msgid "Aesthetic:"
 msgstr "Esthétique :"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:155
 msgid "- Reworked graph drawing"
 msgstr "- Dessin des graphiques retravaillé"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:156
 msgid "Internal:"
 msgstr "Interne :"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:157
 msgid "- Decoupled several events that can trigger a graph redraw"
 msgstr ""
 "- Découplement de plusieurs événements pouvant déclencher une réécriture du "
 "graphique"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:162
 msgid "First release"
 msgstr "Première version"
 
@@ -434,7 +412,6 @@ msgctxt "preferences_page_appearance"
 msgid "Show current value"
 msgstr "Afficher la valeur actuelle"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:79
 msgid ""
 "Fixed a bug preventing the preferences window from opening (Thanks to "
 "@jrdmellow)"
@@ -478,15 +455,12 @@ msgctxt "preferences_appearance"
 msgid "Redraw frequency"
 msgstr "Fréquence de rafraîchissement"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:70
 msgid "Added support to show the current value of a monitor"
 msgstr "Ajout de l’affichage de la valeur actuelle d’un moniteur"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:71
 msgid "Remember window size on close"
 msgstr "Taille de la fenêtre mémorisée lors de la fermeture"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:72
 msgid ""
 "Use the same scaling for network uplink and downlink monitors to avoid "
 "confusion"
@@ -510,15 +484,12 @@ msgstr "Basse"
 msgid "Very Low"
 msgstr "Très basse"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:58
 msgid "Added support for arbitrarily large monitor size"
 msgstr "Ajout de la prise en charge d’un écran de taille arbitraire"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:59
 msgid "Added support to arrange monitors in a grid layout"
 msgstr "Ajout d’une disposition des moniteurs sous forme de grille"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:60
 msgid ""
 "Added support to select between Celsius and Fahrenheit units for the "
 "temperature sensors"
@@ -526,13 +497,11 @@ msgstr ""
 "Ajout de la possibilité de sélectionner Celsius ou Fahrenheit pour les "
 "unités de température"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:61
 msgid "Added support to configure the redraw rate of the monitor graphs"
 msgstr ""
 "Ajout d’une fonction permettant de configurer la fréquence de "
 "rafraîchissement des graphiques du moniteur"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:62
 msgid ""
 "Added a keyboard shortcut to open the preferences window (Kudos to github."
 "com/gregorni/)"
@@ -540,7 +509,51 @@ msgstr ""
 "Ajout d’un raccourci clavier pour ouvrir la fenêtre des préférences "
 "(remerciements à github.com/gregorni/)"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:63
 msgid "Added french translation (Kudos to github.com/rene-coty/)"
 msgstr ""
 "Ajout d’une traduction française (remerciements à github.com/rene-coty/)"
+
+#: src/gtk/preferences-page-monitors.ui:36
+msgctxt "monitors_preference_group"
+msgid ""
+"Pressure stall quantifies resource scarcity between processes. The more "
+"processes are stalled waiting for a resource (because it is being used by "
+"something else) the higher the pressure over that resource will be."
+msgstr ""
+
+#: src/gtk/preferences-page-monitors.ui:37
+msgctxt "monitors_preference_group"
+msgid "Pressure"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:29
+msgid "CPU, Memory and I/O pressure"
+msgstr ""
+
+#: src/translatable_strings/monitor_title.py:12
+msgid "CPU Pressure"
+msgstr ""
+
+#: src/translatable_strings/monitor_title.py:13
+msgid "Memory Pressure"
+msgstr ""
+
+#: src/translatable_strings/monitor_title.py:14
+msgid "I/O Pressure"
+msgstr ""
+
+#: src/translatable_strings/preference_toggle_label.py:13
+msgid "CPU pressure"
+msgstr ""
+
+#: src/translatable_strings/preference_toggle_label.py:14
+msgid "Memory pressure"
+msgstr ""
+
+#: src/translatable_strings/preference_toggle_label.py:15
+msgid "I/O pressure"
+msgstr ""
+
+#: src/translatable_strings/preference_toggle_section_name.py:9
+msgid "Pressure"
+msgstr ""

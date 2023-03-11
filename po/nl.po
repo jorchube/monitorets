@@ -107,14 +107,14 @@ msgctxt "monitors_preference_group"
 msgid "Disk usage"
 msgstr "Schijfgebruik"
 
-#: src/gtk/preferences-page-monitors.ui:36
+#: src/gtk/preferences-page-monitors.ui:42
 msgctxt "monitorets"
 msgid ""
 "These are all the temperature sensors that Monitorets has been able to "
 "discover in your setup."
 msgstr "Dit zijn alle door Monitorets aangetroffen temperatuursensors."
 
-#: src/gtk/preferences-page-monitors.ui:37
+#: src/gtk/preferences-page-monitors.ui:43
 msgctxt "monitors_preference_group"
 msgid "Temperature sensors"
 msgstr "Temperatuursensors"
@@ -220,98 +220,76 @@ msgstr "Ruimte in persoonlijke map"
 msgid "Root space"
 msgstr "Ruimte in systeemmap"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:29
+#: data/io.github.jorchube.monitorets.appdata.xml.in:30
 msgid "Temperature sensors"
 msgstr "Temperatuursensors"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:86
 msgid "Added support for custom monitor names"
 msgstr "Nieuw: ondersteuning voor aangepaste monitornamen"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:87
 msgid "Added smooth graph drawing"
 msgstr "Nieuw: vloeiende grafieken"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:94
 msgid "Added Swap memory monitor"
 msgstr "Nieuw: wisselgeheugenmonitor"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:95
 msgid "Refactored dropdown menu and preferences"
 msgstr "Verbeterd: uitklapmenu en voorkeuren"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:102
 msgid "Added Dutch language support"
 msgstr "Nieuw: Nederlandse vertaling"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:109
 msgid "Added internationalization support"
 msgstr "Nieuw: de toepassing kan voortaan worden vertaald"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:116
 msgid "Restored missing network permission needed for the network monitors"
 msgstr "Opgelost: ontbrekend netwerk-toegangsrecht voor de netwerkmonitors"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:123
 msgid ""
 "Autodiscover temperature sensors and expose them as temperature monitors"
 msgstr "Nieuw: automatische detectie van temperatuursensors"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:124
 msgid "Ellipsize monitor names when do not fit the available space"
 msgstr "Nieuw: monitornamen worden ingekort bij onvoldoende ruimte"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:125
 msgid "Add monitor groups for same-kind monitors in the preferences popover"
 msgstr "Nieuw: monitors worden voortaan gegroepeerd"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:132
 msgid "Added network downlink and uplink traffic monitors"
 msgstr "Nieuw: down- en uploadverkeersmonitors"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:133
 msgid "Some cosmetic changes have been done"
 msgstr "Bijgewerkt: enkele uiterlijke wijzigingen"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:140
 msgid "Added home and root folder usage monitors"
 msgstr "Nieuw: schijfgebruik van persoonlijke en systeemmappen"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:141
 msgid "Added layout selector"
 msgstr "Nieuw: indelingskeuze"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:142
 msgid "Added Tips section"
 msgstr "Nieuw: tipssectie"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:143
 msgid "Improve close and preferences buttons visibility when shown"
 msgstr "Verbeterd: zichtbaarheid van sluit- en voorkeursknoppen"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:149
 msgid "Under the hood tweaks"
 msgstr "Verbeterd: onder de motorkap gesleuteld"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:154
 msgid "Aesthetic:"
 msgstr "Uiterlijk:"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:155
 msgid "- Reworked graph drawing"
 msgstr "- Opnieuw ontworpen grafieken"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:156
 msgid "Internal:"
 msgstr "Intern:"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:157
 msgid "- Decoupled several events that can trigger a graph redraw"
 msgstr ""
 "- Enkele gebeurtenissen die het opnieuw intekenen van grafieken triggerde "
 "zijn ontkoppeld"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:162
 msgid "First release"
 msgstr "Allereerste versie"
 
@@ -419,7 +397,6 @@ msgctxt "preferences_page_appearance"
 msgid "Show current value"
 msgstr "Huidige waarde tonen"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:79
 msgid ""
 "Fixed a bug preventing the preferences window from opening (Thanks to "
 "@jrdmellow)"
@@ -461,15 +438,12 @@ msgctxt "preferences_appearance"
 msgid "Redraw frequency"
 msgstr "Tekenfrequentie"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:70
 msgid "Added support to show the current value of a monitor"
 msgstr "Nieuw: toon de huidige waarde van een monitor"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:71
 msgid "Remember window size on close"
 msgstr "Verbeterd: onthoud de vensterafmetingen na afsluiten"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:72
 msgid ""
 "Use the same scaling for network uplink and downlink monitors to avoid "
 "confusion"
@@ -491,26 +465,21 @@ msgstr "Laag"
 msgid "Very Low"
 msgstr "Erg laag"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:58
 msgid "Added support for arbitrarily large monitor size"
 msgstr "Nieuw: ondersteuning voor grote monitors"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:59
 msgid "Added support to arrange monitors in a grid layout"
 msgstr "Nieuw: toon monitors op een rooster"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:60
 msgid ""
 "Added support to select between Celsius and Fahrenheit units for the "
 "temperature sensors"
 msgstr ""
 "Nieuw: ondersteuning voor Celsius en Fahrenheit in de temperatuursensoren"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:61
 msgid "Added support to configure the redraw rate of the monitor graphs"
 msgstr "Nieuw: stel de tekenfrequentie van grafieken in"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:62
 msgid ""
 "Added a keyboard shortcut to open the preferences window (Kudos to github."
 "com/gregorni/)"
@@ -518,6 +487,50 @@ msgstr ""
 "Nieuw: sneltoets om de voorkeuren te openen (met dan aan github.com/"
 "gregorni/!)"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:63
 msgid "Added french translation (Kudos to github.com/rene-coty/)"
 msgstr "Nieuw: Franse vertaling (met dank aan github.com/rene-coty/!)"
+
+#: src/gtk/preferences-page-monitors.ui:36
+msgctxt "monitors_preference_group"
+msgid ""
+"Pressure stall quantifies resource scarcity between processes. The more "
+"processes are stalled waiting for a resource (because it is being used by "
+"something else) the higher the pressure over that resource will be."
+msgstr ""
+
+#: src/gtk/preferences-page-monitors.ui:37
+msgctxt "monitors_preference_group"
+msgid "Pressure"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:29
+msgid "CPU, Memory and I/O pressure"
+msgstr ""
+
+#: src/translatable_strings/monitor_title.py:12
+msgid "CPU Pressure"
+msgstr ""
+
+#: src/translatable_strings/monitor_title.py:13
+msgid "Memory Pressure"
+msgstr ""
+
+#: src/translatable_strings/monitor_title.py:14
+msgid "I/O Pressure"
+msgstr ""
+
+#: src/translatable_strings/preference_toggle_label.py:13
+msgid "CPU pressure"
+msgstr ""
+
+#: src/translatable_strings/preference_toggle_label.py:14
+msgid "Memory pressure"
+msgstr ""
+
+#: src/translatable_strings/preference_toggle_label.py:15
+msgid "I/O pressure"
+msgstr ""
+
+#: src/translatable_strings/preference_toggle_section_name.py:9
+msgid "Pressure"
+msgstr ""
