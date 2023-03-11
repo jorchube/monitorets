@@ -18,6 +18,7 @@ class PreferencesPageMonitors(Adw.PreferencesPage):
     _memory_preferences_group = Gtk.Template.Child()
     _network_preferences_group = Gtk.Template.Child()
     _disk_preferences_group = Gtk.Template.Child()
+    _pressure_preferences_group = Gtk.Template.Child()
     _temperature_preferences_group = Gtk.Template.Child()
 
     def __init__(self, *args, **kwargs):
@@ -42,6 +43,9 @@ class PreferencesPageMonitors(Adw.PreferencesPage):
 
         for descriptor in descriptors[preference_toggle_section_name.DISK_USAGE]:
             self._add_toggle_to_group(descriptor, self._disk_preferences_group)
+
+        for descriptor in descriptors[preference_toggle_section_name.PRESSURE]:
+            self._add_toggle_to_group(descriptor, self._pressure_preferences_group)
 
         for descriptor in descriptors[preference_toggle_section_name.TEMPERATURE]:
             self._add_toggle_to_group(descriptor, self._temperature_preferences_group)

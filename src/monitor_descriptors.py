@@ -11,6 +11,11 @@ from .ui.monitor_widgets.downlink_monitor_widget import DownlinkMonitorWidget
 from .ui.monitor_widgets.uplink_monitor_widget import UplinkMonitorWidget
 from .ui.monitor_widgets.home_usage_monitor_widget import HomeUsageMonitorWidget
 from .ui.monitor_widgets.root_usage_monitor_widget import RootUsageMonitorWidget
+from .ui.monitor_widgets.cpu_pressure_monitor_widget import CpuPressureMonitorWidget
+from .ui.monitor_widgets.memory_pressure_monitor_widget import (
+    MemoryPressureMonitorWidget,
+)
+from .ui.monitor_widgets.io_pressure_monitor_widget import IOPressureMonitorWidget
 from .translatable_strings import (
     preference_toggle_label,
     preference_toggle_description,
@@ -99,6 +104,33 @@ monitor_descriptor_list = [
         "preference_toggle_description": None,
         "preference_toggle_section_name": preference_toggle_section_name.DISK_USAGE,
         "default_order": 9,
+    },
+    {
+        "type": MonitorType.CPU_PRESSURE,
+        "enabled_preference_key": PreferenceKeys.CPU_PRESSURE_MONITOR_ENABLED,
+        "monitor_class": CpuPressureMonitorWidget,
+        "preference_toggle_label": preference_toggle_label.CPU_PRESSURE,
+        "preference_toggle_description": None,
+        "preference_toggle_section_name": preference_toggle_section_name.PRESSURE,
+        "default_order": 10,
+    },
+    {
+        "type": MonitorType.MEMORY_PRESSURE,
+        "enabled_preference_key": PreferenceKeys.MEMORY_PRESSURE_MONITOR_ENABLED,
+        "monitor_class": MemoryPressureMonitorWidget,
+        "preference_toggle_label": preference_toggle_label.MEMORY_PRESSURE,
+        "preference_toggle_description": None,
+        "preference_toggle_section_name": preference_toggle_section_name.PRESSURE,
+        "default_order": 11,
+    },
+    {
+        "type": MonitorType.IO_PRESSURE,
+        "enabled_preference_key": PreferenceKeys.IO_PRESSURE_MONITOR_ENABLED,
+        "monitor_class": IOPressureMonitorWidget,
+        "preference_toggle_label": preference_toggle_label.IO_PRESSURE,
+        "preference_toggle_description": None,
+        "preference_toggle_section_name": preference_toggle_section_name.PRESSURE,
+        "default_order": 12,
     },
 ]
 
