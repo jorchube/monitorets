@@ -12,7 +12,9 @@ from .ui.monitor_widgets.uplink_monitor_widget import UplinkMonitorWidget
 from .ui.monitor_widgets.home_usage_monitor_widget import HomeUsageMonitorWidget
 from .ui.monitor_widgets.root_usage_monitor_widget import RootUsageMonitorWidget
 from .ui.monitor_widgets.cpu_pressure_monitor_widget import CpuPressureMonitorWidget
-from .ui.monitor_widgets.memory_pressure_monitor_widget import MemoryPressureMonitorWidget
+from .ui.monitor_widgets.memory_pressure_monitor_widget import (
+    MemoryPressureMonitorWidget,
+)
 from .ui.monitor_widgets.io_pressure_monitor_widget import IOPressureMonitorWidget
 from .translatable_strings import (
     preference_toggle_label,

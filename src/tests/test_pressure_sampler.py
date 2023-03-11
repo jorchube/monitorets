@@ -7,7 +7,9 @@ class TestPressureSampler:
     @pytest.fixture
     def file_handle_mock(self):
         m = mock.Mock()
-        m.readline.return_value = """some avg10=7.71 avg60=0.00 avg300=1.03 total=154824318"""
+        m.readline.return_value = (
+            """some avg10=7.71 avg60=0.00 avg300=1.03 total=154824318"""
+        )
         return m
 
     @pytest.fixture
