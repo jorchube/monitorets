@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Monitorets\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-08 20:16+0100\n"
-"PO-Revision-Date: 2023-02-02 18:13+0100\n"
+"PO-Revision-Date: 2023-03-13 20:42+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -497,40 +497,42 @@ msgid ""
 "processes are stalled waiting for a resource (because it is being used by "
 "something else) the higher the pressure over that resource will be."
 msgstr ""
+"De druk berekent het aantal beschikbare bronnen tussen processen. Hoe meer "
+"processen in de wacht staan, des te hoger de druk zal zijn."
 
 #: src/gtk/preferences-page-monitors.ui:37
 msgctxt "monitors_preference_group"
 msgid "Pressure"
-msgstr ""
+msgstr "Druk"
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:29
 msgid "CPU, Memory and I/O pressure"
-msgstr ""
+msgstr "Cpu-, geheugen- en I/O-druk"
 
 #: src/translatable_strings/monitor_title.py:12
 msgid "CPU Pressure"
-msgstr ""
+msgstr "Cpu-druk"
 
 #: src/translatable_strings/monitor_title.py:13
 msgid "Memory Pressure"
-msgstr ""
+msgstr "Geheugendruk"
 
 #: src/translatable_strings/monitor_title.py:14
 msgid "I/O Pressure"
-msgstr ""
+msgstr "I/O-druk"
 
 #: src/translatable_strings/preference_toggle_label.py:13
 msgid "CPU pressure"
-msgstr ""
+msgstr "Cpu-druk"
 
 #: src/translatable_strings/preference_toggle_label.py:14
 msgid "Memory pressure"
-msgstr ""
+msgstr "Geheugendruk"
 
 #: src/translatable_strings/preference_toggle_label.py:15
 msgid "I/O pressure"
-msgstr ""
+msgstr "I/O-druk"
 
 #: src/translatable_strings/preference_toggle_section_name.py:9
 msgid "Pressure"
-msgstr ""
+msgstr "Druk"
