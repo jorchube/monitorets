@@ -56,7 +56,7 @@
   </provides>
 
   <releases>
-    <release version="0.10.0" date="2023-03-20">
+    <release version="0.10.0" date="2023-03-18">
       <description>
         <ul>
           <li>Added CPU, Memory and I/O pressure monitors</li>
