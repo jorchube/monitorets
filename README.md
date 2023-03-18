@@ -29,10 +29,15 @@ Choose which resources you want to have visible:
 * Network uplink traffic
 * Home folder ( **~** ) space
 * Root ( **/** ) space
+* CPU, Memory and I/O pressure
 * Temperature sensors
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/preferences_monitors.png" />
+    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/preferences_monitors_1.png" />
+</p>
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/jorchube/monitorets/master/imgs/preferences_monitors_2.png" />
 </p>
 
 ### Get it now:
