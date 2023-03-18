@@ -5,8 +5,8 @@
    viewBox="0 0 33.750061 33.750061"
    version="1.1"
    id="svg974"
-   sodipodi:docname="logo.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="logo_3.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -28,15 +28,15 @@
      showgrid="false"
      showguides="true"
      inkscape:lockguides="false"
-     inkscape:zoom="8"
-     inkscape:cx="99.3125"
-     inkscape:cy="60.3125"
-     inkscape:window-width="3076"
-     inkscape:window-height="1296"
-     inkscape:window-x="26"
-     inkscape:window-y="23"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer1">
+     inkscape:zoom="2"
+     inkscape:cx="-141"
+     inkscape:cy="132"
+     inkscape:window-width="3440"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2">
     <inkscape:grid
        type="xygrid"
        id="grid306" />
@@ -1179,10 +1179,10 @@
        style="color-interpolation-filters:sRGB;"
        inkscape:label="Drop Shadow"
        id="filter3295"
-       x="0.022595052"
-       y="-0.18292832"
-       width="0.47641279"
-       height="1.3658566">
+       x="-0.13403722"
+       y="-0.13882423"
+       width="1.2680744"
+       height="1.2776485">
       <feFlood
          flood-opacity="0.635294"
          flood-color="rgb(0,0,0)"
@@ -1196,7 +1196,7 @@
          id="feComposite3287" />
       <feGaussianBlur
          in="composite1"
-         stdDeviation="2"
+         stdDeviation="1.2855704"
          result="blur"
          id="feGaussianBlur3289" />
       <feOffset
@@ -1211,6 +1211,139 @@
          result="composite2"
          id="feComposite3293" />
     </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter2139"
+       x="-0.0030003356"
+       y="-4.8292595e-06"
+       width="1.0059987"
+       height="1.002599">
+      <feFlood
+         flood-opacity="0.635294"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood2129" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite2131" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="8.2639511e-06"
+         result="blur"
+         id="feGaussianBlur2133" />
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offset"
+         id="feOffset2135" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite2137" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter2151"
+       x="-0.00010656131"
+       y="-0.00010656131"
+       width="1.0002131"
+       height="1.0002131">
+      <feFlood
+         flood-opacity="0.635294"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood2141" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite2143" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0.0011164836"
+         result="blur"
+         id="feGaussianBlur2145" />
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offset"
+         id="feOffset2147" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite2149" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath7321">
+      <rect
+         style="display:inline;fill:url(#radialGradient7325);fill-opacity:1;stroke:none;stroke-width:0.881505;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter3295)"
+         id="rect7323"
+         width="23.018747"
+         height="22.225002"
+         x="48.154171"
+         y="6.3499985"
+         ry="2.6601064"
+         inkscape:label="inner bg"
+         transform="matrix(5.7846994,0,0,6.8910711,-278.95421,-43.758892)" />
+    </clipPath>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4386"
+       id="radialGradient7325"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.96551745,0,0.60215147)"
+       cx="59.663544"
+       cy="17.4625"
+       fx="59.663544"
+       fy="17.4625"
+       r="11.509374" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1962">
+      <rect
+         style="fill:none;stroke:#2ec27e;stroke-width:0.111047;paint-order:stroke fill markers"
+         id="rect1964"
+         width="7.6898851"
+         height="2.6287968"
+         x="42.502384"
+         y="-22.204847"
+         ry="0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1966">
+      <rect
+         style="fill:none;stroke:#2ec27e;stroke-width:0.111047;paint-order:stroke fill markers"
+         id="rect1968"
+         width="7.6898851"
+         height="2.6287968"
+         x="44.017727"
+         y="-22.306606"
+         ry="0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1970">
+      <rect
+         style="fill:none;stroke:#2ec27e;stroke-width:0.111047;paint-order:stroke fill markers"
+         id="rect1972"
+         width="7.6898851"
+         height="2.6287968"
+         x="46.206554"
+         y="-15.183211"
+         ry="0" />
+    </clipPath>
   </defs>
   <metadata
      id="metadata971">
@@ -1233,13 +1366,14 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="new icon"
-     transform="translate(-42.788515,-0.5874689)"
+     transform="translate(-42.7885, -0.587469)"
      style="filter:url(#filter3295)">
     <g
        inkscape:groupmode="layer"
        id="layer3"
        inkscape:label="bg figure"
-       style="display:inline">
+       style="display:inline"
+       sodipodi:insensitive="true">
       <rect
          style="fill:#c0bfbc;fill-opacity:1;stroke:none;stroke-width:0.980001;stroke-dasharray:none;stroke-opacity:1"
          id="rect3237-3"
@@ -1276,12 +1410,2076 @@
          y="6.3499985"
          ry="2.6601064"
          inkscape:label="inner bg" />
+      <g
+         inkscape:groupmode="layer"
+         id="layer5"
+         inkscape:label="bg_grid"
+         style="display:inline;opacity:0.1;stroke:#ffffff;filter:url(#filter2139)"
+         transform="matrix(0.99733803,0,0,1.0000065,0.18868721,-1.1139875e-4)">
+        <g
+           inkscape:label="Grid_Polar:X5:Y5"
+           transform="matrix(0.17333124,0,0,0.14511438,48.162289,6.3501559)"
+           id="g3783"
+           clip-path="url(#clipPath7321)"
+           style="stroke:#ffffff">
+          <g
+             inkscape:label="MajorXGridlines"
+             id="g2983"
+             style="stroke:#ffffff">
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorXDiv10"
+               d="M 13.2292,0 V 152.757"
+               id="path2965" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorXDiv20"
+               d="M 26.4583,0 V 152.757"
+               id="path2967" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorXDiv30"
+               d="M 39.6875,0 V 152.757"
+               id="path2969" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorXDiv40"
+               d="M 52.9167,0 V 152.757"
+               id="path2971" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorXDiv50"
+               d="M 66.1458,0 V 152.757"
+               id="path2973" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorXDiv60"
+               d="M 79.375,0 V 152.757"
+               id="path2975" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorXDiv70"
+               d="M 92.6042,0 V 152.757"
+               id="path2977" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorXDiv80"
+               d="M 105.833,0 V 152.757"
+               id="path2979" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorXDiv90"
+               d="M 119.062,0 V 152.757"
+               id="path2981" />
+          </g>
+          <g
+             inkscape:label="MajorYGridlines"
+             id="g3015"
+             style="stroke:#ffffff">
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 25.1354,152.757 0,138.245"
+               id="path2985" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 51.5937,152.757 0,122.97"
+               id="path2987" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 78.0521,152.757 0,107.694"
+               id="path2989" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 104.51,152.757 0,92.4182"
+               id="path2991" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 130.969,152.757 0,77.1425"
+               id="path2993" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,138.245 0,61.8667"
+               id="path2995" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,122.97 0,46.591"
+               id="path2997" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,107.694 0,31.3153"
+               id="path2999" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,92.4182 0,16.0395"
+               id="path3001" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,77.1425 0,0.763787"
+               id="path3003" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,61.8667 25.1354,0"
+               id="path3005" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,46.591 51.5937,0"
+               id="path3007" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,31.3153 78.0521,0"
+               id="path3009" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,16.0395 104.51,0"
+               id="path3011" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,0.763787 130.969,0"
+               id="path3013" />
+          </g>
+          <g
+             inkscape:label="MajorZGridlines"
+             id="g3047"
+             style="stroke:#ffffff">
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv10"
+               d="m 107.156,152.757 25.136,-14.512"
+               id="path3017" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv20"
+               d="M 80.6979,152.757 132.292,122.97"
+               id="path3019" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv30"
+               d="M 54.2396,152.757 132.292,107.694"
+               id="path3021" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv40"
+               d="M 27.7812,152.757 132.292,92.4182"
+               id="path3023" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv50"
+               d="M 1.32292,152.757 132.292,77.1425"
+               id="path3025" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv60"
+               d="M 0,138.245 132.292,61.8667"
+               id="path3027" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv70"
+               d="M 0,122.97 132.292,46.591"
+               id="path3029" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv80"
+               d="M 0,107.694 132.292,31.3153"
+               id="path3031" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv90"
+               d="M 0,92.4182 132.292,16.0395"
+               id="path3033" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv100"
+               d="M 0,77.1425 132.292,0.763787"
+               id="path3035" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv110"
+               d="M 0,61.8667 107.156,0"
+               id="path3037" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv120"
+               d="M 0,46.591 80.6979,0"
+               id="path3039" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv130"
+               d="M 0,31.3153 54.2396,0"
+               id="path3041" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv140"
+               d="M 0,16.0395 27.7812,0"
+               id="path3043" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.529167"
+               inkscape:label="MajorZDiv150"
+               d="M 0,0.763787 1.32292,0"
+               id="path3045" />
+          </g>
+          <g
+             inkscape:label="MinorXGridlines"
+             id="g3069"
+             style="stroke:#ffffff">
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorXDiv5"
+               d="M 6.61458,0 V 152.757"
+               id="path3049" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorXDiv15"
+               d="M 19.8438,0 V 152.757"
+               id="path3051" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorXDiv25"
+               d="M 33.0729,0 V 152.757"
+               id="path3053" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorXDiv35"
+               d="M 46.3021,0 V 152.757"
+               id="path3055" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorXDiv45"
+               d="M 59.5312,0 V 152.757"
+               id="path3057" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorXDiv55"
+               d="M 72.7604,0 V 152.757"
+               id="path3059" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorXDiv65"
+               d="M 85.9896,0 V 152.757"
+               id="path3061" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorXDiv75"
+               d="M 99.2188,0 V 152.757"
+               id="path3063" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorXDiv85"
+               d="M 112.448,0 V 152.757"
+               id="path3065" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorXDiv95"
+               d="M 125.677,0 V 152.757"
+               id="path3067" />
+          </g>
+          <g
+             inkscape:label="SubMinorXGridlines"
+             id="g3231"
+             style="stroke:#ffffff">
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv1"
+               d="M 1.32292,0 V 152.757"
+               id="path3071" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv2"
+               d="M 2.64583,0 V 152.757"
+               id="path3073" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv3"
+               d="M 3.96875,0 V 152.757"
+               id="path3075" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv4"
+               d="M 5.29167,0 V 152.757"
+               id="path3077" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv6"
+               d="M 7.9375,0 V 152.757"
+               id="path3079" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv7"
+               d="M 9.26042,0 V 152.757"
+               id="path3081" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv8"
+               d="M 10.5833,0 V 152.757"
+               id="path3083" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv9"
+               d="M 11.9062,0 V 152.757"
+               id="path3085" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv11"
+               d="M 14.5521,0 V 152.757"
+               id="path3087" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv12"
+               d="M 15.875,0 V 152.757"
+               id="path3089" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv13"
+               d="M 17.1979,0 V 152.757"
+               id="path3091" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv14"
+               d="M 18.5208,0 V 152.757"
+               id="path3093" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv16"
+               d="M 21.1667,0 V 152.757"
+               id="path3095" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv17"
+               d="M 22.4896,0 V 152.757"
+               id="path3097" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv18"
+               d="M 23.8125,0 V 152.757"
+               id="path3099" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv19"
+               d="M 25.1354,0 V 152.757"
+               id="path3101" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv21"
+               d="M 27.7812,0 V 152.757"
+               id="path3103" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv22"
+               d="M 29.1042,0 V 152.757"
+               id="path3105" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv23"
+               d="M 30.4271,0 V 152.757"
+               id="path3107" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv24"
+               d="M 31.75,0 V 152.757"
+               id="path3109" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv26"
+               d="M 34.3958,0 V 152.757"
+               id="path3111" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv27"
+               d="M 35.7188,0 V 152.757"
+               id="path3113" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv28"
+               d="M 37.0417,0 V 152.757"
+               id="path3115" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv29"
+               d="M 38.3646,0 V 152.757"
+               id="path3117" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv31"
+               d="M 41.0104,0 V 152.757"
+               id="path3119" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv32"
+               d="M 42.3333,0 V 152.757"
+               id="path3121" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv33"
+               d="M 43.6562,0 V 152.757"
+               id="path3123" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv34"
+               d="M 44.9792,0 V 152.757"
+               id="path3125" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv36"
+               d="M 47.625,0 V 152.757"
+               id="path3127" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv37"
+               d="M 48.9479,0 V 152.757"
+               id="path3129" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv38"
+               d="M 50.2708,0 V 152.757"
+               id="path3131" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv39"
+               d="M 51.5938,0 V 152.757"
+               id="path3133" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv41"
+               d="M 54.2396,0 V 152.757"
+               id="path3135" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv42"
+               d="M 55.5625,0 V 152.757"
+               id="path3137" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv43"
+               d="M 56.8854,0 V 152.757"
+               id="path3139" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv44"
+               d="M 58.2083,0 V 152.757"
+               id="path3141" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv46"
+               d="M 60.8542,0 V 152.757"
+               id="path3143" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv47"
+               d="M 62.1771,0 V 152.757"
+               id="path3145" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv48"
+               d="M 63.5,0 V 152.757"
+               id="path3147" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv49"
+               d="M 64.8229,0 V 152.757"
+               id="path3149" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv51"
+               d="M 67.4688,0 V 152.757"
+               id="path3151" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv52"
+               d="M 68.7917,0 V 152.757"
+               id="path3153" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv53"
+               d="M 70.1146,0 V 152.757"
+               id="path3155" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv54"
+               d="M 71.4375,0 V 152.757"
+               id="path3157" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv56"
+               d="M 74.0833,0 V 152.757"
+               id="path3159" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv57"
+               d="M 75.4062,0 V 152.757"
+               id="path3161" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv58"
+               d="M 76.7292,0 V 152.757"
+               id="path3163" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv59"
+               d="M 78.0521,0 V 152.757"
+               id="path3165" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv61"
+               d="M 80.6979,0 V 152.757"
+               id="path3167" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv62"
+               d="M 82.0208,0 V 152.757"
+               id="path3169" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv63"
+               d="M 83.3438,0 V 152.757"
+               id="path3171" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv64"
+               d="M 84.6667,0 V 152.757"
+               id="path3173" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv66"
+               d="M 87.3125,0 V 152.757"
+               id="path3175" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv67"
+               d="M 88.6354,0 V 152.757"
+               id="path3177" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv68"
+               d="M 89.9583,0 V 152.757"
+               id="path3179" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv69"
+               d="M 91.2812,0 V 152.757"
+               id="path3181" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv71"
+               d="M 93.9271,0 V 152.757"
+               id="path3183" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv72"
+               d="M 95.25,0 V 152.757"
+               id="path3185" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv73"
+               d="M 96.5729,0 V 152.757"
+               id="path3187" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv74"
+               d="M 97.8958,0 V 152.757"
+               id="path3189" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv76"
+               d="M 100.542,0 V 152.757"
+               id="path3191" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv77"
+               d="M 101.865,0 V 152.757"
+               id="path3193" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv78"
+               d="M 103.188,0 V 152.757"
+               id="path3195" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv79"
+               d="M 104.51,0 V 152.757"
+               id="path3197" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv81"
+               d="M 107.156,0 V 152.757"
+               id="path3199" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv82"
+               d="M 108.479,0 V 152.757"
+               id="path3201" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv83"
+               d="M 109.802,0 V 152.757"
+               id="path3203" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv84"
+               d="M 111.125,0 V 152.757"
+               id="path3205" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv86"
+               d="M 113.771,0 V 152.757"
+               id="path3207" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv87"
+               d="M 115.094,0 V 152.757"
+               id="path3209" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv88"
+               d="M 116.417,0 V 152.757"
+               id="path3211" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv89"
+               d="M 117.74,0 V 152.757"
+               id="path3213" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv91"
+               d="M 120.385,0 V 152.757"
+               id="path3215" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv92"
+               d="M 121.708,0 V 152.757"
+               id="path3217" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv93"
+               d="M 123.031,0 V 152.757"
+               id="path3219" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv94"
+               d="M 124.354,0 V 152.757"
+               id="path3221" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv96"
+               d="M 127,0 V 152.757"
+               id="path3223" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv97"
+               d="M 128.323,0 V 152.757"
+               id="path3225" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv98"
+               d="M 129.646,0 V 152.757"
+               id="path3227" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorXDiv99"
+               d="M 130.969,0 V 152.757"
+               id="path3229" />
+          </g>
+          <g
+             inkscape:label="MinorYGridlines"
+             id="g3263"
+             style="stroke:#ffffff">
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 11.9062,152.757 0,145.883"
+               id="path3233" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 38.3646,152.757 0,130.608"
+               id="path3235" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 64.8229,152.757 0,115.332"
+               id="path3237" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 91.2812,152.757 0,100.056"
+               id="path3239" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 117.74,152.757 0,84.7803"
+               id="path3241" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,145.883 0,69.5046"
+               id="path3243" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,130.608 0,54.2289"
+               id="path3245" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,115.332 0,38.9531"
+               id="path3247" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,100.056 0,23.6774"
+               id="path3249" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,84.7803 0,8.40165"
+               id="path3251" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,69.5046 11.9062,0"
+               id="path3253" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,54.2289 38.3646,0"
+               id="path3255" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,38.9531 64.8229,0"
+               id="path3257" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,23.6774 91.2812,0"
+               id="path3259" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,8.40165 117.74,0"
+               id="path3261" />
+          </g>
+          <g
+             inkscape:label="SubMinorYGridlines"
+             id="g3505"
+             style="stroke:#ffffff">
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 1.32292,152.757 0,151.994"
+               id="path3265" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 3.96875,152.757 0,150.466"
+               id="path3267" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 6.61458,152.757 0,148.938"
+               id="path3269" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 9.26042,152.757 0,147.411"
+               id="path3271" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 14.5521,152.757 0,144.356"
+               id="path3273" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 17.1979,152.757 0,142.828"
+               id="path3275" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 19.8437,152.757 0,141.301"
+               id="path3277" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 22.4896,152.757 0,139.773"
+               id="path3279" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 27.7812,152.757 0,136.718"
+               id="path3281" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 30.4271,152.757 0,135.19"
+               id="path3283" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 33.0729,152.757 0,133.663"
+               id="path3285" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 35.7187,152.757 0,132.135"
+               id="path3287" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 41.0104,152.757 0,129.08"
+               id="path3289" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 43.6562,152.757 0,127.552"
+               id="path3291" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 46.3021,152.757 0,126.025"
+               id="path3293" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 48.9479,152.757 0,124.497"
+               id="path3295" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 54.2396,152.757 0,121.442"
+               id="path3297" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 56.8854,152.757 0,119.915"
+               id="path3299" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 59.5312,152.757 0,118.387"
+               id="path3301" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 62.1771,152.757 0,116.859"
+               id="path3303" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 67.4687,152.757 0,113.804"
+               id="path3305" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 70.1146,152.757 0,112.277"
+               id="path3307" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 72.7604,152.757 0,110.749"
+               id="path3309" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 75.4062,152.757 0,109.221"
+               id="path3311" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 80.6979,152.757 0,106.166"
+               id="path3313" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 83.3437,152.757 0,104.639"
+               id="path3315" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 85.9896,152.757 0,103.111"
+               id="path3317" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 88.6354,152.757 0,101.584"
+               id="path3319" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 93.9271,152.757 0,98.5285"
+               id="path3321" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 96.5729,152.757 0,97.0009"
+               id="path3323" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 99.2187,152.757 0,95.4733"
+               id="path3325" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 101.865,152.757 0,93.9458"
+               id="path3327" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 107.156,152.757 0,90.8906"
+               id="path3329" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 109.802,152.757 0,89.363"
+               id="path3331" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 112.448,152.757 0,87.8355"
+               id="path3333" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 115.094,152.757 0,86.3079"
+               id="path3335" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 120.385,152.757 0,83.2527"
+               id="path3337" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 123.031,152.757 0,81.7252"
+               id="path3339" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 125.677,152.757 0,80.1976"
+               id="path3341" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 128.323,152.757 0,78.67"
+               id="path3343" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,151.994 0,75.6149"
+               id="path3345" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,150.466 0,74.0873"
+               id="path3347" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,148.938 0,72.5597"
+               id="path3349" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,147.411 0,71.0322"
+               id="path3351" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,144.356 0,67.977"
+               id="path3353" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,142.828 0,66.4494"
+               id="path3355" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,141.301 0,64.9219"
+               id="path3357" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,139.773 0,63.3943"
+               id="path3359" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,136.718 0,60.3391"
+               id="path3361" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,135.19 0,58.8116"
+               id="path3363" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,133.663 0,57.284"
+               id="path3365" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,132.135 0,55.7564"
+               id="path3367" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,129.08 0,52.7013"
+               id="path3369" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,127.552 0,51.1737"
+               id="path3371" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,126.025 0,49.6461"
+               id="path3373" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,124.497 0,48.1186"
+               id="path3375" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,121.442 0,45.0634"
+               id="path3377" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,119.915 0,43.5358"
+               id="path3379" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,118.387 0,42.0083"
+               id="path3381" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,116.859 0,40.4807"
+               id="path3383" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,113.804 0,37.4255"
+               id="path3385" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,112.277 0,35.898"
+               id="path3387" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,110.749 0,34.3704"
+               id="path3389" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,109.221 0,32.8428"
+               id="path3391" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,106.166 0,29.7877"
+               id="path3393" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,104.639 0,28.2601"
+               id="path3395" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,103.111 0,26.7325"
+               id="path3397" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,101.584 0,25.205"
+               id="path3399" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,98.5285 0,22.1498"
+               id="path3401" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,97.0009 0,20.6222"
+               id="path3403" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,95.4733 0,19.0947"
+               id="path3405" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,93.9458 0,17.5671"
+               id="path3407" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,90.8906 0,14.5119"
+               id="path3409" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,89.363 0,12.9844"
+               id="path3411" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,87.8355 0,11.4568"
+               id="path3413" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,86.3079 0,9.92923"
+               id="path3415" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,83.2527 0,6.87408"
+               id="path3417" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,81.7252 0,5.34651"
+               id="path3419" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,80.1976 0,3.81893"
+               id="path3421" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,78.67 0,2.29136"
+               id="path3423" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,75.6149 1.32292,0"
+               id="path3425" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,74.0873 3.96875,0"
+               id="path3427" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,72.5597 6.61458,0"
+               id="path3429" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,71.0322 9.26042,0"
+               id="path3431" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,67.977 14.5521,0"
+               id="path3433" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,66.4494 17.1979,0"
+               id="path3435" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,64.9219 19.8437,0"
+               id="path3437" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,63.3943 22.4896,0"
+               id="path3439" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,60.3391 27.7812,0"
+               id="path3441" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,58.8116 30.4271,0"
+               id="path3443" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,57.284 33.0729,0"
+               id="path3445" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,55.7564 35.7187,0"
+               id="path3447" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,52.7013 41.0104,0"
+               id="path3449" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,51.1737 43.6562,0"
+               id="path3451" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,49.6461 46.3021,0"
+               id="path3453" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,48.1186 48.9479,0"
+               id="path3455" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,45.0634 54.2396,0"
+               id="path3457" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,43.5358 56.8854,0"
+               id="path3459" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,42.0083 59.5312,0"
+               id="path3461" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,40.4807 62.1771,0"
+               id="path3463" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,37.4255 67.4687,0"
+               id="path3465" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,35.898 70.1146,0"
+               id="path3467" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,34.3704 72.7604,0"
+               id="path3469" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,32.8428 75.4062,0"
+               id="path3471" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,29.7877 80.6979,0"
+               id="path3473" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,28.2601 83.3437,0"
+               id="path3475" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,26.7325 85.9896,0"
+               id="path3477" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,25.205 88.6354,0"
+               id="path3479" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,22.1498 93.9271,0"
+               id="path3481" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,20.6222 96.5729,0"
+               id="path3483" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,19.0947 99.2187,0"
+               id="path3485" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,17.5671 101.865,0"
+               id="path3487" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,14.5119 107.156,0"
+               id="path3489" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,12.9844 109.802,0"
+               id="path3491" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,11.4568 112.448,0"
+               id="path3493" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,9.92923 115.094,0"
+               id="path3495" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,6.87408 120.385,0"
+               id="path3497" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,5.34651 123.031,0"
+               id="path3499" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,3.81893 125.677,0"
+               id="path3501" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorYDiv99"
+               d="M 132.292,2.29136 128.323,0"
+               id="path3503" />
+          </g>
+          <g
+             inkscape:label="MinorZGridlines"
+             id="g3537"
+             style="stroke:#ffffff">
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv5"
+               d="m 120.385,152.757 11.907,-6.874"
+               id="path3507" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv15"
+               d="M 93.9271,152.757 132.292,130.608"
+               id="path3509" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv25"
+               d="M 67.4688,152.757 132.292,115.332"
+               id="path3511" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv35"
+               d="M 41.0104,152.757 132.292,100.056"
+               id="path3513" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv45"
+               d="M 14.5521,152.757 132.292,84.7803"
+               id="path3515" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv55"
+               d="M 0,145.883 132.292,69.5046"
+               id="path3517" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv65"
+               d="M 0,130.608 132.292,54.2289"
+               id="path3519" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv75"
+               d="M 0,115.332 132.292,38.9531"
+               id="path3521" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv85"
+               d="M 0,100.056 132.292,23.6774"
+               id="path3523" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv95"
+               d="M 0,84.7803 132.292,8.40165"
+               id="path3525" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv105"
+               d="M 0,69.5046 120.385,0"
+               id="path3527" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv115"
+               d="M 0,54.2289 93.9271,0"
+               id="path3529" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv125"
+               d="M 0,38.9531 67.4688,0"
+               id="path3531" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv135"
+               d="M 0,23.6774 41.0104,0"
+               id="path3533" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.132292"
+               inkscape:label="MajorZDiv145"
+               d="M 0,8.40165 14.5521,0"
+               id="path3535" />
+          </g>
+          <g
+             inkscape:label="SubMinorZGridlines"
+             id="g3779"
+             style="stroke:#ffffff">
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv1"
+               d="m 130.969,152.757 1.323,-0.763"
+               id="path3539" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv2"
+               d="m 128.323,152.757 3.969,-2.291"
+               id="path3541" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv3"
+               d="m 125.677,152.757 6.615,-3.819"
+               id="path3543" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv4"
+               d="m 123.031,152.757 9.261,-5.346"
+               id="path3545" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv6"
+               d="m 117.74,152.757 14.552,-8.401"
+               id="path3547" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv7"
+               d="m 115.094,152.757 17.198,-9.929"
+               id="path3549" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv8"
+               d="m 112.448,152.757 19.844,-11.456"
+               id="path3551" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv9"
+               d="m 109.802,152.757 22.49,-12.984"
+               id="path3553" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv11"
+               d="m 104.51,152.757 27.782,-16.039"
+               id="path3555" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv12"
+               d="M 101.865,152.757 132.292,135.19"
+               id="path3557" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv13"
+               d="M 99.2188,152.757 132.292,133.663"
+               id="path3559" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv14"
+               d="M 96.5729,152.757 132.292,132.135"
+               id="path3561" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv16"
+               d="M 91.2812,152.757 132.292,129.08"
+               id="path3563" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv17"
+               d="M 88.6354,152.757 132.292,127.552"
+               id="path3565" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv18"
+               d="M 85.9896,152.757 132.292,126.025"
+               id="path3567" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv19"
+               d="m 83.3438,152.757 48.9482,-28.26"
+               id="path3569" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv21"
+               d="M 78.0521,152.757 132.292,121.442"
+               id="path3571" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv22"
+               d="M 75.4062,152.757 132.292,119.915"
+               id="path3573" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv23"
+               d="m 72.7604,152.757 59.5316,-34.37"
+               id="path3575" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv24"
+               d="M 70.1146,152.757 132.292,116.859"
+               id="path3577" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv26"
+               d="M 64.8229,152.757 132.292,113.804"
+               id="path3579" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv27"
+               d="m 62.1771,152.757 70.1149,-40.48"
+               id="path3581" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv28"
+               d="M 59.5312,152.757 132.292,110.749"
+               id="path3583" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv29"
+               d="M 56.8854,152.757 132.292,109.221"
+               id="path3585" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv31"
+               d="M 51.5938,152.757 132.292,106.166"
+               id="path3587" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv32"
+               d="M 48.9479,152.757 132.292,104.639"
+               id="path3589" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv33"
+               d="M 46.3021,152.757 132.292,103.111"
+               id="path3591" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv34"
+               d="M 43.6562,152.757 132.292,101.584"
+               id="path3593" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv36"
+               d="M 38.3646,152.757 132.292,98.5285"
+               id="path3595" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv37"
+               d="M 35.7188,152.757 132.292,97.0009"
+               id="path3597" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv38"
+               d="M 33.0729,152.757 132.292,95.4733"
+               id="path3599" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv39"
+               d="M 30.4271,152.757 132.292,93.9458"
+               id="path3601" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv41"
+               d="M 25.1354,152.757 132.292,90.8906"
+               id="path3603" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv42"
+               d="M 22.4896,152.757 132.292,89.363"
+               id="path3605" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv43"
+               d="M 19.8438,152.757 132.292,87.8355"
+               id="path3607" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv44"
+               d="M 17.1979,152.757 132.292,86.3079"
+               id="path3609" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv46"
+               d="M 11.9062,152.757 132.292,83.2527"
+               id="path3611" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv47"
+               d="M 9.26042,152.757 132.292,81.7252"
+               id="path3613" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv48"
+               d="M 6.61458,152.757 132.292,80.1976"
+               id="path3615" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv49"
+               d="M 3.96875,152.757 132.292,78.67"
+               id="path3617" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv51"
+               d="M 0,151.994 132.292,75.6149"
+               id="path3619" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv52"
+               d="M 0,150.466 132.292,74.0873"
+               id="path3621" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv53"
+               d="M 0,148.938 132.292,72.5597"
+               id="path3623" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv54"
+               d="M 0,147.411 132.292,71.0322"
+               id="path3625" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv56"
+               d="M 0,144.356 132.292,67.977"
+               id="path3627" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv57"
+               d="M 0,142.828 132.292,66.4494"
+               id="path3629" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv58"
+               d="M 0,141.301 132.292,64.9219"
+               id="path3631" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv59"
+               d="M 0,139.773 132.292,63.3943"
+               id="path3633" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv61"
+               d="M 0,136.718 132.292,60.3391"
+               id="path3635" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv62"
+               d="M 0,135.19 132.292,58.8116"
+               id="path3637" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv63"
+               d="M 0,133.663 132.292,57.284"
+               id="path3639" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv64"
+               d="M 0,132.135 132.292,55.7564"
+               id="path3641" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv66"
+               d="M 0,129.08 132.292,52.7013"
+               id="path3643" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv67"
+               d="M 0,127.552 132.292,51.1737"
+               id="path3645" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv68"
+               d="M 0,126.025 132.292,49.6461"
+               id="path3647" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv69"
+               d="M 0,124.497 132.292,48.1186"
+               id="path3649" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv71"
+               d="M 0,121.442 132.292,45.0634"
+               id="path3651" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv72"
+               d="M 0,119.915 132.292,43.5358"
+               id="path3653" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv73"
+               d="M 0,118.387 132.292,42.0083"
+               id="path3655" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv74"
+               d="M 0,116.859 132.292,40.4807"
+               id="path3657" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv76"
+               d="M 0,113.804 132.292,37.4255"
+               id="path3659" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv77"
+               d="M 0,112.277 132.292,35.898"
+               id="path3661" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv78"
+               d="M 0,110.749 132.292,34.3704"
+               id="path3663" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv79"
+               d="M 0,109.221 132.292,32.8428"
+               id="path3665" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv81"
+               d="M 0,106.166 132.292,29.7877"
+               id="path3667" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv82"
+               d="M 0,104.639 132.292,28.2601"
+               id="path3669" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv83"
+               d="M 0,103.111 132.292,26.7325"
+               id="path3671" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv84"
+               d="M 0,101.584 132.292,25.205"
+               id="path3673" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv86"
+               d="M 0,98.5285 132.292,22.1498"
+               id="path3675" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv87"
+               d="M 0,97.0009 132.292,20.6222"
+               id="path3677" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv88"
+               d="M 0,95.4733 132.292,19.0947"
+               id="path3679" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv89"
+               d="M 0,93.9458 132.292,17.5671"
+               id="path3681" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv91"
+               d="M 0,90.8906 132.292,14.5119"
+               id="path3683" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv92"
+               d="M 0,89.363 132.292,12.9844"
+               id="path3685" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv93"
+               d="M 0,87.8355 132.292,11.4568"
+               id="path3687" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv94"
+               d="M 0,86.3079 132.292,9.92923"
+               id="path3689" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv96"
+               d="M 0,83.2527 132.292,6.87408"
+               id="path3691" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv97"
+               d="M 0,81.7252 132.292,5.34651"
+               id="path3693" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv98"
+               d="M 0,80.1976 132.292,3.81893"
+               id="path3695" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv99"
+               d="M 0,78.67 132.292,2.29136"
+               id="path3697" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv101"
+               d="M 0,75.6149 130.969,0"
+               id="path3699" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv102"
+               d="M 0,74.0873 128.323,0"
+               id="path3701" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv103"
+               d="M 0,72.5597 125.677,0"
+               id="path3703" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv104"
+               d="M 0,71.0322 123.031,0"
+               id="path3705" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv106"
+               d="M 0,67.977 117.74,0"
+               id="path3707" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv107"
+               d="M 0,66.4494 115.094,0"
+               id="path3709" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv108"
+               d="M 0,64.9219 112.448,0"
+               id="path3711" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv109"
+               d="M 0,63.3943 109.802,0"
+               id="path3713" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv111"
+               d="M 0,60.3391 104.51,0"
+               id="path3715" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv112"
+               d="M 0,58.8116 101.865,0"
+               id="path3717" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv113"
+               d="M 0,57.284 99.2188,0"
+               id="path3719" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv114"
+               d="M 0,55.7564 96.5729,0"
+               id="path3721" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv116"
+               d="M 0,52.7013 91.2812,0"
+               id="path3723" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv117"
+               d="M 0,51.1737 88.6354,0"
+               id="path3725" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv118"
+               d="M 0,49.6461 85.9896,0"
+               id="path3727" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv119"
+               d="M 0,48.1186 83.3438,0"
+               id="path3729" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv121"
+               d="M 0,45.0634 78.0521,0"
+               id="path3731" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv122"
+               d="M 0,43.5358 75.4062,0"
+               id="path3733" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv123"
+               d="M 0,42.0083 72.7604,0"
+               id="path3735" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv124"
+               d="M 0,40.4807 70.1146,0"
+               id="path3737" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv126"
+               d="M 0,37.4255 64.8229,0"
+               id="path3739" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv127"
+               d="M 0,35.898 62.1771,0"
+               id="path3741" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv128"
+               d="M 0,34.3704 59.5312,0"
+               id="path3743" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv129"
+               d="M 0,32.8428 56.8854,0"
+               id="path3745" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv131"
+               d="M 0,29.7877 51.5938,0"
+               id="path3747" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv132"
+               d="M 0,28.2601 48.9479,0"
+               id="path3749" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv133"
+               d="M 0,26.7325 46.3021,0"
+               id="path3751" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv134"
+               d="M 0,25.205 43.6562,0"
+               id="path3753" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv136"
+               d="M 0,22.1498 38.3646,0"
+               id="path3755" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv137"
+               d="M 0,20.6222 35.7188,0"
+               id="path3757" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv138"
+               d="M 0,19.0947 33.0729,0"
+               id="path3759" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv139"
+               d="M 0,17.5671 30.4271,0"
+               id="path3761" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv141"
+               d="M 0,14.5119 25.1354,0"
+               id="path3763" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv142"
+               d="M 0,12.9844 22.4896,0"
+               id="path3765" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv143"
+               d="M 0,11.4568 19.8438,0"
+               id="path3767" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv144"
+               d="M 0,9.92923 17.1979,0"
+               id="path3769" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv146"
+               d="M 0,6.87408 11.9062,0"
+               id="path3771" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv147"
+               d="M 0,5.34651 9.26042,0"
+               id="path3773" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv148"
+               d="M 0,3.81893 6.61458,0"
+               id="path3775" />
+            <path
+               style="fill:none;stroke:#ffffff;stroke-width:0.0264583"
+               inkscape:label="MajorZDiv149"
+               d="M 0,2.29136 3.96875,0"
+               id="path3777" />
+          </g>
+          <rect
+             x="0"
+             y="0"
+             width="132.29167"
+             height="152.75732"
+             style="fill:none;stroke:#ffffff;stroke-width:0.79375"
+             inkscape:label="Border"
+             id="rect3781" />
+        </g>
+      </g>
     </g>
     <g
        inkscape:groupmode="layer"
        id="layer2"
        inkscape:label="blue line"
-       transform="matrix(4.1197952,0,0,5.5118743,-154.12521,92.284881)">
+       transform="matrix(4.1197952,0,0,5.5118743,-150.95022,92.284881)"
+       sodipodi:insensitive="true"
+       clip-path="url(#clipPath1970)">
       <path
          style="fill:none;fill-opacity:1;stroke:url(#linearGradient4232);stroke-width:0.0799999;stroke-dasharray:none;stroke-opacity:1"
          d="m 47.625,-21.166667 c 1.322917,0 1.322917,1.322917 2.645833,1.322917 1.322917,0 1.322917,-1.322917 2.645833,-1.322916 1.322917,-1e-6 1.322917,1.322916 2.645833,1.322916 1.322918,0 1.322918,-1.322917 2.645834,-1.322916 1.322917,-1e-6 1.322917,1.322916 2.645833,1.322916 1.322917,0 1.322917,-1.322917 2.645833,-1.322916"
@@ -1312,7 +3510,9 @@
        inkscape:groupmode="layer"
        id="g4238"
        inkscape:label="green line"
-       transform="matrix(4.1197952,0,0,5.5118743,-145.1077,131.54814)">
+       transform="matrix(4.1197952,0,0,5.5118743,-141.93271,131.54814)"
+       sodipodi:insensitive="true"
+       clip-path="url(#clipPath1966)">
       <path
          style="opacity:0.740246;fill:none;fill-opacity:1;stroke:url(#linearGradient4240);stroke-width:0.0799999;stroke-dasharray:none;stroke-opacity:1"
          d="m 47.625,-21.166667 c 1.322917,0 1.322917,1.322917 2.645833,1.322917 1.322917,0 1.322917,-1.322917 2.645833,-1.322916 1.322917,-1e-6 1.322917,1.322916 2.645833,1.322916 1.322918,0 1.322918,-1.322917 2.645834,-1.322916 1.322917,-1e-6 1.322917,1.322916 2.645833,1.322916 1.322917,0 1.322917,-1.322917 2.645833,-1.322916"
@@ -1343,7 +3543,9 @@
        inkscape:groupmode="layer"
        id="g4252"
        inkscape:label="orange line"
-       transform="matrix(4.1197952,0,0,5.5118743,-138.8648,130.98726)">
+       transform="matrix(4.1197952,0,0,5.5118743,-135.68981,130.98726)"
+       sodipodi:insensitive="true"
+       clip-path="url(#clipPath1962)">
       <path
          style="fill:none;fill-opacity:1;stroke:url(#linearGradient4254);stroke-width:0.0799808;stroke-dasharray:none;stroke-opacity:1"
          d="m 43.560255,-21.268777 c 1.322917,0 1.322917,1.322917 2.645833,1.322917 1.322917,0 1.322917,-1.322917 2.645833,-1.322916 1.322917,-1e-6 1.322917,1.322916 2.645833,1.322916 1.322918,0 1.322918,-1.322917 2.645834,-1.322916 1.322917,-1e-6 1.322917,1.322916 2.645833,1.322916 1.322917,0 1.322917,-1.322917 2.645833,-1.322916"
