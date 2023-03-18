@@ -4,6 +4,25 @@
     "build-commands": [],
     "modules": [
         {
+            "name": "python3-blessed",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"blessed==1.20.0\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/76/98/584f211c3a4bb38f2871fa937ee0cc83c130de50c955d6c7e2334dbf4acb/blessed-1.20.0-py2.py3-none-any.whl",
+                    "sha256": "0c542922586a265e699188e52d5f5ac5ec0dd517e5a1041d90d2bbf23f906058"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/20/f4/c0584a25144ce20bfcf1aecd041768b8c762c1eb0aa77502a3f0baa83f11/wcwidth-0.2.6-py2.py3-none-any.whl",
+                    "sha256": "795b138f6875577cd91bba52baf9e445cd5118fd32723b460e30a0af30ea230e"
+                }
+            ]
+        },
+        {
             "name": "python3-psutil",
             "buildsystem": "simple",
             "build-commands": [
@@ -14,6 +33,20 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/de/eb/1c01a34c86ee3b058c556e407ce5b07cb7d186ebe47b3e69d6f152ca5cc5/psutil-5.9.3.tar.gz",
                     "sha256": "7ccfcdfea4fc4b0a02ca2c31de7fcd186beb9cff8207800e14ab66f79c773af6"
+                }
+            ]
+        },
+        {
+            "name": "python3-wcwidth",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"wcwidth==0.2.6\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/20/f4/c0584a25144ce20bfcf1aecd041768b8c762c1eb0aa77502a3f0baa83f11/wcwidth-0.2.6-py2.py3-none-any.whl",
+                    "sha256": "795b138f6875577cd91bba52baf9e445cd5118fd32723b460e30a0af30ea230e"
                 }
             ]
         },

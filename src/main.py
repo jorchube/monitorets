@@ -20,6 +20,7 @@
 import sys
 import gi
 
+
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 
@@ -32,6 +33,7 @@ from . import discover_temperature_monitors
 from .translators import translators_credits
 from . import events
 from .event_broker import EventBroker
+from .cli import cli_entrypoint
 
 
 class MonitorApplication(Adw.Application):
@@ -118,7 +120,15 @@ class MonitorApplication(Adw.Application):
         discover_temperature_monitors.execute()
 
 
+def _is_cli(argv):
+    return True
+
+
 def main(version):
     """The application's entry point."""
+    if _is_cli(sys.argv):
+        cli = cli_entrypoint.Cli()
+        cli.run()
+
     app = MonitorApplication()
     return app.run(sys.argv)

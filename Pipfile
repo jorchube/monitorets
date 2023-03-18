@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 psutil = "==5.9.3"
 xdg = "==5.1.1"
+blessed = "*"
 
 [dev-packages]
 pytest = "*"
