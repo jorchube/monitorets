@@ -31,8 +31,8 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "file:///var/home/jorchube/Code/monitorets"
+                    "type" : "dir",
+                    "path" : "."
                 }
             ]
         }
