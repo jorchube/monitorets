@@ -242,58 +242,76 @@ msgstr "About"
 msgid "Quit"
 msgstr "Quit"
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:127
 msgid "Added Dutch language support"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:134
 msgid "Added internationalization support"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:141
 msgid "Restored missing network permission needed for the network monitors"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:148
 msgid ""
 "Autodiscover temperature sensors and expose them as temperature monitors"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:149
 msgid "Ellipsize monitor names when do not fit the available space"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:150
 msgid "Add monitor groups for same-kind monitors in the preferences popover"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:157
 msgid "Added network downlink and uplink traffic monitors"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:158
 msgid "Some cosmetic changes have been done"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:165
 msgid "Added home and root folder usage monitors"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:166
 msgid "Added layout selector"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:167
 msgid "Added Tips section"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:168
 msgid "Improve close and preferences buttons visibility when shown"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:174
 msgid "Under the hood tweaks"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:179
 msgid "Aesthetic:"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:180
 msgid "- Reworked graph drawing"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:181
 msgid "Internal:"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:182
 msgid "- Decoupled several events that can trigger a graph redraw"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:187
 msgid "First release"
 msgstr ""
 
@@ -351,9 +369,11 @@ msgstr "Temperature sensors"
 msgid "Swap"
 msgstr "Swap"
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:119
 msgid "Added Swap memory monitor"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:120
 msgid "Refactored dropdown menu and preferences"
 msgstr ""
 
@@ -405,14 +425,17 @@ msgctxt "preferences_page_appearance"
 msgid "Show current value"
 msgstr "Show current value"
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:104
 msgid ""
 "Fixed a bug preventing the preferences window from opening (Thanks to "
 "@jrdmellow)"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:111
 msgid "Added support for custom monitor names"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:112
 msgid "Added smooth graph drawing"
 msgstr ""
 
@@ -452,12 +475,15 @@ msgctxt "preferences_appearance"
 msgid "Redraw frequency"
 msgstr "Redraw frequency"
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:95
 msgid "Added support to show the current value of a monitor"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:96
 msgid "Remember window size on close"
 msgstr ""
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:97
 msgid ""
 "Use the same scaling for network uplink and downlink monitors to avoid "
 "confusion"
@@ -479,12 +505,15 @@ msgstr "Low"
 msgid "Very Low"
 msgstr "Very Low"
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:83
 msgid "Added support for arbitrarily large monitor size"
 msgstr "Added support for arbitrarily large monitor size"
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:84
 msgid "Added support to arrange monitors in a grid layout"
 msgstr "Added support to arrange monitors in a grid layout"
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:85
 msgid ""
 "Added support to select between Celsius and Fahrenheit units for the "
 "temperature sensors"
@@ -492,9 +521,11 @@ msgstr ""
 "Added support to select between Celsius and Fahrenheit units for the "
 "temperature sensors"
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:86
 msgid "Added support to configure the redraw rate of the monitor graphs"
 msgstr "Added support to configure the redraw rate of the monitor graphs"
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:87
 msgid ""
 "Added a keyboard shortcut to open the preferences window (Kudos to github."
 "com/gregorni/)"
@@ -502,6 +533,7 @@ msgstr ""
 "Added a keyboard shortcut to open the preferences window (Kudos to github."
 "com/gregorni/)"
 
+#: data/io.github.jorchube.monitorets.appdata.xml.in:88
 msgid "Added french translation (Kudos to github.com/rene-coty/)"
 msgstr "Added french translation (Kudos to github.com/rene-coty/)"
 
@@ -552,3 +584,15 @@ msgstr "I/O pressure"
 #: src/translatable_strings/preference_toggle_section_name.py:9
 msgid "Pressure"
 msgstr "Pressure"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:62
+msgid "Added CPU, Memory and I/O pressure monitors"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:69
+msgid "Fix misalignment of monitor titles"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:76
+msgid "Added missing filesystem permissions"
+msgstr ""
