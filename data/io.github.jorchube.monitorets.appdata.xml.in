@@ -66,21 +66,21 @@
       </description>
     </release>
     <release version="0.9.2" date="2023-02-11">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Fix misalignment of monitor titles</li>
         </ul>
       </description>
     </release>
     <release version="0.9.1" date="2023-02-04">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added missing filesystem permissions</li>
         </ul>
       </description>
     </release>
     <release version="0.9.0" date="2023-02-03">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added support for arbitrarily large monitor size</li>
           <li>Added support to arrange monitors in a grid layout</li>
@@ -92,7 +92,7 @@
       </description>
     </release>
     <release version="0.8.0" date="2023-01-21">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added support to show the current value of a monitor</li>
           <li>Remember window size on close</li>
@@ -101,14 +101,14 @@
       </description>
     </release>
     <release version="0.7.1" date="2023-01-11">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Fixed a bug preventing the preferences window from opening (Thanks to @jrdmellow)</li>
         </ul>
       </description>
     </release>
     <release version="0.7.0" date="2023-01-06">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added support for custom monitor names</li>
           <li>Added smooth graph drawing</li>
@@ -116,7 +116,7 @@
       </description>
     </release>
     <release version="0.6.90" date="2022-12-27">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Swap memory monitor</li>
           <li>Refactored dropdown menu and preferences</li>
@@ -124,28 +124,28 @@
       </description>
     </release>
     <release version="0.6.1" date="2022-12-09">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Dutch language support</li>
         </ul>
       </description>
     </release>
     <release version="0.6.0" date="2022-12-02">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added internationalization support</li>
         </ul>
       </description>
     </release>
     <release version="0.5.1" date="2022-11-21">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Restored missing network permission needed for the network monitors</li>
         </ul>
       </description>
     </release>
     <release version="0.5.0" date="2022-11-20">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Autodiscover temperature sensors and expose them as temperature monitors</li>
           <li>Ellipsize monitor names when do not fit the available space</li>
@@ -154,7 +154,7 @@
       </description>
     </release>
     <release version="0.4.0" date="2022-11-17">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added network downlink and uplink traffic monitors</li>
           <li>Some cosmetic changes have been done</li>
@@ -162,7 +162,7 @@
       </description>
     </release>
     <release version="0.3.0" date="2022-11-06">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added home and root folder usage monitors</li>
           <li>Added layout selector</li>
@@ -172,12 +172,12 @@
       </description>
     </release>
     <release version="0.2.1" date="2022-11-02">
-      <description>
+      <description translatable="no">
         <p>Under the hood tweaks</p>
       </description>
     </release>
     <release version="0.2.0" date="2022-11-01">
-      <description>
+      <description translatable="no">
         <p>Aesthetic:</p>
         <p>  - Reworked graph drawing</p>
         <p>Internal:</p>
@@ -185,7 +185,7 @@
       </description>
     </release>
     <release version="0.1.0" date="2022-10-31">
-      <description>
+      <description translatable="no">
         <p>First release</p>
       </description>
     </release>
