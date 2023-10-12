@@ -12,6 +12,10 @@ setup-dev-environment: install-dev-requirements generate-python-gtk-symbols
 dev-shell:
 	pipenv shell
 
+generate-pot-file:
+	meson setup build
+	ninja -C build monitorets-pot
+
 update-po-files:
 	find . -name *.po -exec xgettext --no-location --omit-header -j -f po/POTFILES -o {} \;
 	find . -name *.po -exec xgettext --omit-header -j -f po/POTFILES -o {} \;
