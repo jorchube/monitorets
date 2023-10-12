@@ -18,8 +18,8 @@
 
     <p>Available monitors:</p>
      <ul>
-      <li>Cpu</li>
-      <li>Gpu (experimental support)</li>
+      <li>CPU</li>
+      <li>GPU (experimental support)</li>
       <li>Memory</li>
       <li>Swap</li>
       <li>Network downlink traffic</li>

@@ -8,12 +8,12 @@
     <property name="title" translatable="yes" context="monitorets">Monitors</property>
     <child>
       <object class="AdwPreferencesGroup" id="_cpu_preferences_group">
-        <property name="title" translatable="yes" context="monitors_preference_group">Cpu</property>
+        <property name="title" translatable="yes" context="monitors_preference_group">CPU</property>
       </object>
     </child>
     <child>
       <object class="AdwPreferencesGroup" id="_gpu_preferences_group">
-        <property name="title" translatable="yes" context="monitors_preference_group">Gpu</property>
+        <property name="title" translatable="yes" context="monitors_preference_group">GPU</property>
       </object>
     </child>
     <child>
