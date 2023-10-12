@@ -8,6 +8,8 @@
   <developer_name>Jordi Chulia</developer_name>
   <url type="homepage">https://github.com/jorchube/monitorets/</url>
   <url type="bugtracker">https://github.com/jorchube/monitorets/issues</url>
+  <url type="translate">https://github.com/jorchube/monitorets/po/</url>
+  <url type="vcs-browser">https://github.com/jorchube/monitorets/</url>
 
   <content_rating type="oars-1.1" />
 
