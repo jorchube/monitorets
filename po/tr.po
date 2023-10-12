@@ -1,0 +1,439 @@
+# Turkish translation for Monitorets.
+# Copyright (C) 2023 Monitorets's copyright holder
+# This file is distributed under the same license as the Monitorets package.
+#
+# Sabri Ünal <libreajans@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Monitorets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-23 11:29+0300\n"
+"PO-Revision-Date: 2023-10-12 21:31+0300\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"Language-Team: Turkish <takim@gnome.org.tr>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4\n"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:4
+#: data/io.github.jorchube.monitorets.desktop.in:3
+msgid "Monitorets"
+msgstr "Monitorets"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:5
+#: data/io.github.jorchube.monitorets.appdata.xml.in:15
+msgid "Have always at a glance the usage of system resources"
+msgstr "Bir gözünüz daima sistem kaynaklarının kullanımında olsun"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:8
+msgid "Jordi Chulia"
+msgstr "Jordi Chulia"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:17
+msgid ""
+"Monitorets is a small utility application offering a simple and quick view "
+"at the usage of several of your computer resources. Almost like an applet or "
+"a widget for your desktop."
+msgstr ""
+"Monitorets, bilgisayar kaynaklarınızın kullanım değerlerine dair basit ve "
+"hızlı bir görünüm sunan küçük bir yardımcı uygulamadır. Neredeyse "
+"masaüstünüz için bir uygulamacık gibi davranır."
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:19
+msgid "Available monitors:"
+msgstr "Kullanılabilir izleyiciler:"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:21
+#: src/translatable_strings/monitor_title.py:3
+#: src/translatable_strings/preference_toggle_label.py:3
+#: src/translatable_strings/preference_toggle_section_name.py:3
+msgid "CPU"
+msgstr "İşlemci"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:22
+msgid "GPU (experimental support)"
+msgstr "Ekran Kartı (deneysel destek)"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:23
+#: src/translatable_strings/monitor_title.py:5
+#: src/translatable_strings/preference_toggle_label.py:6
+#: src/translatable_strings/preference_toggle_section_name.py:5
+msgid "Memory"
+msgstr "Bellek"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:24
+#: src/translatable_strings/monitor_title.py:6
+#: src/translatable_strings/preference_toggle_label.py:7
+msgid "Swap"
+msgstr "Takas"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:25
+msgid "Network downlink traffic"
+msgstr "Ağ indirme trafiği"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:26
+msgid "Network uplink traffic"
+msgstr "Ağ yükleme trafiği"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:27
+msgid "Home folder space"
+msgstr "Ev klasörü alanı"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:28
+msgid "Root space"
+msgstr "Kök alanı"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:29
+msgid "CPU, Memory and I/O pressure"
+msgstr "İşlemci, Bellek ve G/Ç baskısı"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:30
+msgid "Temperature sensors"
+msgstr "Sıcaklık sensörleri"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:62
+msgid "Added CPU, Memory and I/O pressure monitors"
+msgstr "İşlemci, Bellek ve G/Ç basınç monitörleri eklendi"
+
+#: data/io.github.jorchube.monitorets.desktop.in:10
+msgid "monitor;system monitor;System Monitor;Monitor;"
+msgstr ""
+"monitor;system monitor;System Monitor;Monitor;ekran;izleme;sistem izleme;"
+"sistem ekranı;"
+
+#: src/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Genel"
+
+#: src/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Kısayolları Göster"
+
+#: src/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Çık"
+
+#: src/gtk/main-menu-model.ui:6
+msgid "Preferences"
+msgstr "Tercihler"
+
+#: src/gtk/main-menu-model.ui:12 src/translatable_strings/tips.py:3
+msgid "Tips"
+msgstr "İpuçları"
+
+#: src/gtk/main-menu-model.ui:16
+msgid "About"
+msgstr "Monitorets Hakkında"
+
+#: src/gtk/main-menu-model.ui:22
+msgid "Quit"
+msgstr "Çık"
+
+#: src/gtk/preferences-page-appearance.ui:9
+msgctxt "monitorets"
+msgid "Appearance"
+msgstr "Görünüm"
+
+#: src/gtk/preferences-page-appearance.ui:12
+msgctxt "monitorets"
+msgid "Choose between light, dark or the global system theme."
+msgstr "Açık, koyu ya da küresel sistem teması arasında seçim yapın."
+
+#: src/gtk/preferences-page-appearance.ui:14
+msgctxt "monitorets"
+msgid "Theme"
+msgstr "Tema"
+
+#: src/gtk/preferences-page-appearance.ui:52
+msgctxt "monitorets"
+msgid "System"
+msgstr "Sistem"
+
+#: src/gtk/preferences-page-appearance.ui:84
+msgctxt "monitorets"
+msgid "Light"
+msgstr "Açık"
+
+#: src/gtk/preferences-page-appearance.ui:117
+msgctxt "monitorets"
+msgid "Dark"
+msgstr "Koyu"
+
+#: src/gtk/preferences-page-appearance.ui:134
+msgctxt "monitorets"
+msgid "Choose how to organize the enabled resource monitors."
+msgstr "Etkinleştirilmiş kaynak izleyicilerin nasıl düzenleneceğini seçin."
+
+#: src/gtk/preferences-page-appearance.ui:135
+msgctxt "monitorets"
+msgid "Layout"
+msgstr "Yerleşim"
+
+#: src/gtk/preferences-page-appearance.ui:138
+msgctxt "monitorets"
+msgid "Monitors stacked in a single column."
+msgstr "İzleyiciler tek sütunda yığılı."
+
+#: src/gtk/preferences-page-appearance.ui:139
+msgid "Vertical"
+msgstr "Dikey"
+
+#: src/gtk/preferences-page-appearance.ui:144
+msgctxt "monitorets"
+msgid "Monitors aligned in a single row."
+msgstr "İzleyiciler tek satırda hizalı."
+
+#: src/gtk/preferences-page-appearance.ui:145
+msgid "Horizontal"
+msgstr "Yatay"
+
+#: src/gtk/preferences-page-appearance.ui:150
+msgctxt "monitorets"
+msgid "Monitors aligned in a grid."
+msgstr "İzleyiciler ızgarada hizalı."
+
+#: src/gtk/preferences-page-appearance.ui:151
+msgid "Grid"
+msgstr "Izgara"
+
+#: src/gtk/preferences-page-appearance.ui:158
+msgctxt "preferences_page_appearance"
+msgid "Graphs"
+msgstr "Grafikler"
+
+#: src/gtk/preferences-page-appearance.ui:161
+msgctxt "preferences_page_appearance"
+msgid "Draw smooth graphs"
+msgstr "Yumuşak grafikler çiz"
+
+#: src/gtk/preferences-page-appearance.ui:166
+msgctxt "preferences_page_appearance"
+msgid "Show current value"
+msgstr "Geçerli değeri göster"
+
+#: src/gtk/preferences-page-appearance.ui:171
+msgctxt "preferences_appearance"
+msgid "Temperature units"
+msgstr "Sıcaklık birimi"
+
+#: src/gtk/preferences-page-appearance.ui:176
+msgctxt "preferences_appearance"
+msgid ""
+"Higher means a smoother redraw but also a slight increase in the resources "
+"used by the application itself."
+msgstr ""
+"Daha yüksek, daha pürüzsüz bir yeniden çizme, ancak uygulamanın kendisi "
+"tarafından kullanılan kaynaklarda hafif bir artış anlamına gelir."
+
+#: src/gtk/preferences-page-appearance.ui:177
+msgctxt "preferences_appearance"
+msgid "Redraw frequency"
+msgstr "Yeniden çizme sıklığı"
+
+#: src/gtk/preferences-page-monitors.ui:8
+msgctxt "monitorets"
+msgid "Monitors"
+msgstr "İzleyiciler"
+
+#: src/gtk/preferences-page-monitors.ui:11
+msgctxt "monitors_preference_group"
+msgid "CPU"
+msgstr "İşlemci"
+
+#: src/gtk/preferences-page-monitors.ui:16
+msgctxt "monitors_preference_group"
+msgid "GPU"
+msgstr "Ekran Kartı"
+
+#: src/gtk/preferences-page-monitors.ui:21
+msgctxt "monitors_preference_group"
+msgid "Memory"
+msgstr "Bellek"
+
+#: src/gtk/preferences-page-monitors.ui:26
+msgctxt "monitors_preference_group"
+msgid "Network"
+msgstr "Ağ"
+
+#: src/gtk/preferences-page-monitors.ui:31
+msgctxt "monitors_preference_group"
+msgid "Disk usage"
+msgstr "Disk Kullanımı"
+
+#: src/gtk/preferences-page-monitors.ui:36
+msgctxt "monitors_preference_group"
+msgid ""
+"Pressure stall quantifies resource scarcity between processes. The more "
+"processes are stalled waiting for a resource (because it is being used by "
+"something else) the higher the pressure over that resource will be."
+msgstr ""
+"Basınç durakları, süreçler arasındaki kaynak kıtlığını ölçer. Bir kaynağı "
+"beklerken ne kadar çok süreç durursa (başka bir şey tarafından kullanıldığı "
+"için) o kaynak üzerindeki basınç o kadar yüksek olur."
+
+#: src/gtk/preferences-page-monitors.ui:37
+msgctxt "monitors_preference_group"
+msgid "Pressure"
+msgstr "Basınç"
+
+#: src/gtk/preferences-page-monitors.ui:42
+msgctxt "monitorets"
+msgid ""
+"These are all the temperature sensors that Monitorets has been able to "
+"discover in your setup."
+msgstr ""
+"Bunlar, Monitorets kurulumunuzun keşfedebildiği tüm sıcaklık sensörleridir."
+
+#: src/gtk/preferences-page-monitors.ui:43
+msgctxt "monitors_preference_group"
+msgid "Temperature sensors"
+msgstr "Sıcaklık sensörleri"
+
+#: src/gtk/rename-monitor-popover.ui:20
+msgctxt "rename_monitor"
+msgid "Rename monitor"
+msgstr "İzleyiciyi yeniden adlandır"
+
+#: src/gtk/rename-monitor-popover.ui:29
+msgctxt "rename_monitor"
+msgid "Leaving this text empty will restore the original name."
+msgstr "Bu metni boş bırakmak özgün adı geri yükler."
+
+#: src/gtk/rename-monitor-popover.ui:38
+msgctxt "rename_monitor"
+msgid "Rename"
+msgstr "Yeniden Adlandır"
+
+#: src/translatable_strings/monitor_title.py:4
+#: src/translatable_strings/preference_toggle_label.py:5
+#: src/translatable_strings/preference_toggle_section_name.py:4
+msgid "GPU"
+msgstr "Ekran Kartı"
+
+#: src/translatable_strings/monitor_title.py:7
+msgid "Network 🠅"
+msgstr "Ağ ↑"
+
+#: src/translatable_strings/monitor_title.py:8
+msgid "Network 🠇"
+msgstr "Ağ ↓"
+
+#: src/translatable_strings/monitor_title.py:11
+msgid "Temp"
+msgstr "Sıcaklık"
+
+#: src/translatable_strings/monitor_title.py:12
+msgid "CPU Pressure"
+msgstr "İşlemci Basıncı"
+
+#: src/translatable_strings/monitor_title.py:13
+msgid "Memory Pressure"
+msgstr "Bellek Basıncı"
+
+#: src/translatable_strings/monitor_title.py:14
+msgid "I/O Pressure"
+msgstr "G/Ç Basıncı"
+
+#: src/translatable_strings/preference_toggle_description.py:3
+msgid "Shown as"
+msgstr "Şu şekilde göster"
+
+#: src/translatable_strings/preference_toggle_description.py:6
+msgid ""
+"The monitor will draw as many graphs as cores are present in the system."
+msgstr "İzleyici, sistemde olan çekirdekler kadar çok grafik çizer."
+
+#: src/translatable_strings/preference_toggle_description.py:8
+msgid "Experimental. This is only known to work on some AMD GPUs currently."
+msgstr ""
+"Deneysel. Bu özellik şimdilik sadece kimi AMD ekran kartları için "
+"çalışmaktadır."
+
+#: src/translatable_strings/preference_toggle_label.py:4
+msgid "CPU per core"
+msgstr "İşlemci başına çekirdek"
+
+#: src/translatable_strings/preference_toggle_label.py:8
+msgid "Downlink"
+msgstr "İndirme trafiği"
+
+#: src/translatable_strings/preference_toggle_label.py:9
+msgid "Uplink"
+msgstr "Yükleme trafiği"
+
+#: src/translatable_strings/preference_toggle_label.py:10
+msgid "Home folder usage"
+msgstr "Ev klasörü kullanımı"
+
+#: src/translatable_strings/preference_toggle_label.py:11
+msgid "Root folder usage"
+msgstr "Kök klasör kullanımı"
+
+#: src/translatable_strings/preference_toggle_label.py:12
+#: src/translatable_strings/preference_toggle_section_name.py:8
+msgid "Temperature"
+msgstr "Sıcaklık"
+
+#: src/translatable_strings/preference_toggle_label.py:13
+msgid "CPU pressure"
+msgstr "İşlemci basıncı"
+
+#: src/translatable_strings/preference_toggle_label.py:14
+msgid "Memory pressure"
+msgstr "Bellek basıncı"
+
+#: src/translatable_strings/preference_toggle_label.py:15
+msgid "I/O pressure"
+msgstr "G/Ç basıncı"
+
+#: src/translatable_strings/preference_toggle_section_name.py:6
+msgid "Network"
+msgstr "Ağ"
+
+#: src/translatable_strings/preference_toggle_section_name.py:7
+msgid "Disk usage"
+msgstr "Disk kullanımı"
+
+#: src/translatable_strings/preference_toggle_section_name.py:9
+msgid "Pressure"
+msgstr "Basınç"
+
+#: src/translatable_strings/redraw_frequency.py:4
+msgid "Very High"
+msgstr "Çok Yüksek"
+
+#: src/translatable_strings/redraw_frequency.py:5
+msgid "High"
+msgstr "Yüksek"
+
+#: src/translatable_strings/redraw_frequency.py:6
+msgid "Low"
+msgstr "Düşük"
+
+#: src/translatable_strings/redraw_frequency.py:7
+msgid "Very Low"
+msgstr "Çok Düşük"
+
+#: src/translatable_strings/tips.py:4
+msgid "Always on Top"
+msgstr "Her Zaman Üstte"
+
+#: src/translatable_strings/tips.py:6
+msgid ""
+"You can make the window stay on top of any other window: Press <span "
+"font_weight='bold'>Alt+Space</span> or right click with your mouse in the "
+"window titlebar to bring the window menu, then select <span "
+"font_weight='bold' font_style='italic'>Always on Top</span>."
+msgstr ""
+"Pencerenin diğer pencerelerin üstünde kalmasını sağlayabilirsiniz: Pencere "
+"menüsünü getirmek için, pencere başlığında <span "
+"font_weight='bold'>Alt+Boşluk</span> tuşlarına basın veya pencere başlık "
+"çubuğuna farenizle sağ tıklayın, ardından <span font_weight='bold' "
+"font_style='italic'>Her Zaman Üstte</span>ʼyi seçin."
