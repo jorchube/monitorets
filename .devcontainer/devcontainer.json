@@ -1,14 +1,9 @@
 {
-	"name": "gnome-43-python-devel",
-
-	"image": "quay.io/gnome_infrastructure/gnome-runtime-images:gnome-43",
-
+	"name": "gnome-44-python-devel",
+	"image": "quay.io/gnome_infrastructure/gnome-runtime-images:gnome-44",
 	"shutdownAction": "stopContainer",
-
 	"postCreateCommand": "bash .devcontainer/on_create.sh",
-
 	"remoteUser": "root",
-
 	"customizations": {
 		"vscode": {
 			"extensions": [
