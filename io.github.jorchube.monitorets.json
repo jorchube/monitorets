@@ -1,7 +1,7 @@
 {
     "app-id" : "io.github.jorchube.monitorets",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "43",
+    "runtime-version" : "44",
     "sdk" : "org.gnome.Sdk",
     "command" : "monitorets",
     "finish-args" : [
@@ -31,8 +31,8 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "file:///var/home/jorchube/Code/monitorets"
+                    "type" : "dir",
+                    "path" : "."
                 }
             ]
         }
