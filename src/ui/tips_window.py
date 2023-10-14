@@ -4,7 +4,7 @@ from gi.repository import Gtk
 from ..translatable_strings import tips
 
 
-@Gtk.Template(resource_path="/org/github/jorchube/monitorets/gtk/tips-window.ui")
+@Gtk.Template(resource_path="/io/github/jorchube/monitorets/gtk/tips-window.ui")
 class TipsWindow(Adw.Window):
     __gtype_name__ = "TipsWindow"
 

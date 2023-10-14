@@ -10,7 +10,7 @@ from .redraw_frequency_toggle_widget import RedrawFrequencyToggleWidget
 
 
 @Gtk.Template(
-    resource_path="/org/github/jorchube/monitorets/gtk/preferences-page-appearance.ui"
+    resource_path="/io/github/jorchube/monitorets/gtk/preferences-page-appearance.ui"
 )
 class PreferencesPageAppearance(Adw.PreferencesPage):
     __gtype_name__ = "PreferencesPageAppearance"
@@ -71,24 +71,24 @@ class PreferencesPageAppearance(Adw.PreferencesPage):
 
     def _init_toggles(self):
         self._system_theme_toggle_button_image_big.set_from_resource(
-            "/org/github/jorchube/monitorets/gtk/icons/system.png"
+            "/io/github/jorchube/monitorets/gtk/icons/system.png"
         )
         self._system_theme_toggle_button_image_small.set_from_resource(
-            "/org/github/jorchube/monitorets/gtk/icons/system.png"
+            "/io/github/jorchube/monitorets/gtk/icons/system.png"
         )
 
         self._light_theme_toggle_button_image_big.set_from_resource(
-            "/org/github/jorchube/monitorets/gtk/icons/light.png"
+            "/io/github/jorchube/monitorets/gtk/icons/light.png"
         )
         self._light_theme_toggle_button_image_small.set_from_resource(
-            "/org/github/jorchube/monitorets/gtk/icons/light.png"
+            "/io/github/jorchube/monitorets/gtk/icons/light.png"
         )
 
         self._dark_theme_toggle_button_image_big.set_from_resource(
-            "/org/github/jorchube/monitorets/gtk/icons/dark.png"
+            "/io/github/jorchube/monitorets/gtk/icons/dark.png"
         )
         self._dark_theme_toggle_button_image_small.set_from_resource(
-            "/org/github/jorchube/monitorets/gtk/icons/dark.png"
+            "/io/github/jorchube/monitorets/gtk/icons/dark.png"
         )
 
         self._vertical_layout_action_row.add_prefix(self._vertical_check_button)
