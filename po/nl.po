@@ -2,11 +2,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Heimen Stoffels <vistausss@fastmail.com>, 2022.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Monitorets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-08 20:16+0100\n"
+"POT-Creation-Date: 2023-10-14 15:40+0300\n"
 "PO-Revision-Date: 2023-03-13 20:42+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch\n"
@@ -16,6 +17,118 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:5
+#: data/io.github.jorchube.monitorets.appdata.xml.in:17
+msgid "Have always at a glance the usage of system resources"
+msgstr "Bekijk in één oogopslag uw systeemverbruik"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:19
+msgid ""
+"Monitorets is a small utility application offering a simple and quick view "
+"at the usage of several of your computer resources. Almost like an applet or "
+"a widget for your desktop."
+msgstr ""
+"Monitorets is een eenvoudige toepassing voor het tonen van uw "
+"systeemverbruik in één oogopslag, vergelijkbaar met een invoegtoepassing of "
+"widget."
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:21
+msgid "Available monitors:"
+msgstr "Beschikbare monitors:"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:23
+#: src/translatable_strings/monitor_title.py:3
+#: src/translatable_strings/preference_toggle_label.py:3
+#: src/translatable_strings/preference_toggle_section_name.py:3
+msgid "CPU"
+msgstr "Cpu"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:24
+msgid "GPU (experimental support)"
+msgstr "Gpu (experimentele ondersteuning)"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:25
+#: src/translatable_strings/monitor_title.py:5
+#: src/translatable_strings/preference_toggle_label.py:6
+#: src/translatable_strings/preference_toggle_section_name.py:5
+msgid "Memory"
+msgstr "Geheugen"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:26
+#: src/translatable_strings/monitor_title.py:6
+#: src/translatable_strings/preference_toggle_label.py:7
+msgid "Swap"
+msgstr "Wisselgeheugen"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:27
+msgid "Network downlink traffic"
+msgstr "Netwerk (downloaden)"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:28
+msgid "Network uplink traffic"
+msgstr "Netwerk (uploaden)"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:29
+msgid "Home folder space"
+msgstr "Ruimte in persoonlijke map"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:30
+msgid "Root space"
+msgstr "Ruimte in systeemmap"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:31
+msgid "CPU, Memory and I/O pressure"
+msgstr "Cpu-, geheugen- en I/O-druk"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:32
+msgid "Temperature sensors"
+msgstr "Temperatuursensors"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:64
+#, fuzzy
+msgid "Added CPU, Memory and I/O pressure monitors"
+msgstr "Cpu-, geheugen- en I/O-druk"
+
+#. Translators: Do not translate the application name
+#: data/io.github.jorchube.monitorets.desktop.in:4
+msgid "Monitorets"
+msgstr "Monitorets"
+
+#: data/io.github.jorchube.monitorets.desktop.in:11
+msgid "monitor;system monitor;System Monitor;Monitor;"
+msgstr "monitor;systeemmonitor;Systeemmonitor;Monitor;"
+
+#: src/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Algemeen"
+
+#: src/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Sneltoetsen tonen"
+
+#: src/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Afsluiten"
+
+#: src/gtk/main-menu-model.ui:6
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+#: src/gtk/main-menu-model.ui:12 src/translatable_strings/tips.py:3
+msgid "Tips"
+msgstr "Tips"
+
+#: src/gtk/main-menu-model.ui:16
+msgid "About"
+msgstr "Over"
+
+#: src/gtk/main-menu-model.ui:22
+msgid "Quit"
+msgstr "Afsluiten"
 
 #: src/gtk/preferences-page-appearance.ui:9
 msgctxt "monitorets"
@@ -62,10 +175,27 @@ msgctxt "monitorets"
 msgid "Monitors stacked in a single column."
 msgstr "Alle monitors in één kolom."
 
+#: src/gtk/preferences-page-appearance.ui:139
+msgid "Vertical"
+msgstr "Verticaal"
+
 #: src/gtk/preferences-page-appearance.ui:144
 msgctxt "monitorets"
 msgid "Monitors aligned in a single row."
 msgstr "Alle monitors op één rij."
+
+#: src/gtk/preferences-page-appearance.ui:145
+msgid "Horizontal"
+msgstr "Horizontaal"
+
+#: src/gtk/preferences-page-appearance.ui:150
+msgctxt "monitorets"
+msgid "Monitors aligned in a grid."
+msgstr "Alle monitors op een rooster."
+
+#: src/gtk/preferences-page-appearance.ui:151
+msgid "Grid"
+msgstr "Rooster"
 
 #: src/gtk/preferences-page-appearance.ui:158
 msgctxt "preferences_page_appearance"
@@ -77,6 +207,28 @@ msgctxt "preferences_page_appearance"
 msgid "Draw smooth graphs"
 msgstr "Vloeiende grafieken tonen"
 
+#: src/gtk/preferences-page-appearance.ui:166
+msgctxt "preferences_page_appearance"
+msgid "Show current value"
+msgstr "Huidige waarde tonen"
+
+#: src/gtk/preferences-page-appearance.ui:171
+msgctxt "preferences_appearance"
+msgid "Temperature units"
+msgstr "Temperatuureenheden"
+
+#: src/gtk/preferences-page-appearance.ui:176
+msgctxt "preferences_appearance"
+msgid ""
+"Higher means a smoother redraw but also a slight increase in the resources "
+"used by the application itself."
+msgstr "Hoger = vloeiender doch intensiever geheugengebruik."
+
+#: src/gtk/preferences-page-appearance.ui:177
+msgctxt "preferences_appearance"
+msgid "Redraw frequency"
+msgstr "Tekenfrequentie"
+
 #: src/gtk/preferences-page-monitors.ui:8
 msgctxt "monitorets"
 msgid "Monitors"
@@ -84,12 +236,12 @@ msgstr "Monitors"
 
 #: src/gtk/preferences-page-monitors.ui:11
 msgctxt "monitors_preference_group"
-msgid "Cpu"
+msgid "CPU"
 msgstr "Cpu"
 
 #: src/gtk/preferences-page-monitors.ui:16
 msgctxt "monitors_preference_group"
-msgid "Gpu"
+msgid "GPU"
 msgstr "Gpu"
 
 #: src/gtk/preferences-page-monitors.ui:21
@@ -107,6 +259,21 @@ msgctxt "monitors_preference_group"
 msgid "Disk usage"
 msgstr "Schijfgebruik"
 
+#: src/gtk/preferences-page-monitors.ui:36
+msgctxt "monitors_preference_group"
+msgid ""
+"Pressure stall quantifies resource scarcity between processes. The more "
+"processes are stalled waiting for a resource (because it is being used by "
+"something else) the higher the pressure over that resource will be."
+msgstr ""
+"De druk berekent het aantal beschikbare bronnen tussen processen. Hoe meer "
+"processen in de wacht staan, des te hoger de druk zal zijn."
+
+#: src/gtk/preferences-page-monitors.ui:37
+msgctxt "monitors_preference_group"
+msgid "Pressure"
+msgstr "Druk"
+
 #: src/gtk/preferences-page-monitors.ui:42
 msgctxt "monitorets"
 msgid ""
@@ -118,22 +285,6 @@ msgstr "Dit zijn alle door Monitorets aangetroffen temperatuursensors."
 msgctxt "monitors_preference_group"
 msgid "Temperature sensors"
 msgstr "Temperatuursensors"
-
-#: src/gtk/main-menu-model.ui:6
-msgid "Preferences"
-msgstr "Voorkeuren"
-
-#: src/gtk/main-menu-model.ui:12 src/translatable_strings/tips.py:3
-msgid "Tips"
-msgstr "Tips"
-
-#: src/gtk/main-menu-model.ui:16
-msgid "About"
-msgstr "Over"
-
-#: src/gtk/main-menu-model.ui:22
-msgid "Quit"
-msgstr "Afsluiten"
 
 #: src/gtk/rename-monitor-popover.ui:20
 msgctxt "rename_monitor"
@@ -150,156 +301,9 @@ msgctxt "rename_monitor"
 msgid "Rename"
 msgstr "Naam wijzigen"
 
-#: data/io.github.jorchube.monitorets.desktop.in:3
-#: data/io.github.jorchube.monitorets.appdata.xml.in:4
-msgid "Monitorets"
-msgstr "Monitorets"
-
-#: data/io.github.jorchube.monitorets.desktop.in:10
-msgid "monitor;system monitor;System Monitor;Monitor;"
-msgstr "monitor;systeemmonitor;Systeemmonitor;Monitor;"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:5
-#: data/io.github.jorchube.monitorets.appdata.xml.in:15
-msgid "Have always at a glance the usage of system resources"
-msgstr "Bekijk in één oogopslag uw systeemverbruik"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:8
-msgid "Jordi Chulia"
-msgstr "Jordi Chulia"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:17
-msgid ""
-"Monitorets is a small utility application offering a simple and quick view "
-"at the usage of several of your computer resources. Almost like an applet or "
-"a widget for your desktop."
-msgstr ""
-"Monitorets is een eenvoudige toepassing voor het tonen van uw "
-"systeemverbruik in één oogopslag, vergelijkbaar met een invoegtoepassing of "
-"widget."
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:19
-msgid "Available monitors:"
-msgstr "Beschikbare monitors:"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:21
-#: src/translatable_strings/preference_toggle_section_name.py:3
-msgid "Cpu"
-msgstr "Cpu"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:22
-msgid "Gpu (experimental support)"
-msgstr "Gpu (experimenteel)"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:23
-#: src/translatable_strings/monitor_title.py:5
-#: src/translatable_strings/preference_toggle_label.py:6
-#: src/translatable_strings/preference_toggle_section_name.py:5
-msgid "Memory"
-msgstr "Geheugen"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:24
-#: src/translatable_strings/monitor_title.py:6
-#: src/translatable_strings/preference_toggle_label.py:7
-msgid "Swap"
-msgstr "Wisselgeheugen"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:25
-msgid "Network downlink traffic"
-msgstr "Netwerk (downloaden)"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:26
-msgid "Network uplink traffic"
-msgstr "Netwerk (uploaden)"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:27
-msgid "Home folder space"
-msgstr "Ruimte in persoonlijke map"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:28
-msgid "Root space"
-msgstr "Ruimte in systeemmap"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:30
-msgid "Temperature sensors"
-msgstr "Temperatuursensors"
-
-msgid "Added support for custom monitor names"
-msgstr "Nieuw: ondersteuning voor aangepaste monitornamen"
-
-msgid "Added smooth graph drawing"
-msgstr "Nieuw: vloeiende grafieken"
-
-msgid "Added Swap memory monitor"
-msgstr "Nieuw: wisselgeheugenmonitor"
-
-msgid "Refactored dropdown menu and preferences"
-msgstr "Verbeterd: uitklapmenu en voorkeuren"
-
-msgid "Added Dutch language support"
-msgstr "Nieuw: Nederlandse vertaling"
-
-msgid "Added internationalization support"
-msgstr "Nieuw: de toepassing kan voortaan worden vertaald"
-
-msgid "Restored missing network permission needed for the network monitors"
-msgstr "Opgelost: ontbrekend netwerk-toegangsrecht voor de netwerkmonitors"
-
-msgid ""
-"Autodiscover temperature sensors and expose them as temperature monitors"
-msgstr "Nieuw: automatische detectie van temperatuursensors"
-
-msgid "Ellipsize monitor names when do not fit the available space"
-msgstr "Nieuw: monitornamen worden ingekort bij onvoldoende ruimte"
-
-msgid "Add monitor groups for same-kind monitors in the preferences popover"
-msgstr "Nieuw: monitors worden voortaan gegroepeerd"
-
-msgid "Added network downlink and uplink traffic monitors"
-msgstr "Nieuw: down- en uploadverkeersmonitors"
-
-msgid "Some cosmetic changes have been done"
-msgstr "Bijgewerkt: enkele uiterlijke wijzigingen"
-
-msgid "Added home and root folder usage monitors"
-msgstr "Nieuw: schijfgebruik van persoonlijke en systeemmappen"
-
-msgid "Added layout selector"
-msgstr "Nieuw: indelingskeuze"
-
-msgid "Added Tips section"
-msgstr "Nieuw: tipssectie"
-
-msgid "Improve close and preferences buttons visibility when shown"
-msgstr "Verbeterd: zichtbaarheid van sluit- en voorkeursknoppen"
-
-msgid "Under the hood tweaks"
-msgstr "Verbeterd: onder de motorkap gesleuteld"
-
-msgid "Aesthetic:"
-msgstr "Uiterlijk:"
-
-msgid "- Reworked graph drawing"
-msgstr "- Opnieuw ontworpen grafieken"
-
-msgid "Internal:"
-msgstr "Intern:"
-
-msgid "- Decoupled several events that can trigger a graph redraw"
-msgstr ""
-"- Enkele gebeurtenissen die het opnieuw intekenen van grafieken triggerde "
-"zijn ontkoppeld"
-
-msgid "First release"
-msgstr "Allereerste versie"
-
-#: src/translatable_strings/monitor_title.py:3
-#: src/translatable_strings/preference_toggle_label.py:3
-msgid "CPU"
-msgstr "Cpu"
-
 #: src/translatable_strings/monitor_title.py:4
 #: src/translatable_strings/preference_toggle_label.py:5
+#: src/translatable_strings/preference_toggle_section_name.py:4
 msgid "GPU"
 msgstr "Gpu"
 
@@ -311,17 +315,36 @@ msgstr "Netwerk 🠅"
 msgid "Network 🠇"
 msgstr "Netwerk 🠇"
 
-#: src/translatable_strings/monitor_title.py:9
-msgid "~"
-msgstr "~"
-
-#: src/translatable_strings/monitor_title.py:10
-msgid "/"
-msgstr "/"
-
 #: src/translatable_strings/monitor_title.py:11
 msgid "Temp"
 msgstr "Temp."
+
+#: src/translatable_strings/monitor_title.py:12
+msgid "CPU Pressure"
+msgstr "Cpu-druk"
+
+#: src/translatable_strings/monitor_title.py:13
+msgid "Memory Pressure"
+msgstr "Geheugendruk"
+
+#: src/translatable_strings/monitor_title.py:14
+msgid "I/O Pressure"
+msgstr "I/O-druk"
+
+#: src/translatable_strings/preference_toggle_description.py:3
+msgid "Shown as"
+msgstr "Tonen als"
+
+#: src/translatable_strings/preference_toggle_description.py:6
+msgid ""
+"The monitor will draw as many graphs as cores are present in the system."
+msgstr "De monitor zal alle kernen als grafieken tonen."
+
+#: src/translatable_strings/preference_toggle_description.py:8
+msgid "Experimental. This is only known to work on some AMD GPUs currently."
+msgstr ""
+"Let op: deze functie is experimenteel en werkt mogelijk alleen bij gebruik "
+"van AMD-gpu's."
 
 #: src/translatable_strings/preference_toggle_label.py:4
 msgid "CPU per core"
@@ -348,9 +371,17 @@ msgstr "Ruimte in systeemmap"
 msgid "Temperature"
 msgstr "Temperatuur"
 
-#: src/translatable_strings/preference_toggle_section_name.py:4
-msgid "Gpu"
-msgstr "Gpu"
+#: src/translatable_strings/preference_toggle_label.py:13
+msgid "CPU pressure"
+msgstr "Cpu-druk"
+
+#: src/translatable_strings/preference_toggle_label.py:14
+msgid "Memory pressure"
+msgstr "Geheugendruk"
+
+#: src/translatable_strings/preference_toggle_label.py:15
+msgid "I/O pressure"
+msgstr "I/O-druk"
 
 #: src/translatable_strings/preference_toggle_section_name.py:6
 msgid "Network"
@@ -360,94 +391,9 @@ msgstr "Netwerk"
 msgid "Disk usage"
 msgstr "Schijfgebruik"
 
-#: src/translatable_strings/preference_toggle_description.py:3
-msgid "Shown as"
-msgstr "Tonen als"
-
-#: src/translatable_strings/preference_toggle_description.py:6
-msgid ""
-"The monitor will draw as many graphs as cores are present in the system."
-msgstr "De monitor zal alle kernen als grafieken tonen."
-
-#: src/translatable_strings/preference_toggle_description.py:8
-msgid "Experimental. This is only known to work on some AMD GPUs currently."
-msgstr ""
-"Let op: deze functie is experimenteel en werkt mogelijk alleen bij gebruik "
-"van AMD-gpu's."
-
-#: src/translatable_strings/tips.py:4
-msgid "Always on Top"
-msgstr "Altijd bovenaan"
-
-#: src/translatable_strings/tips.py:6
-msgid ""
-"You can make the window stay on top of any other window: Press <span "
-"font_weight='bold'>Alt+Space</span> or right click with your mouse in the "
-"window titlebar to bring the window menu, then select <span "
-"font_weight='bold' font_style='italic'>Always on Top</span>."
-msgstr ""
-"U kunt er voor kiezen om het venster altijd bovenop andere vensters te "
-"houden. Dit doet u als volgt: Druk op <span "
-"font_weight='bold'>Alt+spatiebalk</span> of rechtsklik op de titelbalk om "
-"het venstermenu te openen en kies <span font_weight='bold' "
-"font_style='italic'>Altijd bovenaan</span>."
-
-#: src/gtk/preferences-page-appearance.ui:166
-msgctxt "preferences_page_appearance"
-msgid "Show current value"
-msgstr "Huidige waarde tonen"
-
-msgid ""
-"Fixed a bug preventing the preferences window from opening (Thanks to "
-"@jrdmellow)"
-msgstr ""
-"Opgelost: bug die het openen van het voorkeurenvenster verhinderde (met dank "
-"aan @jrdmellow!)"
-
-#: src/gtk/preferences-page-appearance.ui:139
-msgid "Vertical"
-msgstr "Verticaal"
-
-#: src/gtk/preferences-page-appearance.ui:145
-msgid "Horizontal"
-msgstr "Horizontaal"
-
-#: src/gtk/preferences-page-appearance.ui:150
-msgctxt "monitorets"
-msgid "Monitors aligned in a grid."
-msgstr "Alle monitors op een rooster."
-
-#: src/gtk/preferences-page-appearance.ui:151
-msgid "Grid"
-msgstr "Rooster"
-
-#: src/gtk/preferences-page-appearance.ui:171
-msgctxt "preferences_appearance"
-msgid "Temperature units"
-msgstr "Temperatuureenheden"
-
-#: src/gtk/preferences-page-appearance.ui:176
-msgctxt "preferences_appearance"
-msgid ""
-"Higher means a smoother redraw but also a slight increase in the resources "
-"used by the application itself."
-msgstr "Hoger = vloeiender doch intensiever geheugengebruik."
-
-#: src/gtk/preferences-page-appearance.ui:177
-msgctxt "preferences_appearance"
-msgid "Redraw frequency"
-msgstr "Tekenfrequentie"
-
-msgid "Added support to show the current value of a monitor"
-msgstr "Nieuw: toon de huidige waarde van een monitor"
-
-msgid "Remember window size on close"
-msgstr "Verbeterd: onthoud de vensterafmetingen na afsluiten"
-
-msgid ""
-"Use the same scaling for network uplink and downlink monitors to avoid "
-"confusion"
-msgstr "Verbeterd: up- en downloadmonitors zijn voortaan even groot"
+#: src/translatable_strings/preference_toggle_section_name.py:9
+msgid "Pressure"
+msgstr "Druk"
 
 #: src/translatable_strings/redraw_frequency.py:4
 msgid "Very High"
@@ -465,74 +411,19 @@ msgstr "Laag"
 msgid "Very Low"
 msgstr "Erg laag"
 
-msgid "Added support for arbitrarily large monitor size"
-msgstr "Nieuw: ondersteuning voor grote monitors"
+#: src/translatable_strings/tips.py:4
+msgid "Always on Top"
+msgstr "Altijd bovenaan"
 
-msgid "Added support to arrange monitors in a grid layout"
-msgstr "Nieuw: toon monitors op een rooster"
-
+#: src/translatable_strings/tips.py:6
 msgid ""
-"Added support to select between Celsius and Fahrenheit units for the "
-"temperature sensors"
+"You can make the window stay on top of any other window: Press <span "
+"font_weight='bold'>Alt+Space</span> or right click with your mouse in the "
+"window titlebar to bring the window menu, then select <span "
+"font_weight='bold' font_style='italic'>Always on Top</span>."
 msgstr ""
-"Nieuw: ondersteuning voor Celsius en Fahrenheit in de temperatuursensoren"
-
-msgid "Added support to configure the redraw rate of the monitor graphs"
-msgstr "Nieuw: stel de tekenfrequentie van grafieken in"
-
-msgid ""
-"Added a keyboard shortcut to open the preferences window (Kudos to github."
-"com/gregorni/)"
-msgstr ""
-"Nieuw: sneltoets om de voorkeuren te openen (met dan aan github.com/"
-"gregorni/!)"
-
-msgid "Added french translation (Kudos to github.com/rene-coty/)"
-msgstr "Nieuw: Franse vertaling (met dank aan github.com/rene-coty/!)"
-
-#: src/gtk/preferences-page-monitors.ui:36
-msgctxt "monitors_preference_group"
-msgid ""
-"Pressure stall quantifies resource scarcity between processes. The more "
-"processes are stalled waiting for a resource (because it is being used by "
-"something else) the higher the pressure over that resource will be."
-msgstr ""
-"De druk berekent het aantal beschikbare bronnen tussen processen. Hoe meer "
-"processen in de wacht staan, des te hoger de druk zal zijn."
-
-#: src/gtk/preferences-page-monitors.ui:37
-msgctxt "monitors_preference_group"
-msgid "Pressure"
-msgstr "Druk"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:29
-msgid "CPU, Memory and I/O pressure"
-msgstr "Cpu-, geheugen- en I/O-druk"
-
-#: src/translatable_strings/monitor_title.py:12
-msgid "CPU Pressure"
-msgstr "Cpu-druk"
-
-#: src/translatable_strings/monitor_title.py:13
-msgid "Memory Pressure"
-msgstr "Geheugendruk"
-
-#: src/translatable_strings/monitor_title.py:14
-msgid "I/O Pressure"
-msgstr "I/O-druk"
-
-#: src/translatable_strings/preference_toggle_label.py:13
-msgid "CPU pressure"
-msgstr "Cpu-druk"
-
-#: src/translatable_strings/preference_toggle_label.py:14
-msgid "Memory pressure"
-msgstr "Geheugendruk"
-
-#: src/translatable_strings/preference_toggle_label.py:15
-msgid "I/O pressure"
-msgstr "I/O-druk"
-
-#: src/translatable_strings/preference_toggle_section_name.py:9
-msgid "Pressure"
-msgstr "Druk"
+"U kunt er voor kiezen om het venster altijd bovenop andere vensters te "
+"houden. Dit doet u als volgt: Druk op <span "
+"font_weight='bold'>Alt+spatiebalk</span> of rechtsklik op de titelbalk om "
+"het venstermenu te openen en kies <span font_weight='bold' "
+"font_style='italic'>Altijd bovenaan</span>."

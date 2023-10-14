@@ -1,13 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Irénée Thirion <irenee.thirion@e.email>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Monitorets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-08 20:16+0100\n"
+"POT-Creation-Date: 2023-10-14 15:40+0300\n"
 "PO-Revision-Date: 2023-03-11 15:34+0100\n"
 "Last-Translator: Irénée Thirion <irenee.thirion@e.email>\n"
 "Language-Team: \n"
@@ -17,6 +18,119 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 3.2.2\n"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:5
+#: data/io.github.jorchube.monitorets.appdata.xml.in:17
+msgid "Have always at a glance the usage of system resources"
+msgstr "Ayez toujours à l’œil l’usage des ressources de votre système"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:19
+msgid ""
+"Monitorets is a small utility application offering a simple and quick view "
+"at the usage of several of your computer resources. Almost like an applet or "
+"a widget for your desktop."
+msgstr ""
+"Monitorets est un petit utilitaire permettant une vue simple et rapide de "
+"l’usage de plusieurs ressources de votre ordinateur. Presque comme une "
+"applet ou un widget pour votre bureau."
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:21
+msgid "Available monitors:"
+msgstr "Moniteurs disponibles :"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:23
+#: src/translatable_strings/monitor_title.py:3
+#: src/translatable_strings/preference_toggle_label.py:3
+#: src/translatable_strings/preference_toggle_section_name.py:3
+msgid "CPU"
+msgstr "CPU"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:24
+#, fuzzy
+msgid "GPU (experimental support)"
+msgstr "GPU (prise en charge expérimentale)"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:25
+#: src/translatable_strings/monitor_title.py:5
+#: src/translatable_strings/preference_toggle_label.py:6
+#: src/translatable_strings/preference_toggle_section_name.py:5
+msgid "Memory"
+msgstr "Mémoire"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:26
+#: src/translatable_strings/monitor_title.py:6
+#: src/translatable_strings/preference_toggle_label.py:7
+msgid "Swap"
+msgstr "Swap"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:27
+msgid "Network downlink traffic"
+msgstr "Trafic réseau réceptionné"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:28
+msgid "Network uplink traffic"
+msgstr "Trafic réseau envoyé"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:29
+msgid "Home folder space"
+msgstr "Espace de stockage du dossier personnel"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:30
+msgid "Root space"
+msgstr "Espace root"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:31
+msgid "CPU, Memory and I/O pressure"
+msgstr "Pression CPU, Mémoire et I/O"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:32
+msgid "Temperature sensors"
+msgstr "Capteurs de température"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:64
+#, fuzzy
+msgid "Added CPU, Memory and I/O pressure monitors"
+msgstr "Pression CPU, Mémoire et I/O"
+
+#. Translators: Do not translate the application name
+#: data/io.github.jorchube.monitorets.desktop.in:4
+msgid "Monitorets"
+msgstr "Monitorets"
+
+#: data/io.github.jorchube.monitorets.desktop.in:11
+msgid "monitor;system monitor;System Monitor;Monitor;"
+msgstr "moniteur;Moniteur;système;Système;"
+
+#: src/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Général"
+
+#: src/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Afficher les raccourcis"
+
+#: src/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Quitter"
+
+#: src/gtk/main-menu-model.ui:6
+msgid "Preferences"
+msgstr "Préférences"
+
+#: src/gtk/main-menu-model.ui:12 src/translatable_strings/tips.py:3
+msgid "Tips"
+msgstr "Conseils"
+
+#: src/gtk/main-menu-model.ui:16
+msgid "About"
+msgstr "À propos"
+
+#: src/gtk/main-menu-model.ui:22
+msgid "Quit"
+msgstr "Quitter"
 
 #: src/gtk/preferences-page-appearance.ui:9
 msgctxt "monitorets"
@@ -63,10 +177,27 @@ msgctxt "monitorets"
 msgid "Monitors stacked in a single column."
 msgstr "Moniteurs empilés en une colonne."
 
+#: src/gtk/preferences-page-appearance.ui:139
+msgid "Vertical"
+msgstr "Vertical"
+
 #: src/gtk/preferences-page-appearance.ui:144
 msgctxt "monitorets"
 msgid "Monitors aligned in a single row."
 msgstr "Moniteurs alignés en une rangée."
+
+#: src/gtk/preferences-page-appearance.ui:145
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: src/gtk/preferences-page-appearance.ui:150
+msgctxt "monitorets"
+msgid "Monitors aligned in a grid."
+msgstr "Moniteurs alignés en une grille"
+
+#: src/gtk/preferences-page-appearance.ui:151
+msgid "Grid"
+msgstr "Grille"
 
 #: src/gtk/preferences-page-appearance.ui:158
 msgctxt "preferences_page_appearance"
@@ -78,6 +209,30 @@ msgctxt "preferences_page_appearance"
 msgid "Draw smooth graphs"
 msgstr "Lisser les graphiques"
 
+#: src/gtk/preferences-page-appearance.ui:166
+msgctxt "preferences_page_appearance"
+msgid "Show current value"
+msgstr "Afficher la valeur actuelle"
+
+#: src/gtk/preferences-page-appearance.ui:171
+msgctxt "preferences_appearance"
+msgid "Temperature units"
+msgstr "Unités de température"
+
+#: src/gtk/preferences-page-appearance.ui:176
+msgctxt "preferences_appearance"
+msgid ""
+"Higher means a smoother redraw but also a slight increase in the resources "
+"used by the application itself."
+msgstr ""
+"Une fréquence élevée induit un dessin plus fluide mais également une légère "
+"augmentation des ressources utilisées par l’application."
+
+#: src/gtk/preferences-page-appearance.ui:177
+msgctxt "preferences_appearance"
+msgid "Redraw frequency"
+msgstr "Fréquence de rafraîchissement"
+
 #: src/gtk/preferences-page-monitors.ui:8
 msgctxt "monitorets"
 msgid "Monitors"
@@ -85,12 +240,12 @@ msgstr "Moniteurs"
 
 #: src/gtk/preferences-page-monitors.ui:11
 msgctxt "monitors_preference_group"
-msgid "Cpu"
+msgid "CPU"
 msgstr "CPU"
 
 #: src/gtk/preferences-page-monitors.ui:16
 msgctxt "monitors_preference_group"
-msgid "Gpu"
+msgid "GPU"
 msgstr "GPU"
 
 #: src/gtk/preferences-page-monitors.ui:21
@@ -108,6 +263,23 @@ msgctxt "monitors_preference_group"
 msgid "Disk usage"
 msgstr "Utilisation du disque"
 
+#: src/gtk/preferences-page-monitors.ui:36
+msgctxt "monitors_preference_group"
+msgid ""
+"Pressure stall quantifies resource scarcity between processes. The more "
+"processes are stalled waiting for a resource (because it is being used by "
+"something else) the higher the pressure over that resource will be."
+msgstr ""
+"La pression de blocage quantifie la rareté des ressources entre les "
+"processus. Plus les processus sont bloqués dans l’attente d’une ressource "
+"(parce qu’elle est utilisée par autre chose), plus la pression sur cette "
+"ressource est élevée."
+
+#: src/gtk/preferences-page-monitors.ui:37
+msgctxt "monitors_preference_group"
+msgid "Pressure"
+msgstr "Pression"
+
 #: src/gtk/preferences-page-monitors.ui:42
 msgctxt "monitorets"
 msgid ""
@@ -121,22 +293,6 @@ msgstr ""
 msgctxt "monitors_preference_group"
 msgid "Temperature sensors"
 msgstr "Capteurs de température"
-
-#: src/gtk/main-menu-model.ui:6
-msgid "Preferences"
-msgstr "Préférences"
-
-#: src/gtk/main-menu-model.ui:12 src/translatable_strings/tips.py:3
-msgid "Tips"
-msgstr "Conseils"
-
-#: src/gtk/main-menu-model.ui:16
-msgid "About"
-msgstr "À propos"
-
-#: src/gtk/main-menu-model.ui:22
-msgid "Quit"
-msgstr "Quitter"
 
 #: src/gtk/rename-monitor-popover.ui:20
 msgctxt "rename_monitor"
@@ -153,166 +309,9 @@ msgctxt "rename_monitor"
 msgid "Rename"
 msgstr "Renommer"
 
-#: data/io.github.jorchube.monitorets.desktop.in:3
-#: data/io.github.jorchube.monitorets.appdata.xml.in:4
-msgid "Monitorets"
-msgstr "Monitorets"
-
-#: data/io.github.jorchube.monitorets.desktop.in:10
-msgid "monitor;system monitor;System Monitor;Monitor;"
-msgstr "moniteur;Moniteur;système;Système;"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:5
-#: data/io.github.jorchube.monitorets.appdata.xml.in:15
-msgid "Have always at a glance the usage of system resources"
-msgstr "Ayez toujours à l’œil l’usage des ressources de votre système"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:8
-msgid "Jordi Chulia"
-msgstr "Jordi Chulia"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:17
-msgid ""
-"Monitorets is a small utility application offering a simple and quick view "
-"at the usage of several of your computer resources. Almost like an applet or "
-"a widget for your desktop."
-msgstr ""
-"Monitorets est un petit utilitaire permettant une vue simple et rapide de "
-"l’usage de plusieurs ressources de votre ordinateur. Presque comme une "
-"applet ou un widget pour votre bureau."
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:19
-msgid "Available monitors:"
-msgstr "Moniteurs disponibles :"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:21
-#: src/translatable_strings/preference_toggle_section_name.py:3
-msgid "Cpu"
-msgstr "CPU"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:22
-msgid "Gpu (experimental support)"
-msgstr "GPU (prise en charge expérimentale)"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:23
-#: src/translatable_strings/monitor_title.py:5
-#: src/translatable_strings/preference_toggle_label.py:6
-#: src/translatable_strings/preference_toggle_section_name.py:5
-msgid "Memory"
-msgstr "Mémoire"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:24
-#: src/translatable_strings/monitor_title.py:6
-#: src/translatable_strings/preference_toggle_label.py:7
-msgid "Swap"
-msgstr "Swap"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:25
-msgid "Network downlink traffic"
-msgstr "Trafic réseau réceptionné"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:26
-msgid "Network uplink traffic"
-msgstr "Trafic réseau envoyé"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:27
-msgid "Home folder space"
-msgstr "Espace de stockage du dossier personnel"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:28
-msgid "Root space"
-msgstr "Espace root"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:30
-msgid "Temperature sensors"
-msgstr "Capteurs de température"
-
-msgid "Added support for custom monitor names"
-msgstr "Ajout de la prise en charge de noms de moniteurs spécifiés"
-
-msgid "Added smooth graph drawing"
-msgstr "Ajout d’un dessin lisse des graphiques"
-
-msgid "Added Swap memory monitor"
-msgstr "Ajout d’un moniteur de mémoire Swap"
-
-msgid "Refactored dropdown menu and preferences"
-msgstr "Menu déroulant et Préférences retravaillés"
-
-msgid "Added Dutch language support"
-msgstr "Ajout de la prise en charge du néerlandais"
-
-msgid "Added internationalization support"
-msgstr "Ajout de la prise en charge des traductions"
-
-msgid "Restored missing network permission needed for the network monitors"
-msgstr ""
-"Restauration de la permission réseau manquante, nécessaire pour les "
-"moniteurs réseau"
-
-msgid ""
-"Autodiscover temperature sensors and expose them as temperature monitors"
-msgstr ""
-"Recherche automatique des capteurs de température, exposés ensuite comme "
-"moniteurs de température"
-
-msgid "Ellipsize monitor names when do not fit the available space"
-msgstr ""
-"Les noms des moniteurs seront tronqués lorsqu’ils dépassent l’espace "
-"disponible"
-
-msgid "Add monitor groups for same-kind monitors in the preferences popover"
-msgstr ""
-"Ajout de groupes de moniteurs pour les moniteurs du même type dans la "
-"fenêtre Préférences"
-
-msgid "Added network downlink and uplink traffic monitors"
-msgstr "Ajout de moniteurs de trafic réseau réceptionné et envoyé"
-
-msgid "Some cosmetic changes have been done"
-msgstr "Quelques changements esthétiques"
-
-msgid "Added home and root folder usage monitors"
-msgstr "Ajout de moniteurs d’utilisation de l’espace root et utilisateur"
-
-msgid "Added layout selector"
-msgstr "Ajout d’un sélecteur de disposition"
-
-msgid "Added Tips section"
-msgstr "Ajout d’une section Conseils"
-
-msgid "Improve close and preferences buttons visibility when shown"
-msgstr ""
-"Amélioration de la visibilité des boutons Fermer et Préférences lorsqu’ils "
-"sont affichés"
-
-msgid "Under the hood tweaks"
-msgstr "Ajustements sous le capot"
-
-msgid "Aesthetic:"
-msgstr "Esthétique :"
-
-msgid "- Reworked graph drawing"
-msgstr "- Dessin des graphiques retravaillé"
-
-msgid "Internal:"
-msgstr "Interne :"
-
-msgid "- Decoupled several events that can trigger a graph redraw"
-msgstr ""
-"- Découplement de plusieurs événements pouvant déclencher une réécriture du "
-"graphique"
-
-msgid "First release"
-msgstr "Première version"
-
-#: src/translatable_strings/monitor_title.py:3
-#: src/translatable_strings/preference_toggle_label.py:3
-msgid "CPU"
-msgstr "CPU"
-
 #: src/translatable_strings/monitor_title.py:4
 #: src/translatable_strings/preference_toggle_label.py:5
+#: src/translatable_strings/preference_toggle_section_name.py:4
 msgid "GPU"
 msgstr "GPU"
 
@@ -324,17 +323,37 @@ msgstr "Réseau 🠅"
 msgid "Network 🠇"
 msgstr "Réseau 🠇"
 
-#: src/translatable_strings/monitor_title.py:9
-msgid "~"
-msgstr "~"
-
-#: src/translatable_strings/monitor_title.py:10
-msgid "/"
-msgstr "/"
-
 #: src/translatable_strings/monitor_title.py:11
 msgid "Temp"
 msgstr "Temp"
+
+#: src/translatable_strings/monitor_title.py:12
+msgid "CPU Pressure"
+msgstr "Pression CPU"
+
+#: src/translatable_strings/monitor_title.py:13
+msgid "Memory Pressure"
+msgstr "Pression Mémoire"
+
+#: src/translatable_strings/monitor_title.py:14
+msgid "I/O Pressure"
+msgstr "Pression I/O"
+
+#: src/translatable_strings/preference_toggle_description.py:3
+msgid "Shown as"
+msgstr "Affiché comme"
+
+#: src/translatable_strings/preference_toggle_description.py:6
+msgid ""
+"The monitor will draw as many graphs as cores are present in the system."
+msgstr ""
+"Le moniteur dessinera autant de graphiques que de cœurs présents dans le "
+"système."
+
+#: src/translatable_strings/preference_toggle_description.py:8
+msgid "Experimental. This is only known to work on some AMD GPUs currently."
+msgstr ""
+"Expérimental. Ceci ne fonctionne actuellement que sur certains GPUs AMD."
 
 #: src/translatable_strings/preference_toggle_label.py:4
 msgid "CPU per core"
@@ -361,9 +380,17 @@ msgstr "Utilisation du dossier root"
 msgid "Temperature"
 msgstr "Température"
 
-#: src/translatable_strings/preference_toggle_section_name.py:4
-msgid "Gpu"
-msgstr "GPU"
+#: src/translatable_strings/preference_toggle_label.py:13
+msgid "CPU pressure"
+msgstr "Pression CPU"
+
+#: src/translatable_strings/preference_toggle_label.py:14
+msgid "Memory pressure"
+msgstr "Pression Mémoire"
+
+#: src/translatable_strings/preference_toggle_label.py:15
+msgid "I/O pressure"
+msgstr "Pression I/O"
 
 #: src/translatable_strings/preference_toggle_section_name.py:6
 msgid "Network"
@@ -373,21 +400,25 @@ msgstr "Réseau"
 msgid "Disk usage"
 msgstr "Utilisation du disque"
 
-#: src/translatable_strings/preference_toggle_description.py:3
-msgid "Shown as"
-msgstr "Affiché comme"
+#: src/translatable_strings/preference_toggle_section_name.py:9
+msgid "Pressure"
+msgstr "Pression"
 
-#: src/translatable_strings/preference_toggle_description.py:6
-msgid ""
-"The monitor will draw as many graphs as cores are present in the system."
-msgstr ""
-"Le moniteur dessinera autant de graphiques que de cœurs présents dans le "
-"système."
+#: src/translatable_strings/redraw_frequency.py:4
+msgid "Very High"
+msgstr "Très élevée"
 
-#: src/translatable_strings/preference_toggle_description.py:8
-msgid "Experimental. This is only known to work on some AMD GPUs currently."
-msgstr ""
-"Expérimental. Ceci ne fonctionne actuellement que sur certains GPUs AMD."
+#: src/translatable_strings/redraw_frequency.py:5
+msgid "High"
+msgstr "Élevée"
+
+#: src/translatable_strings/redraw_frequency.py:6
+msgid "Low"
+msgstr "Basse"
+
+#: src/translatable_strings/redraw_frequency.py:7
+msgid "Very Low"
+msgstr "Très basse"
 
 #: src/translatable_strings/tips.py:4
 msgid "Always on Top"
@@ -406,158 +437,3 @@ msgstr ""
 "souris sur la barre supérieure de la fenêtre pour faire apparaître le menu "
 "de la fenêtre, puis sélectionnez <span font_weight='bold' "
 "font_style='italic'>Toujours au-dessus</span>."
-
-#: src/gtk/preferences-page-appearance.ui:166
-msgctxt "preferences_page_appearance"
-msgid "Show current value"
-msgstr "Afficher la valeur actuelle"
-
-msgid ""
-"Fixed a bug preventing the preferences window from opening (Thanks to "
-"@jrdmellow)"
-msgstr ""
-"Correction d’un bogue empêchant l’ouverture de la fenêtre des Préférences "
-"(grâce à @jrdmellow)"
-
-#: src/gtk/preferences-page-appearance.ui:139
-msgid "Vertical"
-msgstr "Vertical"
-
-#: src/gtk/preferences-page-appearance.ui:145
-msgid "Horizontal"
-msgstr "Horizontal"
-
-#: src/gtk/preferences-page-appearance.ui:150
-msgctxt "monitorets"
-msgid "Monitors aligned in a grid."
-msgstr "Moniteurs alignés en une grille"
-
-#: src/gtk/preferences-page-appearance.ui:151
-msgid "Grid"
-msgstr "Grille"
-
-#: src/gtk/preferences-page-appearance.ui:171
-msgctxt "preferences_appearance"
-msgid "Temperature units"
-msgstr "Unités de température"
-
-#: src/gtk/preferences-page-appearance.ui:176
-msgctxt "preferences_appearance"
-msgid ""
-"Higher means a smoother redraw but also a slight increase in the resources "
-"used by the application itself."
-msgstr ""
-"Une fréquence élevée induit un dessin plus fluide mais également une légère "
-"augmentation des ressources utilisées par l’application."
-
-#: src/gtk/preferences-page-appearance.ui:177
-msgctxt "preferences_appearance"
-msgid "Redraw frequency"
-msgstr "Fréquence de rafraîchissement"
-
-msgid "Added support to show the current value of a monitor"
-msgstr "Ajout de l’affichage de la valeur actuelle d’un moniteur"
-
-msgid "Remember window size on close"
-msgstr "Taille de la fenêtre mémorisée lors de la fermeture"
-
-msgid ""
-"Use the same scaling for network uplink and downlink monitors to avoid "
-"confusion"
-msgstr ""
-"Utilisation de la même échelle pour les moniteurs de réseau descendant ou "
-"ascendant pour éviter toute confusion"
-
-#: src/translatable_strings/redraw_frequency.py:4
-msgid "Very High"
-msgstr "Très élevée"
-
-#: src/translatable_strings/redraw_frequency.py:5
-msgid "High"
-msgstr "Élevée"
-
-#: src/translatable_strings/redraw_frequency.py:6
-msgid "Low"
-msgstr "Basse"
-
-#: src/translatable_strings/redraw_frequency.py:7
-msgid "Very Low"
-msgstr "Très basse"
-
-msgid "Added support for arbitrarily large monitor size"
-msgstr "Ajout de la prise en charge d’un écran de taille arbitraire"
-
-msgid "Added support to arrange monitors in a grid layout"
-msgstr "Ajout d’une disposition des moniteurs sous forme de grille"
-
-msgid ""
-"Added support to select between Celsius and Fahrenheit units for the "
-"temperature sensors"
-msgstr ""
-"Ajout de la possibilité de sélectionner Celsius ou Fahrenheit pour les "
-"unités de température"
-
-msgid "Added support to configure the redraw rate of the monitor graphs"
-msgstr ""
-"Ajout d’une fonction permettant de configurer la fréquence de "
-"rafraîchissement des graphiques du moniteur"
-
-msgid ""
-"Added a keyboard shortcut to open the preferences window (Kudos to github."
-"com/gregorni/)"
-msgstr ""
-"Ajout d’un raccourci clavier pour ouvrir la fenêtre des préférences "
-"(remerciements à github.com/gregorni/)"
-
-msgid "Added french translation (Kudos to github.com/rene-coty/)"
-msgstr ""
-"Ajout d’une traduction française (remerciements à github.com/rene-coty/)"
-
-#: src/gtk/preferences-page-monitors.ui:36
-msgctxt "monitors_preference_group"
-msgid ""
-"Pressure stall quantifies resource scarcity between processes. The more "
-"processes are stalled waiting for a resource (because it is being used by "
-"something else) the higher the pressure over that resource will be."
-msgstr ""
-"La pression de blocage quantifie la rareté des ressources entre les "
-"processus. Plus les processus sont bloqués dans l’attente d’une ressource "
-"(parce qu’elle est utilisée par autre chose), plus la pression sur cette "
-"ressource est élevée."
-
-#: src/gtk/preferences-page-monitors.ui:37
-msgctxt "monitors_preference_group"
-msgid "Pressure"
-msgstr "Pression"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:29
-msgid "CPU, Memory and I/O pressure"
-msgstr "Pression CPU, Mémoire et I/O"
-
-#: src/translatable_strings/monitor_title.py:12
-msgid "CPU Pressure"
-msgstr "Pression CPU"
-
-#: src/translatable_strings/monitor_title.py:13
-msgid "Memory Pressure"
-msgstr "Pression Mémoire"
-
-#: src/translatable_strings/monitor_title.py:14
-msgid "I/O Pressure"
-msgstr "Pression I/O"
-
-#: src/translatable_strings/preference_toggle_label.py:13
-msgid "CPU pressure"
-msgstr "Pression CPU"
-
-#: src/translatable_strings/preference_toggle_label.py:14
-msgid "Memory pressure"
-msgstr "Pression Mémoire"
-
-#: src/translatable_strings/preference_toggle_label.py:15
-msgid "I/O pressure"
-msgstr "Pression I/O"
-
-#: src/translatable_strings/preference_toggle_section_name.py:9
-msgid "Pressure"
-msgstr "Pression"

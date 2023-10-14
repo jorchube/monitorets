@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Monitorets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-23 11:29+0300\n"
+"POT-Creation-Date: 2023-10-14 15:40+0300\n"
 "PO-Revision-Date: 2023-10-12 21:31+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -19,21 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.4\n"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:4
-#: data/io.github.jorchube.monitorets.desktop.in:3
-msgid "Monitorets"
-msgstr "Monitorets"
-
 #: data/io.github.jorchube.monitorets.appdata.xml.in:5
-#: data/io.github.jorchube.monitorets.appdata.xml.in:15
+#: data/io.github.jorchube.monitorets.appdata.xml.in:17
 msgid "Have always at a glance the usage of system resources"
 msgstr "Bir gözünüz daima sistem kaynaklarının kullanımında olsun"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:8
-msgid "Jordi Chulia"
-msgstr "Jordi Chulia"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:17
+#: data/io.github.jorchube.monitorets.appdata.xml.in:19
 msgid ""
 "Monitorets is a small utility application offering a simple and quick view "
 "at the usage of several of your computer resources. Almost like an applet or "
@@ -43,63 +34,68 @@ msgstr ""
 "hızlı bir görünüm sunan küçük bir yardımcı uygulamadır. Neredeyse "
 "masaüstünüz için bir uygulamacık gibi davranır."
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:19
+#: data/io.github.jorchube.monitorets.appdata.xml.in:21
 msgid "Available monitors:"
 msgstr "Kullanılabilir izleyiciler:"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:21
+#: data/io.github.jorchube.monitorets.appdata.xml.in:23
 #: src/translatable_strings/monitor_title.py:3
 #: src/translatable_strings/preference_toggle_label.py:3
 #: src/translatable_strings/preference_toggle_section_name.py:3
 msgid "CPU"
 msgstr "İşlemci"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:22
+#: data/io.github.jorchube.monitorets.appdata.xml.in:24
 msgid "GPU (experimental support)"
 msgstr "Ekran Kartı (deneysel destek)"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:23
+#: data/io.github.jorchube.monitorets.appdata.xml.in:25
 #: src/translatable_strings/monitor_title.py:5
 #: src/translatable_strings/preference_toggle_label.py:6
 #: src/translatable_strings/preference_toggle_section_name.py:5
 msgid "Memory"
 msgstr "Bellek"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:24
+#: data/io.github.jorchube.monitorets.appdata.xml.in:26
 #: src/translatable_strings/monitor_title.py:6
 #: src/translatable_strings/preference_toggle_label.py:7
 msgid "Swap"
 msgstr "Takas"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:25
+#: data/io.github.jorchube.monitorets.appdata.xml.in:27
 msgid "Network downlink traffic"
 msgstr "Ağ indirme trafiği"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:26
+#: data/io.github.jorchube.monitorets.appdata.xml.in:28
 msgid "Network uplink traffic"
 msgstr "Ağ yükleme trafiği"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:27
+#: data/io.github.jorchube.monitorets.appdata.xml.in:29
 msgid "Home folder space"
 msgstr "Ev klasörü alanı"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:28
+#: data/io.github.jorchube.monitorets.appdata.xml.in:30
 msgid "Root space"
 msgstr "Kök alanı"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:29
+#: data/io.github.jorchube.monitorets.appdata.xml.in:31
 msgid "CPU, Memory and I/O pressure"
 msgstr "İşlemci, Bellek ve G/Ç baskısı"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:30
+#: data/io.github.jorchube.monitorets.appdata.xml.in:32
 msgid "Temperature sensors"
 msgstr "Sıcaklık sensörleri"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:62
+#: data/io.github.jorchube.monitorets.appdata.xml.in:64
 msgid "Added CPU, Memory and I/O pressure monitors"
 msgstr "İşlemci, Bellek ve G/Ç basınç monitörleri eklendi"
 
-#: data/io.github.jorchube.monitorets.desktop.in:10
+#. Translators: Do not translate the application name
+#: data/io.github.jorchube.monitorets.desktop.in:4
+msgid "Monitorets"
+msgstr "Monitorets"
+
+#: data/io.github.jorchube.monitorets.desktop.in:11
 msgid "monitor;system monitor;System Monitor;Monitor;"
 msgstr ""
 "monitor;system monitor;System Monitor;Monitor;ekran;izleme;sistem izleme;"
