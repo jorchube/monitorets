@@ -16,10 +16,6 @@ generate-pot-file:
 	meson setup build
 	ninja -C build monitorets-pot
 
-update-po-files:
-	find . -name *.po -exec xgettext --no-location --omit-header -j -f po/POTFILES -o {} \;
-	find . -name *.po -exec xgettext --omit-header -j -f po/POTFILES -o {} \;
-
 test:
 	pipenv run pytest
 
