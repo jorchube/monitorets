@@ -1,13 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+#
 # Philipp Kiemle <philipp.kiemle@gmail.com>, 2023
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Monitorets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 21:31+0100\n"
+"POT-Creation-Date: 2023-10-14 15:40+0300\n"
 "PO-Revision-Date: 2023-09-30 18:16+0200\n"
 "Last-Translator: Philipp Kiemle <philipp.kiemle@gmail.com>\n"
 "Language-Team: \n"
@@ -16,6 +17,128 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.3.2\n"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:5
+#: data/io.github.jorchube.monitorets.appdata.xml.in:17
+msgid "Have always at a glance the usage of system resources"
+msgstr "Haben Sie die Verwendung der Systemressourcen immer im Blick"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:19
+msgid ""
+"Monitorets is a small utility application offering a simple and quick view "
+"at the usage of several of your computer resources. Almost like an applet or "
+"a widget for your desktop."
+msgstr ""
+"Monitorets ist eine kleine Anwendung, die einen einfachen und schnellen "
+"Blick auf die Auslastung verschiedener Ressourcen Ihres Rechners ermöglicht. "
+"Fast wie ein Applet oder Widget für Ihren Desktop."
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:21
+msgid "Available monitors:"
+msgstr "Verfügbare Monitore:"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:23
+#: src/translatable_strings/monitor_title.py:3
+#: src/translatable_strings/preference_toggle_label.py:3
+#: src/translatable_strings/preference_toggle_section_name.py:3
+msgid "CPU"
+msgstr "CPU"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:24
+msgid "GPU (experimental support)"
+msgstr "CPU (experimentelle Unterstützung)"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:25
+#: src/translatable_strings/monitor_title.py:5
+#: src/translatable_strings/preference_toggle_label.py:6
+#: src/translatable_strings/preference_toggle_section_name.py:5
+msgid "Memory"
+msgstr "Arbeitsspeicher"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:26
+#: src/translatable_strings/monitor_title.py:6
+#: src/translatable_strings/preference_toggle_label.py:7
+msgid "Swap"
+msgstr "Swap"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:27
+msgid "Network downlink traffic"
+msgstr "Netzwerk Downlink-Traffic"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:28
+msgid "Network uplink traffic"
+msgstr "Netzwerk Uplink-Traffic"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:29
+msgid "Home folder space"
+msgstr "Platz im persönlichen Ordner"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:30
+msgid "Root space"
+msgstr "Platz im Wurzelverzeichnis"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:31
+msgid "CPU, Memory and I/O pressure"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:32
+msgid "Temperature sensors"
+msgstr "Temperatursensoren"
+
+#: data/io.github.jorchube.monitorets.appdata.xml.in:64
+msgid "Added CPU, Memory and I/O pressure monitors"
+msgstr ""
+
+#. Translators: Do not translate the application name
+#: data/io.github.jorchube.monitorets.desktop.in:4
+msgid "Monitorets"
+msgstr "Monitorets"
+
+#: data/io.github.jorchube.monitorets.desktop.in:11
+msgid "monitor;system monitor;System Monitor;Monitor;"
+msgstr ""
+"monitor;system monitor;System Monitor;Monitor;Überwachung;Systemüberwachung;"
+
+#: src/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Allgemein"
+
+#: src/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Tastenkürzel anzeigen"
+
+#: src/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Beenden"
+
+#: src/gtk/main-menu-model.ui:6
+msgid "Preferences"
+msgstr "Einstellungen"
+
+#: src/gtk/main-menu-model.ui:12 src/translatable_strings/tips.py:3
+msgid "Tips"
+msgstr "Tipps"
+
+#: src/gtk/main-menu-model.ui:16
+msgid "About"
+msgstr "Info"
+
+#: src/gtk/main-menu-model.ui:22
+msgid "Quit"
+msgstr "Beenden"
+
+#: src/gtk/preferences-page-appearance.ui:9
+msgctxt "monitorets"
+msgid "Appearance"
+msgstr "Erscheinunngsbild"
+
+#: src/gtk/preferences-page-appearance.ui:12
+msgctxt "monitorets"
+msgid "Choose between light, dark or the global system theme."
+msgstr "Wählen Sie zwischen einem hellen, dunklen oder dem Systemthema."
 
 #: src/gtk/preferences-page-appearance.ui:14
 msgctxt "monitorets"
@@ -37,356 +160,30 @@ msgctxt "monitorets"
 msgid "Dark"
 msgstr "Dunkel"
 
-#: src/gtk/preferences-page-monitors.ui:8
-msgctxt "monitorets"
-msgid "Monitors"
-msgstr "Monitore"
-
-#: data/io.github.jorchube.monitorets.desktop.in:3
-#: data/io.github.jorchube.monitorets.appdata.xml.in:4
-msgid "Monitorets"
-msgstr "Monitorets"
-
-#: data/io.github.jorchube.monitorets.desktop.in:10
-msgid "monitor;system monitor;System Monitor;Monitor;"
-msgstr ""
-"monitor;system monitor;System Monitor;Monitor;Überwachung;Systemüberwachung;"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:5
-#: data/io.github.jorchube.monitorets.appdata.xml.in:15
-msgid "Have always at a glance the usage of system resources"
-msgstr "Haben Sie die Verwendung der Systemressourcen immer im Blick"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:8
-msgid "Jordi Chulia"
-msgstr "Jordi Chulia"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:17
-msgid ""
-"Monitorets is a small utility application offering a simple and quick view "
-"at the usage of several of your computer resources. Almost like an applet or "
-"a widget for your desktop."
-msgstr ""
-"Monitorets ist eine kleine Anwendung, die einen einfachen und schnellen "
-"Blick auf die Auslastung verschiedener Ressourcen Ihres Rechners ermöglicht. "
-"Fast wie ein Applet oder Widget für Ihren Desktop."
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:19
-msgid "Available monitors:"
-msgstr "Verfügbare Monitore:"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:21
-#: src/translatable_strings/preference_toggle_section_name.py:3
-msgid "Cpu"
-msgstr "CPU"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:22
-msgid "Gpu (experimental support)"
-msgstr "CPU (experimentelle Unterstützung)"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:23
-#: src/translatable_strings/monitor_title.py:5
-#: src/translatable_strings/preference_toggle_label.py:6
-#: src/translatable_strings/preference_toggle_section_name.py:5
-msgid "Memory"
-msgstr "Arbeitsspeicher"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:25
-msgid "Network downlink traffic"
-msgstr "Netzwerk Downlink-Traffic"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:26
-msgid "Network uplink traffic"
-msgstr "Netzwerk Uplink-Traffic"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:27
-msgid "Home folder space"
-msgstr "Platz im persönlichen Ordner"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:28
-msgid "Root space"
-msgstr "Platz im Wurzelverzeichnis"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:30
-msgid "Temperature sensors"
-msgstr "Temperatursensoren"
-
-msgid "Have always at a glance useful system information"
-msgstr "Nützliche Systeminformationen immer im Blick haben"
-
-msgid "Choose between light and dark theme"
-msgstr "Wählen Sie zwischen hellem und dunklen Thema"
-
-msgid ""
-"Monitorets lets you choose the layout you prefer to view your system "
-"resources"
-msgstr ""
-"In Monitorets können Sie zwischen verschiedenen Anordnungen wählen, in denen "
-"Ihre Systemressourcen angezeigt werden"
-
-msgid "Drag window from here"
-msgstr "Fenster von hier ziehen"
-
-#: src/gtk/main-menu-model.ui:6
-msgid "Preferences"
-msgstr "Einstellungen"
-
-#: src/translatable_strings/monitor_title.py:3
-#: src/translatable_strings/preference_toggle_label.py:3
-msgid "CPU"
-msgstr "CPU"
-
-#: src/translatable_strings/monitor_title.py:4
-#: src/translatable_strings/preference_toggle_label.py:5
-msgid "GPU"
-msgstr "GPU"
-
-#: src/translatable_strings/monitor_title.py:7
-msgid "Network 🠅"
-msgstr "Netzwerk 🠅"
-
-#: src/translatable_strings/monitor_title.py:8
-msgid "Network 🠇"
-msgstr "Netzwerk 🠇"
-
-#: src/translatable_strings/monitor_title.py:9
-msgid "~"
-msgstr "~"
-
-#: src/translatable_strings/monitor_title.py:10
-msgid "/"
-msgstr "/"
-
-#: src/translatable_strings/monitor_title.py:11
-msgid "Temp"
-msgstr "Temp"
-
-msgid "GPU (experimental)"
-msgstr "GPU (experimentell)"
-
-#: src/translatable_strings/preference_toggle_label.py:8
-msgid "Downlink"
-msgstr "Downlink"
-
-#: src/translatable_strings/preference_toggle_label.py:9
-msgid "Uplink"
-msgstr "Uplink"
-
-#: src/translatable_strings/preference_toggle_label.py:10
-msgid "Home folder usage"
-msgstr "Belegung des persönlichen Ordners"
-
-#: src/translatable_strings/preference_toggle_label.py:11
-msgid "Root folder usage"
-msgstr "Belegung des Wurzelverzeichnisses"
-
-#: src/translatable_strings/preference_toggle_label.py:12
-#: src/translatable_strings/preference_toggle_section_name.py:8
-msgid "Temperature"
-msgstr "Temperatur"
-
-#: src/translatable_strings/preference_toggle_section_name.py:6
-msgid "Network"
-msgstr "Netzwerk"
-
-#: src/translatable_strings/preference_toggle_section_name.py:7
-msgid "Disk usage"
-msgstr "Speichernutzung"
-
-#: src/gtk/main-menu-model.ui:12 src/translatable_strings/tips.py:3
-msgid "Tips"
-msgstr "Tipps"
-
-#: src/translatable_strings/tips.py:4
-msgid "Always on Top"
-msgstr "Immer im Vordergrund"
-
-#: src/translatable_strings/tips.py:6
-msgid ""
-"You can make the window stay on top of any other window: Press <span "
-"font_weight='bold'>Alt+Space</span> or right click with your mouse in the "
-"window titlebar to bring the window menu, then select <span "
-"font_weight='bold' font_style='italic'>Always on Top</span>."
-msgstr ""
-"Sie können das Fenster immer im Vordergrund vor anderen Fenstern lassen: "
-"Drücken Sie <span font_weight='bold'>Alt+Leertaste</span> oder klicken Sie "
-"mit der rechten Maustaste in die Titelleiste des Fensters. Wählen Sie im "
-"dann erscheinenden Menü <span font_weight='bold' font_style='italic'>Immer "
-"im Vordergrund</span>."
-
-#: src/gtk/preferences-page-appearance.ui:9
-msgctxt "monitorets"
-msgid "Appearance"
-msgstr "Erscheinunngsbild"
-
-#: src/gtk/preferences-page-appearance.ui:12
-msgctxt "monitorets"
-msgid "Choose between light, dark or the global system theme."
-msgstr "Wählen Sie zwischen einem hellen, dunklen oder dem Systemthema."
-
 #: src/gtk/preferences-page-appearance.ui:134
 msgctxt "monitorets"
 msgid "Choose how to organize the enabled resource monitors."
 msgstr ""
 "Wählen Sie, wie die aktivierten Ressourcenmonitore angeordnet werden sollen."
 
-#: src/gtk/preferences-page-appearance.ui:138
-msgctxt "monitorets"
-msgid "Monitors stacked in a single column."
-msgstr "Monitore in einer einzigen Spalte übereinander."
-
-#: src/gtk/preferences-page-appearance.ui:144
-msgctxt "monitorets"
-msgid "Monitors aligned in a single row."
-msgstr "Monitore in einer einzigen Zeile nebeneinander."
-
-#: src/gtk/main-menu-model.ui:16
-msgid "About"
-msgstr "Info"
-
-#: src/gtk/main-menu-model.ui:22
-msgid "Quit"
-msgstr "Beenden"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:127
-msgid "Added Dutch language support"
-msgstr "Niederländische Übersetzung hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:134
-msgid "Added internationalization support"
-msgstr "Unterstützung für Internationalisierung hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:141
-msgid "Restored missing network permission needed for the network monitors"
-msgstr ""
-"Fehlende Netzwerk-Berechtigung wiederhergestellt, wird von den "
-"Netzwerkmonitoren benötigt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:148
-msgid ""
-"Autodiscover temperature sensors and expose them as temperature monitors"
-msgstr ""
-"Temperatursensoren automatisch erkennen und als Temperaturmonitore "
-"bereitstellen"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:149
-msgid "Ellipsize monitor names when do not fit the available space"
-msgstr "Monitornamen verkürzen, wenn sie nicht in den verfügbaren Platz passen"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:150
-msgid "Add monitor groups for same-kind monitors in the preferences popover"
-msgstr ""
-"Monitorgruppen für ähnliche Monitore im Einstellungs-Popover hibzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:157
-msgid "Added network downlink and uplink traffic monitors"
-msgstr "Monitore für Netzwerk-Uplink- und -Downlink-Traffic hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:158
-msgid "Some cosmetic changes have been done"
-msgstr "Ein paar kosmetische Änderungen wurden vorgenommen"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:165
-msgid "Added home and root folder usage monitors"
-msgstr ""
-"Monitore für die Belegung des persönlichen Ordners/des Wurzelverzeichnisses "
-"hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:166
-msgid "Added layout selector"
-msgstr "Auswahlmöglichkeiten für die Anordnung hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:167
-msgid "Added Tips section"
-msgstr "Tipps-Abschnitt hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:168
-msgid "Improve close and preferences buttons visibility when shown"
-msgstr ""
-"Sichtbarkeit der »Schließen«- und »Einstellungen«- Knöpfe verbessert, wenn "
-"angezeigt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:174
-msgid "Under the hood tweaks"
-msgstr "Verbesserungen unter der Haube"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:179
-msgid "Aesthetic:"
-msgstr "Aussehen:"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:180
-msgid "- Reworked graph drawing"
-msgstr "- Arbeiten an der Graphendarstellung"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:181
-msgid "Internal:"
-msgstr "Intern:"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:182
-msgid "- Decoupled several events that can trigger a graph redraw"
-msgstr ""
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:187
-msgid "First release"
-msgstr "Erste Veröffentlichung"
-
-#: src/translatable_strings/preference_toggle_section_name.py:4
-msgid "Gpu"
-msgstr "GPU"
-
 #: src/gtk/preferences-page-appearance.ui:135
 msgctxt "monitorets"
 msgid "Layout"
 msgstr "Layout"
 
-#: src/gtk/preferences-page-monitors.ui:11
-msgctxt "monitors_preference_group"
-msgid "Cpu"
-msgstr "CPU"
-
-#: src/gtk/preferences-page-monitors.ui:16
-msgctxt "monitors_preference_group"
-msgid "Gpu"
-msgstr "GPU"
-
-#: src/gtk/preferences-page-monitors.ui:21
-msgctxt "monitors_preference_group"
-msgid "Memory"
-msgstr "Arbeitsspeicher"
-
-#: src/gtk/preferences-page-monitors.ui:26
-msgctxt "monitors_preference_group"
-msgid "Network"
-msgstr "Netzwek"
-
-#: src/gtk/preferences-page-monitors.ui:31
-msgctxt "monitors_preference_group"
-msgid "Disk usage"
-msgstr "Festplattenbelegung"
-
-#: src/gtk/preferences-page-monitors.ui:42
+#: src/gtk/preferences-page-appearance.ui:138
 msgctxt "monitorets"
-msgid ""
-"These are all the temperature sensors that Monitorets has been able to "
-"discover in your setup."
-msgstr ""
-"Dies sind alle Temperatursensoren, die Monitorets in Ihrer Konfiguration "
-"erkennen konnte."
-
-#: src/gtk/preferences-page-monitors.ui:43
-msgctxt "monitors_preference_group"
-msgid "Temperature sensors"
-msgstr "Temperatursensoren"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:24
-#: src/translatable_strings/monitor_title.py:6
-#: src/translatable_strings/preference_toggle_label.py:7
-msgid "Swap"
-msgstr "Swap"
+msgid "Monitors stacked in a single column."
+msgstr "Monitore in einer einzigen Spalte übereinander."
 
 #: src/gtk/preferences-page-appearance.ui:139
 msgid "Vertical"
 msgstr "Vertikal"
+
+#: src/gtk/preferences-page-appearance.ui:144
+msgctxt "monitorets"
+msgid "Monitors aligned in a single row."
+msgstr "Monitore in einer einzigen Zeile nebeneinander."
 
 #: src/gtk/preferences-page-appearance.ui:145
 msgid "Horizontal"
@@ -435,6 +232,36 @@ msgctxt "preferences_appearance"
 msgid "Redraw frequency"
 msgstr "Aktualisierungsintervall"
 
+#: src/gtk/preferences-page-monitors.ui:8
+msgctxt "monitorets"
+msgid "Monitors"
+msgstr "Monitore"
+
+#: src/gtk/preferences-page-monitors.ui:11
+msgctxt "monitors_preference_group"
+msgid "CPU"
+msgstr "CPU"
+
+#: src/gtk/preferences-page-monitors.ui:16
+msgctxt "monitors_preference_group"
+msgid "GPU"
+msgstr "GPU"
+
+#: src/gtk/preferences-page-monitors.ui:21
+msgctxt "monitors_preference_group"
+msgid "Memory"
+msgstr "Arbeitsspeicher"
+
+#: src/gtk/preferences-page-monitors.ui:26
+msgctxt "monitors_preference_group"
+msgid "Network"
+msgstr "Netzwek"
+
+#: src/gtk/preferences-page-monitors.ui:31
+msgctxt "monitors_preference_group"
+msgid "Disk usage"
+msgstr "Festplattenbelegung"
+
 #: src/gtk/preferences-page-monitors.ui:36
 msgctxt "monitors_preference_group"
 msgid ""
@@ -447,6 +274,20 @@ msgstr ""
 msgctxt "monitors_preference_group"
 msgid "Pressure"
 msgstr ""
+
+#: src/gtk/preferences-page-monitors.ui:42
+msgctxt "monitorets"
+msgid ""
+"These are all the temperature sensors that Monitorets has been able to "
+"discover in your setup."
+msgstr ""
+"Dies sind alle Temperatursensoren, die Monitorets in Ihrer Konfiguration "
+"erkennen konnte."
+
+#: src/gtk/preferences-page-monitors.ui:43
+msgctxt "monitors_preference_group"
+msgid "Temperature sensors"
+msgstr "Temperatursensoren"
 
 #: src/gtk/rename-monitor-popover.ui:20
 msgctxt "rename_monitor"
@@ -464,97 +305,23 @@ msgctxt "rename_monitor"
 msgid "Rename"
 msgstr "Umbenennen"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:29
-msgid "CPU, Memory and I/O pressure"
-msgstr ""
+#: src/translatable_strings/monitor_title.py:4
+#: src/translatable_strings/preference_toggle_label.py:5
+#: src/translatable_strings/preference_toggle_section_name.py:4
+msgid "GPU"
+msgstr "GPU"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:62
-msgid "Added CPU, Memory and I/O pressure monitors"
-msgstr ""
+#: src/translatable_strings/monitor_title.py:7
+msgid "Network 🠅"
+msgstr "Netzwerk 🠅"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:69
-msgid "Fix misalignment of monitor titles"
-msgstr "Fehlerhafte Ausrichtung der Monitortitel behoben"
+#: src/translatable_strings/monitor_title.py:8
+msgid "Network 🠇"
+msgstr "Netzwerk 🠇"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:76
-msgid "Added missing filesystem permissions"
-msgstr "Fehlende Dateisystem-Berechtigungen hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:83
-msgid "Added support for arbitrarily large monitor size"
-msgstr "Unterstützung für beliebig große Monitore hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:84
-msgid "Added support to arrange monitors in a grid layout"
-msgstr "Möglichkeit hinzugefügt, Monitore in einem Gitter anzuordnen"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:85
-msgid ""
-"Added support to select between Celsius and Fahrenheit units for the "
-"temperature sensors"
-msgstr ""
-"Auswahl zwischen Celsius und Fahrenheit bei Temperatursensoren hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:86
-msgid "Added support to configure the redraw rate of the monitor graphs"
-msgstr ""
-"Unterstützung zur Konfiguration der Aktualisierungsrate der Monitor-Graphen "
-"hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:87
-msgid ""
-"Added a keyboard shortcut to open the preferences window (Kudos to github."
-"com/gregorni/)"
-msgstr ""
-"Tastenkürzel zum Öffnen des Einstellungs-Fensters hinzugefügt (Kudos an "
-"github.com/gregorni/)"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:88
-msgid "Added french translation (Kudos to github.com/rene-coty/)"
-msgstr "Französische Übersetzung hinzugefügt (Kudos an github.com/rene-coty/)"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:95
-msgid "Added support to show the current value of a monitor"
-msgstr ""
-"Unterstützung zur Anzeige des aktuellen Werts eines Monitors hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:96
-msgid "Remember window size on close"
-msgstr "Fenstergröße beim Schließen merken"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:97
-msgid ""
-"Use the same scaling for network uplink and downlink monitors to avoid "
-"confusion"
-msgstr ""
-"Die gleiche Skala für Netzwerk-Uplink- und -Downlink-Monitore verwenden, um "
-"Verwirrungen zu vermeiden"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:104
-msgid ""
-"Fixed a bug preventing the preferences window from opening (Thanks to "
-"@jrdmellow)"
-msgstr ""
-"Fehler behoben, der das Öffnen des Einstellungs-Fensters verhindert hat "
-"(Danke an @jrdmellow)"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:111
-msgid "Added support for custom monitor names"
-msgstr "Unterstützung für benutzerdefinierte Monitornamen hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:112
-msgid "Added smooth graph drawing"
-msgstr ""
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:119
-msgid "Added Swap memory monitor"
-msgstr ""
-"Monitor für A\n"
-"uslagerungsspeicher hinzugefügt"
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:120
-msgid "Refactored dropdown menu and preferences"
-msgstr "Aufklappmenü und Einstellungen überarbeitet"
+#: src/translatable_strings/monitor_title.py:11
+msgid "Temp"
+msgstr "Temp"
 
 #: src/translatable_strings/monitor_title.py:12
 msgid "CPU Pressure"
@@ -566,26 +333,6 @@ msgstr ""
 
 #: src/translatable_strings/monitor_title.py:14
 msgid "I/O Pressure"
-msgstr ""
-
-#: src/translatable_strings/preference_toggle_label.py:4
-msgid "CPU per core"
-msgstr "CPU pro Kern"
-
-#: src/translatable_strings/preference_toggle_label.py:13
-msgid "CPU pressure"
-msgstr ""
-
-#: src/translatable_strings/preference_toggle_label.py:14
-msgid "Memory pressure"
-msgstr ""
-
-#: src/translatable_strings/preference_toggle_label.py:15
-msgid "I/O pressure"
-msgstr ""
-
-#: src/translatable_strings/preference_toggle_section_name.py:9
-msgid "Pressure"
 msgstr ""
 
 #: src/translatable_strings/preference_toggle_description.py:3
@@ -602,6 +349,55 @@ msgstr ""
 msgid "Experimental. This is only known to work on some AMD GPUs currently."
 msgstr "Experimentell. Dies funktioniert aktuell nur auf einigen GPUs von AMD."
 
+#: src/translatable_strings/preference_toggle_label.py:4
+msgid "CPU per core"
+msgstr "CPU pro Kern"
+
+#: src/translatable_strings/preference_toggle_label.py:8
+msgid "Downlink"
+msgstr "Downlink"
+
+#: src/translatable_strings/preference_toggle_label.py:9
+msgid "Uplink"
+msgstr "Uplink"
+
+#: src/translatable_strings/preference_toggle_label.py:10
+msgid "Home folder usage"
+msgstr "Belegung des persönlichen Ordners"
+
+#: src/translatable_strings/preference_toggle_label.py:11
+msgid "Root folder usage"
+msgstr "Belegung des Wurzelverzeichnisses"
+
+#: src/translatable_strings/preference_toggle_label.py:12
+#: src/translatable_strings/preference_toggle_section_name.py:8
+msgid "Temperature"
+msgstr "Temperatur"
+
+#: src/translatable_strings/preference_toggle_label.py:13
+msgid "CPU pressure"
+msgstr ""
+
+#: src/translatable_strings/preference_toggle_label.py:14
+msgid "Memory pressure"
+msgstr ""
+
+#: src/translatable_strings/preference_toggle_label.py:15
+msgid "I/O pressure"
+msgstr ""
+
+#: src/translatable_strings/preference_toggle_section_name.py:6
+msgid "Network"
+msgstr "Netzwerk"
+
+#: src/translatable_strings/preference_toggle_section_name.py:7
+msgid "Disk usage"
+msgstr "Speichernutzung"
+
+#: src/translatable_strings/preference_toggle_section_name.py:9
+msgid "Pressure"
+msgstr ""
+
 #: src/translatable_strings/redraw_frequency.py:4
 msgid "Very High"
 msgstr "Sehr hoch"
@@ -617,3 +413,20 @@ msgstr "Niedrig"
 #: src/translatable_strings/redraw_frequency.py:7
 msgid "Very Low"
 msgstr "Sehr niedrig"
+
+#: src/translatable_strings/tips.py:4
+msgid "Always on Top"
+msgstr "Immer im Vordergrund"
+
+#: src/translatable_strings/tips.py:6
+msgid ""
+"You can make the window stay on top of any other window: Press <span "
+"font_weight='bold'>Alt+Space</span> or right click with your mouse in the "
+"window titlebar to bring the window menu, then select <span "
+"font_weight='bold' font_style='italic'>Always on Top</span>."
+msgstr ""
+"Sie können das Fenster immer im Vordergrund vor anderen Fenstern lassen: "
+"Drücken Sie <span font_weight='bold'>Alt+Leertaste</span> oder klicken Sie "
+"mit der rechten Maustaste in die Titelleiste des Fensters. Wählen Sie im "
+"dann erscheinenden Menü <span font_weight='bold' font_style='italic'>Immer "
+"im Vordergrund</span>."
