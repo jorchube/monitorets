@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>io.github.jorchube.monitorets</id>
-  <name>Monitorets</name>
+  <name translatable="no">Monitorets</name>
   <summary>Have always at a glance the usage of system resources</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
-  <developer_name>Jordi Chulia</developer_name>
+  <developer_name translatable="no">Jordi Chulia</developer_name>
   <url type="homepage">https://github.com/jorchube/monitorets/</url>
   <url type="bugtracker">https://github.com/jorchube/monitorets/issues</url>
   <url type="translate">https://github.com/jorchube/monitorets/po/</url>

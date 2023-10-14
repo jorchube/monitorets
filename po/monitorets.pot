@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: monitorets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 20:25+0300\n"
+"POT-Creation-Date: 2023-10-14 15:40+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/io.github.jorchube.monitorets.appdata.xml.in:4
-#: data/io.github.jorchube.monitorets.desktop.in:3
-msgid "Monitorets"
-msgstr ""
-
 #: data/io.github.jorchube.monitorets.appdata.xml.in:5
 #: data/io.github.jorchube.monitorets.appdata.xml.in:17
 msgid "Have always at a glance the usage of system resources"
-msgstr ""
-
-#: data/io.github.jorchube.monitorets.appdata.xml.in:8
-msgid "Jordi Chulia"
 msgstr ""
 
 #: data/io.github.jorchube.monitorets.appdata.xml.in:19
@@ -94,7 +85,12 @@ msgstr ""
 msgid "Added CPU, Memory and I/O pressure monitors"
 msgstr ""
 
-#: data/io.github.jorchube.monitorets.desktop.in:10
+#. Translators: Do not translate the application name
+#: data/io.github.jorchube.monitorets.desktop.in:4
+msgid "Monitorets"
+msgstr ""
+
+#: data/io.github.jorchube.monitorets.desktop.in:11
 msgid "monitor;system monitor;System Monitor;Monitor;"
 msgstr ""
 
