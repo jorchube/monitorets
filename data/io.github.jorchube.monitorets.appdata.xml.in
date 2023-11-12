@@ -58,6 +58,14 @@
   </provides>
 
   <releases>
+    <release version="0.10.1" date="2023-11-13">
+      <description>
+        <ul>
+          <li>Added Turkish translation</li>
+          <li>Added German translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.10.0" date="2023-03-18">
       <description>
         <ul>
