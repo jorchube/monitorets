@@ -68,7 +68,7 @@ class HeaderBarWrapper:
         button.add_css_class("raised")
 
         builder = Gtk.Builder.new_from_resource(
-            "/org/github/jorchube/monitorets/gtk/main-menu-model.ui"
+            "/io/github/jorchube/monitorets/gtk/main-menu-model.ui"
         )
         menu = builder.get_object("main_menu")
 

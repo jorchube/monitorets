@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: monitorets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-14 15:40+0300\n"
+"POT-Creation-Date: 2023-10-14 21:13+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,6 +118,10 @@ msgid "Tips"
 msgstr ""
 
 #: src/gtk/main-menu-model.ui:16
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/gtk/main-menu-model.ui:20
 msgid "About"
 msgstr ""
 

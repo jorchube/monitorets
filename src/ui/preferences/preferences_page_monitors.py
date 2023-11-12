@@ -8,7 +8,7 @@ from ...monitor_descriptors import (
 
 
 @Gtk.Template(
-    resource_path="/org/github/jorchube/monitorets/gtk/preferences-page-monitors.ui"
+    resource_path="/io/github/jorchube/monitorets/gtk/preferences-page-monitors.ui"
 )
 class PreferencesPageMonitors(Adw.PreferencesPage):
     __gtype_name__ = "PreferencesPageMonitors"

@@ -27,7 +27,7 @@ from ..preference_keys import PreferenceKeys
 from ..window_geometry import WindowGeometry
 
 
-@Gtk.Template(resource_path="/org/github/jorchube/monitorets/gtk/single-window.ui")
+@Gtk.Template(resource_path="/io/github/jorchube/monitorets/gtk/single-window.ui")
 class SingleWindow(Adw.ApplicationWindow):
     __gtype_name__ = "SingleWindow"
 

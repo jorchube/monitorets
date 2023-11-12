@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Monitorets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-14 15:40+0300\n"
-"PO-Revision-Date: 2023-10-12 21:31+0300\n"
+"POT-Creation-Date: 2023-10-14 21:13+0300\n"
+"PO-Revision-Date: 2023-10-14 21:15+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
@@ -125,6 +125,10 @@ msgid "Tips"
 msgstr "İpuçları"
 
 #: src/gtk/main-menu-model.ui:16
+msgid "Keyboard Shortcuts"
+msgstr "Klavye Kısayolları"
+
+#: src/gtk/main-menu-model.ui:20
 msgid "About"
 msgstr "Monitorets Hakkında"
 
@@ -354,7 +358,7 @@ msgstr ""
 
 #: src/translatable_strings/preference_toggle_label.py:4
 msgid "CPU per core"
-msgstr "İşlemci başına çekirdek"
+msgstr "Çekirdek başına işlemci"
 
 #: src/translatable_strings/preference_toggle_label.py:8
 msgid "Downlink"

@@ -41,6 +41,7 @@ class MonitorApplication(Adw.Application):
         super().__init__(
             application_id="io.github.jorchube.monitorets",
             flags=Gio.ApplicationFlags.FLAGS_NONE,
+            resource_base_path="/io/github/jorchube/monitorets",
         )
 
         self.window = None
