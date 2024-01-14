@@ -8,7 +8,7 @@
   <developer_name translatable="no">Jordi Chulia</developer_name>
   <url type="homepage">https://github.com/jorchube/monitorets/</url>
   <url type="bugtracker">https://github.com/jorchube/monitorets/issues</url>
-  <url type="translate">https://github.com/jorchube/monitorets/po/</url>
+  <url type="translate">https://github.com/jorchube/monitorets/tree/master/po</url>
   <url type="vcs-browser">https://github.com/jorchube/monitorets/</url>
 
   <content_rating type="oars-1.1" />
@@ -52,6 +52,7 @@
   </screenshots>
 
   <launchable type="desktop-id">io.github.jorchube.monitorets.desktop</launchable>
+  <translation type="gettext">monitorets</translation>
 
   <provides>
     <binary>monitorets</binary>
@@ -59,7 +60,7 @@
 
   <releases>
     <release version="0.10.1" date="2023-11-13">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Turkish translation</li>
           <li>Added German translation</li>
@@ -67,7 +68,7 @@
       </description>
     </release>
     <release version="0.10.0" date="2023-03-18">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added CPU, Memory and I/O pressure monitors</li>
         </ul>
